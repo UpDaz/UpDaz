@@ -2,7 +2,7 @@
     ErrorDocument 401 "Authorisation Required"
     AuthType Basic
     AuthName "Veuillez entrer vos identifiants"
-    AuthUserFile /home/u641567625/domains/updaz.fr/public_html/preprod/.htpasswd
+    AuthUserFile /domains/updaz.fr/public_html/preprod/.htpasswd
     Require user UpDaz
     Satisfy All
 </If>

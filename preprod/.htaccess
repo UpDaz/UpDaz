@@ -1,4 +1,4 @@
-<If "req('Host') = 'updaz.fr'">
+<If "req('Host') = 'preprod.updaz.fr'">
     ErrorDocument 401 "Authorisation Required"
     AuthType Basic
     AuthName "Veuillez entrer vos identifiants"

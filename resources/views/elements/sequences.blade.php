@@ -5,10 +5,10 @@
         </h1>
         <div class="-mt-24 grid grid-cols-1 lg:grid-cols-2 flex items-center justify-between w-full">
             <div class="mt-40 lg:-mt-20">
-                <div class="text-center lg:text-left text-white font-title text-4xl lg:text-6xl">
+                <div class="text-center lg:text-left text-white font-title text-4xl lg:text-6xl font-bold">
                     Je veux
                 </div>
-                <div class="text-orange font-title text-4xl lg:text-6xl underline underline-offset-4 relative">
+                <div class="text-orange font-title text-4xl lg:text-6xl font-bold relative">
                     <span
                         class="txt-rotate absolute w-full text-center lg:text-left"
                         data-period="2000"

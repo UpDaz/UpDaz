@@ -13,7 +13,7 @@
                     </li>
                     <li class="flex items-center mb-6 lg:mb-4">
                         <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-3" width="25" height="25" alt="Illustration picto check" title="Check"/>
-                        Plus de fléxibilité pour un fonctionnement optimisé et des performances accrues
+                        Plus de flexibilité pour un fonctionnement optimisé et des performances accrues
                     </li>
                     <li class="flex items-center mb-6 lg:mb-4">
                         <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-3" width="25" height="25" alt="Illustration picto check" title="Check"/>

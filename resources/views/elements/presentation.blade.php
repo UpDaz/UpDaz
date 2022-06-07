@@ -1,7 +1,7 @@
 <div id="presentation" x-data="presentation" class="w-full flex items-center justify-between px-8 lg:px-16 py-16 lg:py-24 relative overflow-hidden">
     <div class="container grid grid-cols-1 lg:grid-cols-5 gap-6 items-center relative">
         <div class="lg:col-span-2 text-center relative">
-            <img src="{{ asset('img/illustrations/background-profile.svg')}}" class="hidden lg:block absolute y-center x-center z-0 max-w-none h-[calc(100%+10rem)]" width="240" height="240" alt="Background Profile" title="Arrière plan">
+            <img src="{{ asset('img/illustrations/background-profile.svg')}}" class="hidden lg:block absolute y-center x-center z-0 max-w-none h-[calc(100%+10rem)] w-auto" width="240" height="240" alt="Background Profile" title="Arrière plan">
             <img class="hidden lg:block w-60 h-60 rounded-full mx-auto z-10 relative" src="{{ asset('img/profile.jpg') }}" alt="Photo profile" title="Matthieu DAZORD"/>
             <picture>
                 <source type="image/webp" srcset="{{ asset('img/illustrations/background-profile.webp') }}">

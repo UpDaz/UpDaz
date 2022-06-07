@@ -4,7 +4,7 @@
         <div class="grid lg:grid-cols-2 gap-12 z-10">
             <div>
                 <h3 class="mb-6 text-4xl text-white">
-                    Application sur-mesure
+                    Application sur mesure
                 </h3>
                 <ul class="text-white leading-4">
                     <li class="flex items-center mb-6 lg:mb-4">

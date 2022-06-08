@@ -23,12 +23,12 @@
             <button x-show="!submitting && !success" class="bg-blue hover:bg-blue-dark text-white shadow-md px-6 py-3 rounded">
                 Envoyer
             </button>
-            <p x-show="!submitting && success" class="text-white bold flex items-center">
-                <img src="{{ asset('img/illustrations/check-rounded-orange.svg')}}" class="mr-2" width="30" alt="Picto check" title="Check"/>
+            <p x-show="!submitting && success" class="text-white bold block md:flex items-center text-right md:text-left">
+                <img src="{{ asset('img/illustrations/check-rounded-orange.svg')}}" class="mx-auto md:mr-2" width="30" alt="Picto check" title="Check"/>
                 Message envoyé avec succés !
             </p>
-            <p x-show="error" class="text-red-500 bold mt-2 flex items-center">
-                <img src="{{ asset('img/illustrations/warning.svg')}}" class="mr-3" width="30" alt="Picto warning" title="Erreur"/>
+            <p x-show="error" class="text-red-500 bold mt-2 block md:flex items-center text-right md:text-left">
+                <img src="{{ asset('img/illustrations/warning.svg')}}" class="mx-auto md:mr-3" width="30" alt="Picto warning" title="Erreur"/>
                 Une erreur est survenue,<br/>si le problème persiste merci de me contacter via matthieu@udpaz.fr
             </p>
         </div>

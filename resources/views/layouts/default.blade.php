@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <title>UpDaz | Développeur Web à Bordeaux | Laravel Prestashop</title>
-    <meta name="description" content="Créateur de plateformes internet sur mesure et clé en main, je propose mon expertise pour vous accompagner dans vos projets web."/>
+    <title>UpDaz - Développeur Web sénior à Bordeaux</title>
+    <meta name="description" content="Créateur de plateformes internet sur mesure (Laravel) et clé en main (Prestashop, Wordpress), je propose mon expertise pour vous accompagner dans vos projets web."/>
     <meta name="keywords" content="Développeur web, Bordeaux, freelance, site internet, Laravel, Prestashop, CMS, Wordpress, accompagnement, HTML, CSS, JavaScript"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="robots" content="index,follow" />

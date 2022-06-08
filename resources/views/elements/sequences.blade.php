@@ -12,7 +12,7 @@
                     <span
                         class="txt-rotate absolute w-full text-center md:text-left"
                         data-period="2000"
-                        data-rotate='[ "un site web.", "une boutique en ligne.", "une plateforme de réservation.", "un site sur-mesure.", "améliorer ma visibilité sur internet.", "optimiser mon référencement naturel.", "améliorer les performances de mon site.", "créer mon projet." ]'></span>
+                        data-rotate='[ "un site web.", "une boutique en ligne.", "une plateforme de réservation.", "un site sur mesure.", "améliorer ma visibilité sur internet.", "optimiser mon référencement naturel.", "améliorer les performances de mon site.", "créer mon projet." ]'></span>
                 </div>
             </div>
             <div class="mt-40 md:mt-0 mb-12 md:mb-0">

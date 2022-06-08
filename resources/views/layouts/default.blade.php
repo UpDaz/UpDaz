@@ -21,7 +21,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap" rel="stylesheet" defer async>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" defer async>
-    <link rel="stylesheet" href="{{ asset("css/app.css") }}?v={{ time() }}" defer async>
+    <link rel="stylesheet" href="{{ asset("css/app.css") }}" defer async>
     @include('elements.structured-data')
     @include('elements.google-analytics')
 </head>

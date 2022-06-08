@@ -22,7 +22,7 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       </button>
-        <ul class="flex flex-col md:flex-row md:space-x-8 text-lg md:text-sm md:font-medium text-center md:text-left">
+        <ul class="flex flex-col md:flex-row md:space-x-8 text-lg text-lg md:text-sm md:font-medium text-center md:text-left">
           <li>
             <a href="{{route('home') }}#presentation" @click.prevent="scrollToTarget('#presentation')" title="Présentation" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white hover:underline" aria-current="page">
               Présentation

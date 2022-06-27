@@ -53,6 +53,16 @@
               <img src="{{ asset('img/linkedin.svg') }}" width="20" height="20" alt="Logo Linkedin" title="Linkedin" class="mx-auto">
             </a>
           </li>
+          <li>
+            <a href="https://www.malt.fr/profile/matthieudazord" target="_blank" title="Malt" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white hover:underline" aria-current="page">
+              <img src="{{ asset('img/malt.svg') }}" width="20" height="20" alt="Logo Malt" title="Malt" class="mx-auto">
+            </a>
+          </li>
+          <li>
+            <a href="https://plateforme.freelance.com/freelance/Matthieu-c34713cf-17ba-4a64-8b99-aa21e240582b" target="_blank" title="Freelance.com" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white hover:underline" aria-current="page">
+              <img src="{{ asset('img/freelance.svg') }}" width="26" height="20" alt="Logo Frellance.com" title="Freelance.com" class="mx-auto">
+            </a>
+          </li>
         </ul>
         <img src="{{ asset('img/illustrations/directions.svg') }}" class="h-1/4 absolute x-center bottom-12 md:hidden" alt="Illustration Navigation" title="Navigation"/>
       </div>

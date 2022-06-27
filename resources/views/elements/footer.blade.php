@@ -4,9 +4,17 @@
             <a href="{{ route('home') }}">
                 <img src="{{ asset('img/logo.svg') }}" class="w-3/4 mb-6 mx-auto h-auto" width="225" height="72" alt="UpDaz Logo" title="UpDaz" loading="lazy">
             </a>
-            <a href="https://fr.linkedin.com/in/matthieu-dazord" target="_blank"  class="block mb-6 py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white hover:underline" aria-current="page">
-                <img src="{{ asset('img/linkedin.svg') }}" width="30" height="30" alt="Logo Linkedin" title="Linkedin" class="mx-auto" loading="lazy">
-            </a>
+            <div class="flex items-center justify-center mb-6">
+                <a href="https://fr.linkedin.com/in/matthieu-dazord" target="_blank"  class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white" aria-current="page">
+                    <img src="{{ asset('img/linkedin.svg') }}" width="30" height="30" alt="Logo Linkedin" title="Linkedin" class="mx-auto" loading="lazy">
+                </a>
+                <a href="https://www.malt.fr/profile/matthieudazord" target="_blank" title="Malt" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white" aria-current="page">
+                    <img src="{{ asset('img/malt.svg') }}" width="30" height="30" alt="Logo Malt" title="Malt" class="mx-auto">
+                </a>
+                <a href="https://plateforme.freelance.com/freelance/Matthieu-c34713cf-17ba-4a64-8b99-aa21e240582b" target="_blank" title="Freelance.com" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white" aria-current="page">
+                    <img src="{{ asset('img/freelance.svg') }}" width="36" height="30" alt="Logo Frellance.com" title="Freelance.com" class="mx-auto">
+                </a>
+            </div>
             © UpDaz {{ date('Y') }}
         </div>
         <p class="absolute -bottom-11 width-full text-center text-sm text-white px-16 ">

@@ -27,7 +27,8 @@ module.exports = {
   safelist: [
     'border-red-500',
     'bg-[#001A9E]',
-    'bg-[#9E7700]'
+    'bg-[#9E7700]',
+    'bg-[#FFFFFF]'
   ], 
   plugins: [],
 }

@@ -8,17 +8,19 @@
                     </a> :
                 </span>
             </h2>
-            <div class="grid grid-cols-2 lg:grid-cols-3 gap-12 items-center">
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-12 items-center ">
 
-                <x-tooltip color="#001A9E">
+                <x-tooltip color="#FFFFFF">
                     <x-slot:message>
-                        <h3 class="font-text font-bold">Khassani Swimwear</h3>
-                        <hr class="my-2 opacity-30"/>
-                        Sur-mesure
-                        <br/>
-                        Laravel
-                        <br/>
-                        E-commerce
+                        <h3 class="font-text text-base font-bold text-blue-dark text-center w-full">Khassani Swimwear</h3>
+                        <hr class="my-2 opacity-30 "/>
+                        <div class="text-blue-dark leading-8">
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Sur-mesure
+                            <br/>
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Laravel
+                            <br/>
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> E-commerce
+                        </div>
                     </x-slot>
                     <x-slot:content>
                         <a href="https://www.khassaniswimwear.com/fr" target="_blank" title="Khassani">
@@ -27,15 +29,17 @@
                     </x-slot>
                 </x-tooltip>
 
-                <x-tooltip color="#001A9E">
+                <x-tooltip color="#FFFFFF">
                     <x-slot:message>
-                        <h3 class="font-text font-bold">Neorev</h3>
+                        <h3 class="font-text text-base font-bold text-blue-dark text-center w-full">Neorev</h3>
                         <hr class="my-2 opacity-30"/>
-                        CMS
-                        <br/>
-                        Prestashop
-                        <br/>
-                        E-commerce
+                        <div class="text-blue-dark leading-8">
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> CMS
+                            <br/>
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Prestashop
+                            <br/>
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> E-commerce
+                        </div>
                     </x-slot>
                     <x-slot:content>
                         <a href="https://www.neorev.fr/" target="_blank" title="Neorev">
@@ -44,15 +48,17 @@
                     </x-slot>
                 </x-tooltip>
 
-                <x-tooltip color="#001A9E">
+                <x-tooltip color="#FFFFFF">
                     <x-slot:message>
-                        <h3 class="font-text font-bold">Artecosy</h3>
+                        <h3 class="font-text text-base font-bold text-blue-dark text-center w-full">Artecosy</h3>
                         <hr class="my-2 opacity-30"/>
-                        CMS
-                        <br/>
-                        Prestashop
-                        <br/>
-                        E-commerce
+                        <div class="text-blue-dark leading-8">
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> CMS
+                            <br/>
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Prestashop
+                            <br/>
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> E-commerce
+                        </div>
                     </x-slot>
                     <x-slot:content>
                         <a href="https://www.artecosy.com/fr/" target="_blank" title="Artecosy">
@@ -61,13 +67,15 @@
                     </x-slot>
                 </x-tooltip>
                 
-                <x-tooltip color="#001A9E">
+                <x-tooltip color="#FFFFFF">
                     <x-slot:message>
-                        <h3 class="font-text font-bold">Pôle Axelera</h3>
+                        <h3 class="font-text text-base font-bold text-blue-dark text-center w-full">Pôle Axelera</h3>
                         <hr class="my-2 opacity-30"/>
-                        Sur-mesure
-                        <br/>
-                        CRM - Vitrine - Blog
+                        <div class="text-blue-dark leading-8">
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Sur-mesure
+                            <br/>
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> CRM - Vitrine - Blog
+                        </div>
                     </x-slot>
                     <x-slot:content>
                         <a href="https://www.axelera.org/fr" target="_blank" title="Axelera">
@@ -76,15 +84,17 @@
                     </x-slot>
                 </x-tooltip>
 
-                <x-tooltip color="#001A9E">
+                <x-tooltip color="#FFFFFF">
                     <x-slot:message>
-                        <h3 class="font-text font-bold">Maison Aubertin</h3>
+                        <h3 class="font-text text-base font-bold text-blue-dark text-center w-full">Maison Aubertin</h3>
                         <hr class="my-2 opacity-30"/>
-                        CMS
-                        <br/>
-                        Prestashop
-                        <br/>
-                        E-commerce
+                        <div class="text-blue-dark leading-8">
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> CMS
+                            <br/>
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Prestashop
+                            <br/>
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> E-commerce
+                        </div>
                     </x-slot>
                     <x-slot:content>
                         <a href="https://www.maison-aubertin.com/" target="_blank" title="Maison Aubertin">
@@ -93,15 +103,17 @@
                     </x-slot>
                 </x-tooltip>
 
-                <x-tooltip color="#001A9E">
+                <x-tooltip color="#FFFFFF">
                     <x-slot:message>
-                        <h3 class="font-text font-bold">Popsgym</h3>
+                        <h3 class="font-text text-base font-bold text-blue-dark text-center w-full">Popsgym</h3>
                         <hr class="my-2 opacity-30"/>
-                        Sur-mesure
-                        <br/>
-                        Laravel
-                        <br/>
-                        E-commerce
+                        <div class="text-blue-dark leading-8">
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Sur-mesure
+                            <br/>
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Laravel
+                            <br/>
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> E-commerce
+                        </div>
                     </x-slot>
                     <x-slot:content>
                         <a href="https://www.popsgym.fr/fr" target="_blank" title="Popsgym">
@@ -110,15 +122,17 @@
                     </x-slot>
                 </x-tooltip>
 
-                <x-tooltip color="#001A9E">
+                <x-tooltip color="#FFFFFF">
                     <x-slot:message>
-                        <h3 class="font-text font-bold">SBFM Grillage</h3>
+                        <h3 class="font-text text-base font-bold text-blue-dark text-center w-full">SBFM Grillage</h3>
                         <hr class="my-2 opacity-30"/>
-                        Sur-mesure
-                        <br/>
-                        Laravel
-                        <br/>
-                        E-commerce
+                        <div class="text-blue-dark leading-8">
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Sur-mesure
+                            <br/>
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Laravel
+                            <br/>
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> E-commerce
+                        </div>
                     </x-slot>
                     <x-slot:content>
                         <a href="https://www.sbfm-grillage.com/fr" target="_blank" title="SBFM">
@@ -127,13 +141,15 @@
                     </x-slot>
                 </x-tooltip>
 
-                <x-tooltip color="#001A9E">
+                <x-tooltip color="#FFFFFF">
                     <x-slot:message>
-                        <h3 class="font-text font-bold">Pôle Avenia</h3>
+                        <h3 class="font-text text-base font-bold text-blue-dark text-center w-full">Pôle Avenia</h3>
                         <hr class="my-2 opacity-30"/>
-                        Sur-mesure
-                        <br/>
-                        CRM - Vitrine - Blog
+                        <div class="text-blue-dark leading-8">
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Sur-mesure
+                            <br/>
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> CRM - Vitrine - Blog
+                        </div>
                     </x-slot>
                     <x-slot:content>
                         <a href="https://www.pole-avenia.com/fr" target="_blank" title="Avenia">
@@ -155,15 +171,17 @@
             </h2>
             <div class="grid grid-cols-2 lg:grid-cols-3 gap-12 items-center">
 
-                <x-tooltip color="#9E7700">
+                <x-tooltip color="#FFFFFF">
                     <x-slot:message>
-                        <h3 class="font-text font-bold">Blooming Ladies</h3>
+                        <h3 class="font-text text-base font-bold text-blue-dark text-center w-full">Blooming Ladies</h3>
                         <hr class="my-2 opacity-30"/>
-                        Sur-mesure
-                        <br/>
-                        Laravel
-                        <br/>
-                        Vitrine
+                        <div class="text-blue-dark leading-8">
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Sur-mesure
+                            <br/>
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Laravel
+                            <br/>
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Vitrine
+                        </div>
                     </x-slot>
                     <x-slot:content>
                         <a href="https://www.bloomingladies.art/" target="_blank" title="Blooming Ladies">
@@ -172,15 +190,17 @@
                     </x-slot>
                 </x-tooltip>
 
-                <x-tooltip color="#9E7700">
+                <x-tooltip color="#FFFFFF">
                     <x-slot:message>
-                        <h3 class="font-text font-bold">KAZoART Pro</h3>
+                        <h3 class="font-text text-base font-bold text-blue-dark text-center w-full">KAZoART Pro</h3>
                         <hr class="my-2 opacity-30"/>
-                        Sur-mesure
-                        <br/>
-                        Laravel
-                        <br/>
-                        Vitrine
+                        <div class="text-blue-dark leading-8">
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Sur-mesure
+                            <br/>
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Laravel
+                            <br/>
+                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Vitrine
+                        </div>
                     </x-slot>
                     <x-slot:content>
                         <a href="https://pro.kazoart.com/fr/" target="_blank" title="KAZoART Pro">

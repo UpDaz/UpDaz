@@ -1,4 +1,4 @@
-<div id="sequences" class="w-full bg-blue px-8 md:px-16 py-16 md:py-24 flex items-center h-screen">
+<div id="sequences" class="w-full bg-blue px-8 md:px-16 py-16 md:py-24 flex items-center h-[calc(100vh-4rem)] md:h-screen">
     <div class="container mx-auto -mt-24">
         <h1 class="hidden">
             Création de site internet sur mesure à Bordeaux
@@ -15,8 +15,8 @@
                         data-rotate='[ "un site web.", "une boutique en ligne.", "une plateforme de réservation.", "un site sur mesure.", "améliorer ma visibilité sur internet.", "optimiser mon référencement naturel.", "améliorer les performances de mon site.", "créer mon projet." ]'></span>
                 </div>
             </div>
-            <div class="mt-40 md:mt-0 mb-12 md:mb-0">
-                <img src="{{ asset('img/illustrations/sequences.svg')}}" class="w-full" width="575" height="384" alt="Illustration présentation" title="Présentation"/>
+            <div class="mt-40 md:mt-0 -ml-6 md:ml-0 w-[calc(100%+3rem)] md:w-full">
+                @include('elements/illustrations/sequences')
             </div>
         </div>
     </div>

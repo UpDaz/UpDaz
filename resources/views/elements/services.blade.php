@@ -1,5 +1,7 @@
 <div id="services" x-data="services" class="relative overflow-hidden bg-blue px-8 md:px-16 py-16 md:py-24">
-    <img src="{{ asset('img/illustrations/services.svg') }}" class="absolute x-center y-center h-3/4 opacity-10" width="587" height="409" alt="Paquets" title="Arrière plan" loading="lazy" />
+    <div class="absolute x-center y-center h-full opacity-50 md:opacity-10 w-2/3 md:w-1/2">
+        @include('elements/illustrations/services')
+    </div>
     <div class="container mx-auto">
         <h2 class="text-orange text-4xl mb-14 w-full text-center z-10">Mes services</h2>
         <div class="grid md:grid-cols-2 gap-12 z-10">

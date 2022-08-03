@@ -1,15 +1,13 @@
-<div id="presentation" x-data="presentation" class="w-full px-8 md:px-16 py-16 md:py-24 relative overflow-hidden">
+<div id="presentation" x-data="presentation" class="w-full px-8 md:px-16 relative overflow-hidden">
     <div class="container mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-5 gap-6 items-center relative">
-            <div class="md:col-span-2 text-center relative">
-                <img src="{{ asset('img/illustrations/background-profile.svg')}}" class="hidden md:block absolute y-center x-center z-0 max-w-none h-[calc(100%+10rem)] w-auto" width="240" height="240" alt="Background Profile" title="Arrière plan" loading="lazy">
-                <img class="hidden md:block w-60 h-60 rounded-full mx-auto z-10 relative" src="{{ asset('img/profile.jpg') }}" alt="Photo profile" title="Matthieu DAZORD" loading="lazy"/>
-                <picture>
-                    <source type="image/webp" srcset="{{ asset('img/illustrations/background-profile.webp') }}">
-                    <img src="{{ asset('img/illustrations/background-profile.png') }}" class="block md:hidden w-full" width="330" height="234" alt="Photo Matthieu Dazord avec background" title="Matthieu DAZORD" loading="lazy">
-                </picture>
+            <div class="md:col-span-2 text-center pt-16 pb-8 md:py-24">
+                <div class="block absolute z-1 max-w-none h-[calc(100vh/2)] md:h-full w-[calc(100%+4rem)] md:w-1/2 -left-8 md:-left-16 top-0">
+                    @include('elements/illustrations/background-profile')
+                </div>
+                <img class=" block w-60 h-60 rounded-full mx-auto z-10 relative" src="{{ asset('img/profile.jpg') }}" alt="Photo profile" title="Matthieu DAZORD" loading="lazy"/>
             </div>
-            <div class="md:col-span-3 z-10 relative">
+            <div class="md:col-span-3 z-10 relative pb-16 md:py-24">
                 <p class="font-title bold text-3xl text-orange mb-6">Bienvenue !</p>
                 <p class="text-gray-800">
                     Je m'appelle <a href="https://fr.linkedin.com/in/matthieu-dazord" target="_blank" class="underline hover:text-orange" title="Linkedin"><b>Matthieu DAZORD</b></a>, je suis développeur full-stack depuis 8 ans sur la région bordelaise.<br/>

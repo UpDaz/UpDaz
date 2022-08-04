@@ -2,7 +2,7 @@
     <div class="container mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-5 gap-6 items-center relative">
             <div class="md:col-span-2 text-center pt-16 pb-8 md:py-24">
-                <div class="block absolute z-1 max-w-none h-[calc(100vh/2)] md:h-full w-[calc(100%+4rem)] md:w-1/2 -left-8 md:-left-16 top-0">
+                <div class="block absolute z-1 md:x-auto max-w-none h-[calc(100vh/2)] md:h-full w-[calc(100%+4rem)] md:w-1/2 -left-8 md:-left-16 top-0 rotate-90 md:rotate-0">
                     @include('elements/illustrations/background-profile')
                 </div>
                 <img class=" block w-60 h-60 rounded-full mx-auto z-10 relative" src="{{ asset('img/profile.jpg') }}" alt="Photo profile" title="Matthieu DAZORD" loading="lazy"/>

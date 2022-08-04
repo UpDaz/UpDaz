@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-    @include('elements.sequences')
+    @include('elements.welcome')
     @include('elements.presentation')
     @include('elements.references')
     @include('elements.your-project')

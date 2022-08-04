@@ -110,8 +110,7 @@
             </div>
         </div>
     </div>
-    <div class="mx-auto mt-8 md:mt-0 md:absolute z-1 md:w-1/6 md:h-36 md:right-16 md:bottom-16">
+    <div class="mx-auto mt-8 md:mt-0 md:absolute z-1 w-5/6 md:w-1/3 lg:w-1/6 md:h-36 md:right-16 lg:right-24 md:bottom-16">
         @include('elements.illustrations.books')
     </div>
-    {{-- <img src="{{ asset('img/illustrations/books.svg') }}"  width="231" height="144" alt="Illustration livres" title="Livres" loading="lazy"/> --}}
 </div>

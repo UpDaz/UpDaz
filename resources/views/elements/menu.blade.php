@@ -8,7 +8,7 @@
   <div class="container mx-auto">
     <div class="flex flex-wrap justify-between items-center">
       <a href="{{ route('home') }}" class="flex items-center" title="UpDaz">
-          <img src="{{ asset('img/logo.svg') }}" class="mr-3 h-6 md:h-8 w-auto" width="100" height="32" alt="UpDaz Logo" title="UpDaz" />
+          <img src="{{ asset('img/logo.svg') }}" class="h-6 md:h-8 w-auto" width="100" height="32" alt="UpDaz Logo" title="UpDaz" />
       </a>
       <button @click.prevent="toggleMobileMenu()" aria-label="Ouvrir menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-white rounded-lg md:hidden" aria-controls="mobile-menu" aria-expanded="false">
         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -22,7 +22,7 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       </button>
-        <ul class="flex flex-col md:flex-row md:space-x-8 text-lg text-lg md:text-sm md:font-medium text-center md:text-left">
+        <ul class="flex flex-col md:flex-row md:space-x-4 lg:space-x-8 text-lg md:text-sm md:font-medium text-center md:text-left">
           <li>
             <a href="{{route('home') }}#presentation" @click.prevent="scrollToTarget('#presentation')" title="Présentation" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white hover:underline" aria-current="page">
               Présentation

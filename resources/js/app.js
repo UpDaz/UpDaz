@@ -1,3 +1,3 @@
 require('./bootstrap');
 require('./menu');
-require('./sequences');
+require('./welcome');

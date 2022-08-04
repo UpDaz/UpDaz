@@ -1,5 +1,5 @@
 <div id="services" x-data="services" class="relative overflow-hidden bg-blue px-8 md:px-16 py-16 md:py-24">
-    <div class="absolute x-center y-center h-full opacity-50 md:opacity-10 w-2/3 md:w-1/2">
+    <div class="absolute -top-8 left-2/4 -translate-x-2/4 h-64 md:h-full opacity-10 w-full md:w-1/2">
         @include('elements/illustrations/services')
     </div>
     <div class="container mx-auto">

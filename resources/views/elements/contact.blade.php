@@ -11,7 +11,7 @@
                 Pour toute demande d'information, merci de renseigner ce formulaire de contact, je reviendrai vers vous dans les plus brefs délais.
             </p>
         </div>
-        <div class="hidden md:block w-full md:h-96 mx-auto my-12 md:my-0 md:absolute x-center top-1/4 z-0 ">
+        <div class="hidden md:block w-full md:h-96 mx-auto my-12 md:my-0 top-1/4 z-0 ">
             @include('elements/illustrations/letter-box')
         </div>
     </div>

@@ -14,7 +14,7 @@
         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
       </button>
       <div x-bind:class="openMobileMenu ? '!left-0' : 'left-full'" 
-          class="w-screen fixed transition-all md:static top-0 pt-12 md:pt-0 h-screen md:h-auto md:block md:w-auto bg-blue-dark md:bg-blue z-50 left-full" 
+          class="w-screen fixed transition-all md:static top-0 pt-4 md:pt-0 h-screen md:h-auto md:block md:w-auto bg-blue-dark md:bg-blue z-50 left-full" 
           id="mobile-menu"
       >
       <button @click.prevent="toggleMobileMenu()" type="button" aria-label="Fermer menu" class="absolute top-6 right-8 text-sm text-white rounded-lg md:hidden" aria-controls="mobile-menu" aria-expanded="false">
@@ -75,7 +75,7 @@
             <img src="{{ asset('img/freelance.svg') }}" width="36" height="30" alt="Logo Frellance.com" title="Freelance.com" class="mx-auto">
           </a>
         </div>
-        <div class="h-1/3 mx-auto md:hidden absolute bottom-3 left-1/2 -translate-x-1/2">
+        <div class="h-1/3 mx-auto md:hidden pt-12">
           @include('elements.illustrations.directions')
         </div>
       </div>

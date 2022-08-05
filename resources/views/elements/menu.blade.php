@@ -18,7 +18,7 @@
           id="mobile-menu"
       >
       <button @click.prevent="toggleMobileMenu()" type="button" aria-label="Fermer menu" class="absolute top-6 right-8 text-sm text-white rounded-lg md:hidden" aria-controls="mobile-menu" aria-expanded="false">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       </button>
@@ -64,7 +64,6 @@
             </a>
           </li>
         </ul>
-        <img src="{{ asset('img/illustrations/directions.svg') }}" class="h-1/6 my-12 mx-auto md:hidden" alt="Illustration Navigation" title="Navigation"/>
         <div class="flex align-middle justify-center md:hidden">
           <a href="https://fr.linkedin.com/in/matthieu-dazord" target="_blank" title="Linkedin" class="block py-4 font-bold text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white hover:underline" aria-current="page">
             <img src="{{ asset('img/linkedin.svg') }}" width="30" height="30" alt="Logo Linkedin" title="Linkedin" class="mx-auto">
@@ -75,6 +74,9 @@
           <a href="https://plateforme.freelance.com/freelance/Matthieu-c34713cf-17ba-4a64-8b99-aa21e240582b" target="_blank" title="Freelance.com" class="block py-4 font-bold text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white hover:underline" aria-current="page">
             <img src="{{ asset('img/freelance.svg') }}" width="36" height="30" alt="Logo Frellance.com" title="Freelance.com" class="mx-auto">
           </a>
+        </div>
+        <div class="h-1/3 mx-auto md:hidden absolute bottom-3 left-1/2 -translate-x-1/2">
+          @include('elements.illustrations.directions')
         </div>
       </div>
     </div>

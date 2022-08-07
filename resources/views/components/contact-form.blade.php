@@ -15,7 +15,7 @@
         <textarea placeholder="Message*" name="message" id="message" cols="30" rows="10" class="placeholder-gray-800 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
     </div>
     <div class="flex items-center justify-between">
-        <p class="text-white text-xs">
+        <p x-show="!submitting && !success" class="text-white text-xs">
             * Champs requis
         </p>
         <div>

@@ -3,7 +3,7 @@
 >
     {!! $content !!}
     <div 
-        class="absolute bottom-full hidden flex-col items-center mb-2 group-hover:flex w-[300%] md:w-64 "
+        class="absolute bottom-full hidden flex-col items-center mb-2 group-hover:flex w-[50vw] md:w-64 "
     >
         <div class="relative z-10 px-6 py-4 text-center text-sm leading-4 text-white whitespace-no-wrap bg-[{{ $color }}] shadow-lg">
             <span class="text-left">

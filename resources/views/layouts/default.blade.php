@@ -25,7 +25,7 @@
     @include('elements.structured-data')
     @include('elements.google-analytics')
 </head>
-<body>
+<body class="overflow-x-hiddenn">
     @include('elements.menu')
     @yield('content')
     @include('elements.footer')

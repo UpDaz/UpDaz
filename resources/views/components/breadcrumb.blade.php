@@ -1,4 +1,4 @@
-<div class="flex items-center justify-start gap-2">
+<div class="flex items-center justify-center gap-2">
     <div>
         @include('elements.icons.home')
     </div>

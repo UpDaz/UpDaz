@@ -1,11 +1,16 @@
 @extends('layouts.default')
 
 @section('content')
-    <div class="bg-blue text-white text-center py-16 md:py-20 md:pt-12">
-        <h1 class="font-title text-4xl lg:text-6xl font-bold">Landing pages <br/> & sites vitrine</h1>
-        <h2 class="text-orange text-xl mt-4 mb-8">via Webflow</h2>
-        <div class="container mx-auto text-left">
-            <x-breadcrumb :links="['Webflow' => route('webflow')]" />
+    <div class="relative bg-blue text-white text-center py-16 md:py-20 md:pt-12">
+        <div class="absolute h-full bottom-0 right-[10%] opacity-[15%] rotate-[30deg] z-[100]">
+            @include('elements/illustrations/webflow-header')
+        </div>
+        <div class="relative">
+            <h1 class="font-title text-4xl lg:text-6xl font-bold">Landing pages <br/> & sites vitrine</h1>
+            <h2 class="text-orange text-xl mt-4 mb-8">via Webflow</h2>
+            <div class="container mx-auto text-center text-sm">
+                <x-breadcrumb :links="['Webflow' => route('webflow')]" />
+            </div>
         </div>
     </div>
     <div class="container mx-auto md:py-24">

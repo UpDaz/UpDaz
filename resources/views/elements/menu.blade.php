@@ -33,14 +33,14 @@
               Références
             </a>
           </li>
-          <li>
+          {{-- <li>
             <a href="{{route('home') }}#votre-projet" @click.prevent="scrollToTarget('#votre-projet')" title="Votre projet" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white hover:underline" aria-current="page">
               Votre projet
             </a>
-          </li>
+          </li> --}}
           <li>
-            <a href="{{route('home') }}#services" @click.prevent="scrollToTarget('#services')" title="Mes services" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white hover:underline" aria-current="page">
-              Mes services
+            <a href="{{route('home') }}#offres" @click.prevent="scrollToTarget('#offres')" title="Mes offres" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white hover:underline" aria-current="page">
+              Mes offres
             </a>
           </li>
           <li>

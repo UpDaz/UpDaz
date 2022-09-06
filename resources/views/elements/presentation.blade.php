@@ -9,14 +9,21 @@
             </div>
             <div class="md:col-span-3 z-10 relative pb-16 md:py-24">
                 <p class="font-title bold text-3xl text-orange mb-6">Bienvenue !</p>
-                <p class="text-gray-800">
-                    Je m'appelle <a href="https://fr.linkedin.com/in/matthieu-dazord" target="_blank" class="underline hover:text-orange" title="Linkedin"><b>Matthieu DAZORD</b></a>, je suis développeur full-stack depuis 8 ans sur la région bordelaise.<br/>
-                    J’ai eu la chance de concevoir de nombreuses plateformes web de part mon parcours : sites vitrines, boutiques en ligne, plateforme sur-mesure…<br/>
-                    Cette variété de projets m'a permis de développer un savoir-faire technique que je mets aujourd'hui au service de <a href="#votre-projet" class="underline hover:text-orange" title="votre projet"><b>votre projet !</b></a>
+                <p class="text-gray-800 italic">
+                    Je m'appelle <a href="https://fr.linkedin.com/in/matthieu-dazord" target="_blank" class="underline hover:text-orange" title="Linkedin"><b>Matthieu</b></a>, je suis développeur full-stack depuis 8 ans sur la région bordelaise.<br/>
+                    J’ai eu la chance de concevoir de nombreuses plateformes web de par mon parcours : landing pages, sites vitrines, boutiques en ligne, plateformes sur-mesure…<br/>
+                    Après plusieurs années en agence de communication et en entreprises spécialisées, j'ai développé un <span class="font-bold">savoir-faire technique</span> et une expertise dans les technologies de l'internet.
+                    <br/><br/>
+                    Face à la multitude de possibilités et d'options proposées pour la conception d'un site, je vous accompagne dans votre démarche, qu'il s'agisse de la création ou de l'évolution de votre site internet dans une optique de communication, de vente ou de digitalisation de vos processus métier.
+                    <br/><br/>
+                    Au plaisir de se rencontrer,
+                </p>
+                <p class="text-gray-800 italic text-right mt-2">
+                    M.
                 </p>
                 <div class="mt-6 md:flex items-center gap-4">
                     <a href="#references" @click.prevent="scrollToTarget('#references')" class="block text-center bg-blue hover:bg-blue-dark text-white px-6 py-3 rounded shadow-md mb-4 md:mb-0" title="Mes références">Mes références</a>
-                    <a href="#services" @click.prevent="scrollToTarget('#services')" class="block text-center bg-blue hover:bg-blue-dark text-white px-6 py-3 rounded shadow-md mb-4 md:mb-0" title="Mes services">Mes services</a>
+                    <a href="#services" @click.prevent="scrollToTarget('#offres')" class="block text-center bg-blue hover:bg-blue-dark text-white px-6 py-3 rounded shadow-md mb-4 md:mb-0" title="Mes offres">Mes offres</a>
                     <a href="#contact" @click.prevent="scrollToTarget('#contact')" class="block text-center bg-orange hover:bg-brown text-white px-6 py-3 rounded shadow-md" title="Me contacter">Me contacter</a>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-<div id="contact" class="relative bg-white px-8 md:px-16 py-16 md:py-24 grid md:grid-cols-2 gap-4">
+<div id="contact" class="relative bg-white px-8 md:px-16 py-16 md:py-24 grid md:grid-cols-2 gap-6">
     <div class="container mx-auto relative">
         <div class="z-10">
             <h2 class="text-orange text-4xl mb-6">

@@ -12,9 +12,8 @@
 
                 <x-tooltip color="#FFFFFF">
                     <x-slot:message>
-                        <h3 class="font-text text-base font-bold text-blue-dark text-center w-full">Khassani Swimwear</h3>
-                        <hr class="my-2 opacity-30 "/>
-                        <div class="text-blue-dark leading-8">
+                        <h3 class="px-6 py-4 font-text text-base font-bold bg-blue-dark text-white text-center w-full">Khassani Swimwear</h3>
+                        <div class="px-6 py-4 text-black leading-8">
                             <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Sur-mesure
                             <br/>
                             <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Laravel
@@ -31,9 +30,9 @@
 
                 <x-tooltip color="#FFFFFF">
                     <x-slot:message>
-                        <h3 class="font-text text-base font-bold text-blue-dark text-center w-full">Neorev</h3>
-                        <hr class="my-2 opacity-30"/>
-                        <div class="text-blue-dark leading-8">
+                        <h3 class="px-6 py-4 font-text text-base font-bold bg-blue-dark text-white text-center w-full">Neorev</h3>
+                        
+                        <div class="px-6 py-4 text-black leading-8">
                             <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> CMS
                             <br/>
                             <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Prestashop
@@ -50,9 +49,9 @@
 
                 <x-tooltip color="#FFFFFF">
                     <x-slot:message>
-                        <h3 class="font-text text-base font-bold text-blue-dark text-center w-full">Artecosy</h3>
-                        <hr class="my-2 opacity-30"/>
-                        <div class="text-blue-dark leading-8">
+                        <h3 class="px-6 py-4 font-text text-base font-bold bg-blue-dark text-white text-center w-full">Artecosy</h3>
+                        
+                        <div class="px-6 py-4 text-black leading-8">
                             <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> CMS
                             <br/>
                             <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Prestashop
@@ -69,9 +68,9 @@
                 
                 <x-tooltip color="#FFFFFF">
                     <x-slot:message>
-                        <h3 class="font-text text-base font-bold text-blue-dark text-center w-full">Pôle Axelera</h3>
-                        <hr class="my-2 opacity-30"/>
-                        <div class="text-blue-dark leading-8">
+                        <h3 class="px-6 py-4 font-text text-base font-bold bg-blue-dark text-white text-center w-full">Pôle Axelera</h3>
+                        
+                        <div class="px-6 py-4 text-black leading-8">
                             <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Sur-mesure
                             <br/>
                             <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> CRM - Vitrine - Blog
@@ -86,9 +85,9 @@
 
                 <x-tooltip color="#FFFFFF">
                     <x-slot:message>
-                        <h3 class="font-text text-base font-bold text-blue-dark text-center w-full">Maison Aubertin</h3>
-                        <hr class="my-2 opacity-30"/>
-                        <div class="text-blue-dark leading-8">
+                        <h3 class="px-6 py-4 font-text text-base font-bold bg-blue-dark text-white text-center w-full">Maison Aubertin</h3>
+                        
+                        <div class="px-6 py-4 text-black leading-8">
                             <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> CMS
                             <br/>
                             <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Prestashop
@@ -105,9 +104,9 @@
 
                 <x-tooltip color="#FFFFFF">
                     <x-slot:message>
-                        <h3 class="font-text text-base font-bold text-blue-dark text-center w-full">Popsgym</h3>
-                        <hr class="my-2 opacity-30"/>
-                        <div class="text-blue-dark leading-8">
+                        <h3 class="px-6 py-4 font-text text-base font-bold bg-blue-dark text-white text-center w-full">Popsgym</h3>
+                        
+                        <div class="px-6 py-4 text-black leading-8">
                             <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Sur-mesure
                             <br/>
                             <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Laravel
@@ -124,9 +123,9 @@
 
                 <x-tooltip color="#FFFFFF">
                     <x-slot:message>
-                        <h3 class="font-text text-base font-bold text-blue-dark text-center w-full">SBFM Grillage</h3>
-                        <hr class="my-2 opacity-30"/>
-                        <div class="text-blue-dark leading-8">
+                        <h3 class="px-6 py-4 font-text text-base font-bold bg-blue-dark text-white text-center w-full">SBFM Grillage</h3>
+                        
+                        <div class="px-6 py-4 text-black leading-8">
                             <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Sur-mesure
                             <br/>
                             <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Laravel
@@ -143,9 +142,9 @@
 
                 <x-tooltip color="#FFFFFF">
                     <x-slot:message>
-                        <h3 class="font-text text-base font-bold text-blue-dark text-center w-full">Pôle Avenia</h3>
-                        <hr class="my-2 opacity-30"/>
-                        <div class="text-blue-dark leading-8">
+                        <h3 class="px-6 py-4 font-text text-base font-bold bg-blue-dark text-white text-center w-full">Pôle Avenia</h3>
+                        
+                        <div class="px-6 py-4 text-black leading-8">
                             <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Sur-mesure
                             <br/>
                             <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> CRM - Vitrine - Blog
@@ -173,9 +172,9 @@
 
                 <x-tooltip color="#FFFFFF">
                     <x-slot:message>
-                        <h3 class="font-text text-base font-bold text-blue-dark text-center w-full">Blooming Ladies</h3>
-                        <hr class="my-2 opacity-30"/>
-                        <div class="text-blue-dark leading-8">
+                        <h3 class="px-6 py-4 font-text text-base font-bold bg-blue-dark text-white text-center w-full">Blooming Ladies</h3>
+                        
+                        <div class="px-6 py-4 text-black leading-8">
                             <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Sur-mesure
                             <br/>
                             <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Laravel
@@ -192,9 +191,9 @@
 
                 <x-tooltip color="#FFFFFF">
                     <x-slot:message>
-                        <h3 class="font-text text-base font-bold text-blue-dark text-center w-full">KAZoART Pro</h3>
-                        <hr class="my-2 opacity-30"/>
-                        <div class="text-blue-dark leading-8">
+                        <h3 class="px-6 py-4 font-text text-base font-bold bg-blue-dark text-white text-center w-full">KAZoART Pro</h3>
+                        
+                        <div class="px-6 py-4 text-black leading-8">
                             <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Sur-mesure
                             <br/>
                             <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Laravel

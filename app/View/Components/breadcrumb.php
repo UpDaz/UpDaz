@@ -4,19 +4,25 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class Tooltip extends Component
+class breadcrumb extends Component
 {
-    public $color;
-    public $displayIcon;
+    /**
+     * The additional links.
+     *
+     * @var array
+     */
+
+    public $links = [];
+
     /**
      * Create a new component instance.
      *
+     * @param  array  $links
      * @return void
      */
-    public function __construct($color="#000000", $displayIcon = true)
+    public function __construct($links)
     {
-        $this->color = $color;
-        $this->displayIcon = $displayIcon;
+        $this->links = $links;
     }
 
     /**
@@ -26,6 +32,6 @@ class Tooltip extends Component
      */
     public function render()
     {
-        return view('components.tooltip');
+        return view('components.breadcrumb');
     }
 }

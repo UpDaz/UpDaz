@@ -16,3 +16,5 @@ yarn-error.log
 /_preprod
 .DS_Store
 */.DS_Store
+
+storage/debugbar/*

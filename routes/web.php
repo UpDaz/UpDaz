@@ -18,5 +18,9 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::get('/webflow', function () {
+    return view('pages.webflow');
+})->name('webflow');
+
 
 Route::post('/contact', [ContactController::class, 'send'])->name('contact');

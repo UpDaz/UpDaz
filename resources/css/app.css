@@ -2,37 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
-    font-family: "Outfit";
-    src: url("../../public/fonts/Outfit-Bold.ttf");
-} */
-
-/* @font-face {
-    font-family: "Roboto";
-    font-weight: bold;
-    src: url("../../public/fonts/Roboto-Bold.ttf");
-}
-
-@font-face {
-    font-family: "Roboto";
-    font-weight: normal;
-    src: url("../../public/fonts/Roboto-Regular.ttf");
-}
-
-@font-face {
-    font-family: "Roboto";
-    font-weight: normal;
-    font-style: italic;
-    src: url("../../public/fonts/Roboto-Italic.ttf");
-}
-
-@font-face {
-    font-family: "Roboto";
-    font-weight: bold;
-    font-style: italic;
-    src: url("../../public/fonts/Roboto-BoldItalic.ttf");
-} */
-
 @layer base {
     html {
       font-family: 'Roboto', system-ui, sans-serif;
@@ -51,11 +20,7 @@ hr{
     margin: 3rem auto;
 }
 
-.grecaptcha-badge{
-    display: none !important;
-}
-
-/* .x-center{
+.x-center{
     left: 50%;
     transform: translateX(-50%);
 }
@@ -71,40 +36,9 @@ hr{
     transform: translate(-50%, -50%);
 }
 
-@media (min-width: 768px){
-    .md\:x-center{
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    
-    .md\:y-center{
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    
-    .md\:x-center.md\:y-center{
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .md\:x-auto{
-        left: inherit;
-        transform: translateX(0);
-    }
-
-    .md\:y-auto{
-        top: inherit;
-        transform: translateY(0%);
-    }
-
-    .md\:x-auto.md\:y-auto{
-        top: inherit;
-        left: inherit;
-        transform: translate(0, 0);
-    }
-} */
-
+.grecaptcha-badge{
+    display: none !important;
+}
 
 /* CURSOR */
 *{
@@ -121,5 +55,19 @@ a, a *,
 button, button *{
     cursor: url("/img/cursors/hand.svg") 10 10, auto !important;
 }
+
+/* .overlay{
+    position: relative;
+}
+.overlay:after{
+    content:"";
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    width: 100%;
+    height: 100%;
+    background: #1940FF;
+    opacity: 0.24;
+} */
 
 @import "animate-svg";

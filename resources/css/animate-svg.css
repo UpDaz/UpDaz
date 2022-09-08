@@ -83,7 +83,7 @@ svg .rotate-flag{
     transform-box: fill-box;
     -webkit-animation: rotate-flag 4s infinite ease-out; 
     animation: rotate-flag 4s infinite ease-out;
-    transform-origin: 10px calc(100% - 8px);
+    transform-origin: bottom right;
 }
 
 @keyframes rotate-flag {

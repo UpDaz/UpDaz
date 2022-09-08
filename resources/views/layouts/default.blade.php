@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <title>UpDaz - Développeur web sénior à Bordeaux</title>
-    <meta name="description" content="Créateur de sites internet sur mesure (Laravel) et clé en main (Prestashop, Wordpress), je propose mon expertise pour vous accompagner dans vos projets web."/>
-    <meta name="keywords" content="Développeur web, Bordeaux, freelance, site internet, Laravel, Prestashop, CMS, Wordpress, accompagnement, HTML, CSS, JavaScript, SEO, conseils"/>
+    <title>
+        @yield('title', 'UpDaz - Développeur web sénior à Bordeaux')
+    </title>
+    <meta name="description" content="
+    @yield('meta-description', 'Créateur de sites internet landing page et site vitrine via Webflow, sur-mesure avec Laravel et e-commerce Prestashop, je vous accompagne dans votre démarche de communication et de digitalisation.')"/>
+    <meta name="keywords" content="Développeur web, Bordeaux, freelance, site internet, Laravel, Prestashop, CMS, Webflow, accompagnement, HTML, CSS, JavaScript, SEO, conseils"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="robots" content="index,follow" />
     <meta name="author" content="Matthieu Dazord"/>

@@ -1,6 +1,8 @@
 <div class="flex items-center justify-center gap-2">
     <div>
-        @include('elements.icons.home')
+        <a href="{{ route('home') }}">
+            @include('elements.icons.home')
+        </a>
     </div>
     @foreach($links as $label => $link)
         <div>

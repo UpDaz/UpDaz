@@ -19,7 +19,7 @@
                                     </x-slot>
                                     <x-slot:content>
                                         <span class="flex hover:cursor-pointer">
-                                            <i>framework</i> @include('elements.icons.question')
+                                            <i>framework</i>
                                         </span>
                                     </x-slot>
                                 </x-tooltip>
@@ -39,19 +39,18 @@
                     <li class="flex items-center mb-6 md:mb-4">
                         <img src="{{ asset('img/illustrations/check-rounded.svg') }}" class="mr-3" width="25" height="25" alt="Illustration picto check" title="Check"/>
                         <div>
-                            Optimisation du référencement naturel 
-                            <div class="mx-1 inline-block">
+                            Optimisation du référencement naturel (
                                 <x-tooltip color="#001A9E">
                                     <x-slot:message>
                                         Search Engine Optimization ou Optimisation pour les moteurs de recherche
                                     </x-slot>
                                     <x-slot:content>
                                         <span class="flex hover:cursor-pointer">
-                                            (<i>SEO</i> @include('elements.icons.question'))
+                                            <i>SEO</i>
                                         </span>
                                     </x-slot>
                                 </x-tooltip>
-                            </div>
+                            )
                         </div>
                     </li>
                     <li class="flex items-center mb-6 md:mb-4">
@@ -82,7 +81,7 @@
                                     </x-slot>
                                     <x-slot:content>
                                         <span class="flex hover:cursor-pointer">
-                                            <i>Agile</i> @include('elements.icons.question')
+                                            <i>Agile</i>
                                         </span>
                                     </x-slot>
                                 </x-tooltip>

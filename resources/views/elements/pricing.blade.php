@@ -1,5 +1,5 @@
 <div id="offres" class="px-8 md:px-16 py-16 md:py-24 bg-blue-dark min-h-screen">
-        <div class="grid grid-cols-3 gap-6 align-top justify-between ">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 align-top justify-center md:justify-between ">
             <div class="relative w-full text-center bg-white border-orange border-8 px-4 py-8">
                 <h2 class="text-orange text-xl">
                     Landing-page
@@ -13,9 +13,9 @@
                     1 000€
                 </h3>
                 <div class="flex justify-center mb-8">
-                    <ul class="flex justify-start flex-col px-4 py-8">
+                    <ul class="flex justify-start flex-col px-4 py-8 text-left">
                         <li class="flex items-center mb-6 md:mb-4">
-                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-3" width="25" height="25" alt="Illustration picto check" title="Check"/>
+                           @include('elements.icons.check')
                             Technologie&nbsp;
                             <a target="_blank" href="https://webflow.com/" class="flex items-center gap-1">
                                 Webflow
@@ -23,38 +23,34 @@
                             </a>
                         </li>
                         <li class="flex items-center mb-6 md:mb-4">
-                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-3" width="25" height="25" alt="Illustration picto check" title="Check"/>
+                           @include('elements.icons.check')
                             Design personnalisable
                         </li>
                         <li class="flex items-center mb-6 md:mb-4">
-                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-3" width="25" height="25" alt="Illustration picto check" title="Check"/>
+                           @include('elements.icons.check')
                             Édition du contenu (CMS)
                         </li>
                         <li class="flex items-center mb-6 md:mb-4">
-                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-3" width="25" height="25" alt="Illustration picto check" title="Check"/>
+                           @include('elements.icons.check')
                             Prise en main simplifiée
                         </li>
                         <li class="flex items-center mb-6 md:mb-4">
-                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-3" width="25" height="25" alt="Illustration picto check" title="Check"/>
+                           @include('elements.icons.check')
                             Site léger et rapide
                         </li>
                         <li class="flex items-center mb-6 md:mb-4">
-                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-3" width="25" height="25" alt="Illustration picto check" title="Check"/>
+                           @include('elements.icons.check')
                             Hébergement intégré sécurisé
                         </li>
                         <li class="flex items-center mb-6 md:mb-4">
-                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-3" width="25" height="25" alt="Illustration picto check" title="Check"/>
+                           @include('elements.icons.check')
                             Optimisation&nbsp;
                             <x-tooltip color="#001A9E">
                                 <x-slot:message>
-                                    <div class="px-6 py-4 leading-4">
-                                        Search Engine Optimization ou Optimisation pour les moteurs de recherche (Google)
-                                    </div>
+                                    Search Engine Optimization ou Optimisation pour les moteurs de recherche (Google)
                                 </x-slot>
                                 <x-slot:content>
-                                    <span class="flex hover:cursor-pointer">
-                                        <i>SEO</i> @include('elements.icons.question')
-                                    </span>
+                                    <i>SEO</i>
                                 </x-slot>
                             </x-tooltip>
                         </li>
@@ -81,7 +77,7 @@
                 <div class="flex justify-center mb-8">
                     <ul class="flex justify-start flex-col px-4 py-8">
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-3" width="25" height="25" alt="Illustration picto check" title="Check"/>
+                           @include('elements.icons.check')
                             CMS&nbsp;
                             <a href="https://www.prestashop.com/fr" target="_blank" class="flex items-center gap-1">
                                 Prestashop
@@ -89,48 +85,44 @@
                             </a>
                         </li>
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-3" width="25" height="25" alt="Illustration picto check" title="Check"/>
+                           @include('elements.icons.check')
                             Aucun frais de transaction
                         </li>
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-3" width="25" height="25" alt="Illustration picto check" title="Check"/>
+                           @include('elements.icons.check')
                             Gestion des produits et des commandes clé-en-main
                         </li>
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-3" width="25" height="25" alt="Illustration picto check" title="Check"/>
+                           @include('elements.icons.check')
                             <div>
                                 Processus de commande en 3 étapes<br/>ou 
-                                <div class="mx-1 inline-block">  
-                                    <x-tooltip color="#001A9E">
-                                        <x-slot:message>
-                                            <div class="px-6 py-4 leading-4">
-                                                L'ensemble du processus de commande (information client, choix du transporter et du mode de paiement) se fait sur une seule page
-                                            </div>
-                                        </x-slot>
-                                        <x-slot:content>
-                                            <span class="flex hover:cursor-pointer">
-                                                <i>OnePage Checkout</i> @include('elements.icons.question')
-                                            </span>
-                                        </x-slot>
-                                    </x-tooltip>
-                                </div>
+                                <x-tooltip color="#001A9E">
+                                    <x-slot:message>
+                                        L'ensemble du processus de commande (information client, choix du transporter et du mode de paiement) se fait sur une seule page
+                                    </x-slot>
+                                    <x-slot:content>
+                                        <i>OnePage Checkout</i>
+                                    </x-slot>
+                                </x-tooltip>
                             </div>
                         </li>
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-3" width="25" height="25" alt="Illustration picto check" title="Check"/>
+                           @include('elements.icons.check')
                             Interface d'administration intégrée
                         </li>
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-3" width="25" height="25" alt="Illustration picto check" title="Check"/>
+                           @include('elements.icons.check')
                             Catalogue de thèmes et d'extensions mis à jour régulièrement
                         </li>
                     </ul>
                 </div>
+                @if (false)
                 <div class="absolute bottom-8 left-0 w-full text-center">
                     <a href="#" class="inline-block bg-blue hover:bg-blue-dark text-white px-6 py-3 rounded shadow-md mb-4 md:mb-0">
                         En savoir plus
                     </a>
                 </div>
+                @endif
             </div>
             <div class="relative w-full text-center bg-white border-orange border-8 px-4 py-8">
                 <h2 class="text-orange text-xl">
@@ -144,67 +136,57 @@
                 <div class="flex justify-center mb-8">
                     <ul class="flex justify-start flex-col px-4 py-8">
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-3" width="25" height="25" alt="Illustration picto check" title="Check"/>
-                            <div class="mr-1 inline-block">  
-                                <x-tooltip color="#001A9E">
-                                    <x-slot:message>
-                                        <div class="px-6 py-4 leading-4">
-                                            Boite à outils servant aux développeurs à créer des sites sur-mesure
-                                        </div>
-                                    </x-slot>
-                                    <x-slot:content>
-                                        <span class="flex hover:cursor-pointer">
-                                        <i>Framework</i> @include('elements.icons.question')
-                                        </span>
-                                    </x-slot>
-                                </x-tooltip>
-                            </div> 
+                           @include('elements.icons.check')
+                            <x-tooltip color="#001A9E">
+                                <x-slot:message>
+                                    Boite à outils servant aux développeurs à créer des sites sur-mesure
+                                </x-slot>
+                                <x-slot:content>
+                                    <i>Framework</i>
+                                </x-slot>
+                            </x-tooltip>
                             Laravel
                         </li>
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-3" width="25" height="25" alt="Illustration picto check" title="Check"/>
+                           @include('elements.icons.check')
                             Digitalisation de vos processus métier
                         </li>
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-3" width="25" height="25" alt="Illustration picto check" title="Check"/>
+                           @include('elements.icons.check')
                             Architecture robuste et sécurisée
                         </li>
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-3" width="25" height="25" alt="Illustration picto check" title="Check"/>
+                           @include('elements.icons.check')
                             Performances accrues
                         </li>
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-3" width="25" height="25" alt="Illustration picto check" title="Check"/>
-                            <div class="mx-1 inline-block">  
-                                <x-tooltip color="#001A9E">
-                                    <x-slot:message>
-                                        <div class="px-6 py-4 leading-4">
-                                            Terme désignant une application conçue pour être extensible et répondre à des besoins spécifiques.
-                                        </div>
-                                    </x-slot>
-                                    <x-slot:content>
-                                        <span class="flex hover:cursor-pointer">
-                                            <i>Scalable</i> @include('elements.icons.question')
-                                        </span>
-                                    </x-slot>
-                                </x-tooltip>
-                            </div>
+                           @include('elements.icons.check')
+                            <x-tooltip color="#001A9E">
+                            <x-slot:message>
+                                Terme désignant une application conçue pour être extensible et répondre à des besoins spécifiques.
+                            </x-slot>
+                            <x-slot:content>
+                                <i>Scalable</i>
+                            </x-slot>
+                        </x-tooltip>
                         </li>
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-3" width="25" height="25" alt="Illustration picto check" title="Check"/>
+                           @include('elements.icons.check')
                             Écosystème poussé
                         </li>
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                            <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-3" width="25" height="25" alt="Illustration picto check" title="Check"/>
+                           @include('elements.icons.check')
                             Mises à jour régulières de la technologie
                         </li>
                     </ul>
                 </div>
+                @if (false)
                 <div class="absolute bottom-8 left-0 w-full text-center">
                     <a href="#" class="inline-block bg-blue hover:bg-blue-dark text-white px-6 py-3 rounded shadow-md mb-4 md:mb-0">
                         En savoir plus
                     </a>
                 </div>
+                @endif
             </div>
         </div>
     </div>

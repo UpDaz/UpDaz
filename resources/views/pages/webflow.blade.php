@@ -1,8 +1,12 @@
 @extends('layouts.default')
 
+@section('title')
+    Offres landing page & sites vitrines - Webflow - UpDaz
+@endsection
+
 @section('content')
     <div class="relative bg-blue text-white text-center py-16 md:py-20 md:pt-12">
-        <div class="absolute h-full bottom-0 right-[10%] opacity-[15%] rotate-[30deg] z-[100]">
+        <div class="absolute h-full bottom-0 right-[10%] opacity-[15%] rotate-[30deg]">
             @include('elements/illustrations/webflow-header')
         </div>
         <div class="relative">
@@ -13,30 +17,187 @@
             </div>
         </div>
     </div>
-    <div class="container mx-auto md:py-24">
-        <h3 id="02ff30ee-4d03-4fe8-90aa-8adaf28461c8" class="">Présentation</h3>
-        <p id="337638ac-f4de-4ce9-b72d-36421ae823d8" class="">Webflow est une plateforme de création de site internet et de gestion de contenu (CMS) en ligne. 
-            Sa particularité est de proposer une expérience “no-code” : la construction de votre site ne nécessite pas de compétences particulières (en théorie), l’ensemble se faisant via une interface graphique.</p><p id="0566e452-202e-4ce3-ae4a-5daac4159e6a" class="">La plateforme propose différentes offres de la plus basique (un site gratuit) sans fonctionnalités poussées mais avec de nombreuses limitations) à la plus poussée (boutique en ligne et enregistrement CMS). </p><p id="76a946bd-1f3f-43df-8c28-b63b198c370f" class="">Fort d’une communauté active, la plateforme propose de nombreux thèmes et  UI Kits (packs d’éléments graphiques à utiliser pour construire son site) pouvant service de base de travail.</p><p id="54c37801-ce8c-4365-9177-1ee1b7b549ef" class="">
+    <div class="container px-8 py-12 mx-auto md:py-24">
+        <h3 class="text-2xl text-orange mb-4">
+            Présentation
+        </h3>
+        <p class="mb-2">
+            Webflow est une plateforme de création de site internet et de gestion de contenu (CMS) en ligne.
+            <br/>
+            Lancée en 2013 afin de répondre aux problématiques de qualité de site proposés par les plateformes type Wix et de complexité de prise en main des CMS type Wordpress. Webflow se veut <span class="font-bold">intuitif, flexible et performant</span>.
         </p>
-        <p id="b158049d-e6f1-494f-a7d3-62269e058cee" class="">En plus de la création graphique de votre site, la plateforme s’occupe de l’hébergement et de l’accès à votre site.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="79948f15-202a-40c8-9624-f3c5fe53d2e1"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">L’accès au site se fait via une URL (ex: www.updaz.fr).
-            Dans sa version Starter, Webflow impose un format d’URL pour accéder au site (ex: updaz.webflow.io), pour obtenir une URL personnalisée, il est nécessaire de souscrire à une offre payante.
-            Pour plus d’informations : <a href="https://webflow.com/pricing">https://webflow.com/pricing</a></div></figure><p id="9b9dfc21-a386-49bf-9caf-d700e3e2b0f0" class="">
+        <p class="mb-2">
+            Sa particularité est de proposer une <span class="font-bold">expérience “no-code”</span> : la construction de votre site ne nécessite pas de connaissances poussées dans le développement web.
+        <br/>
+            Proposant une interface similaire aux logiciels de la suite Adobe (Illustrator, Photoshop, etc), les différents éléments du site se mettent en place via un système de 
+            <x-tooltip color="#001A9E">
+                <x-slot:message>
+                    <span class="block p-6">
+                        Utilisation du glisser-déposer en utilisant la souris de votre ordinateur.
+                    </span>
+                </x-slot>
+                <x-slot:content>
+                    <i>drag-and-drop</i>
+                </x-slot>
+            </x-tooltip>
+            .
+        <br/>
+            Chaque élément peut être par la suite personnalisé en agissant sur ses caractéristiques.
         </p>
-        <h3 id="c8c96c22-0413-4e75-a0e8-3989bf6854f4" class="">Quelle utilisation ?</h3>
-        <p id="a17111c7-1a65-4b64-8899-794420feaedd" class="">3 types de sites sont proposés par la plateforme : </p>
-        <ul id="1f07dbb8-ba3f-439b-a922-370588388d85" class="bulleted-list">
-            <li style="list-style-type:disc">Site vitrine</li>
-        </ul><ul id="91668b08-afea-4b82-bc63-c35858120cce" class="bulleted-list">
-            <li style="list-style-type:disc">Site avec enregistrements CMS</li></ul><ul id="03d4c386-bf63-4c9d-a044-a0ad2b379bf5" class="bulleted-list"><li style="list-style-type:disc">Site E-commerce</li></ul><hr id="b264246c-af71-4522-aaab-4a706c3f5062"/><p id="dd258edf-e47b-43fd-a632-a79d7391ef1a" class="">Le site vitrine correspond à un site dans sa version la plus simple : un ensemble de pages est créé (accueil, présentation de l’équipe, contact, etc) sur lequel du contenu est ajouté (textes, images) et personnalisé avant d’être mis en ligne.
-            De base Webflow propose d’intégrer des formulaires (dont la principale utilisation sera le formulaire de contact) qu’il est possible personnaliser en ajoutant différents champs.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="eba8c343-0a57-4c12-a3d0-85cd11d4e3fd"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">En fonction de l’offre souscrite auprès de Webflow, des limitations sont mise en place. 
-            Dans sa version la plus standard le formulaire ne peut être soumis que 50 fois en tout et pour tout.
-            Pour plus d’informations : <a href="https://webflow.com/pricing">https://webflow.com/pricing</a></div></figure><p id="bd7e66e6-30f7-4561-8035-bc35042e84f8" class="">Ce type de site est parfaitement adapté pour vous accompagner au démarrage de votre projet, vous permettant d’accéder à un outils de communication puissant et accessible.</p><hr id="c05f59c7-ce77-4962-9213-de7150e181f6"/><p id="4e35214c-865f-4c3e-a63d-857e437a1fe3" class="">La version avec enregistrement CMS permet d’ajouter un système de base de données simplifié. 
-            Ces enregistrement peuvent être appelés et affichés de différentes manière sur le site. Par exemple si votre site propose une section blog, il est possible définir des articles (illustration, texte d’introduction et contenu) qui seront appelés sous forme de vignettes sur la pages d’accueil (illustration et texte d’introduction) et posséderont en plus une page dédiées (illustration, texte d’introduction et contenu. Les textes de l’article et son image sont centralisé dans une enregistrement CMS qui est réutilisé lorsque nécessaire évitant d’avoir à dupliquer manuellement du contenu à plusieurs endroit sur le site.</p><p id="e149d83d-b68e-4279-819c-63c37bb546c4" class="">Cette fonctionnalité permet d’optimiser les informations du site ainsi que leur gestion.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="bb35cca4-1a27-4905-ac30-512bb0c77755"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">En fonction de l’offre souscrite, le nombre d’enregistrement CMS est plus ou moins limité.</div></figure><hr id="ee64e915-1f18-4608-baec-712c26ca3eb6"/><p id="305a6c03-5fda-4608-b3bb-2aa31fb292ad" class="">Pour les sites E-commerce, Webflow propose un système simplifié pour les gestion des produits, ainsi qu’une commission à la vente (2% pour l’offre la plus attractive). </p><h3 id="654e9a00-5d6c-4c60-a457-582bb9e7ff4d" class="">Mon accompagnement</h3><p id="7bd17e1b-61f8-4ef0-990a-69121c2f31a0" class="">Bien que Webflow propose une approche simplifiée, il est important de comprendre que votre site fonctionnera de la même manière que n’importe quelle autre site et sera régis par les mêmes règles et contraintes. 
-            Sans connaissances dans la création de site internet (que ce soit pour la partie graphique qui impact l’expérience utilisateur, le respect des règles SEO pour améliorer votre positionnement dans les résultats de Google ou la programmation pour optimiser vos enregistrements CMS), il est difficile et chronophage d’obtenir un résultat en adéquation avec vos attentes.</p><p id="c0ebf961-cdc5-4c9e-a6ef-45eb71e22c4e" class="">
+        <div class="my-8">
+            <img class="block w-full max-w-screen-md mx-auto" src="{{ asset('img/screenshoots/webflow-interface.png') }}" width="768" height="423" alt="Exemple interface Webflow" title="Interface Webflow" loading="lazy"/>
+            <p class="text-center text-sm italic mt-2">
+                Interface Webflow
+            </p>
+        </div>
+        <p class="mb-2">
+            La plateforme propose une approche
+            <x-tooltip color="#001A9E">
+                <x-slot:message>
+                    <span class="block p-6">
+                        Solution As A Service
+                    </span>
+                </x-slot>
+                <x-slot:content>
+                    <i>SaaS</i>
+                </x-slot>
+            </x-tooltip>
+            avec différentes offres, de la plus basique (et gratuite) permettant d’accéder à la plupart des fonctionnalités en version limitée, à la plus poussée (boutique en ligne et enregistrements CMS).
+        <p>
+        <p class="mb-2"> 
+            Webflow propose de <span class="font-bold">nombreux thèmes et UI Kits</span> (packs d’éléments graphiques à utiliser pour construire son site) pouvant servir de base de travail. 
+            <br>
+            Régulièrement mis à jour et classés par thématiques, ils servent de base à la conception de votre site pour <span class="font-bold">un rendu moderne et dynamique</span>.
         </p>
-        <p id="1623502c-695a-4b65-881f-22e2308e45f1" class="">Je vous propose donc d’échanger sur votre demande, pour trouver une offre correspondant à vos besoin avec un accompagnement sur mesure.</p><p id="4830e05c-af7c-4c15-80ee-93d50091565b" class="">
+        <p class="mb-2"> 
+            En plus de la création graphique de votre site, la plateforme s’occupe de l’hébergement et de l’accès à votre site (via les services de cloud computing Amazone Web Service).
+            <br/>
+            Il est cependant possible d’exporter le code généré par Webflow afin de l’héberger et de l’utiliser pour une version plus poussée de votre application.
         </p>
-        <p id="b5975bbd-58b1-43b5-b4a3-60db561e9abb" class="">Cout : 1000€ création site sur une base thème pages avec optimisations UX et SEO + Cout des options Webflow souscrites</p><ul id="684cecf4-de47-4b66-8f35-1cb8236c4328" class="bulleted-list"><li style="list-style-type:disc">500€ par gestion des enregistrements CMS</li></ul><p id="0274ce48-05f7-490e-8d6b-b3470c00d35f" class="">
+        <div class="mt-8">
+            <x-tips>
+                <x-slot:content>
+                    <p>
+                        L’accès au site se fait via une URL (ex: www.updaz.fr).
+                        <br/>
+                        Dans sa version Starter, Webflow impose un format d’URL pour accéder au site (ex: updaz.webflow.io), pour obtenir une URL personnalisée, il est nécessaire de souscrire à une offre payante.
+                        <br/>
+                        Pour plus d’informations : <a href="https://webflow.com/pricing" target="_blank" class="underline">https://webflow.com/pricing</a>
+                    </p>
+                </x-slot>
+            </x-tips>
+        </div>
+        <h3 class="text-2xl text-orange mb-4 mt-16">
+            Quelle utilisation ?
+        </h3>
+        <p>
+            3 typologies de sites sont possibles sur Webflow : <br/>
+            <ul>
+                <li>- Landing page & site vitrine</li>
+                <li>- Site avec enregistrements CMS</li>
+                <li>- Site E-commerce</li>
+            </ul>
         </p>
+        <h4 class="text-lg text-blue-dark mb-2 mt-8">
+            Landing page & site vitrine
+        </h4>
+        <div class="lg:columns-2 gap-16">
+            <p>
+                Les sites sous forme de 
+                <x-tooltip color="#001A9E">
+                    <x-slot:message>
+                        <span class="block p-6">
+                            Site composé d'une page unique
+                        </span>
+                    </x-slot>
+                    <x-slot:content>
+                        <i>landing page</i>
+                    </x-slot>
+                </x-tooltip>
+                ou les
+                <x-tooltip color="#001A9E">
+                    <x-slot:message>
+                        <span class="block p-6">
+                            Site composé de plusieurs pages de le contenu est statique.
+                        </span>
+                    </x-slot>
+                    <x-slot:content>
+                        <i>sites vitrines</i>
+                    </x-slot>
+                </x-tooltip>
+                correspondent aux sites dans leur version la plus simple : le contenu est ajouté (textes, images) et personnalisé avant d’être mis en ligne de manière statique (le contenu n’est pas géré et mis à jour de manière automatique).
+                <br/>
+                Dans sa version de base Webflow propose d’intégrer des formulaires (dont la principale utilisation reste le formulaire de contact) qu’il est possible personnaliser en ajoutant des champs supplémentaires.
+            </p>
+            <div class="mt-8 mb-8">
+                <x-tips>
+                    <x-slot:content>
+                        <p>
+                            En fonction de l’offre souscrite auprès de Webflow, des limitations sont mise en place.
+                            <br/>
+                            Dans sa version la plus standard le formulaire ne peut être soumis que 50 fois en tout et pour tout.
+                            <br/>
+                            Pour plus d’informations : <a href="https://webflow.com/pricing" target="_blank" class="underline">https://webflow.com/pricing</a>
+                        </p>
+                    </x-slot>
+                </x-tips>
+            </div>
+        </div>
+        <h4 class="text-lg text-blue-dark mb-2 mt-8">
+            Enregistrements CMS
+        </h4>
+        <p class="mb-2">
+            L’utilisation des enregistrements CMS permets de <span class="font-bold">définir des collections</span> (composés d’un ou plusieurs items) simulant le comportant d’une base de données afin d’y enregistrer du contenu de manière dynamique.
+            <br/>
+            Une fois les différents champs qui composent un item définis, il sera alors possible de générer un ensemble cohérents d’<span class="font-bold">items basés sur le même model</span> et qui composeront la collection.
+        </p>
+        <p class="mb-2">
+            Ces enregistrements peuvent être appelés et affichés de différentes manières sur le site. 
+            <br/>
+            Par exemple si votre site propose une section blog, il est possible de définir des articles composés d’une illustration, d’un texte de présentation et d’un texte pour le corps de l’article. Les articles pourront être affiché sous forme de vignettes sur la pages d’accueil (on demandera alors à afficher l’illustration et le texte de présentation) de manière automatique sans avoir besoin de recopier un à un chaque article.
+        </p>
+        <p>
+            Cette fonctionnalité permet d’optimiser la centralisation des informations du site ainsi que de faciliter leur gestion au fur et à mesure que votre site prend de l’ampleur.
+            <br/>
+            Il sera de plus possible d'y appliquer des comportements spécifiques tels que la <span class="font-bold">gestion de l'ordre d'affichage</span> ou <span class="font-bold">le filtrage par catégorie</span>.
+            <br/>
+            De plus, les enregistrements CMS peuvent être <span class="font-bold">importés via un fichier CSV ou l’API CMS</span>.
+        </p>
+        <div class="mt-6 mb-10">
+            <x-tips>
+                <x-slot:content>
+                    <p>
+                        En fonction de l’offre souscrite, le nombre d’enregistrement CMS est plus ou moins limité.
+                        <br/>
+                        De plus l'ajout de fonctionnalités spécifiques sur les collections (filtrage, ordre, etc) nécessite dans la plupart des cas l'accès à l'option "code personnalisé", uniquement accessible via une offre payante.
+                    </p>
+                </x-slot>
+            </x-tips>
+        </div>
+        <h4 class="text-lg text-blue-dark mb-2 mt-8">
+            Sites e-commerce
+        </h4>
+        <p>
+            Pour les boutiques en ligne, Webflow propose un système simplifié pour la gestion des produits mais impose une commission à la vente (2% du montant de chaque vente pour l’offre la plus attractive). 
+        </p>
+        <h3 class="text-2xl text-orange mb-4 mt-16">
+            Mon accompagnement
+        </h3>
+        <p>
+            À première vue Webflow propose une approche simplifiée et accessible à tous.
+            <br/>
+            Il est cependant important de comprendre que votre site sera régis par les mêmes règles, codes et contraintes lors de sa conception.
+            <br/>
+            Sans connaissances dans la création de site internet (que ce soit pour la partie graphique qui impact l’expérience utilisateur, le respect des règles SEO pour améliorer votre positionnement dans les résultats de Google ou la programmation pour optimiser vos enregistrements CMS), il est difficile et chronophage d’<span class="font-bold">obtenir un résultat en adéquation avec vos attentes</span>.
+        </p>
+        <p>
+            Afin de garantir une qualité de site et <span class="font-bold">une expérience utilisateur à forte valeur ajoutée</span> au lancement de votre structure ou de votre produit, je propose un accompagnement adapté à vos besoins et à vos attentes.
+        </p>
+        <div class="max-w-screen-md mx-auto mt-8 overflow-x-scroll">
+            @include('elements.webflow.pricing')
+        </div>
+        <div class="mt-16">
+            @include('elements.contact')
+        </div>
     </div>
 @endsection

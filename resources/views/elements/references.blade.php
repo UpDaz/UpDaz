@@ -10,7 +10,7 @@
             </h2>
             <div class="grid grid-cols-2 lg:grid-cols-3 gap-12 items-center ">
 
-                <x-tooltip color="#FFFFFF">
+                <x-tooltip color="#FFFFFF" displayIcon="{{ false }}">
                     <x-slot:message>
                         <h3 class="px-6 py-4 font-text text-base font-bold bg-blue-dark text-white text-center w-full">Khassani Swimwear</h3>
                         <div class="px-6 py-4 text-black leading-8">
@@ -28,7 +28,7 @@
                     </x-slot>
                 </x-tooltip>
 
-                <x-tooltip color="#FFFFFF">
+                <x-tooltip color="#FFFFFF" displayIcon="{{ false }}">
                     <x-slot:message>
                         <h3 class="px-6 py-4 font-text text-base font-bold bg-blue-dark text-white text-center w-full">Neorev</h3>
                         
@@ -47,7 +47,7 @@
                     </x-slot>
                 </x-tooltip>
 
-                <x-tooltip color="#FFFFFF">
+                <x-tooltip color="#FFFFFF" displayIcon="{{ false }}">
                     <x-slot:message>
                         <h3 class="px-6 py-4 font-text text-base font-bold bg-blue-dark text-white text-center w-full">Artecosy</h3>
                         
@@ -66,7 +66,7 @@
                     </x-slot>
                 </x-tooltip>
                 
-                <x-tooltip color="#FFFFFF">
+                <x-tooltip color="#FFFFFF" displayIcon="{{ false }}">
                     <x-slot:message>
                         <h3 class="px-6 py-4 font-text text-base font-bold bg-blue-dark text-white text-center w-full">Pôle Axelera</h3>
                         
@@ -83,7 +83,7 @@
                     </x-slot>
                 </x-tooltip>
 
-                <x-tooltip color="#FFFFFF">
+                <x-tooltip color="#FFFFFF" displayIcon="{{ false }}">
                     <x-slot:message>
                         <h3 class="px-6 py-4 font-text text-base font-bold bg-blue-dark text-white text-center w-full">Maison Aubertin</h3>
                         
@@ -102,7 +102,7 @@
                     </x-slot>
                 </x-tooltip>
 
-                <x-tooltip color="#FFFFFF">
+                <x-tooltip color="#FFFFFF" displayIcon="{{ false }}">
                     <x-slot:message>
                         <h3 class="px-6 py-4 font-text text-base font-bold bg-blue-dark text-white text-center w-full">Popsgym</h3>
                         
@@ -121,7 +121,7 @@
                     </x-slot>
                 </x-tooltip>
 
-                <x-tooltip color="#FFFFFF">
+                <x-tooltip color="#FFFFFF" displayIcon="{{ false }}">
                     <x-slot:message>
                         <h3 class="px-6 py-4 font-text text-base font-bold bg-blue-dark text-white text-center w-full">SBFM Grillage</h3>
                         
@@ -140,7 +140,7 @@
                     </x-slot>
                 </x-tooltip>
 
-                <x-tooltip color="#FFFFFF">
+                <x-tooltip color="#FFFFFF" displayIcon="{{ false }}">
                     <x-slot:message>
                         <h3 class="px-6 py-4 font-text text-base font-bold bg-blue-dark text-white text-center w-full">Pôle Avenia</h3>
                         
@@ -170,7 +170,7 @@
             </h2>
             <div class="grid grid-cols-2 lg:grid-cols-3 gap-12 items-center">
 
-                <x-tooltip color="#FFFFFF">
+                <x-tooltip color="#FFFFFF" displayIcon="{{ false }}">
                     <x-slot:message>
                         <h3 class="px-6 py-4 font-text text-base font-bold bg-blue-dark text-white text-center w-full">Blooming Ladies</h3>
                         
@@ -189,7 +189,7 @@
                     </x-slot>
                 </x-tooltip>
 
-                <x-tooltip color="#FFFFFF">
+                <x-tooltip color="#FFFFFF" displayIcon="{{ false }}">
                     <x-slot:message>
                         <h3 class="px-6 py-4 font-text text-base font-bold bg-blue-dark text-white text-center w-full">KAZoART Pro</h3>
                         

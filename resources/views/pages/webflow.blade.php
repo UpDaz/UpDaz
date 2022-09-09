@@ -10,7 +10,7 @@
             @include('elements/illustrations/webflow-header')
         </div>
         <div class="relative">
-            <h1 class="font-title text-4xl lg:text-6xl font-bold">Landing pages <br/> & sites vitrine</h1>
+            <h1 class="font-title text-4xl lg:text-6xl font-bold">Landing pages <br/> & sites vitrines</h1>
             <h2 class="text-orange text-xl mt-4 mb-8">via Webflow</h2>
             <div class="container mx-auto text-center text-sm">
                 <x-breadcrumb :links="['Webflow' => route('webflow')]" />

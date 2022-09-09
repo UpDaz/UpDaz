@@ -2,7 +2,7 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 align-top justify-center md:justify-between ">
             <div class="relative w-full text-center bg-white border-orange border-8 px-4 py-8">
                 <h2 class="text-orange text-xl">
-                    Landing-page
+                    Landing page
                     <br/>
                     & site vitrine
                 </h2>

@@ -1,7 +1,11 @@
 @extends('layouts.default')
 
 @section('title')
-    Offres landing page & site vitrine - Webflow - UpDaz
+Offres landing page & site vitrine Webflow - UpDaz
+@endsection
+
+@section('meta-description')
+Créez votre landing page et site vitrine grâce à l'outils en ligne Webflow. Obtenez un site moderne et performant tout en gardant la main sur son contenu.
 @endsection
 
 @section('content')

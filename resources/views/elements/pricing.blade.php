@@ -47,7 +47,9 @@
                             Optimisation&nbsp;
                             <x-tooltip color="#001A9E">
                                 <x-slot:message>
-                                    Search Engine Optimization ou Optimisation pour les moteurs de recherche (Google)
+                                    <span class="block p-6">
+                                        Search Engine Optimization ou Optimisation pour les moteurs de recherche (Google)
+                                    </span>
                                 </x-slot>
                                 <x-slot:content>
                                     <i>SEO</i>
@@ -98,7 +100,9 @@
                                 Processus de commande en 3 étapes<br/>ou 
                                 <x-tooltip color="#001A9E">
                                     <x-slot:message>
-                                        L'ensemble du processus de commande (information client, choix du transporter et du mode de paiement) se fait sur une seule page
+                                        <span class="block p-6">
+                                            L'ensemble du processus de commande (information client, choix du transporter et du mode de paiement) se fait sur une seule page
+                                        </span>        
                                     </x-slot>
                                     <x-slot:content>
                                         <i>OnePage Checkout</i>
@@ -139,7 +143,9 @@
                            @include('elements.icons.check')
                             <x-tooltip color="#001A9E">
                                 <x-slot:message>
-                                    Boite à outils servant aux développeurs à créer des sites sur-mesure
+                                    <span class="block p-6">
+                                        Boite à outils servant aux développeurs à créer des sites sur-mesure
+                                    </span>
                                 </x-slot>
                                 <x-slot:content>
                                     <i>Framework</i>
@@ -163,7 +169,9 @@
                            @include('elements.icons.check')
                             <x-tooltip color="#001A9E">
                             <x-slot:message>
-                                Terme désignant une application conçue pour être extensible et répondre à des besoins spécifiques.
+                                <span class="block p-6">
+                                    Terme désignant une application conçue pour être extensible et répondre à des besoins spécifiques.
+                                </span>
                             </x-slot>
                             <x-slot:content>
                                 <i>Scalable</i>

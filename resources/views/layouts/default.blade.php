@@ -17,6 +17,8 @@
 
     <link rel="icon" type="image/png" href="{{ asset("img/favicon.png") }}" />
 
+    <x-canonical-url />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://www.gstatic.com">
     <link rel="preconnect" href="https://www.googletagmanager.com">

@@ -135,7 +135,7 @@
                     & Sur-mesure
                 </h2>
                 <h3 class="text-4xl font-bold text-blue mt-10 mb-2">
-                    Sur demande
+                    Sur devis
                 </h3>
                 <div class="flex justify-center mb-8">
                     <ul class="flex justify-start flex-col px-4 py-8">
@@ -188,13 +188,11 @@
                         </li>
                     </ul>
                 </div>
-                @if (false)
                 <div class="absolute bottom-8 left-0 w-full text-center">
-                    <a href="#" class="inline-block bg-blue hover:bg-blue-dark text-white px-6 py-3 rounded shadow-md mb-4 md:mb-0">
+                    <a href="{{ route('laravel') }}" class="inline-block bg-blue hover:bg-blue-dark text-white px-6 py-3 rounded shadow-md mb-4 md:mb-0">
                         En savoir plus
                     </a>
                 </div>
-                @endif
             </div>
         </div>
     </div>

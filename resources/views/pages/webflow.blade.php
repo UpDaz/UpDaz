@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('title')
-Offres landing page & site vitrine Webflow - UpDaz
+Offre landing page & site vitrine Webflow - UpDaz
 @endsection
 
 @section('meta-description')
@@ -9,8 +9,8 @@ Créez votre landing page et site vitrine grâce à l'outils en ligne Webflow. O
 @endsection
 
 @section('content')
-    <div class="relative bg-blue text-white text-center py-16 md:py-20 md:pt-12">
-        <div class="absolute h-full bottom-0 right-[10%] opacity-[15%] rotate-[30deg]">
+    <div class="relative bg-blue text-white text-center py-16 md:py-20 md:pt-12 overflow-hidden">
+        <div class="absolute h-full bottom-0 lg:right-[10%] opacity-[15%] rotate-[30deg]">
             @include('elements/illustrations/webflow-header')
         </div>
         <div class="relative">
@@ -97,9 +97,24 @@ Créez votre landing page et site vitrine grâce à l'outils en ligne Webflow. O
         <p>
             3 typologies de sites sont possibles sur Webflow : <br/>
             <ul>
-                <li>- Landing page & site vitrine</li>
-                <li>- Site avec enregistrements CMS</li>
-                <li>- Site E-commerce</li>
+                <li class="flex justify-start align-top gap-4">
+                    <span>
+                        @include('elements.icons.long-arrow-right')
+                    </span>               
+                    Landing page & site vitrine
+                </li>
+                <li class="flex justify-start align-top gap-4">
+                    <span>
+                        @include('elements.icons.long-arrow-right')
+                    </span> 
+                    Site avec enregistrements CMS
+                </li>
+                <li class="flex justify-start align-top gap-4">
+                    <span>
+                        @include('elements.icons.long-arrow-right')
+                    </span> 
+                    Site E-commerce
+                </li>
             </ul>
         </p>
         <h4 class="text-lg text-blue-dark mb-2 mt-8">

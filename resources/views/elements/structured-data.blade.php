@@ -1,12 +1,12 @@
 <script type="application/ld+json">
     {
       "@context": "https://schema.org/",
-      "@type": "ProfessionalService",
+      "@type": "LocalBusiness",
       "name": "UpDaz",
       "email": "matthieu@updaz.fr",
+      "priceRange": "$$",
       "address" : {
         "@type": "PostalAddress",
-        "streetAddress": "",
         "addressLocality": "Bordeaux",
         "addressRegion": "Nouvelle-Aquitaine",
         "postalCode": "33000",

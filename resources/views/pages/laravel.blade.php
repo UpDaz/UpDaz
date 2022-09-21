@@ -10,7 +10,7 @@ Digitalisez vos processus métiers et optez pour la fiabilité et la performance
 
 @section('content')
     <div class="relative bg-blue text-white text-center py-16 md:py-20 md:pt-12 overflow-hidden">
-        <div class="absolute h-full bottom-0 lg:right-[10%] opacity-[15%]">
+        <div class="absolute h-80 bottom-10 lg:left-2/4 lg:-translate-x-1/2 opacity-10">
             @include('elements/illustrations/laravel-header')
         </div>
         <div class="relative">
@@ -21,57 +21,67 @@ Digitalisez vos processus métiers et optez pour la fiabilité et la performance
             </div>
         </div>
     </div>
-    <div class="container px-8 py-12 mx-auto md:py-24">
-        <h3 class="text-2xl text-orange mb-4">
-            Laravel, qu’est-ce que c’est ?
-        </h3>
-        <p class="mb-2">
-            Laravel est un 
-            <x-tooltip color="#001A9E">
-                <x-slot:message>
-                    <span class="block p-6">
-                        Boite à outils servant aux développeurs à créer des sites sur-mesure
-                    </span>
-                </x-slot>
-                <x-slot:content>
-                    <i>Framework</i>
-                </x-slot>
-            </x-tooltip>
-            permettant la conception d’applications web.
-            <br/>
-            Créé en juin 2011 par Taylor Otwell, cet outil open-source a su évoluer et convaincre <b>une communauté de développeurs de plus en plus importante</b>, participant activement à son évolution.
-        </p>
-        <p class="mb-2">
-            Basé sur le langage de programmation PHP, il met à la disposition des développeurs un ensemble de composants <b>facilement utilisables et évolutifs</b> afin de construire des <b>applications complexes et autonomes</b>.
-        </p>
-        <p class="mb-2">
-            Reposant sur un modèle d’architecture
-            <x-tooltip color="#001A9E">
-                <x-slot:message>
-                    <span class="block p-6">
-                        Modèle-Vue-Controller : séparation logique entre les données, le design et les processus métier
-                    </span>
-                </x-slot>
-                <x-slot:content>
-                    <i>MVC</i>
-                </x-slot>
-            </x-tooltip>
-            , les projets conçus avec Laravel se caractérisent par leur fiabilité, leur
-            <x-tooltip color="#001A9E">
-                <x-slot:message>
-                    <span class="block p-6">
-                        conçu pour évoluer facilement
-                    </span>
-                </x-slot>
-                <x-slot:content>
-                    <i>scalabilité</i>
-                </x-slot>
-            </x-tooltip>
-            et leur performance.
-        </p>
-        <p>
-            Laravel propose tout un <b>écosystème d’outils et de services</b> facilitant le développement et le fonctionnement de votre projet (on peut par exemple citer “Vapor” pour gérer la mise en ligne de votre projet, “Nova” pour ajouter un tableau d’administration ou encore ”Cashier” pour ajouter un système de facturation).
-        </p>
+    <div class="container px-8 py-12 mx-auto md:px-0 md:py-24">
+        <div class="lg:flex content-middle gap-8 justify-between items-center">
+            <div>
+                <h3 class="text-2xl text-orange mb-4">
+                    Laravel, qu’est-ce que c’est ?
+                </h3>
+                <p class="mb-2">
+                    Laravel est un 
+                    <x-tooltip color="#001A9E">
+                        <x-slot:message>
+                            <span class="block p-6">
+                                Boite à outils servant aux développeurs à créer des sites sur-mesure
+                            </span>
+                        </x-slot>
+                        <x-slot:content>
+                            <i>Framework</i>
+                        </x-slot>
+                    </x-tooltip>
+                    permettant la conception d’applications web.
+                    <br/>
+                    Créé en juin 2011 par Taylor Otwell, cet outil open-source a su évoluer et convaincre <b>une communauté de développeurs de plus en plus importante</b>, participant activement à son évolution.
+                </p>
+                <p class="mb-2">
+                    Basé sur le langage de programmation PHP, il met à la disposition des développeurs un ensemble de composants <b>facilement utilisables et évolutifs</b> afin de construire des <b>applications complexes et autonomes</b>.
+                </p>
+                <p class="mb-2">
+                    Reposant sur un modèle d’architecture
+                    <x-tooltip color="#001A9E">
+                        <x-slot:message>
+                            <span class="block p-6">
+                                Modèle-Vue-Controller : séparation logique entre les données, le design et les processus métier
+                            </span>
+                        </x-slot>
+                        <x-slot:content>
+                            <i>MVC</i>
+                        </x-slot>
+                    </x-tooltip>
+                    , les projets conçus avec Laravel se caractérisent par leur fiabilité, leur
+                    <x-tooltip color="#001A9E">
+                        <x-slot:message>
+                            <span class="block p-6">
+                                conçu pour évoluer facilement
+                            </span>
+                        </x-slot>
+                        <x-slot:content>
+                            <i>scalabilité</i>
+                        </x-slot>
+                    </x-tooltip>
+                    et leur performance.
+                </p>
+                <p>
+                    Laravel propose tout un <b>écosystème d’outils et de services</b> facilitant le développement et le fonctionnement de votre projet (on peut par exemple citer “Vapor” pour gérer la mise en ligne de votre projet, “Nova” pour ajouter un tableau d’administration ou encore ”Cashier” pour ajouter un système de facturation).
+                </p>
+            </div>
+            <div class="w-1/2 my-8 lg:w-1/6 mx-auto lg:m-0">
+                <img src="{{ asset('img/logos/laravel.svg') }}" class="w-full mb-2" alt="Logo Webflow">
+                <p class="text-center text-sm italic mt-2">
+                    Logo Laravel
+                </p>
+            </div>
+        </div>
         <h3 class="text-2xl text-orange mb-4 mt-16">
             Quelle utilisation ?
         </h3>
@@ -124,29 +134,21 @@ Digitalisez vos processus métiers et optez pour la fiabilité et la performance
             <br/>
             On distinguera alors plusieurs points essentiels dans l’établissement du budget : 
             <ul>
-                <li class="flex justify-start align-top gap-4">
-                    <span>
-                        @include('elements.icons.long-arrow-right')
-                    </span>               
-                    La conception du design.
+                <li class="flex justify-start align-top gap-2">
+                    @include('elements.animated.long-arrow-right')              
+                    La conception du design
                 </li>
-                <li class="flex justify-start align-top gap-4">
-                    <span>
-                        @include('elements.icons.long-arrow-right')
-                    </span> 
-                    Le développement des fonctionnalités.
+                <li class="flex justify-start align-top gap-2">
+                    @include('elements.animated.long-arrow-right')
+                    Le développement des fonctionnalités
                 </li>
-                <li class="flex justify-start align-top gap-4">
-                    <span>
-                        @include('elements.icons.long-arrow-right')
-                    </span> 
-                    La création du contenu.
+                <li class="flex justify-start align-top gap-2">
+                    @include('elements.animated.long-arrow-right')
+                    La création du contenu
                 </li>
-                <li class="flex justify-start align-top gap-4">
-                    <span>
-                        @include('elements.icons.long-arrow-right')
-                    </span> 
-                    Les dépenses de fonctionnement.
+                <li class="flex justify-start align-top gap-2">
+                    @include('elements.animated.long-arrow-right')
+                    Les dépenses de fonctionnement
                 </li>
             </ul>
         </p>
@@ -158,16 +160,12 @@ Digitalisez vos processus métiers et optez pour la fiabilité et la performance
             <br/>
             En fonction du budget alloué, plusieurs alternatives sont possibles : 
             <ul class="mb-2">
-                <li class="flex justify-start align-top gap-4">
-                    <span>
-                        @include('elements.icons.long-arrow-right')
-                    </span> 
+                <li class="flex justify-start align-top gap-2">
+                    @include('elements.animated.long-arrow-right')
                     Utiliser un thème HTML pré-fabriqué en vente sur des plateformes spécialisées.
                 </li>
-                <li class="flex justify-start align-top gap-4">
-                    <span>
-                        @include('elements.icons.long-arrow-right')
-                    </span> 
+                <li class="flex justify-start align-top gap-2">
+                    @include('elements.animated.long-arrow-right')
                     Faire appel à un graphiste pour définir une identité visuelle et créer des maquettes que le développeur intégrera par la suite.
                 </li>
             </ul>
@@ -193,16 +191,12 @@ Digitalisez vos processus métiers et optez pour la fiabilité et la performance
             Il s’agit ici de retranscrire en langages informatiques deux aspects de votre site : 
         </p>
         <ul class="mb-4">
-            <li class="flex justify-start align-top gap-4">
-                <span>
-                    @include('elements.icons.long-arrow-right')
-                </span> 
+            <li class="flex justify-start align-top gap-2">
+                @include('elements.animated.long-arrow-right')
                 Le design (préalablement défini) regroupant l’aspect visuel et les interactions avec l’utilisateur.
             </li>
-            <li class="flex justify-start align-top gap-4">
-                <span>
-                    @include('elements.icons.long-arrow-right')
-                </span> 
+            <li class="flex justify-start align-top gap-2">
+                @include('elements.animated.long-arrow-right')
                 Les processus métiers qui définissent les actions concrètes effectuées par votre application web.
             </li>
         </ul>
@@ -278,8 +272,9 @@ Digitalisez vos processus métiers et optez pour la fiabilité et la performance
         <p>
             À ceci peut se rajouter des services supplémentaires pour optimiser la gestion des emails, s’assurer d’une maintenance de votre site 7j/7 et 24h/24, gérer le consentement des cookies, etc.
         </p>
-        <div class="mt-16">
-            @include('elements.contact')
-        </div>
+    </div>
+    @include('elements.laravel-references')
+    <div class="container px-8 py-12 mx-auto md:px-0 md:py-24">
+        @include('elements.contact')
     </div>
 @endsection

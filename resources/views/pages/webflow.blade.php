@@ -10,7 +10,7 @@ Créez votre landing page et site vitrine grâce à l'outils en ligne Webflow. O
 
 @section('content')
     <div class="relative bg-blue text-white text-center py-16 md:py-20 md:pt-12 overflow-hidden">
-        <div class="absolute h-full bottom-0 lg:right-[10%] opacity-[15%] rotate-[30deg]">
+        <div class="absolute h-80 bottom-10 lg:left-2/4 lg:-translate-x-1/2 opacity-10 rotate-[30deg]">
             @include('elements/illustrations/webflow-header')
         </div>
         <div class="relative">
@@ -21,34 +21,44 @@ Créez votre landing page et site vitrine grâce à l'outils en ligne Webflow. O
             </div>
         </div>
     </div>
-    <div class="container px-8 py-12 mx-auto md:py-24">
+    <div class="container px-8 py-12 mx-auto md:px-0 md:py-24 relative">
         <h3 class="text-2xl text-orange mb-4">
             Présentation
         </h3>
-        <p class="mb-2">
-            Webflow est une plateforme de création de site internet et de gestion de contenu (CMS) en ligne.
-            <br/>
-            Lancée en 2013 afin de répondre aux problématiques de qualité de site proposés par les plateformes type Wix et de complexité de prise en main des CMS type Wordpress. Webflow se veut <span class="font-bold">intuitif, flexible et performant</span>.
-        </p>
-        <p class="mb-2">
-            Sa particularité est de proposer une <span class="font-bold">expérience “no-code”</span> : la construction de votre site ne nécessite pas de connaissances poussées dans le développement web.
-        <br/>
-            Proposant une interface similaire aux logiciels de la suite Adobe (Illustrator, Photoshop, etc), les différents éléments du site se mettent en place via un système de 
-            <x-tooltip color="#001A9E">
-                <x-slot:message>
-                    <span class="block p-6">
-                        Utilisation du glisser-déposer en utilisant la souris de votre ordinateur.
-                    </span>
-                </x-slot>
-                <x-slot:content>
-                    <i>drag-and-drop</i>
-                </x-slot>
-            </x-tooltip>
-            .
-        <br/>
-            Chaque élément peut être par la suite personnalisé en agissant sur ses caractéristiques.
-        </p>
-        <div class="my-8">
+        <div class="lg:flex content-middle gap-8 justify-between items-center">
+            <div>
+                <p class="mb-2">
+                    Webflow est une plateforme de création de site internet et de gestion de contenu (CMS) en ligne.
+                    <br/>
+                    Lancée en 2013 afin de répondre aux problématiques de qualité de site proposés par les plateformes type Wix et de complexité de prise en main des CMS type Wordpress. Webflow se veut <span class="font-bold">intuitif, flexible et performant</span>.
+                </p>
+                <p class="mb-2">
+                    Sa particularité est de proposer une <span class="font-bold">expérience “no-code”</span> : la construction de votre site ne nécessite pas de connaissances poussées dans le développement web.
+                <br/>
+                    Proposant une interface similaire aux logiciels de la suite Adobe (Illustrator, Photoshop, etc), les différents éléments du site se mettent en place via un système de 
+                    <x-tooltip color="#001A9E">
+                        <x-slot:message>
+                            <span class="block p-6">
+                                Utilisation du glisser-déposer en utilisant la souris de votre ordinateur.
+                            </span>
+                        </x-slot>
+                        <x-slot:content>
+                            <i>drag-and-drop</i>
+                        </x-slot>
+                    </x-tooltip>
+                    .
+                    <br/>
+                    Chaque élément peut être par la suite personnalisé en agissant sur ses caractéristiques.
+                </p>
+            </div>
+            <div class="w-1/2 my-8 lg:w-1/6 mx-auto lg:m-0">
+                <img src="{{ asset('img/logos/webflow.svg') }}" class="w-full mb-2" alt="Logo Webflow">
+                <p class="text-center text-sm italic mt-2">
+                    Logo Webflow
+                </p>
+            </div>
+        </div>
+        <div class="my-12">
             <img class="block w-full max-w-screen-md mx-auto" src="{{ asset('img/screenshoots/webflow-interface.png') }}" width="768" height="423" alt="Exemple interface Webflow" title="Interface Webflow" loading="lazy"/>
             <p class="text-center text-sm italic mt-2">
                 Interface Webflow
@@ -97,22 +107,16 @@ Créez votre landing page et site vitrine grâce à l'outils en ligne Webflow. O
         <p>
             3 typologies de sites sont possibles sur Webflow : <br/>
             <ul>
-                <li class="flex justify-start align-top gap-4">
-                    <span>
-                        @include('elements.icons.long-arrow-right')
-                    </span>               
+                <li class="flex justify-start align-top gap-2">
+                    @include('elements.animated.long-arrow-right')              
                     Landing page & site vitrine
                 </li>
-                <li class="flex justify-start align-top gap-4">
-                    <span>
-                        @include('elements.icons.long-arrow-right')
-                    </span> 
+                <li class="flex justify-start align-top gap-2">
+                    @include('elements.animated.long-arrow-right')
                     Site avec enregistrements CMS
                 </li>
-                <li class="flex justify-start align-top gap-4">
-                    <span>
-                        @include('elements.icons.long-arrow-right')
-                    </span> 
+                <li class="flex justify-start align-top gap-2">
+                    @include('elements.animated.long-arrow-right')
                     Site E-commerce
                 </li>
             </ul>

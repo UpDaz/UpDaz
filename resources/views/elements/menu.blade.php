@@ -24,58 +24,72 @@
       </button>
         <ul class="flex flex-col md:flex-row md:space-x-4 lg:space-x-8 text-lg md:text-sm md:font-medium text-center md:text-left">
           <li>
-            <a href="{{route('home') }}#presentation" @click.prevent="scrollToTarget('#presentation')" title="Présentation" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white hover:underline" aria-current="page">
+            <a href="{{route('home') }}#presentation" @click.prevent="scrollToTarget('#presentation')" title="Présentation" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
               Présentation
             </a>
           </li>
           <li>
-            <a href="{{route('home') }}#references" @click.prevent="scrollToTarget('#references')" title="Mes Références" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white hover:underline" aria-current="page">
+            <a href="{{route('home') }}#references" @click.prevent="scrollToTarget('#references')" title="Mes Références" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
               Références
             </a>
           </li>
-          {{-- <li>
-            <a href="{{route('home') }}#votre-projet" @click.prevent="scrollToTarget('#votre-projet')" title="Votre projet" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white hover:underline" aria-current="page">
-              Votre projet
+          <li class="relative border-orange border-2 mx-4 md:border-none md:mx-0" 
+              x-data="{ openSubmenu:false }" 
+              @mouseleave="openSubmenu = false" 
+              @mouseover="openSubmenu = true">
+            <a href="{{route('home') }}#offres" 
+                @click.prevent="scrollToTarget('#offres')" 
+                title="Offres" 
+                class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white md:bg-transparent md:p-0 hover:underline" aria-current="page">
+              Offres
             </a>
-          </li> --}}
-          <li>
-            <a href="{{route('home') }}#offres" @click.prevent="scrollToTarget('#offres')" title="Mes offres" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white hover:underline" aria-current="page">
-              Mes offres
-            </a>
+            <div class="w-1/3 bg-orange mx-auto h-[2px] md:hidden"></div>
+            <ul class="block text-center md:hidden md:absolute md:bg-white md:left-1/2 md:-translate-x-2/4 md:w-60 md:shadow-md md:rounded" x-bind:class="openSubmenu? 'md:!block' : '' ">
+              <li>
+                <a href="{{ route('webflow') }}" class="block pt-4 pb-2 text-base font-bold text-white md:text-sm md:py-4 md:text-blue hover:bg-blue-dark hover:text-white">
+                  Landing page & site vitrine
+                </a>
+              </li>
+              <li>
+                <a href="{{ route('laravel') }}" class="block pt-2 pb-4 text-base font-bold text-white md:py-4 md:text-sm md:text-blue hover:bg-blue-dark hover:text-white">
+                  Application métier & sur-mesure
+                </a>
+              </li>
+            </ul>
           </li>
           <li>
-            <a href="{{route('home') }}#contact" @click.prevent="scrollToTarget('#contact')" title="Me Contacter" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white hover:underline" aria-current="page">
+            <a href="{{route('home') }}#contact" @click.prevent="scrollToTarget('#contact')" title="Me Contacter" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
               Contact
             </a>
           </li>
           <li class="hidden md:block">
-            <a href="https://fr.linkedin.com/in/matthieu-dazord" target="_blank" title="Linkedin" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white hover:underline" aria-current="page">
+            <a href="https://fr.linkedin.com/in/matthieu-dazord" target="_blank" title="Linkedin" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
               <img src="{{ asset('img/linkedin.svg') }}" width="20" height="20" alt="Logo Linkedin" title="Linkedin" class="mx-auto">
             </a>
           </li>
           <li class="hidden md:block">
-            <a href="https://www.malt.fr/profile/matthieudazord" target="_blank" title="Malt" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white hover:underline" aria-current="page">
+            <a href="https://www.malt.fr/profile/matthieudazord" target="_blank" title="Malt" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
               <img src="{{ asset('img/malt.svg') }}" width="20" height="20" alt="Logo Malt" title="Malt" class="mx-auto">
             </a>
           </li>
           <li class="hidden md:block">
-            <a href="https://plateforme.freelance.com/freelance/Matthieu-c34713cf-17ba-4a64-8b99-aa21e240582b" target="_blank" title="Freelance.com" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white hover:underline" aria-current="page">
+            <a href="https://plateforme.freelance.com/freelance/Matthieu-c34713cf-17ba-4a64-8b99-aa21e240582b" target="_blank" title="Freelance.com" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
               <img src="{{ asset('img/freelance.svg') }}" width="26" height="20" alt="Logo Frellance.com" title="Freelance.com" class="mx-auto">
             </a>
           </li>
         </ul>
         <div class="flex align-middle justify-center md:hidden">
-          <a href="https://fr.linkedin.com/in/matthieu-dazord" target="_blank" title="Linkedin" class="block py-4 font-bold text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white hover:underline" aria-current="page">
+          <a href="https://fr.linkedin.com/in/matthieu-dazord" target="_blank" title="Linkedin" class="block py-4 font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
             <img src="{{ asset('img/linkedin.svg') }}" width="30" height="30" alt="Logo Linkedin" title="Linkedin" class="mx-auto">
           </a>
-          <a href="https://www.malt.fr/profile/matthieudazord" target="_blank" title="Malt" class="block py-4 px-10 font-bold text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white hover:underline" aria-current="page">
+          <a href="https://www.malt.fr/profile/matthieudazord" target="_blank" title="Malt" class="block py-4 px-10 font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
             <img src="{{ asset('img/malt.svg') }}" width="30" height="30" alt="Logo Malt" title="Malt" class="mx-auto">
           </a>
-          <a href="https://plateforme.freelance.com/freelance/Matthieu-c34713cf-17ba-4a64-8b99-aa21e240582b" target="_blank" title="Freelance.com" class="block py-4 font-bold text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white hover:underline" aria-current="page">
+          <a href="https://plateforme.freelance.com/freelance/Matthieu-c34713cf-17ba-4a64-8b99-aa21e240582b" target="_blank" title="Freelance.com" class="block py-4 font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
             <img src="{{ asset('img/freelance.svg') }}" width="36" height="30" alt="Logo Frellance.com" title="Freelance.com" class="mx-auto">
           </a>
         </div>
-        <div class="h-1/3 mx-auto md:hidden pt-12">
+        <div class="h-1/4 mx-auto md:hidden pt-12">
           @include('elements.illustrations.directions')
         </div>
       </div>

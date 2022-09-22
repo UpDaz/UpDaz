@@ -15,35 +15,35 @@
                 <div class="flex justify-center mb-8">
                     <ul class="flex justify-start flex-col px-4 py-8 text-left">
                         <li class="flex items-center mb-6 md:mb-4">
-                           @include('elements.icons.check')
+                           @include('elements.svg-icons.check')
                             Technologie&nbsp;
                             <a target="_blank" href="https://webflow.com/" class="flex items-center gap-1">
                                 Webflow
-                                @include('elements.icons.external-link')
+                                @include('elements.svg-icons.external-link')
                             </a>
                         </li>
                         <li class="flex items-center mb-6 md:mb-4">
-                           @include('elements.icons.check')
+                           @include('elements.svg-icons.check')
                             Design personnalisable
                         </li>
                         <li class="flex items-center mb-6 md:mb-4">
-                           @include('elements.icons.check')
+                           @include('elements.svg-icons.check')
                             Édition du contenu (CMS)
                         </li>
                         <li class="flex items-center mb-6 md:mb-4">
-                           @include('elements.icons.check')
+                           @include('elements.svg-icons.check')
                             Prise en main simplifiée
                         </li>
                         <li class="flex items-center mb-6 md:mb-4">
-                           @include('elements.icons.check')
+                           @include('elements.svg-icons.check')
                             Site léger et rapide
                         </li>
                         <li class="flex items-center mb-6 md:mb-4">
-                           @include('elements.icons.check')
+                           @include('elements.svg-icons.check')
                             Hébergement intégré sécurisé
                         </li>
                         <li class="flex items-center mb-6 md:mb-4">
-                           @include('elements.icons.check')
+                           @include('elements.svg-icons.check')
                             Optimisation&nbsp;
                             <x-tooltip color="#001A9E">
                                 <x-slot:message>
@@ -79,23 +79,23 @@
                 <div class="flex justify-center mb-8">
                     <ul class="flex justify-start flex-col px-4 py-8">
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                           @include('elements.icons.check')
+                           @include('elements.svg-icons.check')
                             CMS&nbsp;
                             <a href="https://www.prestashop.com/fr" target="_blank" class="flex items-center gap-1">
                                 Prestashop
-                                @include('elements.icons.external-link')
+                                @include('elements.svg-icons.external-link')
                             </a>
                         </li>
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                           @include('elements.icons.check')
+                           @include('elements.svg-icons.check')
                             Aucun frais de transaction
                         </li>
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                           @include('elements.icons.check')
+                           @include('elements.svg-icons.check')
                             Gestion des produits et des commandes clé-en-main
                         </li>
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                           @include('elements.icons.check')
+                           @include('elements.svg-icons.check')
                             <div>
                                 Processus de commande en 3 étapes<br/>ou 
                                 <x-tooltip color="#001A9E">
@@ -111,11 +111,11 @@
                             </div>
                         </li>
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                           @include('elements.icons.check')
+                           @include('elements.svg-icons.check')
                             Interface d'administration intégrée
                         </li>
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                           @include('elements.icons.check')
+                           @include('elements.svg-icons.check')
                             Catalogue de thèmes et d'extensions mis à jour régulièrement
                         </li>
                     </ul>
@@ -140,7 +140,7 @@
                 <div class="flex justify-center mb-8">
                     <ul class="flex justify-start flex-col px-4 py-8">
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                           @include('elements.icons.check')
+                           @include('elements.svg-icons.check')
                             <x-tooltip color="#001A9E">
                                 <x-slot:message>
                                     <span class="block p-6">
@@ -154,19 +154,19 @@
                             Laravel
                         </li>
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                           @include('elements.icons.check')
+                           @include('elements.svg-icons.check')
                             Digitalisation de vos processus métier
                         </li>
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                           @include('elements.icons.check')
+                           @include('elements.svg-icons.check')
                             Architecture robuste et sécurisée
                         </li>
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                           @include('elements.icons.check')
+                           @include('elements.svg-icons.check')
                             Performances accrues
                         </li>
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                           @include('elements.icons.check')
+                           @include('elements.svg-icons.check')
                             <x-tooltip color="#001A9E">
                             <x-slot:message>
                                 <span class="block p-6">
@@ -179,11 +179,11 @@
                         </x-tooltip>
                         </li>
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                           @include('elements.icons.check')
+                           @include('elements.svg-icons.check')
                             Écosystème poussé
                         </li>
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
-                           @include('elements.icons.check')
+                           @include('elements.svg-icons.check')
                             Mises à jour régulières de la technologie
                         </li>
                     </ul>

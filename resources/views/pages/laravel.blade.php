@@ -135,19 +135,19 @@ Digitalisez vos processus métiers et optez pour la fiabilité et la performance
             On distinguera alors plusieurs points essentiels dans l’établissement du budget : 
             <ul>
                 <li class="flex justify-start align-top gap-2">
-                    @include('elements.animated.long-arrow-right')              
+                    @include('elements.svg-icons.animated.long-arrow-right')              
                     La conception du design
                 </li>
                 <li class="flex justify-start align-top gap-2">
-                    @include('elements.animated.long-arrow-right')
+                    @include('elements.svg-icons.animated.long-arrow-right')
                     Le développement des fonctionnalités
                 </li>
                 <li class="flex justify-start align-top gap-2">
-                    @include('elements.animated.long-arrow-right')
+                    @include('elements.svg-icons.animated.long-arrow-right')
                     La création du contenu
                 </li>
                 <li class="flex justify-start align-top gap-2">
-                    @include('elements.animated.long-arrow-right')
+                    @include('elements.svg-icons.animated.long-arrow-right')
                     Les dépenses de fonctionnement
                 </li>
             </ul>
@@ -161,11 +161,11 @@ Digitalisez vos processus métiers et optez pour la fiabilité et la performance
             En fonction du budget alloué, plusieurs alternatives sont possibles : 
             <ul class="mb-2">
                 <li class="flex justify-start align-top gap-2">
-                    @include('elements.animated.long-arrow-right')
+                    @include('elements.svg-icons.animated.long-arrow-right')
                     Utiliser un thème HTML pré-fabriqué en vente sur des plateformes spécialisées.
                 </li>
                 <li class="flex justify-start align-top gap-2">
-                    @include('elements.animated.long-arrow-right')
+                    @include('elements.svg-icons.animated.long-arrow-right')
                     Faire appel à un graphiste pour définir une identité visuelle et créer des maquettes que le développeur intégrera par la suite.
                 </li>
             </ul>
@@ -192,11 +192,11 @@ Digitalisez vos processus métiers et optez pour la fiabilité et la performance
         </p>
         <ul class="mb-4">
             <li class="flex justify-start align-top gap-2">
-                @include('elements.animated.long-arrow-right')
+                @include('elements.svg-icons.animated.long-arrow-right')
                 Le design (préalablement défini) regroupant l’aspect visuel et les interactions avec l’utilisateur.
             </li>
             <li class="flex justify-start align-top gap-2">
-                @include('elements.animated.long-arrow-right')
+                @include('elements.svg-icons.animated.long-arrow-right')
                 Les processus métiers qui définissent les actions concrètes effectuées par votre application web.
             </li>
         </ul>

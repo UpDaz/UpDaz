@@ -16,7 +16,7 @@ use App\Http\Controllers\ContactController;
 
 Route::get(
     '/', function () {
-        return view('home');
+        return view('pages.home');
     }
 )->name('home');
 

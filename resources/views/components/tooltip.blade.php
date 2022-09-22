@@ -5,7 +5,7 @@
         <span class="flex hover:cursor-pointer">
             {!! $content !!}
             @if ($displayIcon)
-                @include('elements.icons.question')
+                @include('elements.svg-icons.question')
             @endif
         </span>
         <span 

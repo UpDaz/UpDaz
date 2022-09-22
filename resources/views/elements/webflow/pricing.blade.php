@@ -5,7 +5,7 @@
                 <ul>
                     <li class="mb-2">
                         <div class="flex">
-                            @include('elements.icons.check')
+                            @include('elements.svg-icons.check')
                             <span class="leading-[1.2]">
                                 Création d'une landing page / page d'accueil
                             </span>
@@ -13,7 +13,7 @@
                     </li>
                     <li class="mb-2">
                         <div class="flex">
-                            @include('elements.icons.check')
+                            @include('elements.svg-icons.check')
                             <span class="leading-[1.2]">
                                 Mise en place d'un thème
                             </span>
@@ -21,7 +21,7 @@
                     </li>
                     <li class="mb-2">
                         <div class="flex">
-                            @include('elements.icons.check')
+                            @include('elements.svg-icons.check')
                             <span class="leading-[1.2]">
                                 Personnalisation du contenu de la page
                             </span>
@@ -29,7 +29,7 @@
                     </li>
                     <li class="mb-2">
                         <div class="flex">
-                            @include('elements.icons.check')
+                            @include('elements.svg-icons.check')
                             <span class="leading-[1.2]">
                                 Mise en place d'un formulaire de contact
                             </span>
@@ -37,7 +37,7 @@
                     </li>
                     <li class="mb-2">
                         <div class="flex">
-                            @include('elements.icons.check')
+                            @include('elements.svg-icons.check')
                             <span class="leading-[1.2]">
                                 Optimisation
                                 <x-tooltip color="#001A9E">
@@ -55,7 +55,7 @@
                     </li>
                     <li class="mb-2">
                         <div class="flex">
-                            @include('elements.icons.check')
+                            @include('elements.svg-icons.check')
                             <span class="leading-[1.2]">
                                 Optimisation du référencement naturel (SEO)
                             </span>
@@ -72,7 +72,7 @@
         <tr>
             <td class="border border-slate-300 py-8 px-8">
                 <div class="flex">
-                    @include('elements.icons.plus')
+                    @include('elements.svg-icons.plus')
                     <span class="leading-[1.2]">
                         Création d'une page supplémentaire avec contenu personnalisé
                     </span>
@@ -88,7 +88,7 @@
         <tr>
             <td class="border border-slate-300 py-8 px-8">
                 <div class="flex">
-                    @include('elements.icons.plus')
+                    @include('elements.svg-icons.plus')
                     <span class="leading-[1.2]">
                         Ajout du système de traduction
                     </span>
@@ -104,7 +104,7 @@
         <tr>
             <td class="border border-slate-300 py-8 px-8">
                 <div class="flex">
-                    @include('elements.icons.plus')
+                    @include('elements.svg-icons.plus')
                     <span class="leading-[1.2]">
                         Mise en place d'enregistrements CMS avec appel spécifique sur le site 
                     </span>

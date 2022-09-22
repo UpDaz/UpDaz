@@ -6,6 +6,6 @@
         class="inline-block -translate-x-36 opacity-0 transition-all duration-500"
         :class="visible? '!translate-x-0 opacity-100' : ''" 
     >
-        @include('elements.icons.long-arrow-right')
+        @include('elements.svg-icons.long-arrow-right')
     </span>
 </div>

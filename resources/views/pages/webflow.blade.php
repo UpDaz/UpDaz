@@ -108,15 +108,15 @@ Créez votre landing page et site vitrine grâce à l'outils en ligne Webflow. O
             3 typologies de sites sont possibles sur Webflow : <br/>
             <ul>
                 <li class="flex justify-start align-top gap-2">
-                    @include('elements.animated.long-arrow-right')              
+                    @include('elements.svg-icons.animated.long-arrow-right')              
                     Landing page & site vitrine
                 </li>
                 <li class="flex justify-start align-top gap-2">
-                    @include('elements.animated.long-arrow-right')
+                    @include('elements.svg-icons.animated.long-arrow-right')
                     Site avec enregistrements CMS
                 </li>
                 <li class="flex justify-start align-top gap-2">
-                    @include('elements.animated.long-arrow-right')
+                    @include('elements.svg-icons.animated.long-arrow-right')
                     Site E-commerce
                 </li>
             </ul>

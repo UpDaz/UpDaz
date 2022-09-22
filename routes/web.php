@@ -14,17 +14,22 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get(
+    '/', function () {
+        return view('home');
+    }
+)->name('home');
 
-Route::get('/webflow', function () {
-    return view('pages.webflow');
-})->name('webflow');
+Route::get(
+    '/webflow', function () {
+        return view('pages.webflow');
+    }
+)->name('webflow');
 
-Route::get('/laravel', function () {
-    return view('pages.laravel');
-})->name('laravel');
-
+Route::get(
+    '/laravel', function () {
+        return view('pages.laravel');
+    }
+)->name('laravel');
 
 Route::post('/contact', [ContactController::class, 'send'])->name('contact');

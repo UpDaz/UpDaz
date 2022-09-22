@@ -12,13 +12,15 @@ class ContactController extends Controller
     {
         $data = $request->validated();
         Mail::to(config('custom.email.contact'))
-            ->send(new Contact(
-                $data['lastname'], 
-                $data['firstname'], 
-                $data['email'], 
-                $data['phone'], 
-                $data['message']
-            ));
+            ->send(
+                new Contact(
+                    $data['lastname'], 
+                    $data['firstname'], 
+                    $data['email'], 
+                    $data['phone'], 
+                    $data['message']
+                )
+            );
         return response()->json();
     }
 }

@@ -70,4 +70,8 @@ button, button *{
     opacity: 0.24;
 } */
 
+svg {
+    display: inline-block;
+    vertical-align: middle;
+}
 @import "animate-svg";

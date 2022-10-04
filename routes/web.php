@@ -32,4 +32,10 @@ Route::get(
     }
 )->name('laravel');
 
+Route::get(
+    '/prestashop', function () {
+        return view('pages.prestashop');
+    }
+)->name('prestashop');
+
 Route::post('/contact', [ContactController::class, 'send'])->name('contact');

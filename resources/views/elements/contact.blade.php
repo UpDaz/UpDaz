@@ -1,4 +1,4 @@
-<div id="contact" class="relative grid md:grid-cols-2 gap-6">
+<div class="relative grid md:grid-cols-2 gap-6">
     <div class="container mx-auto relative">
         <div class="z-10">
             <h2 class="text-orange text-4xl mb-6">

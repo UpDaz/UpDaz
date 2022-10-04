@@ -1,4 +1,4 @@
-<div class="relative ml-8 pl-16 pr-12 py-10 bg-slate-100" 
+<div class="relative ml-8 pl-16 pr-12 py-10 bg-slate-100 text-left" 
     x-data="{ visible:false }"
     x-intersect.once="visible = true"
 >

@@ -273,7 +273,7 @@ Digitalisez vos processus métiers et optez pour la fiabilité et la performance
             À ceci peut se rajouter des services supplémentaires pour optimiser la gestion des emails, s’assurer d’une maintenance de votre site 7j/7 et 24h/24, gérer le consentement des cookies, etc.
         </p>
     </div>
-    @include('elements.laravel-references')
+    @include('elements.laravel.references')
     <div class="container px-8 py-12 mx-auto md:px-0 md:py-24">
         @include('elements.contact')
     </div>

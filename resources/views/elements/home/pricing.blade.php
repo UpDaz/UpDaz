@@ -120,13 +120,11 @@
                         </li>
                     </ul>
                 </div>
-                @if (false)
                 <div class="absolute bottom-8 left-0 w-full text-center">
-                    <a href="#" class="inline-block bg-blue hover:bg-blue-dark text-white px-6 py-3 rounded shadow-md mb-4 md:mb-0">
+                    <a href="{{ route('prestashop') }}" class="inline-block bg-blue hover:bg-blue-dark text-white px-6 py-3 rounded shadow-md mb-4 md:mb-0">
                         En savoir plus
                     </a>
                 </div>
-                @endif
             </div>
             <div class="relative w-full text-center bg-white border-orange border-8 px-4 py-8">
                 <h2 class="text-orange text-xl">

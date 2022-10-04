@@ -19,7 +19,7 @@
                     Au plaisir de se rencontrer,
                 </p>
                 <p class="text-gray-800 italic text-right mt-2">
-                    M.
+                    Matthieu
                 </p>
                 <div class="mt-6 md:flex items-center gap-4">
                     <a href="#references" @click.prevent="scrollToTarget('#references')" class="block text-center bg-blue hover:bg-blue-dark text-white px-6 py-3 rounded shadow-md mb-4 md:mb-0" title="Mes références">Mes références</a>

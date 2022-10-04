@@ -1,13 +1,15 @@
-<table class="w-full table-auto border border-collapse border-slate-300">
+<table class="w-full table-auto border border-collapse border-slate-300 text-left">
     <tbody class="bg-slate-100">
         <tr>
-            <td class="border border-slate-300 py-8 px-8">
+            <td class="border border-slate-300 py-8 px-8 min-w-[250px]">
                 <ul>
                     <li class="mb-2">
                         <div class="flex items-start">
                             @include('elements.svg-icons.check')
                             <span class="leading-[1.2]">
-                                Création d'une landing page / page d'accueil
+                                Création de la boutique en ligne
+                                <br/>
+                                <span class="text-xs">(installation de Prestashop avec sa base de données, accès à la boutique spécifique)</span>
                             </span>
                         </div>
                     </li>
@@ -15,7 +17,7 @@
                         <div class="flex items-start">
                             @include('elements.svg-icons.check')
                             <span class="leading-[1.2]">
-                                Mise en place d'un thème
+                                Installation, adaptation et vérification du thème
                             </span>
                         </div>
                     </li>
@@ -23,7 +25,7 @@
                         <div class="flex items-start">
                             @include('elements.svg-icons.check')
                             <span class="leading-[1.2]">
-                                Personnalisation du contenu de la page
+                                Optimisation des performances
                             </span>
                         </div>
                     </li>
@@ -31,7 +33,7 @@
                         <div class="flex items-start">
                             @include('elements.svg-icons.check')
                             <span class="leading-[1.2]">
-                                Mise en place d'un formulaire de contact
+                                Optimisation SEO
                             </span>
                         </div>
                     </li>
@@ -39,25 +41,7 @@
                         <div class="flex items-start">
                             @include('elements.svg-icons.check')
                             <span class="leading-[1.2]">
-                                Optimisation
-                                <x-tooltip color="#001A9E">
-                                    <x-slot:message>
-                                        <span class="block p-6">
-                                            User Experience - Expérience utilisateur
-                                        </span>
-                                    </x-slot>
-                                    <x-slot:content>
-                                        <i>UX</i>
-                                    </x-slot>
-                                </x-tooltip>
-                            </span>
-                        </div>
-                    </li>
-                    <li class="mb-2">
-                        <div class="flex items-start">
-                            @include('elements.svg-icons.check')
-                            <span class="leading-[1.2]">
-                                Optimisation du référencement naturel (SEO)
+                                Formation à la gestion des produits et des commandes
                             </span>
                         </div>
                     </li>
@@ -65,7 +49,7 @@
             </td>
             <td class="border border-slate-300 py-8 px-8 text-center">
                 <span class="font-title text-blue font-bold text-xl">
-                    1000€
+                    2500€
                 </span>
             </td>
         </tr>
@@ -74,15 +58,17 @@
                 <div class="flex items-start">
                     @include('elements.svg-icons.plus')
                     <span class="leading-[1.2]">
-                        Création d'une page supplémentaire avec contenu personnalisé
+                        Installation d'un module, vérification de son fonctionnement
                     </span>
                 </div>
             </td>
             <td class="border border-slate-300 py-8 px-8 text-center whitespace-nowrap">
                 <span class="font-title text-blue font-bold text-xl">
-                    250€
+                    100€
                 </span>
-                / page
+                / module
+                <br/>
+                <span class="text-xs">(+ prix du module)</span>
             </td>
         </tr>
         <tr>
@@ -90,15 +76,14 @@
                 <div class="flex items-start">
                     @include('elements.svg-icons.plus')
                     <span class="leading-[1.2]">
-                        Ajout du système de traduction
+                        Développement spécifique d’un module
                     </span>
                 </div>
             </td>
             <td class="border border-slate-300 py-8 px-8 text-center whitespace-nowrap">
                 <span class="font-title text-blue font-bold text-xl">
-                    500€
+                    Sur devis
                 </span>
-                / langue
             </td>
         </tr>
         <tr>
@@ -106,15 +91,14 @@
                 <div class="flex items-start">
                     @include('elements.svg-icons.plus')
                     <span class="leading-[1.2]">
-                        Mise en place d'enregistrements CMS avec appel spécifique sur le site 
+                        Intégration sur mesure 
                     </span>
                 </div>
             </td>
             <td class="border border-slate-300 py-8 px-8 text-center whitespace-nowrap">
                 <span class="font-title text-blue font-bold text-xl">
-                    500 €  
+                    Sur devis 
                 </span>
-                / collection
             </td>
         </tr>
     </tbody>

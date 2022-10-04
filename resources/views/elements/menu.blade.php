@@ -51,6 +51,11 @@
                 </a>
               </li>
               <li>
+                <a href="{{ route('prestashop') }}" class="block pt-2 pb-4 text-base font-bold text-white md:py-4 md:text-sm md:text-blue hover:bg-blue-dark hover:text-white">
+                  E-commerce & boutique en ligne
+                </a>
+              </li>
+              <li>
                 <a href="{{ route('laravel') }}" class="block pt-2 pb-4 text-base font-bold text-white md:py-4 md:text-sm md:text-blue hover:bg-blue-dark hover:text-white">
                   Application métier & sur-mesure
                 </a>

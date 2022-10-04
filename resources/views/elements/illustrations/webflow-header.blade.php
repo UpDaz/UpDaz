@@ -6,7 +6,7 @@
     </linearGradient>
   </defs>
   <path d="M-103-63.85H797v600H-103Z" style="fill: none"/>
-  <path d="M91.07,430.74c13.51-11.67,12.32-35.2,12.32-35.2S80.3,391,66.8,402.64s-12.34,35.19-12.34,35.19S77.55,442.42,91.07,430.74Z" style="fill: url(#Dégradé_sans_nom)"/>
+  <path d="M91.07,430.74c13.51-11.67,12.32-35.2,12.32-35.2S80.3,391,66.8,402.64s-12.34,35.19-12.34,35.19S77.55,442.42,91.07,430.74Z" style="fill: #f9f9f9"/>
   <circle class="bubble" cx="164.8" cy="403.89" r="24.91" style="fill: #fff"/>
   <circle class="bubble" cx="329.8" cy="43.57" r="19.63" style="fill: #fff"/>
   <circle class="bubble" cx="600.84" cy="61.38" r="16.36" style="fill: #fff"/>

@@ -21,8 +21,11 @@ Créez votre landing page et site vitrine grâce à l'outils en ligne Webflow. O
             </div>
         </div>
     </div>
-    <div class="container px-8 py-12 mx-auto md:px-0 md:py-24 relative">
-        <h3 class="text-2xl text-orange mb-4">
+    <div class="container px-8 py-12 mx-auto md:px-0 md:py-24 relative text-justify">
+        <div class="bg-gray-100 px-8 py-8 md:float-right md:w-1/3 md:ml-16 md:mb-8">
+            @include('elements.webflow.menu')
+        </div>
+        <h3 class="text-2xl text-orange mb-4" id="presentation">
             Présentation
         </h3>
         <div class="lg:flex content-middle gap-8 justify-between items-center">
@@ -49,12 +52,6 @@ Créez votre landing page et site vitrine grâce à l'outils en ligne Webflow. O
                     .
                     <br/>
                     Chaque élément peut être par la suite personnalisé en agissant sur ses caractéristiques.
-                </p>
-            </div>
-            <div class="w-1/2 my-8 lg:w-1/6 mx-auto lg:m-0">
-                <img src="{{ asset('img/logos/webflow.svg') }}" class="w-full mb-2" alt="Logo Webflow">
-                <p class="text-center text-sm italic mt-2">
-                    Logo Webflow
                 </p>
             </div>
         </div>
@@ -101,27 +98,39 @@ Créez votre landing page et site vitrine grâce à l'outils en ligne Webflow. O
                 </x-slot>
             </x-tips>
         </div>
-        <h3 class="text-2xl text-orange mb-4 mt-16">
-            Quelle utilisation ?
-        </h3>
-        <p>
-            3 typologies de sites sont possibles sur Webflow : <br/>
-            <ul>
-                <li class="flex justify-start align-top gap-2">
-                    @include('elements.svg-icons.animated.long-arrow-right')              
-                    Landing page & site vitrine
-                </li>
-                <li class="flex justify-start align-top gap-2">
-                    @include('elements.svg-icons.animated.long-arrow-right')
-                    Site avec enregistrements CMS
-                </li>
-                <li class="flex justify-start align-top gap-2">
-                    @include('elements.svg-icons.animated.long-arrow-right')
-                    Site E-commerce
-                </li>
-            </ul>
-        </p>
-        <h4 class="text-lg text-blue-dark mb-2 mt-8">
+        <div class="flex justify-between items-end ">
+            <div>
+                <h3 class="text-2xl text-orange mb-4 pt-16" id="quelle-utilisation">
+                    Quelle utilisation ?
+                </h3>
+                <p>
+                    3 typologies de sites sont possibles sur Webflow : <br/>
+                    <ul>
+                        <li class="flex justify-start align-top gap-2">
+                            @include('elements.svg-icons.animated.long-arrow-right')              
+                            Landing page & site vitrine
+                        </li>
+                        <li class="flex justify-start align-top gap-2">
+                            @include('elements.svg-icons.animated.long-arrow-right')
+                            Site avec enregistrements CMS
+                        </li>
+                        <li class="flex justify-start align-top gap-2">
+                            @include('elements.svg-icons.animated.long-arrow-right')
+                            Site E-commerce
+                        </li>
+                    </ul>
+                </p>
+            </div>
+            <div class="w-1/2">
+                <div class="md:w-1/6 mx-auto">
+                    <img src="{{ asset('img/logos/webflow.svg') }}" class="w-full mb-2" alt="Logo Webflow">
+                    <p class="text-center text-sm italic mt-2">
+                        Logo Webflow
+                    </p>
+                </div>
+            </div>
+        </div>
+        <h4 class="text-lg text-blue-dark mb-2 pt-8" id="landing-page-site-vitrine">
             Landing page & site vitrine
         </h4>
         <div class="lg:columns-2 gap-16">
@@ -166,7 +175,7 @@ Créez votre landing page et site vitrine grâce à l'outils en ligne Webflow. O
                 </x-tips>
             </div>
         </div>
-        <h4 class="text-lg text-blue-dark mb-2 mt-8">
+        <h4 class="text-lg text-blue-dark mb-2 pt-8" id="enregistrements-cms">
             Enregistrements CMS
         </h4>
         <p class="mb-2">
@@ -197,13 +206,13 @@ Créez votre landing page et site vitrine grâce à l'outils en ligne Webflow. O
                 </x-slot>
             </x-tips>
         </div>
-        <h4 class="text-lg text-blue-dark mb-2 mt-8">
+        <h4 class="text-lg text-blue-dark mb-2 pt-8" id="site-ecommerce">
             Sites e-commerce
         </h4>
         <p>
             Pour les boutiques en ligne, Webflow propose un système simplifié pour la gestion des produits mais impose une commission à la vente (2% du montant de chaque vente pour l’offre la plus attractive). 
         </p>
-        <h3 class="text-2xl text-orange mb-4 mt-16">
+        <h3 class="text-2xl text-orange mb-4 pt-16" id="accompagnement">
             Mon accompagnement
         </h3>
         <p>
@@ -216,10 +225,10 @@ Créez votre landing page et site vitrine grâce à l'outils en ligne Webflow. O
         <p>
             Afin de garantir une qualité de site et <span class="font-bold">une expérience utilisateur à forte valeur ajoutée</span> au lancement de votre structure ou de votre produit, je propose un accompagnement adapté à vos besoins et à vos attentes.
         </p>
-        <div class="max-w-screen-md mx-auto mt-8 overflow-x-scroll">
+        <div class="max-w-screen-md mx-auto pt-8 overflow-x-scroll">
             @include('elements.webflow.pricing')
         </div>
-        <div class="mt-16">
+        <div class="pt-16" id="contact">
             @include('elements.contact')
         </div>
     </div>

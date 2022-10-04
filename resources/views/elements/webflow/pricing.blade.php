@@ -1,7 +1,7 @@
-<table class="w-full table-auto border border-collapse border-slate-300">
+<table class="w-full table-auto border border-collapse border-slate-300 text-left">
     <tbody class="bg-slate-100">
         <tr>
-            <td class="border border-slate-300 py-8 px-8">
+            <td class="border border-slate-300 py-8 px-8 min-w-[250px]">
                 <ul>
                     <li class="mb-2">
                         <div class="flex items-start">

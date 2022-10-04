@@ -21,74 +21,68 @@ Digitalisez vos processus métiers et optez pour la fiabilité et la performance
             </div>
         </div>
     </div>
-    <div class="container px-8 py-12 mx-auto md:px-0 md:py-24">
-        <div class="lg:flex content-middle gap-8 justify-between items-center">
-            <div>
-                <h3 class="text-2xl text-orange mb-4">
-                    Laravel, qu’est-ce que c’est ?
-                </h3>
-                <p class="mb-2">
-                    Laravel est un 
-                    <x-tooltip color="#001A9E">
-                        <x-slot:message>
-                            <span class="block p-6">
-                                Boite à outils servant aux développeurs à créer des sites sur-mesure
-                            </span>
-                        </x-slot>
-                        <x-slot:content>
-                            <i>Framework</i>
-                        </x-slot>
-                    </x-tooltip>
-                    permettant la conception d’applications web.
-                    <br/>
-                    Créé en juin 2011 par Taylor Otwell, cet outil open-source a su évoluer et convaincre <b>une communauté de développeurs de plus en plus importante</b>, participant activement à son évolution.
-                </p>
-                <p class="mb-2">
-                    Basé sur le langage de programmation PHP, il met à la disposition des développeurs un ensemble de composants <b>facilement utilisables et évolutifs</b> afin de construire des <b>applications complexes et autonomes</b>.
-                </p>
-                <p class="mb-2">
-                    Reposant sur un modèle d’architecture
-                    <x-tooltip color="#001A9E">
-                        <x-slot:message>
-                            <span class="block p-6">
-                                Modèle-Vue-Controller : séparation logique entre les données, le design et les processus métier
-                            </span>
-                        </x-slot>
-                        <x-slot:content>
-                            <i>MVC</i>
-                        </x-slot>
-                    </x-tooltip>
-                    , les projets conçus avec Laravel se caractérisent par leur fiabilité, leur
-                    <x-tooltip color="#001A9E">
-                        <x-slot:message>
-                            <span class="block p-6">
-                                conçu pour évoluer facilement
-                            </span>
-                        </x-slot>
-                        <x-slot:content>
-                            <i>scalabilité</i>
-                        </x-slot>
-                    </x-tooltip>
-                    et leur performance.
-                </p>
-                <p>
-                    Laravel propose tout un <b>écosystème d’outils et de services</b> facilitant le développement et le fonctionnement de votre projet (on peut par exemple citer “Vapor” pour gérer la mise en ligne de votre projet, “Nova” pour ajouter un tableau d’administration ou encore ”Cashier” pour ajouter un système de facturation).
-                </p>
-            </div>
-            <div class="w-1/2 my-8 lg:w-1/6 mx-auto lg:m-0">
-                <img src="{{ asset('img/logos/laravel.svg') }}" class="w-full mb-2" alt="Logo Webflow">
-                <p class="text-center text-sm italic mt-2">
-                    Logo Laravel
-                </p>
-            </div>
+    <div class="container px-8 pt-12 mx-auto md:px-0 md:pt-24 text-justify">
+        <div class="bg-gray-100 px-8 py-8 md:float-right md:w-1/3 md:ml-16 md:mb-8">
+            @include('elements.laravel.menu')
         </div>
-        <h3 class="text-2xl text-orange mb-4 mt-16">
+        <h3 class="text-2xl text-orange mb-4" id="presentation">
+            Laravel, qu’est-ce que c’est ?
+        </h3>
+        <p class="mb-2">
+            Laravel est un 
+            <x-tooltip color="#001A9E">
+                <x-slot:message>
+                    <span class="block p-6">
+                        Boite à outils servant aux développeurs à créer des sites sur-mesure
+                    </span>
+                </x-slot>
+                <x-slot:content>
+                    <i>Framework</i>
+                </x-slot>
+            </x-tooltip>
+            permettant la conception d’applications web.
+            <br/>
+            Créé en juin 2011 par Taylor Otwell, cet outil open-source a su évoluer et convaincre <b>une communauté de développeurs de plus en plus importante</b>, participant activement à son évolution.
+        </p>
+        <p class="mb-2">
+            Basé sur le langage de programmation PHP, il met à la disposition des développeurs un ensemble de composants <b>facilement utilisables et évolutifs</b> afin de construire des <b>applications complexes et autonomes</b>.
+        </p>
+        <p class="mb-2">
+            Reposant sur un modèle d’architecture
+            <x-tooltip color="#001A9E">
+                <x-slot:message>
+                    <span class="block p-6">
+                        Modèle-Vue-Controller : séparation logique entre les données, le design et les processus métier
+                    </span>
+                </x-slot>
+                <x-slot:content>
+                    <i>MVC</i>
+                </x-slot>
+            </x-tooltip>
+            , les projets conçus avec Laravel se caractérisent par leur fiabilité, leur
+            <x-tooltip color="#001A9E">
+                <x-slot:message>
+                    <span class="block p-6">
+                        conçu pour évoluer facilement
+                    </span>
+                </x-slot>
+                <x-slot:content>
+                    <i>scalabilité</i>
+                </x-slot>
+            </x-tooltip>
+            et leur performance.
+        </p>
+        <p>
+            Laravel propose tout un <b>écosystème d’outils et de services</b> facilitant le développement et le fonctionnement de votre projet (on peut par exemple citer “Vapor” pour gérer la mise en ligne de votre projet, “Nova” pour ajouter un tableau d’administration ou encore ”Cashier” pour ajouter un système de facturation).
+        </p>
+            
+        <h3 class="text-2xl text-orange mb-4 pt-16" id="quelle-utilisation">
             Quelle utilisation ?
         </h3>
         <p class="mb-2">
             L’intérêt d’utiliser un framework comme base est de <b>pouvoir modeler votre application web en fonction de vos besoins</b>.
             <br/>
-            Des outils comme <a href="{{ route('webflow') }}" class="underline">Webflow</a> et Prestashop offrent une expérience formatée et vous impose une base standardisée (aussi bien pour l’affichage du site que pour son fonctionnement) demandant d’importantes ressources pour s’adapter aux spécificités métiers. 
+            Des outils comme <a href="{{ route('webflow') }}" class="underline">Webflow</a> et <a href="{{ route('prestashop') }}" class="underline">Prestashop</a> offrent une expérience formatée et vous impose une base standardisée (aussi bien pour l’affichage du site que pour son fonctionnement) demandant d’importantes ressources pour s’adapter aux spécificités métiers. 
             <br/>
             Un framework permet de gagner en flexibilité, en spécialisation et en performance.
         </p>
@@ -108,7 +102,7 @@ Digitalisez vos processus métiers et optez pour la fiabilité et la performance
                 </x-slot>
             </x-tips>
         </div>
-        <h3 class="text-2xl text-orange mb-4 mt-16">
+        <h3 class="text-2xl text-orange mb-4 pt-16" id="accompagnement">
             Mon accompagnement
         </h3>
         <p class="mb-2">
@@ -126,33 +120,45 @@ Digitalisez vos processus métiers et optez pour la fiabilité et la performance
             <br/>
             Aborder ses processus avec un développeur au moment de la rédaction du cahier des charges est donc nécessaire.
         </p>
-        <h3 class="text-2xl text-orange mb-4 mt-16">
-            Quel budget ?
-        </h3>
-        <p class="mb-2">
-            Le coût de conception d’une plateforme web via Laravel va dépendre de ce que vous souhaitez mettre en place sur votre site et des spécificités.
-            <br/>
-            On distinguera alors plusieurs points essentiels dans l’établissement du budget : 
-            <ul>
-                <li class="flex justify-start align-top gap-2">
-                    @include('elements.svg-icons.animated.long-arrow-right')              
-                    La conception du design
-                </li>
-                <li class="flex justify-start align-top gap-2">
-                    @include('elements.svg-icons.animated.long-arrow-right')
-                    Le développement des fonctionnalités
-                </li>
-                <li class="flex justify-start align-top gap-2">
-                    @include('elements.svg-icons.animated.long-arrow-right')
-                    La création du contenu
-                </li>
-                <li class="flex justify-start align-top gap-2">
-                    @include('elements.svg-icons.animated.long-arrow-right')
-                    Les dépenses de fonctionnement
-                </li>
-            </ul>
-        </p>
-        <h4 class="text-lg text-blue-dark mb-2 mt-8">
+        <div class="flex justify-between items-end ">
+            <div>
+                <h3 class="text-2xl text-orange mb-4 pt-16" id="quel-budget">
+                    Quel budget ?
+                </h3>
+                <p class="mb-2">
+                    Le coût de conception d’une plateforme web via Laravel va dépendre de ce que vous souhaitez mettre en place sur votre site et des spécificités.
+                    <br/>
+                    On distinguera alors plusieurs points essentiels dans l’établissement du budget : 
+                    <ul>
+                        <li class="flex justify-start align-top gap-2">
+                            @include('elements.svg-icons.animated.long-arrow-right')              
+                            La conception du design
+                        </li>
+                        <li class="flex justify-start align-top gap-2">
+                            @include('elements.svg-icons.animated.long-arrow-right')
+                            Le développement des fonctionnalités
+                        </li>
+                        <li class="flex justify-start align-top gap-2">
+                            @include('elements.svg-icons.animated.long-arrow-right')
+                            La création du contenu
+                        </li>
+                        <li class="flex justify-start align-top gap-2">
+                            @include('elements.svg-icons.animated.long-arrow-right')
+                            Les dépenses de fonctionnement
+                        </li>
+                    </ul>
+                </p>
+            </div>
+            <div class="w-1/2">
+                <div class="md:w-1/6 mx-auto">
+                    <img src="{{ asset('img/logos/laravel.svg') }}" class="w-full mb-2" alt="Logo Webflow">
+                    <p class="text-center text-sm italic mt-2">
+                        Logo Laravel
+                    </p>
+                </div>
+            </div>
+        </div>
+        <h4 class="text-lg text-blue-dark mb-2 pt-8" id="design">
             Le design
         </h4>
         <p class="mb-4">
@@ -182,7 +188,7 @@ Digitalisez vos processus métiers et optez pour la fiabilité et la performance
             <br/>
             Le coût d’un graphiste varie suivant son tarif journalier et s’élève à plusieurs centaines d’euros en fonction de son accompagnement, des livrables et de son expérience.
         </p>
-        <h4 class="text-lg text-blue-dark mb-2 mt-8">
+        <h4 class="text-lg text-blue-dark mb-2 pt-8" id="developpement">
             Le développement
         </h4>
         <p class="mb-2">
@@ -227,7 +233,7 @@ Digitalisez vos processus métiers et optez pour la fiabilité et la performance
         <p>
             Il reste tout à fait envisageable d’adapter le fonctionnement de votre plateforme afin d’<b>utiliser des outils déjà existants</b> faisant baisser le coût de développement.
         </p>
-        <h4 class="text-lg text-blue-dark mb-2 mt-8">
+        <h4 class="text-lg text-blue-dark mb-2 pt-8" id="contenu">
             Le contenu
         </h4>
         <div class="lg:columns-2 gap-16">
@@ -250,7 +256,7 @@ Digitalisez vos processus métiers et optez pour la fiabilité et la performance
                 </x-tips>
             </div>
         </div>
-        <h4 class="text-lg text-blue-dark mb-2 mt-8">
+        <h4 class="text-lg text-blue-dark mb-2 pt-8" id="depenses-fonctionnement">
             Les dépenses de fonctionnement
         </h4>
         <p>
@@ -272,9 +278,11 @@ Digitalisez vos processus métiers et optez pour la fiabilité et la performance
         <p>
             À ceci peut se rajouter des services supplémentaires pour optimiser la gestion des emails, s’assurer d’une maintenance de votre site 7j/7 et 24h/24, gérer le consentement des cookies, etc.
         </p>
-    </div>
-    @include('elements.laravel.references')
-    <div class="container px-8 py-12 mx-auto md:px-0 md:py-24">
-        @include('elements.contact')
+        <div class="pt-12 md:pt-24" id="references">
+            @include('elements.laravel.references')
+        </div>
+        <div class="pt-16" id="contact">
+            @include('elements.contact')
+        </div>
     </div>
 @endsection

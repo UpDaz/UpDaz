@@ -1,5 +1,5 @@
 <div class="">
-    <h3 class="text-orange">
+    <h3 class="text-orange text-xl">
         Sommaire
     </h3>
     <ul class="list-decimal list-inside">

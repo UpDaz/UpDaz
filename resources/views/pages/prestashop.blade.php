@@ -25,7 +25,7 @@ Lancez votre boutique en ligne sur internet grâce au CMS Prestashop.
         <div class="bg-gray-100 px-8 py-8 md:float-right md:w-1/3 md:ml-16 md:mb-8">
             @include('elements.prestashop.menu')
         </div>
-        <h3 class="text-2xl text-orange mb-4 mt-8" id="presentation">
+        <h3 class="text-2xl text-orange mb-4 pt-8" id="presentation">
             Prestashop :  la boutique en ligne clé en main
         </h3>
         <p class="mb-2">
@@ -87,13 +87,13 @@ Lancez votre boutique en ligne sur internet grâce au CMS Prestashop.
                 </p>
             </div>
         </div>
-        <h3 class="text-2xl text-orange mt-16 mb-4" id="extensions">
+        <h3 class="text-2xl text-orange pt-16 mb-4" id="extensions">
             Le système d’extensions
         </h3>
         <p>
             Bien que Prestashop propose <b>une expérience complète</b> dans son état initial, de nombreux éléments de personnalisation peuvent se greffer dessus. 
         </p>
-        <h4 class="text-lg text-blue-dark mb-2 mt-8" id="hooks">
+        <h4 class="text-lg text-blue-dark mb-2 pt-8" id="hooks">
             Les hooks
         </h4>
         <p class="mb-2">
@@ -116,7 +116,7 @@ Lancez votre boutique en ligne sur internet grâce au CMS Prestashop.
         <p>
             Ce système spécifique permet de <b>centraliser et de réutiliser les fonctionnalités</b> du module bien qu’il faille faire attention aux <b>problèmes de compatibilité principalement</b> entre les modules qui sont greffés sur un même hook.
         </p>
-        <h4 class="text-lg text-blue-dark mb-2 mt-8" id="catalogue-de-module">
+        <h4 class="text-lg text-blue-dark mb-2 pt-8" id="catalogue-de-module">
             Le catalogue de modules
         </h4>
         <p class="mb-2">
@@ -156,7 +156,7 @@ Lancez votre boutique en ligne sur internet grâce au CMS Prestashop.
         <p class="mt-4">
             Grâce à ce catalogue de <b>plus de 3000 modules</b>, Prestashop permets de faire évoluer sa boutique en ligne en fonction de la demande.
         </p>
-        <h4 class="text-lg text-blue-dark mb-2 mt-8" id="developpement-specifique">
+        <h4 class="text-lg text-blue-dark mb-2 pt-8" id="developpement-specifique">
             Développement spécifique
         </h4>
         <p class="mb-2">
@@ -175,7 +175,7 @@ Lancez votre boutique en ligne sur internet grâce au CMS Prestashop.
                     Module <i>Barre d'ajout au panier</i>
                 </a>
         </div>
-        <h3 class="text-2xl text-orange mt-16 mb-4" id="accompagnement">
+        <h3 class="text-2xl text-orange pt-16 mb-4" id="accompagnement">
             Mon accompagnement
         </h3>
         <p>
@@ -188,7 +188,7 @@ Lancez votre boutique en ligne sur internet grâce au CMS Prestashop.
         </div>
     </div>
     @include('elements.prestashop.references')
-    <div class="container px-8 py-12 mx-auto md:px-0 md:py-24">
+    <div class="container px-8 py-12 mx-auto md:px-0 md:py-24" id="contact">
         @include('elements.contact')
     </div>
 @endsection

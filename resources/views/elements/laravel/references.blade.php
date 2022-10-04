@@ -1,4 +1,4 @@
-<div id="references" class="w-full block md:flex items-stretch justify-between">
+<div class="w-full block md:flex items-stretch justify-between">
     <div class="md:w-1/2 bg-blue px-8 md:px-32 py-16 md:py-24">
         <div class="container md:container-none">
             <h2 class="text-white text-3xl mb-10">

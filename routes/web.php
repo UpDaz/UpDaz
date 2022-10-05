@@ -38,4 +38,10 @@ Route::get(
     }
 )->name('prestashop');
 
+Route::get(
+    '/contact', function () {
+        return redirect('/');
+    }
+)->name('contact');
+
 Route::post('/contact', [ContactController::class, 'send'])->name('contact');

@@ -24,12 +24,12 @@
       </button>
         <ul class="flex flex-col md:flex-row md:space-x-4 lg:space-x-8 text-lg md:text-sm md:font-medium text-center md:text-left">
           <li>
-            <a href="{{route('home') }}#presentation" @click.prevent="scrollToTarget('#presentation')" title="Présentation" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
+            <a href="{{ route('home') }}#presentation" @click.prevent="scrollToTarget('#presentation')" title="Présentation" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
               Présentation
             </a>
           </li>
           <li>
-            <a href="{{route('home') }}#references" @click.prevent="scrollToTarget('#references')" title="Mes Références" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
+            <a href="{{ route('home') }}#references" @click.prevent="scrollToTarget('#references')" title="Mes Références" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
               Références
             </a>
           </li>
@@ -37,7 +37,7 @@
               x-data="{ openSubmenu:false }" 
               @mouseleave="openSubmenu = false" 
               @mouseover="openSubmenu = true">
-            <a href="{{route('home') }}#offres" 
+            <a href="{{ route('home') }}#offres" 
                 @click.prevent="scrollToTarget('#offres')" 
                 title="Offres" 
                 class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white md:bg-transparent md:p-0 hover:underline" aria-current="page">
@@ -63,7 +63,7 @@
             </ul>
           </li>
           <li>
-            <a href="{{route('home') }}#contact" @click.prevent="scrollToTarget('#contact')" title="Me Contacter" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
+            <a href="{{ route('home') }}#contact" @click.prevent="scrollToTarget('#contact')" title="Me Contacter" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
               Contact
             </a>
           </li>

@@ -6,16 +6,16 @@
             </a>
             <div class="flex items-center justify-center mb-6 gap-10 my-4">
                 <a href="https://fr.linkedin.com/in/matthieu-dazord" target="_blank"  class="font-bold text-white" aria-current="page">
-                    <img src="{{ asset('img/logos/linkedin.svg') }}" width="30" height="30" alt="Logo Linkedin" title="Linkedin" class="mx-auto" loading="lazy">
+                    <img src="{{ asset('img/logos/white/linkedin.svg') }}" width="30" height="30" alt="Logo Linkedin" title="Linkedin" class="mx-auto" loading="lazy">
                 </a>
                 <a href="https://www.malt.fr/profile/matthieudazord" target="_blank" title="Malt" class="font-bold text-white" aria-current="page">
-                    <img src="{{ asset('img/logos/malt.svg') }}" width="30" height="30" alt="Logo Malt" title="Malt" class="mx-auto">
+                    <img src="{{ asset('img/logos/white/malt.svg') }}" width="30" height="30" alt="Logo Malt" title="Malt" class="mx-auto">
                 </a>
                 <a href="https://plateforme.freelance.com/freelance/Matthieu-c34713cf-17ba-4a64-8b99-aa21e240582b" target="_blank" title="Freelance.com" class="font-bold text-white" aria-current="page">
-                    <img src="{{ asset('img/logos/freelance.svg') }}" width="36" height="30" alt="Logo Frellance.com" title="Freelance.com" class="mx-auto">
+                    <img src="{{ asset('img/logos/white/freelance.svg') }}" width="36" height="30" alt="Logo Frellance.com" title="Freelance.com" class="mx-auto">
                 </a>
                 <a href="https://github.com/UpDaz" target="_blank" title="Github" class="font-bold text-white" aria-current="page">
-                    <img src="{{ asset('img/logos/github.svg') }}" width="30" height="30" alt="Logo Github" title="Github" class="mx-auto">
+                    <img src="{{ asset('img/logos/white/github.svg') }}" width="30" height="30" alt="Logo Github" title="Github" class="mx-auto">
                 </a>
             </div>
             © UpDaz {{ date('Y') }}

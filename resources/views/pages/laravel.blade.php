@@ -9,7 +9,7 @@ Digitalisez vos processus métiers et optez pour la fiabilité et la performance
 @endsection
 
 @section('content')
-    <div class="relative bg-blue text-white text-center py-16 md:py-20 md:pt-12 overflow-hidden">
+    <div class="relative bg-blue text-white text-center py-16 md:py-20 md:pt-32 md:-mt-24 overflow-hidden min-h-[50vh] md:min-h-0">
         <div class="absolute h-80 bottom-10 lg:left-2/4 lg:-translate-x-1/2 opacity-10">
             @include('elements/illustrations/laravel-header')
         </div>

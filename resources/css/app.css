@@ -56,22 +56,11 @@ button, button *{
     cursor: url("/img/cursors/hand.svg") 10 10, auto !important;
 }
 
-/* .overlay{
-    position: relative;
-}
-.overlay:after{
-    content:"";
-    position: absolute;
-    top: 10%;
-    left: 15%;
-    width: 100%;
-    height: 100%;
-    background: #1940FF;
-    opacity: 0.24;
-} */
 
 svg {
     display: inline-block;
     vertical-align: middle;
 }
 @import "animate-svg";
+
+@import "article";

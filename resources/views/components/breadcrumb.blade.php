@@ -1,4 +1,4 @@
-<div class="flex items-center justify-center gap-2">
+<div class="flex items-start justify-center gap-2">
     <div>
         <a href="{{ route('home') }}">
             @include('elements.svg-icons.home')

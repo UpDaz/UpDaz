@@ -1,4 +1,4 @@
-<div id="welcome" class="w-full bg-blue px-8 md:px-16 py-16 md:py-24 flex items-center h-[calc(100vh-4rem)] md:h-screen">
+<div id="welcome" class="w-full bg-blue px-8 md:px-16 py-16 md:py-24 md:-mt-24 flex items-center h-[calc(100vh-4rem)] md:h-[calc(100vh+2rem)]">
     <div class="container mx-auto md:-mt-24">
         <h1 class="hidden">
             Création de site internet sur mesure à Bordeaux

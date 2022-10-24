@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 
@@ -45,3 +47,11 @@ Route::get(
 );
 
 Route::post('/contact', [ContactController::class, 'send'])->name('contact');
+
+Route::get(
+    '/actualites/{slug}', [CategoryController::class, 'show']
+)->name('category');
+
+Route::get(
+    '/actualites/{categorySlug}/{slug}', [ArticleController::class, 'show']
+)->name('article');

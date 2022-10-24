@@ -9,8 +9,8 @@ Lancez votre boutique en ligne sur internet grâce au CMS Prestashop.
 @endsection
 
 @section('content')
-    <div class="relative bg-blue text-white text-center py-16 md:py-20 md:pt-12 overflow-hidden">
-        <div class="absolute h-80 bottom-10 lg:left-2/4 lg:-translate-x-1/2 opacity-10">
+    <div class="relative bg-blue text-white text-center py-16 md:py-20 md:pt-32 md:-mt-24 overflow-hidden min-h-[50vh] md:min-h-0">
+        <div class="absolute h-full bottom-10 lg:left-2/4 lg:-translate-x-1/2 opacity-10">
             @include('elements/illustrations/prestashop-header')
         </div>
         <div class="relative">

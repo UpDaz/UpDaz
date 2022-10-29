@@ -32,9 +32,10 @@ class CanonicalUrl extends Component
     private function getCanonicalUrl()
     {
         $currentUrl = URL::current();
+
         return str_replace([
             'http://',
-            'www.'
+            'www.',
         ],
         [
             'https://',

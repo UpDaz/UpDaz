@@ -22,7 +22,7 @@ class Markdown implements CastsAttributes
      * @param  array  $attributes
      * @return mixed
      */
-    public function get($model, string $key, $value, array $attributes)
+    public function get($model, string $key, $markdownContent, array $attributes)
     {
         $environment = new Environment([
             'allow_unsafe_links' => false,
@@ -33,7 +33,10 @@ class Markdown implements CastsAttributes
 
         $converter = new MarkdownConverter($environment);
 
-        return $this->replacePublicImagePath(new HtmlString($converter->convert($value)->getContent()));
+        $markdownContent = $this->overrideAsideHtmlBlock($markdownContent);
+        $htmlContent = new HtmlString($converter->convert($markdownContent)->getContent());
+        $htmlContent = $this->replacePublicImagePath($htmlContent);
+        return $htmlContent;
     }
 
     /**
@@ -50,8 +53,20 @@ class Markdown implements CastsAttributes
         return $value;
     }
 
-    private function replacePublicImagePath($content)
+    private function replacePublicImagePath($htmlContent)
     {
-        return str_replace("public_img_path/", URL::asset('img') . '/', $content);
+        return str_replace("public_img_path/", URL::asset('img') . '/', $htmlContent);
+    }
+
+    private function overrideAsideHtmlBlock($content)
+    {
+        return str_replace([
+            '<aside>', 
+            '</aside>',
+        ],
+        [
+            '<p class="aside">',
+            '</p>',
+        ], $content);
     }
 }

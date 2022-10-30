@@ -26,7 +26,7 @@
     </div>
 </div>
 
-<div class="container px-8 py-12 mx-auto md:px-28 md:py-24 text-justify">
+<div class="container px-8 py-12 mx-auto md:px-36 md:py-24 text-justify">
     <div class="text-sm mb-6 italic text-right">
         Le {{ $article->published_at->format('d/m/Y') }}<br/>
         Par Matthieu
@@ -36,4 +36,9 @@
     </div>
 </div>
 
+@endsection
+
+@section('javascript')
+@parent
+<script src="{{ asset('js/article.js') }}" async defer></script>
 @endsection

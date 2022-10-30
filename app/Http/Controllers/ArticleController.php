@@ -18,7 +18,7 @@ class ArticleController extends Controller
     {
         $article = $this->articleRepository->getByCategorySlugAndSlug($slugCategory, $slug);
         
-        if ($article) {
+        if ( $article && $article->can_be_read ) {
             return view('article.show', [
                 'article' => $article,
             ]);

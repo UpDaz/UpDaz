@@ -12,7 +12,9 @@ class Category extends Model
 
     public function articles()
     {
-        return $this->hasMany(Article::class)->where('is_published', true);
+        return $this->hasMany(Article::class)
+                    ->where('is_published', true)
+                    ->where('published_at', '<=', date('Y-m-d'));
     }
 
     /**

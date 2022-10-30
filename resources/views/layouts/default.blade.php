@@ -34,5 +34,6 @@
 </body>
 
 <script src="{{ asset('js/app.js') }}" async defer></script>
+@yield('javascript')
 
 </html>

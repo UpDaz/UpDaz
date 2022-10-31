@@ -29,7 +29,6 @@ class GenerateSitemap extends Command
      */
     public function handle()
     {
-        // modify this to your own needs
         SitemapGenerator::create(config('app.url'))
             ->hasCrawled(function (Url $url) {
                 if(substr($url->path(), -1, 1) == '/') {
@@ -44,5 +43,6 @@ class GenerateSitemap extends Command
                 return $url;
             })
             ->writeToFile(public_path('sitemap.xml'));
+        $this->info('Sitemap file generated successfully !');
     }
 }

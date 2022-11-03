@@ -92,11 +92,6 @@
             </a>
           </li>
           <li class="hidden md:block">
-            <a href="https://plateforme.freelance.com/freelance/Matthieu-c34713cf-17ba-4a64-8b99-aa21e240582b" target="_blank" title="Freelance.com" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
-              <img src="{{ asset('img/logos/white/freelance.svg') }}" width="26" height="20" alt="Logo Frellance.com" title="Freelance.com" class="mx-auto">
-            </a>
-          </li>
-          <li class="hidden md:block">
             <a href="https://github.com/UpDaz" target="_blank" title="Github" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
               <img src="{{ asset('img/logos/white/github.svg') }}" width="20" height="20" alt="Logo Github" title="Github" class="mx-auto">
             </a>
@@ -109,10 +104,7 @@
           <a href="https://www.malt.fr/profile/matthieudazord" target="_blank" title="Malt" class="block font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
             <img src="{{ asset('img/logos/white/malt.svg') }}" width="30" height="30" alt="Logo Malt" title="Malt" class="mx-auto">
           </a>
-          <a href="https://plateforme.freelance.com/freelance/Matthieu-c34713cf-17ba-4a64-8b99-aa21e240582b" target="_blank" title="Freelance.com" class="block font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
-            <img src="{{ asset('img/logos/white/freelance.svg') }}" width="36" height="30" alt="Logo Frellance.com" title="Freelance.com" class="mx-auto">
-          </a>
-          <a href="https://github.com/UpDaz" target="_blank" title="Freelance.com" class="block font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
+          <a href="https://github.com/UpDaz" target="_blank" title="Github" class="block font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
             <img src="{{ asset('img/logos/white/github.svg') }}" width="30" height="30" alt="Logo Github" title="GIthub" class="mx-auto">
           </a>
         </div>

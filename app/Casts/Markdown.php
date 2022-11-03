@@ -36,9 +36,9 @@ class Markdown implements CastsAttributes
 
         $converter = new MarkdownConverter($environment);
 
-        $markdownContent = $this->_overrideAsideHtmlBlock($markdownContent);
+        $markdownContent = $this->overrideAsideHtmlBlock($markdownContent);
         $htmlContent = new HtmlString($converter->convert($markdownContent)->getContent());
-        $htmlContent = $this->_replacePublicImagePath($htmlContent);
+        $htmlContent = $this->replacePublicImagePath($htmlContent);
         return $htmlContent;
     }
 
@@ -63,7 +63,7 @@ class Markdown implements CastsAttributes
      *
      * @return String
      */
-    private function _replacePublicImagePath(string $htmlContent) : String
+    private function replacePublicImagePath(string $htmlContent) : String
     {
         return str_replace("public_img_path/", URL::asset('img') . '/', $htmlContent);
     }
@@ -75,7 +75,7 @@ class Markdown implements CastsAttributes
      *
      * @return string
      */
-    private function _overrideAsideHtmlBlock(string $content) : string
+    private function overrideAsideHtmlBlock($content) : string
     {
         return str_replace(
             [

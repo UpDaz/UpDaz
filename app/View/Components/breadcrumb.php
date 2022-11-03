@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class breadcrumb extends Component
+class Breadcrumb extends Component
 {
     /**
      * The additional links.

@@ -33,14 +33,16 @@ class CanonicalUrl extends Component
     {
         $currentUrl = URL::current();
 
-        return str_replace([
+        return str_replace(
+            [
             'http://',
             'www.',
-        ],
-        [
+            ],
+            [
             'https://',
             '',
-        ],
-        $currentUrl);
+            ],
+            $currentUrl
+        );
     }
 }

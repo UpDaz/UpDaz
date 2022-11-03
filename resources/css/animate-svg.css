@@ -81,7 +81,7 @@ svg .bubble:nth-of-type(odd) {
 /* LETTER BOX */
 svg .rotate-flag{
     transform-box: fill-box;
-    -webkit-animation: rotate-flag 4s infinite ease-out; 
+    -webkit-animation: rotate-flag 4s infinite ease-out;
     animation: rotate-flag 4s infinite ease-out;
     transform-origin: bottom right;
 }
@@ -102,7 +102,7 @@ svg .rotate-flag{
 }
 
 svg .rotate-effect > *{
-    -webkit-animation: rotate-effect 4s infinite linear; 
+    -webkit-animation: rotate-effect 4s infinite linear;
     animation: rotate-effect 4s infinite linear;
 }
 
@@ -125,13 +125,13 @@ svg .rotate-effect > *{
 /* NUAGES */
 svg .cloud:nth-of-type(even) {
     transform-box: fill-box;
-    -webkit-animation: cloud-1 4s infinite linear; 
+    -webkit-animation: cloud-1 4s infinite linear;
     animation: cloud-1 4s infinite linear;
 }
 
 svg .cloud:nth-of-type(odd) {
     transform-box: fill-box;
-    -webkit-animation: cloud-2 10s infinite linear; 
+    -webkit-animation: cloud-2 10s infinite linear;
     animation: cloud-2 10s infinite linear;
 }
 

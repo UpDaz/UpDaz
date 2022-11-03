@@ -17,31 +17,36 @@ use App\Http\Controllers\ContactController;
 */
 
 Route::get(
-    '/', function () {
+    '/',
+    function () {
         return view('pages.home');
     }
 )->name('home');
 
 Route::get(
-    '/webflow', function () {
+    '/webflow',
+    function () {
         return view('pages.webflow');
     }
 )->name('webflow');
 
 Route::get(
-    '/laravel', function () {
+    '/laravel',
+    function () {
         return view('pages.laravel');
     }
 )->name('laravel');
 
 Route::get(
-    '/prestashop', function () {
+    '/prestashop',
+    function () {
         return view('pages.prestashop');
     }
 )->name('prestashop');
 
 Route::get(
-    '/contact', function () {
+    '/contact',
+    function () {
         return redirect('/');
     }
 );
@@ -49,9 +54,11 @@ Route::get(
 Route::post('/contact', [ContactController::class, 'send'])->name('contact');
 
 Route::get(
-    '/actualites/{slug}', [CategoryController::class, 'show']
+    '/actualites/{slug}',
+    [CategoryController::class, 'show']
 )->name('category');
 
 Route::get(
-    '/actualites/{categorySlug}/{slug}', [ArticleController::class, 'show']
+    '/actualites/{categorySlug}/{slug}',
+    [ArticleController::class, 'show']
 )->name('article');

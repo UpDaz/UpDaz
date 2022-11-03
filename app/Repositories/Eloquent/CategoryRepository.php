@@ -14,25 +14,25 @@ class CategoryRepository extends BaseRepository implements CategoryRepositoryInt
     *
     * @param Category $model
     */
-   public function __construct(Category $model)
-   {
-       parent::__construct($model);
-   }
+    public function __construct(Category $model)
+    {
+        parent::__construct($model);
+    }
 
    /**
     * @return Collection
     */
-   public function all(): Collection
-   {
-       return $this->model->all();    
-   }
+    public function all(): Collection
+    {
+        return $this->model->all();
+    }
 
    /**
     * @return Collection
     */
     public function actives($limit = null): Collection
     {
-        return $this->model->where(['is_active' => 1])->limit($limit)->get();    
+        return $this->model->where(['is_active' => 1])->limit($limit)->get();
     }
 
     /**
@@ -44,6 +44,6 @@ class CategoryRepository extends BaseRepository implements CategoryRepositoryInt
                 ->where('slug', $slug)
                 ->where('is_active', true)
                 ->with('articles')
-                ->first();    
+                ->first();
     }
 }

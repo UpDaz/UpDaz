@@ -7,9 +7,9 @@ use Illuminate\Support\Collection;
 
 interface CategoryRepositoryInterface
 {
-   public function all(): Collection;
+    public function all(): Collection;
 
-   public function actives(): Collection;
+    public function actives(): Collection;
 
-   public function getBySlug($slug): ?Category;
+    public function getBySlug($slug): ?Category;
 }

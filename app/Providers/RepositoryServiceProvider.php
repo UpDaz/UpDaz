@@ -3,10 +3,10 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Repositories\EloquentRepositoryInterface; 
+use App\Repositories\EloquentRepositoryInterface;
 use App\Repositories\ArticleRepositoryInterface;
 use App\Repositories\CategoryRepositoryInterface;
-use App\Repositories\Eloquent\ArticleRepository; 
+use App\Repositories\Eloquent\ArticleRepository;
 use App\Repositories\Eloquent\BaseRepository;
 use App\Repositories\Eloquent\CategoryRepository;
 

@@ -31,7 +31,7 @@ class GenerateSitemap extends Command
     {
         SitemapGenerator::create(config('app.url'))
             ->hasCrawled(function (Url $url) {
-                if(substr($url->path(), -1, 1) == '/') {
+                if (substr($url->path(), -1, 1) == '/') {
                     return;
                 }
                 if ($url->segment(1) === 'actualites') {

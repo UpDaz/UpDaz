@@ -24,5 +24,4 @@ class Category extends Model
     {
         return $this->articles->isNotEmpty();
     }
-
 }

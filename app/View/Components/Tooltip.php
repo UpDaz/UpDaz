@@ -13,7 +13,7 @@ class Tooltip extends Component
      *
      * @return void
      */
-    public function __construct($color="#000000", $displayIcon = true)
+    public function __construct($color = "#000000", $displayIcon = true)
     {
         $this->color = $color;
         $this->displayIcon = $displayIcon;

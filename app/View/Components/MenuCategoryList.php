@@ -16,7 +16,7 @@ class MenuCategoryList extends Component
      */
     public function __construct(CategoryRepositoryInterface $categoryRepository)
     {
-        $this->categories = $categoryRepository->actives()->sortBy('name'); 
+        $this->categories = $categoryRepository->actives()->sortBy('name');
     }
 
     /**

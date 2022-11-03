@@ -14,19 +14,19 @@ class ArticleRepository extends BaseRepository implements ArticleRepositoryInter
     *
     * @param Article $model
     */
-   public function __construct(Article $model)
-   {
-       parent::__construct($model);
-   }
+    public function __construct(Article $model)
+    {
+        parent::__construct($model);
+    }
 
    /**
     * @return Collection
     */
-   public function all(): Collection
-   {
-       return $this->model
-                ->all();    
-   }
+    public function all(): Collection
+    {
+        return $this->model
+                ->all();
+    }
 
    /**
     * @return Collection
@@ -36,16 +36,16 @@ class ArticleRepository extends BaseRepository implements ArticleRepositoryInter
         return $this->model
                 ->where('is_published', true)
                 ->where('published_at', '<=', date('Y-m-d'))
-                ->whereHas('category', function($q){
+                ->whereHas('category', function ($q) {
                     $q->where('is_active', true);
                 })
                 ->with('category')
                 ->limit($limit)
-                ->get();    
+                ->get();
     }
 
     /**
-     * 
+     *
      * @param string $categorySlug
      * @param string $slug
      * @return Article
@@ -54,11 +54,11 @@ class ArticleRepository extends BaseRepository implements ArticleRepositoryInter
     {
         return $this->model
         ->where('slug', $slug)
-        ->whereHas('category', function($q) use ($categorySlug) {
+        ->whereHas('category', function ($q) use ($categorySlug) {
             $q->where('slug', $categorySlug)
                 ->where('is_active', true);
         })
         ->with('category')
-        ->first();     
+        ->first();
     }
 }

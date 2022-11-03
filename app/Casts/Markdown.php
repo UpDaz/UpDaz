@@ -3,7 +3,6 @@
 namespace App\Casts;
 
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
-use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\HtmlString;
 use League\CommonMark\Environment\Environment;
@@ -13,20 +12,24 @@ use League\CommonMark\MarkdownConverter;
 
 class Markdown implements CastsAttributes
 {
+
     /**
-     * Cast the given value.
+     * Method get
      *
-     * @param  \Illuminate\Database\Eloquent\Model  $model
-     * @param  string  $key
-     * @param  mixed  $value
-     * @param  array  $attributes
-     * @return mixed
+     * @param $model $model [explicite description]
+     * @param string $key [explicite description]
+     * @param $markdownContent $markdownContent [explicite description]
+     * @param array $attributes [explicite description]
+     *
+     * @return string
      */
-    public function get($model, string $key, $markdownContent, array $attributes)
+    public function get($model, string $key, $markdownContent, array $attributes) : string
     {
-        $environment = new Environment([
+        $environment = new Environment(
+            [
             'allow_unsafe_links' => false,
-        ]);
+            ]
+        );
 
         $environment->addExtension(new CommonMarkCoreExtension);
         $environment->addExtension(new TableExtension);
@@ -42,31 +45,48 @@ class Markdown implements CastsAttributes
     /**
      * Prepare the given value for storage.
      *
-     * @param  \Illuminate\Database\Eloquent\Model  $model
-     * @param  string  $key
-     * @param  mixed  $value
-     * @param  array  $attributes
+     * @param  \Illuminate\Database\Eloquent\Model $model
+     * @param  string                              $key
+     * @param  mixed                               $value
+     * @param  array                               $attributes
      * @return mixed
      */
     public function set($model, string $key, $value, array $attributes)
     {
         return $value;
     }
-
-    private function replacePublicImagePath($htmlContent)
+      
+    /**
+     * Method replacePublicImagePath
+     *
+     * @param string $htmlContent [explicite description]
+     *
+     * @return String
+     */
+    private function replacePublicImagePath(string $htmlContent) : String
     {
         return str_replace("public_img_path/", URL::asset('img') . '/', $htmlContent);
     }
-
-    private function overrideAsideHtmlBlock($content)
+    
+    /**
+     * Method overrideAsideHtmlBlock
+     *
+     * @param string $content [explicite description]
+     *
+     * @return string
+     */
+    private function overrideAsideHtmlBlock($content) : string
     {
-        return str_replace([
-            '<aside>', 
+        return str_replace(
+            [
+            '<aside>',
             '</aside>',
-        ],
-        [
+            ],
+            [
             '<p class="aside">',
             '</p>',
-        ], $content);
+            ],
+            $content
+        );
     }
 }

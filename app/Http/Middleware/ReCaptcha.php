@@ -17,7 +17,7 @@ class ReCaptcha
     public function handle(Request $request, Closure $next)
     {
         if ($request->method() === 'POST' && $request->has('g-recaptcha-response')) {
-            if(!$this->verifyToken($request->get('g-recaptcha-response'))) {
+            if (!$this->verifyToken($request->get('g-recaptcha-response'))) {
                 abort(500);
             }
         }

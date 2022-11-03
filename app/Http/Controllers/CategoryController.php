@@ -11,7 +11,7 @@ class CategoryController extends Controller
 
     public function __construct(CategoryRepositoryInterface $categoryController)
     {
-        $this->categoryController = $categoryController;    
+        $this->categoryController = $categoryController;
     }
 
     public function show($slug)

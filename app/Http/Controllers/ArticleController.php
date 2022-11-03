@@ -11,14 +11,14 @@ class ArticleController extends Controller
 
     public function __construct(ArticleRepositoryInterface $articleRepository)
     {
-        $this->articleRepository = $articleRepository;    
+        $this->articleRepository = $articleRepository;
     }
 
     public function show($slugCategory, $slug)
     {
         $article = $this->articleRepository->getByCategorySlugAndSlug($slugCategory, $slug);
         
-        if ( $article && $article->can_be_read ) {
+        if ($article && $article->can_be_read) {
             return view('article.show', [
                 'article' => $article,
             ]);

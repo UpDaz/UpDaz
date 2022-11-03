@@ -14,10 +14,10 @@ class ContactController extends Controller
         Mail::to(config('custom.email.contact'))
             ->send(
                 new Contact(
-                    $data['lastname'], 
-                    $data['firstname'], 
-                    $data['email'], 
-                    $data['phone'], 
+                    $data['lastname'],
+                    $data['firstname'],
+                    $data['email'],
+                    $data['phone'],
                     $data['message']
                 )
             );

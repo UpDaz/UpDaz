@@ -83,6 +83,11 @@
     margin-bottom: 0.5rem;
 }
 
+.article-content pre code{
+    display: block;
+    padding: 1rem 1.5rem;
+}
+
 .article-content code{
     display: inline-block;
     vertical-align: middle;

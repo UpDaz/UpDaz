@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class BaseRepository implements EloquentRepositoryInterface
 {
-
     /**
      * @var Model
      */
@@ -22,7 +21,7 @@ class BaseRepository implements EloquentRepositoryInterface
     {
         $this->model = $model;
     }
- 
+
     /**
     * @param $id
     * @return Model

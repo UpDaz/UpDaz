@@ -10,7 +10,6 @@ use Illuminate\Database\Eloquent\Model;
 */
 interface EloquentRepositoryInterface
 {
-
    /**
     * @param $id
     * @return Model

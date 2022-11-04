@@ -12,7 +12,6 @@ use League\CommonMark\MarkdownConverter;
 
 class Markdown implements CastsAttributes
 {
-
     /**
      * Method get
      *
@@ -23,7 +22,7 @@ class Markdown implements CastsAttributes
      *
      * @return string
      */
-    public function get($model, string $key, $markdownContent, array $attributes) : string
+    public function get($model, string $key, $markdownContent, array $attributes): string
     {
         $environment = new Environment(
             [
@@ -31,8 +30,8 @@ class Markdown implements CastsAttributes
             ]
         );
 
-        $environment->addExtension(new CommonMarkCoreExtension);
-        $environment->addExtension(new TableExtension);
+        $environment->addExtension(new CommonMarkCoreExtension());
+        $environment->addExtension(new TableExtension());
 
         $converter = new MarkdownConverter($environment);
 
@@ -55,7 +54,7 @@ class Markdown implements CastsAttributes
     {
         return $value;
     }
-      
+
     /**
      * Method replacePublicImagePath
      *
@@ -63,11 +62,11 @@ class Markdown implements CastsAttributes
      *
      * @return String
      */
-    private function replacePublicImagePath(string $htmlContent) : String
+    private function replacePublicImagePath(string $htmlContent): string
     {
         return str_replace("public_img_path/", URL::asset('img') . '/', $htmlContent);
     }
-    
+
     /**
      * Method overrideAsideHtmlBlock
      *
@@ -75,7 +74,7 @@ class Markdown implements CastsAttributes
      *
      * @return string
      */
-    private function overrideAsideHtmlBlock($content) : string
+    private function overrideAsideHtmlBlock($content): string
     {
         return str_replace(
             [

@@ -9,7 +9,8 @@ use Illuminate\Queue\SerializesModels;
 
 class Contact extends Mailable
 {
-    use Queueable, SerializesModels;
+    use Queueable;
+    use SerializesModels;
 
     public $lastname;
     public $firstname;

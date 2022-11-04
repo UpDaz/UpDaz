@@ -8,7 +8,6 @@ use Illuminate\Support\Collection;
 
 class ArticleRepository extends BaseRepository implements ArticleRepositoryInterface
 {
-
    /**
     * ArticleRepository constructor.
     *

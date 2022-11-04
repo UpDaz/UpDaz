@@ -24,7 +24,7 @@ class ReCaptcha
         return $next($request);
     }
 
-    private function verifyToken(string $token) : Bool
+    private function verifyToken(string $token): bool
     {
         $data = http_build_query(
             array(

@@ -2,6 +2,40 @@
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 items-center ">
         <x-tooltip color="#FFFFFF" displayIcon="{{ false }}">
             <x-slot:message>
+                <h3 class="px-6 py-4 font-text text-base font-bold bg-blue text-white text-center w-full">Éditions Vetiver</h3>
+                <div class="px-6 py-4 text-black leading-8">
+                    <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Wordpress / Woocommercer
+                    <br/>
+                    <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Maintenance
+                    <br/>
+                    <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Évolutions techniques
+                </div>
+            </x-slot>
+            <x-slot:content>
+                <a href="https://editionsvetiver.com/" target="_blank" title="Éditions Vetiver">
+                    <img src="{{ asset('img/references/editions-vetiver.svg') }}" class="w-full max-h-16 mx-auto" width="138" height="50" alt="Éditions Vetiver logo" title="Éditions Vetiver" loading="lazy"/>
+                </a>
+            </x-slot>
+        </x-tooltip>
+        <x-tooltip color="#FFFFFF" displayIcon="{{ false }}">
+            <x-slot:message>
+                <h3 class="px-6 py-4 font-text text-base font-bold bg-blue text-white text-center w-full">Ma Beauté Bio</h3>
+                <div class="px-6 py-4 text-black leading-8">
+                    <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Prestashop
+                    <br/>
+                    <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Maintenance
+                    <br/>
+                    <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Évolutions techniques
+                </div>
+            </x-slot>
+            <x-slot:content>
+                <a href="https://mabeautebio.fr/" target="_blank" title="Ma Beauté Bio" class="bg-white p-2">
+                    <img src="{{ asset('img/references/ma-beaute-bio.jpeg') }}" class="w-full max-h-16 mx-auto" width="138" height="50" alt="Ma Beauté Bio logo" title="Ma Beauté Bio" loading="lazy"/>
+                </a>
+            </x-slot>
+        </x-tooltip>
+        <x-tooltip color="#FFFFFF" displayIcon="{{ false }}">
+            <x-slot:message>
                 <h3 class="px-6 py-4 font-text text-base font-bold bg-blue text-white text-center w-full">C&C Graphic</h3>
                 <div class="px-6 py-4 text-black leading-6">
                     <img src="{{ asset('img/illustrations/check.svg')}}" class="mr-1 inline-block align-middle" width="20" height="20" alt="Illustration picto check" title="Check"/> Accompagnement dans la création technique de sites web
@@ -53,7 +87,9 @@
                 </div>
             </x-slot>
             <x-slot:content>
-                <img src="{{ asset('img/references/gpbl.png') }}" class="w-full max-h-12 mx-auto" width="138" height="30" alt="C" title="Mediaffiliation" loading="lazy"/>
+                <div class="bg-white p-2">
+                    <img src="{{ asset('img/references/gpbl.png') }}" class="w-full max-h-12 mx-auto" width="138" height="30" alt="C" title="Mediaffiliation" loading="lazy"/>
+                </div>
             </x-slot>
         </x-tooltip>
     </div>     

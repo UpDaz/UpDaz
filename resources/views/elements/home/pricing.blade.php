@@ -17,7 +17,7 @@
                         <li class="flex items-center mb-6 md:mb-4">
                            @include('elements.svg-icons.check')
                             Technologie&nbsp;
-                            <a target="_blank" href="https://webflow.com/" class="flex items-center gap-1">
+                            <a target="_blank" href="https://webflow.com/" class="flex items-center gap-1 border-b-2">
                                 Webflow
                                 @include('elements.svg-icons.external-link')
                             </a>
@@ -81,7 +81,7 @@
                         <li class="flex items-center mb-6 md:mb-4 text-left leading-5">
                            @include('elements.svg-icons.check')
                             CMS&nbsp;
-                            <a href="https://www.prestashop.com/fr" target="_blank" class="flex items-center gap-1">
+                            <a href="https://www.prestashop.com/fr" target="_blank" class="flex items-center gap-1 border-b-2">
                                 Prestashop
                                 @include('elements.svg-icons.external-link')
                             </a>

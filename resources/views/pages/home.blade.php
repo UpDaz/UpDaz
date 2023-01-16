@@ -3,6 +3,7 @@
 @section('content')
     @include('elements.home.welcome')
     @include('elements.home.presentation')
+    @include('elements.home.opquast')
     @include('elements.home.references')
     @include('elements.home.pricing')
     @include('elements.home.articles')

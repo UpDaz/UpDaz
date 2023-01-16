@@ -34,36 +34,15 @@
               Références
             </a>
           </li>
-          <li class="relative border-orange border-2 mx-4 md:border-none md:mx-0" 
-              x-data="{ openSubmenu:false }" 
-              @mouseleave="openSubmenu = false" 
-              @mouseover="openSubmenu = true">
+          <li>
             <a href="{{ route('home') }}#offres" 
                 @click.prevent="scrollToTarget('#offres')" 
                 title="Offres" 
                 class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white md:bg-transparent md:p-0 hover:underline" aria-current="page">
               Offres
             </a>
-            <div class="w-1/3 bg-orange mx-auto h-[2px] md:hidden"></div>
-            <ul class="block text-center md:hidden md:absolute md:bg-white md:left-1/2 md:-translate-x-2/4 md:w-60 md:shadow-md md:rounded" x-bind:class="openSubmenu? 'md:!block' : '' ">
-              <li>
-                <a href="{{ route('webflow') }}" class="block pt-4 pb-2 text-base font-bold text-white md:text-sm md:py-4 md:text-blue hover:bg-blue-dark hover:text-white">
-                  Landing page & site vitrine
-                </a>
-              </li>
-              <li>
-                <a href="{{ route('prestashop') }}" class="block pt-2 pb-4 text-base font-bold text-white md:py-4 md:text-sm md:text-blue hover:bg-blue-dark hover:text-white">
-                  E-commerce & boutique en ligne
-                </a>
-              </li>
-              <li>
-                <a href="{{ route('laravel') }}" class="block pt-2 pb-4 text-base font-bold text-white md:py-4 md:text-sm md:text-blue hover:bg-blue-dark hover:text-white">
-                  Application métier & sur-mesure
-                </a>
-              </li>
-            </ul>
           </li>
-          <li class="relative border-orange border-2 mx-4 mt-4 md:mt-0 md:border-none md:mx-0" 
+          <li class="relative" 
               x-data="{ openSubmenu:false }" 
               @mouseleave="openSubmenu = false" 
               @mouseover="openSubmenu = true">
@@ -73,8 +52,9 @@
                 class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white md:bg-transparent md:p-0 hover:underline" aria-current="page">
               Actualités
             </a>
-            <div class="w-1/3 bg-orange mx-auto h-[2px] md:hidden"></div>
-            <x-menu-category-list />
+            <div class="hidden md:block">
+              <x-menu-category-list />
+            </div>
           </li>
           <li>
             <a href="{{ route('home') }}#contact" @click.prevent="scrollToTarget('#contact')" title="Me Contacter" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
@@ -87,11 +67,6 @@
             </a>
           </li>
           <li class="hidden md:block">
-            <a href="https://www.malt.fr/profile/matthieudazord" target="_blank" title="Malt" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
-              <img src="{{ asset('img/logos/white/malt.svg') }}" width="20" height="20" alt="Logo Malt" title="Malt" class="mx-auto">
-            </a>
-          </li>
-          <li class="hidden md:block">
             <a href="https://github.com/UpDaz" target="_blank" title="Github" class="block py-4 md:py-2 pr-4 pl-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
               <img src="{{ asset('img/logos/white/github.svg') }}" width="20" height="20" alt="Logo Github" title="Github" class="mx-auto">
             </a>
@@ -100,9 +75,6 @@
         <div class="flex align-middle justify-center md:hidden gap-10 my-4">
           <a href="https://fr.linkedin.com/in/matthieu-dazord" target="_blank" title="Linkedin" class="block font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
             <img src="{{ asset('img/logos/white/linkedin.svg') }}" width="30" height="30" alt="Logo Linkedin" title="Linkedin" class="mx-auto">
-          </a>
-          <a href="https://www.malt.fr/profile/matthieudazord" target="_blank" title="Malt" class="block font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
-            <img src="{{ asset('img/logos/white/malt.svg') }}" width="30" height="30" alt="Logo Malt" title="Malt" class="mx-auto">
           </a>
           <a href="https://github.com/UpDaz" target="_blank" title="Github" class="block font-bold text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
             <img src="{{ asset('img/logos/white/github.svg') }}" width="30" height="30" alt="Logo Github" title="GIthub" class="mx-auto">

@@ -5,7 +5,7 @@ Offre boutique en ligne & e-commerce - UpDaz
 @endsection
 
 @section('meta-description')
-Lancez votre boutique en ligne sur internet grâce au CMS Prestashop.
+Votre boutique e-commerce en ligne clé-en-main grâce au CMS Prestashop. Profiter d'un large choix de modules et de thèmes adaptés à vos besoins. 
 @endsection
 
 @section('content')

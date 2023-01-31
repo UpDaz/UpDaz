@@ -30,4 +30,14 @@ class Article extends Model
     {
         return $this->is_published && $this->published_at->lte(Carbon::now());
     }
+
+    public function getMetaTitleAttribute()
+    {
+        return substr($this->title, 0, 52);
+    }
+
+    public function getMetaDescriptionAttribute()
+    {
+        return substr($this->catch_phrase, 0, 150);
+    }
 }

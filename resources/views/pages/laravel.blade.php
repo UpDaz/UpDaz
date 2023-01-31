@@ -5,7 +5,7 @@ Offre sur-mesure & application métier Laravel - UpDaz
 @endsection
 
 @section('meta-description')
-Digitalisez vos processus métiers et optez pour la fiabilité et la performance d'un site sur-mesure avec Laravel.
+Digitalisez vos processus métiers et optez pour la fiabilité, la performance et la sécurité d'une application web sur-mesure avec Laravel.
 @endsection
 
 @section('content')

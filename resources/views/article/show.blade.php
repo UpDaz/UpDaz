@@ -1,10 +1,10 @@
 @extends('layouts.default')
 
 @section('title')
-{{ $article->title }} - Article - UpDaz
+{{ $article->meta_title }} - UpDaz
 @endsection
 
-@section('meta-description'){{ $article->catch_phrase }}@endsection
+@section('meta-description'){{ $article->meta_description }}@endsection
 
 @section('content')
 @include('elements.article.structured-data')

@@ -31,7 +31,7 @@
 
 <div class="container px-8 py-12 mx-auto md:px-16 md:py-24">
     @if($category->has_articles)
-        <div class="md:grid grid-cols-3 gap-6 align-top justify-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 align-top justify-center">
             @foreach( $category->articles->sortByDesc('published_at') as $article)
                 @include('elements.article.box')
             @endforeach

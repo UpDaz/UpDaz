@@ -1,4 +1,4 @@
-<div class="article bg-white border-8 border-orange px-6 py-8">
+<div class="article bg-slate-50 border-8 border-orange px-6 py-8 shadow-lg">
     <h3 class="">
         <a href="{{ route('article', ['categorySlug' => $article->category->slug, 'slug' => $article->slug]) }}" class="font-title bold text-2xl text-blue text-left">
             {{ $article->title }}

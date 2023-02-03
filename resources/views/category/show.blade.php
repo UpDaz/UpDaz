@@ -1,11 +1,11 @@
 @extends('layouts.default')
 
 @section('title')
-{{ $category->name }} - Actualités - UpDaz
+{{ $category->meta_title }} - UpDaz
 @endsection
 
 @section('meta-description')
-{{ $category->catch_phrase }}
+{{ $category->meta_description }}
 @endsection
 
 @section('content')
@@ -14,11 +14,8 @@
         @include('elements/illustrations/write-book')
     </div>
     <div class="relative">
-        <h1 class="font-title text-4xl lg:text-6xl font-bold">Actualités <span class="text-orange">{{ $category->name }}</span></h1>
-        <p class="container mx-auto text-center my-6">
-            {{ $category->catch_phrase }}
-        </p>
-        <div class="container mx-auto text-center text-sm">
+        <h1 class="font-title text-4xl lg:text-6xl font-bold">Les articles <span class="text-orange">{{ $category->name }}</span></h1>
+        <div class="container mx-auto text-center text-sm mt-6">
             <x-breadcrumb :links="[
                 $category->name => route('category', ['slug' => $category->slug])
             ]" />
@@ -26,7 +23,13 @@
     </div>
 </div>
 
-<div class="container px-8 py-12 mx-auto md:px-16 md:py-24 text-justify">
+<div class="container mx-auto mt-6">
+    <p class="text-center">
+        {{ $category->catch_phrase }}
+    </p>
+</div>
+
+<div class="container px-8 py-12 mx-auto md:px-16 md:py-24">
     @if($category->has_articles)
         <div class="md:grid grid-cols-3 gap-6 align-top justify-center">
             @foreach( $category->articles->sortByDesc('published_at') as $article)

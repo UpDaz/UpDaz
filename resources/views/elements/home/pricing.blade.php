@@ -1,6 +1,6 @@
 <div id="offres" class="px-8 md:px-16 py-16 md:py-24 bg-blue-dark min-h-screen">
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 align-top justify-center md:justify-between ">
-            <div class="relative w-full text-center bg-white border-orange border-8 px-4 py-8">
+            <div class="relative w-full text-center bg-slate-50 border-orange border-8 px-4 py-8 shadow-lg">
                 <h2 class="text-orange text-xl">
                     Landing page
                     <br/>
@@ -64,7 +64,7 @@
                     </a>
                 </div>
             </div>
-            <div class="relative w-full text-center bg-white border-orange border-8 px-4 py-8">
+            <div class="relative w-full text-center bg-slate-50 border-orange border-8 px-4 py-8 shadow-lg">
                 <h2 class="text-orange text-xl">
                     E-commerce & 
                     <br/>
@@ -126,7 +126,7 @@
                     </a>
                 </div>
             </div>
-            <div class="relative w-full text-center bg-white border-orange border-8 px-4 py-8">
+            <div class="relative w-full text-center bg-slate-50 border-orange border-8 px-4 py-8 shadow-lg">
                 <h2 class="text-orange text-xl">
                     Application métier
                     <br/>

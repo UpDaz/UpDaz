@@ -1,4 +1,4 @@
-<form x-data="contactForm" id="contact-form" @submit.prevent="submitForm()" class="bg-orange shadow-md px-4 md:px-10 py-8 mb-4">
+<form x-data="contactForm" id="contact-form" @submit.prevent="submitForm()" class="bg-orange shadow-lg px-4 md:px-10 py-8 mb-4">
     <div class="mb-4">
         <input placeholder="Prénom*" name="firstname" class=" placeholder-gray-800 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="firstname" type="text" required>
     </div>

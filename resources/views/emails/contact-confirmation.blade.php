@@ -5,7 +5,7 @@ Confirmation demande de contact
 @endsection
 
 @section('content')
-@include('elements.emails.image', ['path' => public_path('https://www.updaz.fr/img/emails/letter-box.png'), 'alt' => 'Boite aux lettres'])
+@include('elements.emails.image', ['path' => 'https://www.updaz.fr/img/emails/letter-box.png', 'alt' => 'Boite aux lettres'])
 <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
     <tbody>
       <tr>
@@ -23,9 +23,9 @@ Confirmation demande de contact
                           <tr>
                             <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                               <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:400;line-height:24px;text-align:left;color:#637381;">
-                                    Merci pour votre demande, je reviens vers vous dans les plus brefs délais.
+                                    Merci pour votre demande, je reviens vers vous sous peu.
                                     <br/>
-                                    Pour rappel voici les informations que vous m'avez partagé :<br><br/>
+                                    Pour rappel voici les informations que vous m'avez envoyé :<br><br/>
                                     Identité : <b>{{ ucfirst($firstname) }} {{ strtoupper($lastname) }}</b>
                                     <br/><br/>
                                     Email : <b>{{ $email }}</b>

@@ -25,7 +25,7 @@
             </button>
             <p x-show="!submitting && success" class="text-white bold block md:flex items-center text-right md:text-left">
                 <img src="{{ asset('img/illustrations/check-rounded-orange.svg')}}" class="mx-auto md:mr-2" width="30" alt="Picto check" title="Check"/>
-                Votre demande a bien été envoyé, vous allez recevoir un mail de confirmation.
+                Votre demande a bien été envoyé, vous allez recevoir un email de confirmation dans les plus brefs délais.
             </p>
             <p x-show="error" class="text-red-500 bold mt-2 block md:flex items-center text-right md:text-left">
                 <img src="{{ asset('img/illustrations/warning.svg')}}" class="mx-auto md:mr-3" width="30" alt="Picto warning" title="Erreur"/>

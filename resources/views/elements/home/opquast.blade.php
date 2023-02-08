@@ -34,10 +34,10 @@
                 Le niveau "<b>Avancé</b>" correspond à d'excellentes connaissances des bonnes pratiques qualité Web et du vocabulaire associé ainsi que des compétences réelles et appréciables pour participer à des projets avec d’autres professionnels.
             </p>
             <p class="md:flex justify-end mt-4 gap-4">
-                <a href="https://directory.opquast.com/fr/certificat/PUGT87/" target="_blank" class="block text-center bg-blue-dark hover:bg-brown text-white px-6 py-3 rounded shadow-md mb-4 md:mb-0">
+                <a href="https://directory.opquast.com/fr/certificat/PUGT87/" target="_blank" class="block text-center bg-blue-dark hover:bg-orange text-white px-6 py-3 rounded shadow-md mb-4 md:mb-0">
                     Authentifier ma certification @include('elements.svg-icons.external-link')
                 </a>
-                <a href="#contact" @click.prevent="scrollToTarget('#contact')" class="block text-center bg-orange hover:bg-brown text-white px-6 py-3 rounded shadow-md" title="Lien vers contact">
+                <a href="#contact" @click.prevent="scrollToTarget('#contact')" class="block text-center bg-orange hover:bg-blue-dark text-white px-6 py-3 rounded shadow-md" title="Lien vers contact">
                     Je veux en apprendre plus
                 </a>
             </p>

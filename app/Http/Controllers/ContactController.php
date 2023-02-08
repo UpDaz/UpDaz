@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ContactRequest;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Contact;
+use App\Mail\ContactConfirmation;
 
 class ContactController extends Controller
 {
@@ -14,6 +15,16 @@ class ContactController extends Controller
         Mail::to(config('custom.email.contact'))
             ->send(
                 new Contact(
+                    $data['lastname'],
+                    $data['firstname'],
+                    $data['email'],
+                    $data['phone'],
+                    $data['message']
+                )
+            );
+        Mail::to(config('custom.email.contact'))
+            ->send(
+                new ContactConfirmation(
                     $data['lastname'],
                     $data['firstname'],
                     $data['email'],

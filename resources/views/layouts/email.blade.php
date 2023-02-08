@@ -136,7 +136,7 @@
                                                       <tbody>
                                                         <tr>
                                                           <td align="left" style="font-size:0px;padding:10px 25px;padding-left:40px;word-break:break-word;">
-                                                            <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#212b35;">
+                                                            <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:20px;font-weight:bold;line-height:24px;text-align:center;color:#001A9E;">
                                                                 @yield('title')
                                                             </div>
                                                           </td>
@@ -223,7 +223,7 @@
                                               </tr>
                                               <tr>
                                                 <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                                                  <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:11px;font-weight:400;line-height:16px;text-align:center;color:#445566;">&copy; UpDaz</div>
+                                                  <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:11px;font-weight:400;line-height:16px;text-align:center;color:#445566;">&copy; UpDaz - {{ date('Y') }}</div>
                                                 </td>
                                               </tr>
                                             </tbody>

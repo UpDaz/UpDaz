@@ -1,7 +1,7 @@
 @extends('layouts.email')
 
 @section('title')
-Confirmation demande de contact
+Accusé de réception - demande de contact
 @endsection
 
 @section('content')
@@ -23,7 +23,7 @@ Confirmation demande de contact
                           <tr>
                             <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                               <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:400;line-height:24px;text-align:left;color:#637381;">
-                                    Merci pour votre demande, je reviens vers vous sous peu.
+                                    Merci pour votre demande, je reviens vers vous dans les plus brefs délais.
                                     <br/>
                                     Pour rappel voici les informations que vous m'avez envoyé :<br><br/>
                                     Identité : <b>{{ ucfirst($firstname) }} {{ strtoupper($lastname) }}</b>
@@ -34,7 +34,7 @@ Confirmation demande de contact
                                     <br/><br/>
                                     Message : <br/><i>{{ $client_message }}</i>
                                     <br/><br/>
-                                    Si votre demande concerne un projet, merci de bien vouloir remplir @include('elements.emails.button', ['content' => 'le formulaire prévu à cet effet', 'link' => 'https://14r0dvle4i4.typeform.com/to/kEyCbkxN'])
+                                    ☞ Si votre demande concerne un projet à venir, merci de bien vouloir renseigner ceci : @include('elements.emails.button', ['content' => "accéder au formulaire d'information", 'link' => 'https://14r0dvle4i4.typeform.com/to/kEyCbkxN'])
                                 </div>
                             </td>
                           </tr>

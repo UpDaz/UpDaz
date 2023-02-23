@@ -4,7 +4,7 @@
     </h3>
     <ul class="list-decimal list-inside">
         <li>
-            <a href="{{ route('prestashop') }}#presentation" class="hover:underline">
+            <a href="{{ route('prestashop') }}#introduction" class="hover:underline">
                 Prestashop :  la boutique en ligne clé en main
             </a>
         </li>

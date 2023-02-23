@@ -65,6 +65,7 @@ svg {
     display: inline-block;
     vertical-align: middle;
 }
+
 @import "animate-svg";
 
 @import "article";

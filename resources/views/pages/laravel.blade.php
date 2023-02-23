@@ -25,7 +25,7 @@ Digitalisez vos processus métiers et optez pour la fiabilité, la performance e
         <div class="bg-gray-100 px-8 py-8 md:float-right md:w-1/3 md:ml-16 md:mb-8">
             @include('elements.laravel.menu')
         </div>
-        <h3 class="text-2xl text-orange mb-4" id="presentation">
+        <h3 class="text-2xl text-orange mb-4" id="introduction">
             Laravel, qu’est-ce que c’est ?
         </h3>
         <p class="mb-2">

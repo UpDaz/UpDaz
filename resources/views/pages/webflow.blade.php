@@ -25,7 +25,7 @@ Créez votre landing page et site vitrine grâce à l'outils en ligne no-code We
         <div class="bg-gray-100 px-8 py-8 md:float-right md:w-1/3 md:ml-16 md:mb-8">
             @include('elements.webflow.menu')
         </div>
-        <h3 class="text-2xl text-orange mb-4" id="presentation">
+        <h3 class="text-2xl text-orange mb-4" id="introduction">
             Présentation
         </h3>
         <div class="lg:flex content-middle gap-8 justify-between items-center">

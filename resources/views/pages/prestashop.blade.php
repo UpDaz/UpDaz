@@ -25,7 +25,7 @@ Votre boutique e-commerce en ligne clé-en-main grâce au CMS Prestashop. Profit
         <div class="bg-gray-100 px-8 py-8 md:float-right md:w-1/3 md:ml-16 md:mb-8">
             @include('elements.prestashop.menu')
         </div>
-        <h3 class="text-2xl text-orange mb-4 pt-8" id="presentation">
+        <h3 class="text-2xl text-orange mb-4 pt-8" id="introduction">
             Prestashop :  la boutique en ligne clé en main
         </h3>
         <p class="mb-2">

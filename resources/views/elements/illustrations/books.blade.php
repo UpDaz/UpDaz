@@ -10,9 +10,9 @@
 	.books-6{fill:url(#SVGID_00000098217850526803052080000016259268378671571360_);}
 	.books-7{fill:#E1E4E5;}
 	.books-8{fill:url(#SVGID_00000122684629852749674150000012643891742497842078_);}
-	.books-9{fill:none;stroke:#E1E4E5;stroke-width:3.312;stroke-linecap:round;stroke-linejoin:round;}
-	.books-10{fill:none;stroke:#E1E4E5;stroke-width:4.206;stroke-linecap:round;stroke-linejoin:round;}
-	.books-11{fill:none;stroke:#E1E4E5;stroke-width:5.42;stroke-linecap:round;stroke-linejoin:round;}
+	.books-9{fill:none;stroke:#E1E4E5;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;}
+	.books-10{fill:none;stroke:#E1E4E5;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;}
+	.books-11{fill:none;stroke:#E1E4E5;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;}
 </style>
 <path class="books-0" d="M-132-81.7h900v600h-900V-81.7z"/>
 <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="283.7275" y1="-156.1975" x2="272.3684" y2="819.3865" gradientTransform="matrix(1 0 0 -1 0 437.0245)">

@@ -4,7 +4,7 @@
         .services-0{fill:none;}
         .services-1{fill:#FFFFFF;}
         .services-2{fill:#E1E4E5;}
-        .services-3{fill:none;stroke:#E1E4E5;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;}
+        .services-3{fill:none;stroke:#E1E4E5;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;}
     </style>
     <path class="services-0" d="M-121-72h900v600h-900V-72z"/>
     <circle class="services-1 bubble" cx="634.5" cy="247.5" r="15.5"/>

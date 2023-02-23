@@ -8,14 +8,14 @@
 	.welcome-4{fill:url(#SVGID_00000005969087282583409730000013273944453824865215_);}
 	.welcome-5{fill:#001A9E;}
 	.welcome-6{fill:#E1E4E5;}
-	.welcome-7{fill:#FFFFFF;stroke:#E1E4E5;stroke-width:4;}
+	.welcome-7{fill:#FFFFFF;stroke:#E1E4E5;stroke-width:3;}
 	.welcome-8{fill:#9E7700;}
 	.welcome-9{fill-rule:evenodd;clip-rule:evenodd;fill:#F8AE9D;}
 	.welcome-10{fill-rule:evenodd;clip-rule:evenodd;fill:#141A3B;}
 	.welcome-11{fill-rule:evenodd;clip-rule:evenodd;fill:#001A9E;}
-	.welcome-12{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;stroke:#E1E4E5;stroke-width:4;}
-	.welcome-13{fill:none;stroke:#EBB100;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;}
-	.welcome-14{fill:none;stroke:#EBB100;stroke-width:5.5;stroke-linecap:round;stroke-linejoin:round;}
+	.welcome-12{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;stroke:#E1E4E5;stroke-width:3;}
+	.welcome-13{fill:none;stroke:#EBB100;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;}
+	.welcome-14{fill:none;stroke:#EBB100;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;}
 	.welcome-15{fill-rule:evenodd;clip-rule:evenodd;fill:#E1E4E5;}
 </style>
 <path class="welcome-0" d="M-84-57h900v600H-84V-57z"/>

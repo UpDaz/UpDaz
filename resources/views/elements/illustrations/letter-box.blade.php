@@ -8,10 +8,10 @@
 	.letter-box-4{fill:url(#SVGID_00000144330385610410037100000000663369645564220601_);}
 	.letter-box-5{fill:#EBB100;}
 	.letter-box-6{fill:#E1E4E5;}
-	.letter-box-7{fill:#FFFFFF;stroke:#E1E4E5;stroke-width:5.247;}
+	.letter-box-7{fill:#FFFFFF;stroke:#E1E4E5;stroke-width:3;}
 	.letter-box-8{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
-	.letter-box-9{fill:none;stroke:#E1E4E5;stroke-width:9.568;}
-	.letter-box-10{fill:none;stroke:#E1E4E5;stroke-width:19.435;stroke-linecap:round;stroke-linejoin:round;}
+	.letter-box-9{fill:none;stroke:#E1E4E5;stroke-width:3;}
+	.letter-box-10{fill:none;stroke:#E1E4E5;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;}
 	.letter-box-11{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;filter:url(#Adobe_OpacityMaskFilter);}
 	.letter-box-12{mask:url(#e_00000162347424591173877650000017432788465417966270_);fill:#E1E4E5;}
 	

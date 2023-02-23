@@ -26,11 +26,11 @@
     <ellipse cx="725.74" cy="372.6" rx="8.21" ry="6.57" style="fill: #e1e4e5"/>
     <circle cx="570.97" cy="99.43" r="16.69" style="fill: #e1e4e5"/>
     <path d="M788,327.26h.22c1.27,18,14.66,18.29,14.66,18.29s-14.77.29-14.77,21.1c0-20.81-14.77-21.1-14.77-21.1S786.7,345.27,788,327.26ZM248.45,502.36h.19c1.12,16.3,13,16.55,13,16.55s-13.11.26-13.11,19.1c0-18.84-13.1-19.1-13.1-19.1S247.32,518.66,248.45,502.36Z" style="fill: #e1e4e5"/>
-    <rect x="221.13" y="128.3" width="461.79" height="344.34" rx="4.19" style="fill: #fff;stroke: #e1e4e5;stroke-width: 4px"/>
-    <path d="M404.57,248v24m96-24v24m35.8,108.38s-31.44-30.14-83.88-30.14-83.87,30.14-83.87,30.14" style="fill: none;stroke: #ebb100;stroke-linecap: round;stroke-linejoin: round;stroke-width: 33.79800033569336px"/>
-    <rect x="221.13" y="128.3" width="461.79" height="40.04" rx="4.19" style="fill: #fff;stroke: #e1e4e5;stroke-width: 4px"/>
-    <rect x="237.14" y="141.65" width="13.35" height="13.35" rx="6.67" style="fill: #fff;stroke: #e1e4e5;stroke-width: 4.193999767303467px"/>
-    <rect x="261.17" y="141.65" width="13.35" height="13.35" rx="6.67" style="fill: #fff;stroke: #e1e4e5;stroke-width: 4.193999767303467px"/>
-    <rect x="285.19" y="141.65" width="13.35" height="13.35" rx="6.67" style="fill: #fff;stroke: #e1e4e5;stroke-width: 4.193999767303467px"/>
+    <rect x="221.13" y="128.3" width="461.79" height="344.34" rx="4.19" style="fill: #fff;stroke: #e1e4e5;stroke-width: 3"/>
+    <path d="M404.57,248v24m96-24v24m35.8,108.38s-31.44-30.14-83.88-30.14-83.87,30.14-83.87,30.14" style="fill: none;stroke: #ebb100;stroke-linecap: round;stroke-linejoin: round;stroke-width: 3"/>
+    <rect x="221.13" y="128.3" width="461.79" height="40.04" rx="4.19" style="fill: #fff;stroke: #e1e4e5;stroke-width: 3"/>
+    <rect x="237.14" y="141.65" width="13.35" height="13.35" rx="6.67" style="fill: #fff;stroke: #e1e4e5;stroke-width: 3"/>
+    <rect x="261.17" y="141.65" width="13.35" height="13.35" rx="6.67" style="fill: #fff;stroke: #e1e4e5;stroke-width: 3"/>
+    <rect x="285.19" y="141.65" width="13.35" height="13.35" rx="6.67" style="fill: #fff;stroke: #e1e4e5;stroke-width: 3"/>
   </svg>
   

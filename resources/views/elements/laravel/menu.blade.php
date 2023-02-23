@@ -4,7 +4,7 @@
     </h3>
     <ul class="list-decimal list-inside">
         <li>
-            <a href="{{ route('laravel') }}#presentation" class="hover:underline">
+            <a href="{{ route('laravel') }}#introduction" class="hover:underline">
                 Laravel, qu’est-ce que c’est ?
             </a>
         </li>

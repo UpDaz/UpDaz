@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="{{ asset("css/app.css") }}" defer async>
     @include('elements.structured-data')
     @include('elements.google-analytics')
+    @include('elements.axeptio')
 </head>
 <body class="overflow-x-hiddenn">
     @include('elements.menu')

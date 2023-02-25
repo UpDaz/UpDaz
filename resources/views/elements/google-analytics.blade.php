@@ -1,9 +1,11 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ config('custom.g-analytics.id') }}" defer async></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  function loadGoogleAnalyticsTag() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', '{{ config('custom.g-analytics.id') }}');
+    gtag('config', '{{ config('custom.g-analytics.id') }}');
+  };
 </script>

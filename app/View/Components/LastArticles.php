@@ -23,7 +23,7 @@ class LastArticles extends Component
     {
         $this->articleRepository = $articleRepository;
         $this->limit = $limit;
-        $this->articles = $this->articleRepository->published($limit)->sortByDesc('published_at');
+        $this->articles = $this->articleRepository->published($limit, 'published_at', 'desc');
     }
 
     /**

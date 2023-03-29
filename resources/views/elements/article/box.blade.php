@@ -1,6 +1,6 @@
 <div class="article bg-blue-dark">
     <div class=" bg-white border-8 border-orange px-6 py-8 h-full w-full mt-2 ml-2">
-        <h3 class="">
+        <h3 class="text-blue">
             <a href="{{ route('article', ['categorySlug' => $article->category->slug, 'slug' => $article->slug]) }}" class="font-title bold text-2xl text-blue text-left">
                 {{ $article->title }}
             </a>

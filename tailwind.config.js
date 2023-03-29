@@ -28,7 +28,10 @@ module.exports = {
     'border-red-500',
     'bg-[#001A9E]',
     'bg-[#9E7700]',
-    'bg-[#FFFFFF]'
+    'bg-[#FFFFFF]',
+    'lg:w-1/2',
+    'col-span-2',
+    'gap-5',
   ], 
   plugins: [],
 }

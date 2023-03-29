@@ -111,3 +111,12 @@
     margin-inline-end: 0px;
     padding-inline-start: 40px;
 }
+
+
+/** Article box */
+.article h3{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

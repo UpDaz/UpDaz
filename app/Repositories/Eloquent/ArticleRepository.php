@@ -30,7 +30,7 @@ class ArticleRepository extends BaseRepository implements ArticleRepositoryInter
    /**
     * @return Collection
     */
-    public function published($limit = null): Collection
+    public function published($limit = null, $orderField = 'title', $orderDirection = 'asc'): Collection
     {
         return $this->model
                 ->where('is_published', true)
@@ -39,6 +39,7 @@ class ArticleRepository extends BaseRepository implements ArticleRepositoryInter
                     $q->where('is_active', true);
                 })
                 ->with('category')
+                ->orderBy($orderField, $orderDirection)
                 ->limit($limit)
                 ->get();
     }

@@ -20,6 +20,7 @@
     <link rel="preconnect" href="https://www.gstatic.com">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://static.axept.io">
 
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap" rel="stylesheet" defer async>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet" defer async>
@@ -34,7 +35,7 @@
     @include('elements.footer')
 </body>
 
-<script src="{{ asset('js/app.js') }}" async defer></script>
+<script src="{{ asset('js/app.js') }}" defer></script>
 @yield('javascript')
 
 </html>

@@ -25,5 +25,5 @@
 
 @section('javascript')
     @parent
-    <script src="{{ asset('js/welcome.js') }}" async defer></script>
+    <script src="{{ asset('js/welcome.js') }}" defer></script>
 @endsection

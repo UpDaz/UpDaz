@@ -1,5 +1,5 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ config('custom.g-analytics.id') }}" defer async></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ config('custom.g-analytics.id') }}" defer></script>
 <script>
   function loadGoogleAnalyticsTag() {
     window.dataLayer = window.dataLayer || [];

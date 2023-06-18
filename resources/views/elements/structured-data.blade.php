@@ -4,7 +4,7 @@
       "@type": "LocalBusiness",
       "name": "UpDaz",
       "email": "matthieu@updaz.fr",
-      "priceRange": "$$",
+      "priceRange": "$",
       "address" : {
         "@type": "PostalAddress",
         "addressLocality": "Bordeaux",

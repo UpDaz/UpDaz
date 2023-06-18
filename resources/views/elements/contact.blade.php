@@ -1,6 +1,6 @@
 <section class="relative">
     <div class="absolute inset-0 bg-gray-300">
-      <iframe width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="map" scrolling="no" src="https://maps.google.com/maps?width=100%&height=600&hl=fr&q=Bordeaux&ie=UTF8&t=&z=12&iwloc=B&output=embed" style="filter: grayscale(1) contrast(1.2) opacity(0.4);"></iframe>
+      <iframe width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="map" scrolling="no" src="https://maps.google.com/maps?width=100%&height=600&hl=fr&q=Bordeaux&ie=UTF8&t=&z=12&iwloc=B&output=embed" style="filter: grayscale(1) contrast(1.2) opacity(0.4);" loading="lazy"></iframe>
     </div>
     <div class="container flex px-5 py-24 mx-auto">
       <div class="relative z-10 flex flex-col w-full p-8 mt-10 bg-white rounded-lg shadow-md md:w-1/2 md:ml-auto md:mt-0">

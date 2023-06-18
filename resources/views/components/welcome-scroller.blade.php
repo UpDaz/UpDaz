@@ -8,7 +8,7 @@
                 @endphp
                 @foreach($images as $image_path)
                 <img class="w-full object-cover shadow-lg p-2 bg-white border-2 rounded border-blue-dark dark:shadow-gray-900/[.75]"
-                    src="{{ $image_path }}" alt="Image Description"/>
+                    src="{{ $image_path }}" alt="Image Technologique UpDaz" width="100" height="100" load="lazy"/>
                 @endforeach
             </div>
             <div class="grid w-full gap-9 animation-sliding-img-down-1">
@@ -17,7 +17,7 @@
                 @endphp
                 @foreach($images as $image_path)
                 <img class="w-full object-cover shadow-lg p-2 bg-white border-2 rounded border-blue-dark dark:shadow-gray-900/[.75]"
-                    src="{{ $image_path }}" alt="Image Description"/>
+                    src="{{ $image_path }}" alt="Image Technologique UpDaz" width="100" height="100" load="lazy"/>
                 @endforeach
             </div>
             <div class="grid w-full gap-9 animation-sliding-img-up-2">
@@ -26,7 +26,7 @@
                 @endphp
                 @foreach($images as $image_path)
                 <img class="w-full object-cover shadow-lg p-2 bg-white border-2 rounded border-blue-dark dark:shadow-gray-900/[.75]"
-                    src="{{ $image_path }}" alt="Image Description"/>
+                    src="{{ $image_path }}" alt="Image Technologique UpDaz" width="100" height="100" load="lazy"/>
                 @endforeach
             </div>
         </div>

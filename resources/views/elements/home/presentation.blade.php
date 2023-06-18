@@ -5,7 +5,7 @@
                 <div class="sm:w-1/3 sm:pr-8 sm:py-8">
                     <div class="sticky inline-flex items-center justify-center rounded-full w-100 top-32">
                         <img class="object-cover object-center rounded" alt="hero"
-                            src="{{ asset('img/profile.jpg') }}">
+                            src="{{ asset('img/profile.jpg') }}" load="lazy">
                     </div>
                 </div>
                 <div

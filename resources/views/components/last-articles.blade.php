@@ -1,4 +1,4 @@
-<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 align-top justify-center md:justify-between ">
+<div class="flex flex-wrap -mx-4">
     @foreach($articles as $article)
         @include('elements.article.box')
     @endforeach

@@ -9,26 +9,28 @@ Créez votre landing page et site vitrine grâce à l'outils en ligne no-code We
 @endsection
 
 @section('content')
-    <div class="relative bg-blue text-white text-center py-16 md:py-20 md:pt-32 md:-mt-24 overflow-hidden min-h-[50vh] md:min-h-0">
-        <div class="absolute h-80 bottom-10 lg:left-2/4 lg:-translate-x-1/2 opacity-10 rotate-[30deg]">
-            @include('elements/illustrations/webflow-header')
-        </div>
-        <div class="relative">
-            <h1 class="font-title text-4xl lg:text-6xl font-bold">Landing page <br/> & site vitrine</h1>
-            <h2 class="text-orange text-xl mt-4 mb-8">via Webflow</h2>
-            <div class="container mx-auto text-center text-sm">
-                <x-breadcrumb :links="['Webflow' => route('webflow')]" />
+    <div class="relative bg-gradient-to-br from-blue-dark to-blue text-white text-center -mt-24 overflow-hidden min-h-[50vh] md:min-h-0">
+        <div class="px-8 py-16 pt-32 pb-24 bg-pattern-1 md:px-16">
+            <div class="container mx-auto">
+                <h1 class="text-4xl font-bold font-title lg:text-6xl">Landing page <br/> & site vitrine</h1>
+                <h2 class="mt-4 mb-8 text-xl ">Mise en place de landing-page via Webflow</h2>
+                <div class="container mx-auto text-sm text-center">
+                    <x-breadcrumb :links="['Webflow' => route('webflow')]" />
+                </div>
             </div>
         </div>
     </div>
-    <div class="container px-8 py-12 mx-auto md:px-0 md:py-24 relative text-justify">
-        <div class="bg-gray-100 px-8 py-8 md:float-right md:w-1/3 md:ml-16 md:mb-8">
-            @include('elements.webflow.menu')
+    <div class="container px-8 py-16 mx-auto text-justify md:px-16 md:py-0 md:pt-24">
+        <div class="mb-8 bg-gray-100 md:float-right md:w-1/3 md:ml-16">
+            <div class="px-8 py-8 bg-pattern-2">
+                @include('elements.webflow.menu')
+            </div>
         </div>
-        <h3 class="text-2xl text-orange mb-4" id="introduction">
+        <h3 class="text-2xl" id="introduction">
             Présentation
         </h3>
-        <div class="lg:flex content-middle gap-8 justify-between items-center">
+        <div class="w-20 h-1 my-2 rounded bg-blue"></div>
+        <div class="items-center justify-between gap-8 lg:flex content-middle">
             <div>
                 <p class="mb-2">
                     Webflow est une plateforme de création de site internet et de gestion de contenu (CMS) en ligne.
@@ -57,7 +59,7 @@ Créez votre landing page et site vitrine grâce à l'outils en ligne no-code We
         </div>
         <div class="my-12">
             <img class="block w-full max-w-screen-md mx-auto" src="{{ asset('img/screenshoots/webflow-interface.png') }}" width="768" height="423" alt="Exemple interface Webflow" title="Interface Webflow" loading="lazy"/>
-            <p class="text-center text-sm italic mt-2">
+            <p class="mt-2 text-sm italic text-center">
                 Interface Webflow
             </p>
         </div>
@@ -98,42 +100,44 @@ Créez votre landing page et site vitrine grâce à l'outils en ligne no-code We
                 </x-slot>
             </x-tips>
         </div>
-        <div class="flex justify-between items-end ">
+        <div class="items-end justify-between gap-4 md:flex">
             <div>
-                <h3 class="text-2xl text-orange mb-4 pt-16" id="quelle-utilisation">
+                <h3 class="pt-16 text-2xl" id="quelle-utilisation">
                     Quelle utilisation ?
                 </h3>
+                <div class="w-20 h-1 my-2 rounded bg-blue"></div>
                 <p>
                     3 typologies de sites sont possibles sur Webflow : <br/>
                     <ul>
-                        <li class="flex justify-start align-top gap-2">
+                        <li class="flex justify-start gap-2 align-top">
                             @include('elements.svg-icons.animated.long-arrow-right')              
                             Landing page & site vitrine
                         </li>
-                        <li class="flex justify-start align-top gap-2">
+                        <li class="flex justify-start gap-2 align-top">
                             @include('elements.svg-icons.animated.long-arrow-right')
                             Site avec enregistrements CMS
                         </li>
-                        <li class="flex justify-start align-top gap-2">
+                        <li class="flex justify-start gap-2 align-top">
                             @include('elements.svg-icons.animated.long-arrow-right')
                             Site E-commerce
                         </li>
                     </ul>
                 </p>
             </div>
-            <div class="w-1/2">
-                <div class="md:w-1/6 mx-auto">
+            <div class="w-1/2 mx-auto mt-4 md:mt-0">
+                <div class="mx-auto md:w-1/6">
                     <img src="{{ asset('img/logos/webflow.svg') }}" class="w-full mb-2" alt="Logo Webflow">
-                    <p class="text-center text-sm italic mt-2">
+                    <p class="mt-2 text-sm italic text-center">
                         Logo Webflow
                     </p>
                 </div>
             </div>
         </div>
-        <h4 class="text-lg text-blue-dark mb-2 pt-8" id="landing-page-site-vitrine">
+        <h4 class="pt-8 text-lg" id="landing-page-site-vitrine">
             Landing page & site vitrine
         </h4>
-        <div class="lg:columns-2 gap-16">
+        <div class="w-10 h-1 my-2 rounded bg-blue"></div>
+        <div class="gap-16 lg:columns-2">
             <p>
                 Les sites sous forme de 
                 <x-tooltip color="#001A9E">
@@ -175,9 +179,10 @@ Créez votre landing page et site vitrine grâce à l'outils en ligne no-code We
                 </x-tips>
             </div>
         </div>
-        <h4 class="text-lg text-blue-dark mb-2 pt-8" id="enregistrements-cms">
+        <h4 class="pt-8 text-lg" id="enregistrements-cms">
             Enregistrements CMS
         </h4>
+        <div class="w-10 h-1 my-2 rounded bg-blue"></div>
         <p class="mb-2">
             L’utilisation des enregistrements CMS permets de <span class="font-bold">définir des collections</span> (composés d’un ou plusieurs items) simulant le comportant d’une base de données afin d’y enregistrer du contenu de manière dynamique.
             <br/>
@@ -206,15 +211,17 @@ Créez votre landing page et site vitrine grâce à l'outils en ligne no-code We
                 </x-slot>
             </x-tips>
         </div>
-        <h4 class="text-lg text-blue-dark mb-2 pt-8" id="site-ecommerce">
+        <h4 class="pt-8 text-lg" id="site-ecommerce">
             Sites e-commerce
         </h4>
+        <div class="w-10 h-1 my-2 rounded bg-blue"></div>
         <p>
             Pour les boutiques en ligne, Webflow propose un système simplifié pour la gestion des produits mais impose une commission à la vente (2% du montant de chaque vente pour l’offre la plus attractive). 
         </p>
-        <h3 class="text-2xl text-orange mb-4 pt-16" id="accompagnement">
+        <h3 class="pt-16 text-2xl" id="accompagnement">
             Mon accompagnement
         </h3>
+        <div class="w-20 h-1 my-2 rounded bg-blue"></div>
         <p>
             À première vue Webflow propose une approche simplifiée et accessible à tous.
             <br/>
@@ -225,11 +232,8 @@ Créez votre landing page et site vitrine grâce à l'outils en ligne no-code We
         <p>
             Afin de garantir une qualité de site et <span class="font-bold">une expérience utilisateur à forte valeur ajoutée</span> au lancement de votre structure ou de votre produit, je propose un accompagnement adapté à vos besoins et à vos attentes.
         </p>
-        <div class="max-w-screen-md mx-auto pt-8 overflow-x-scroll">
-            @include('elements.webflow.pricing')
-        </div>
-        <div class="pt-16" id="contact">
-            @include('elements.contact')
-        </div>
+    </div>
+    <div class="pt-16" id="contact">
+        @include('elements.contact')
     </div>
 @endsection

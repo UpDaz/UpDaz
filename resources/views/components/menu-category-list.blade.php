@@ -1,4 +1,4 @@
-<ul class="text-center md:hidden md:absolute md:bg-white md:left-1/2 md:-translate-x-2/4 md:w-60 md:shadow-md md:rounded" x-bind:class="openSubmenu? 'md:!block' : '' ">
+<ul class="text-center md:hidden md:absolute md:bg-white md:left-1/2 md:-translate-x-2/4 md:w-60 md:shadow-md md:rounded overflow-hidden" x-bind:class="openSubmenu? 'md:!block' : '' ">
     @foreach($categories as $category)
         @if($category->has_articles)
             <li>

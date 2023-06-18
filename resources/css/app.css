@@ -3,13 +3,14 @@
 @tailwind utilities;
 
 @layer base {
-    html {
+    html, .font-roboto {
       font-family: 'Roboto', system-ui, sans-serif;
     }
 
-    h1, h2, h3, h4, h5, h6{
+    h1, h2, h3, h4, h5, h6, .font-outfit{
         font-family: 'Outfit', sans-serif;
     }
+
 
     .p-relative{
         position: relative;
@@ -65,6 +66,19 @@ svg {
     display: inline-block;
     vertical-align: middle;
 }
+
+/* BACKGROUND */
+.bg-pattern-1{
+    background-image: url('/img/backgrounds/pattern-1.svg');
+    background-size: cover;
+}
+
+.bg-pattern-2{
+    background-image: url('/img/backgrounds/pattern-2.svg');
+    background-size: cover;
+}
+
+@import "welcome-scroller";
 
 @import "animate-svg";
 

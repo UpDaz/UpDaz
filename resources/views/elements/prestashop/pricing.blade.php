@@ -48,7 +48,7 @@
                 </ul>
             </td>
             <td class="border border-slate-300 py-8 px-8 text-center">
-                <span class="font-title text-blue font-bold text-xl">
+                <span class="font-title  font-bold text-xl">
                     2500€
                 </span>
             </td>
@@ -63,7 +63,7 @@
                 </div>
             </td>
             <td class="border border-slate-300 py-8 px-8 text-center whitespace-nowrap">
-                <span class="font-title text-blue font-bold text-xl">
+                <span class="font-title  font-bold text-xl">
                     100€
                 </span>
                 / module
@@ -81,7 +81,7 @@
                 </div>
             </td>
             <td class="border border-slate-300 py-8 px-8 text-center whitespace-nowrap">
-                <span class="font-title text-blue font-bold text-xl">
+                <span class="font-title  font-bold text-xl">
                     Sur devis
                 </span>
             </td>
@@ -96,7 +96,7 @@
                 </div>
             </td>
             <td class="border border-slate-300 py-8 px-8 text-center whitespace-nowrap">
-                <span class="font-title text-blue font-bold text-xl">
+                <span class="font-title  font-bold text-xl">
                     Sur devis 
                 </span>
             </td>

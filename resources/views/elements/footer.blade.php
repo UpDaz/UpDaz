@@ -1,24 +1,23 @@
-<footer class="bg-blue py-12">
-    <div class="container px-16 py-6 flex flex-wrap justify-center items-center mx-auto relative">
-        <div class="text-white text-sm text-center leading-6">
-            <a href="{{ route('home') }}">
-                <img src="{{ asset('img/logo.svg') }}" class="w-3/4 mb-6 mx-auto h-auto" width="225" height="72" alt="UpDaz Logo" title="UpDaz" loading="lazy">
+<footer class="bg-gradient-to-tl from-blue-dark to-blue">
+    <div class="bg-pattern-1">
+        <div class="container flex flex-col items-center px-5 py-8 mx-auto sm:flex-row">
+            <a href="{{ route('home') }}" class="w-1/2 md:w-1/12">
+                <img src="{{ asset('img/logo.svg') }}" class="w-auto h-auto" width="225" height="72" alt="UpDaz Logo" title="UpDaz" loading="lazy">
             </a>
-            <div class="flex items-center justify-center mb-6 gap-10 my-4">
-                <a href="https://fr.linkedin.com/in/matthieu-dazord" target="_blank" title="Linkedin" class="font-bold text-white" aria-current="page">
-                    <img src="{{ asset('img/logos/white/linkedin.svg') }}" width="30" height="30" alt="Logo Linkedin" title="Linkedin" class="mx-auto" loading="lazy">
+            <p class="mt-4 text-sm text-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0">
+                © {{ date('Y') }} UpDaz - 
+                <a href="{{ route('legal-notices') }}" class="w-full md:w-1/12">
+                    Mentions légales
                 </a>
-                <a href="https://www.malt.fr/profile/matthieudazord" target="_blank" title="Malt" class="font-bold text-white" aria-current="page">
-                    <img src="{{ asset('img/logos/white/malt.svg') }}" width="30" height="30" alt="Logo Malt" title="Malt" class="mx-auto">
-                </a>
-                <a href="https://github.com/UpDaz" target="_blank" title="Github" class="font-bold text-white" aria-current="page">
-                    <img src="{{ asset('img/logos/white/github.svg') }}" width="30" height="30" alt="Logo Github" title="Github" class="mx-auto">
-                </a>
-            </div>
-            © UpDaz {{ date('Y') }}
+            </p>
+        <span class="inline-flex justify-center mt-4 sm:ml-auto sm:mt-0 sm:justify-start">
+            <a href="https://fr.linkedin.com/in/matthieu-dazord" target="_blank" title="Linkedin" class="mr-6 text-white" aria-current="page">
+                <img src="{{ asset('img/logos/white/linkedin.svg') }}" width="30" height="30" alt="Logo Linkedin" title="Linkedin" class="mx-auto" loading="lazy">
+            </a>
+            <a href="https://github.com/UpDaz" target="_blank" title="Github" class="text-white underline" aria-current="page">
+                <img src="{{ asset('img/logos/white/github.svg') }}" width="30" height="30" alt="Logo Github" title="Github" class="mx-auto">
+            </a>
+        </span>
         </div>
-        <p class="absolute -bottom-11 width-full text-center text-sm text-white px-16 ">
-            Site créé avec Laravel, TailwindCSS et AlpineJS | Illustrations : <a href="https://themeisle.com/illustrations/" target="_blank" title="Themeisle">Themeisle</a>
-        </p>
     </div>
-</footer>
+  </footer>

@@ -9,25 +9,27 @@ Votre boutique e-commerce en ligne clé-en-main grâce au CMS Prestashop. Profit
 @endsection
 
 @section('content')
-    <div class="relative bg-blue text-white text-center py-16 md:py-20 md:pt-32 md:-mt-24 overflow-hidden min-h-[50vh] md:min-h-0">
-        <div class="absolute h-full bottom-10 lg:left-2/4 lg:-translate-x-1/2 opacity-10">
-            @include('elements/illustrations/prestashop-header')
-        </div>
-        <div class="relative">
-            <h1 class="font-title text-4xl lg:text-6xl font-bold">E-commerce &<br/>boutique en ligne</h1>
-            <h2 class="text-orange text-xl mt-4 mb-8">via Prestashop</h2>
-            <div class="container mx-auto text-center text-sm">
-                <x-breadcrumb :links="['Prestashop' => route('prestashop')]" />
+    <div class="relative bg-gradient-to-br from-blue-dark to-blue text-white text-center -mt-24 overflow-hidden min-h-[50vh] md:min-h-0">
+        <div class="px-8 py-16 pt-32 pb-24 bg-pattern-1 md:px-16">
+            <div class="container mx-auto">
+                <h1 class="text-4xl font-bold font-title lg:text-6xl">E-commerce &<br/>boutique en ligne</h1>
+                <h2 class="mt-4 mb-8 text-xl">Création de site de vente en ligne via Prestashop</h2>
+                <div class="container mx-auto text-sm text-center">
+                    <x-breadcrumb :links="['Prestashop' => route('prestashop')]" />
+                </div>
             </div>
         </div>
     </div>
-    <div class="container px-8 py-12 mx-auto md:px-0 md:py-24 relative text-justify">
-        <div class="bg-gray-100 px-8 py-8 md:float-right md:w-1/3 md:ml-16 md:mb-8">
-            @include('elements.prestashop.menu')
+    <div class="container px-8 py-16 mx-auto text-justify md:px-16 md:py-0 md:pt-24">
+        <div class="mb-8 bg-gray-100 md:float-right md:w-1/3 md:ml-16">
+            <div class="px-8 py-8 bg-pattern-2">
+                @include('elements.prestashop.menu')
+            </div>
         </div>
-        <h3 class="text-2xl text-orange mb-4 pt-8" id="introduction">
+        <h3 class="pt-8 text-2xl" id="introduction">
             Prestashop :  la boutique en ligne clé en main
         </h3>
+        <div class="w-20 h-1 my-2 rounded bg-blue"></div>
         <p class="mb-2">
             Prestashop est un
             <x-tooltip color="#001A9E">
@@ -69,10 +71,10 @@ Votre boutique e-commerce en ligne clé-en-main grâce au CMS Prestashop. Profit
         <p>
             Par défaut la partie publique du site repose sur le thème par défaut de Prestashop et intègre une base d’extensions et de modules.
         </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+        <div class="grid grid-cols-1 gap-8 my-8 md:grid-cols-2">
             <div>
                 <img src="{{ asset('img/screenshoots/prestashop-front.png') }}" alt="Thème par defaut de Prestashop" load="lazy"/>
-                <p class="text-center text-sm italic mt-2">
+                <p class="mt-2 text-sm italic text-center">
                     Interface publique de Prestashop - thème par default
                     <br/>
                     <a href="https://demo.prestashop.com/#/fr/front" target="_blank" class="underline">Démo @include('elements.svg-icons.external-link')</a>
@@ -80,22 +82,24 @@ Votre boutique e-commerce en ligne clé-en-main grâce au CMS Prestashop. Profit
             </div>
             <div>
                 <img src="{{ asset('img/screenshoots/prestashop-back.png') }}" alt="Interface administration de Prestashop" load="lazy"/>
-                <p class="text-center text-sm italic mt-2">
+                <p class="mt-2 text-sm italic text-center">
                     Interface administration de Prestashop
                     <br/>
                     <a href="https://demo.prestashop.com/#/fr/back" target="_blank" class="underline">Démo @include('elements.svg-icons.external-link')</a>
                 </p>
             </div>
         </div>
-        <h3 class="text-2xl text-orange pt-16 mb-4" id="extensions">
+        <h3 class="pt-16 text-2xl" id="extensions">
             Le système d’extensions
         </h3>
+        <div class="w-20 h-1 my-2 rounded bg-blue"></div>
         <p>
             Bien que Prestashop propose <b>une expérience complète</b> dans son état initial, de nombreux éléments de personnalisation peuvent se greffer dessus. 
         </p>
-        <h4 class="text-lg text-blue-dark mb-2 pt-8" id="hooks">
+        <h4 class="pt-8 text-lg" id="hooks">
             Les hooks
         </h4>
+        <div class="w-10 h-1 my-2 rounded bg-blue"></div>
         <p class="mb-2">
             Prestashop utilise un système de 
             <x-tooltip color="#001A9E">
@@ -116,9 +120,10 @@ Votre boutique e-commerce en ligne clé-en-main grâce au CMS Prestashop. Profit
         <p>
             Ce système spécifique permet de <b>centraliser et de réutiliser les fonctionnalités</b> du module bien qu’il faille faire attention aux <b>problèmes de compatibilité principalement</b> entre les modules qui sont greffés sur un même hook.
         </p>
-        <h4 class="text-lg text-blue-dark mb-2 pt-8" id="catalogue-de-module">
+        <h4 class="pt-8 text-lg" id="catalogue-de-module">
             Le catalogue de modules
         </h4>
+        <div class="w-10 h-1 my-2 rounded bg-blue"></div>
         <p class="mb-2">
             Ces extensions sont proposées via la <a href="https://addons.prestashop.com/" target="_blank" class="underline">marketplace de Prestashop @include('elements.svg-icons.external-link')</a>.
             <br/>
@@ -128,27 +133,27 @@ Votre boutique e-commerce en ligne clé-en-main grâce au CMS Prestashop. Profit
             On peut y retrouver :<br/>
         </p>
             <ul>
-                <li class="flex justify-start align-top gap-2">
+                <li class="flex justify-start gap-2 align-top">
                     @include('elements.svg-icons.animated.long-arrow-right')              
                     des thèmes
                 </li>
-                <li class="flex justify-start align-top gap-2">
+                <li class="flex justify-start gap-2 align-top">
                     @include('elements.svg-icons.animated.long-arrow-right')
                     des éléments de navigation (recherche avancées, mega-menu, etc)
                 </li>
-                <li class="flex justify-start align-top gap-2">
+                <li class="flex justify-start gap-2 align-top">
                     @include('elements.svg-icons.animated.long-arrow-right')
                     des modes paiements (banques spécifiques, paiements en plusieurs fois etc)
                 </li>
-                <li class="flex justify-start align-top gap-2">
+                <li class="flex justify-start gap-2 align-top">
                     @include('elements.svg-icons.animated.long-arrow-right')
                     de la gestion de logistique (transporteurs, gestion du stocks poussée, etc)
                 </li>
-                <li class="flex justify-start align-top gap-2">
+                <li class="flex justify-start gap-2 align-top">
                     @include('elements.svg-icons.animated.long-arrow-right')
                     des éléments UX pour la fiche produit
                 </li>
-                <li class="flex justify-start align-top gap-2">
+                <li class="flex justify-start gap-2 align-top">
                     @include('elements.svg-icons.animated.long-arrow-right')
                     etc.
                 </li>
@@ -156,39 +161,37 @@ Votre boutique e-commerce en ligne clé-en-main grâce au CMS Prestashop. Profit
         <p class="mt-4">
             Grâce à ce catalogue de <b>plus de 3000 modules</b>, Prestashop permets de faire évoluer sa boutique en ligne en fonction de la demande.
         </p>
-        <h4 class="text-lg text-blue-dark mb-2 pt-8" id="developpement-specifique">
+        <h4 class="pt-8 text-lg" id="developpement-specifique">
             Développement spécifique
         </h4>
+        <div class="w-10 h-1 my-2 rounded bg-blue"></div>
         <p class="mb-2">
             Il est de plus tout à fait possible de développer un module sur-mesure correspondant à des <b>besoins spécifiques</b> (le module ne sera alors pas disponible sur la marketplace mais directement installé sur la boutique).
         </p>
         <p class="mb-2">
             J’ai dors et déjà développé plusieurs modules dont certains sont accessibles sur la marketplace :
         </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <a href="https://addons.prestashop.com/fr/blocs-onglets-bannieres/88810-bandeaux-avant-apres.html" target="_blank" class="bg-slate-100 px-12 py-10 text-center hover:bg-blue hover:text-white">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                <a href="https://addons.prestashop.com/fr/blocs-onglets-bannieres/88810-bandeaux-avant-apres.html" target="_blank" class="px-12 py-10 text-center bg-slate-100 hover:bg-blue hover:text-white">
                     <img src="{{ asset('img/logos/prestashop.svg') }}" width="50" class="mx-auto mb-2" alt="Logo Prestashop">
                     Module <i>Bandeau Avant-Après</i>
                 </a>
-                <a href="https://addons.prestashop.com/fr/inscription-processus-de-commande/89281-barre-d-ajout-au-panier.html" target="_blank" class="bg-slate-100 px-12 py-10 text-center hover:bg-blue hover:text-white">
+                <a href="https://addons.prestashop.com/fr/inscription-processus-de-commande/89281-barre-d-ajout-au-panier.html" target="_blank" class="px-12 py-10 text-center bg-slate-100 hover:bg-blue hover:text-white">
                     <img src="{{ asset('img/logos/prestashop.svg') }}" width="50" class="mx-auto mb-2" alt="Logo Prestashop">
                     Module <i>Barre d'ajout au panier</i>
                 </a>
         </div>
-        <h3 class="text-2xl text-orange pt-16 mb-4" id="accompagnement">
+        <h3 class="pt-16 text-2xl" id="accompagnement">
             Mon accompagnement
         </h3>
+        <div class="w-20 h-1 my-2 rounded bg-blue"></div>
         <p>
             Bien que le CMS Prestashop soit proposé gratuitement, la création d’une boutique peut se révéler plus compliquée que prévue et <b>nécessite un savoir faire</b>.
             <br/>
             Cet outils étant particulièrement complet de base et possédant des <b>notions spécifiques</b> (page CMS, système d’attributs, hooks, etc), je vous propose de <b>vous accompagner</b> de bout en bout dans la mise en place de votre boutique en ligne afin de garantir <b>un fonctionnement optimisé</b> et de <b>répondre à vos besoins spécifiques</b>.
         </p>
-        <div class="max-w-screen-md mx-auto mt-8 overflow-x-scroll">
-            @include('elements.prestashop.pricing')
-        </div>
     </div>
-    @include('elements.prestashop.references')
-    <div class="container px-8 py-12 mx-auto md:px-0 md:py-24" id="contact">
+    <div class="pt-16" id="contact">
         @include('elements.contact')
     </div>
 @endsection

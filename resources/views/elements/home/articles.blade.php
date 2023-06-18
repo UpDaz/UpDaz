@@ -1,4 +1,7 @@
-<div id="articles" class="px-8 md:px-16 py-16 md:py-24 bg-blue">
-    <p class="font-title bold text-3xl text-white mb-6">Les dernières news développement, Laravel, Webflow et Prestashop</p>
-    <x-last-articles />
-</div>
+<section id="articles" class="px-8 md:px-16 py-16">
+    <div class="container mx-auto">
+        <h2 class="font-title bold text-3xl text-black mb-6">Mes dernières actualités</h2>
+        <div class="h-1 w-20 bg-blue rounded"></div>
+        <x-last-articles />
+    </div>
+</section>

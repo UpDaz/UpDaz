@@ -1,7 +1,8 @@
-<div class="">
-    <h3 class="text-orange text-xl">
+<div >
+    <h3 class=" text-xl">
         Sommaire
     </h3>
+    <div class="h-1 w-20 my-2 bg-orange rounded"></div>
     <ul class="list-decimal list-inside">
         <li>
             <a href="{{ route('prestashop') }}#introduction" class="hover:underline">

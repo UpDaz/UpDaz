@@ -1,25 +1,25 @@
-<div class="article bg-blue-dark">
-    <div class=" bg-white border-8 border-orange px-6 py-8 h-full w-full mt-2 ml-2">
-        <h3 class="text-blue">
-            <a href="{{ route('article', ['categorySlug' => $article->category->slug, 'slug' => $article->slug]) }}" class="font-title bold text-2xl text-blue text-left">
-                {{ $article->title }}
-            </a>
-        </h3>
-        <div class="flex items-center justify-between my-4">
-            <a href="{{ route('category', ['slug' => $article->category->slug]) }}" class="text-xs bg-orange py-1 px-2 text-white rounded shadow-md">
+<div class="py-8 px-4 w-full lg:w-1/3">
+    <div class="h-full bg-gray-100 rounded-lg px-4 py-6 flex items-start">
+      <div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
+        <span class="text-sm leading-none">{{ $article->published_at->format('M') }}</span>
+        <span class="text-sm pt-2 mt-2 border-t-2 border-gray-200">{{ $article->published_at->format('Y') }}</span>
+      </div>
+      <div class="flex-grow pl-6">
+        <h4 class="text-xs font-medium text-blue mb-1">
+            <a href="{{ route('category', ['slug' => $article->category->slug]) }}">
                 {{ $article->category->name }}
             </a>
-            <p class="text-right italic text-xs">
-                le {{ $article->published_at->format('d/m/Y') }}
-            </p>
-        </div>
-        <p class="text-left">
+        </h4>
+        <h3 class="text-xl font-medium text-black mb-3">
+            {{ $article->title }}
+        </h3>
+        <p class="mb-5">
             {{ $article->catch_phrase }}
         </p>
-        <div class="w-full text-center mt-8">
-            <a href="{{ route('article', ['categorySlug' => $article->category->slug, 'slug' => $article->slug]) }}" class="inline-block bg-blue hover:bg-blue-dark text-white px-6 py-3 rounded shadow-md mb-4 md:mb-0">
-                En savoir plus
-            </a>
-        </div>
+        <a  href="{{ route('article', ['categorySlug' => $article->category->slug, 'slug' => $article->slug]) }}"
+            class="inline-block font-medium text-center bg-gradient-to-br hover:bg-gradient-to-r from-blue-dark to-blue hover:bg-orange text-white px-6 py-3 rounded shadow-md">
+            Lire l'article
+        </a>
+      </div>
     </div>
-</div>
+  </div>

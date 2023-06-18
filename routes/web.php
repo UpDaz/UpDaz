@@ -51,6 +51,13 @@ Route::get(
     }
 );
 
+Route::get(
+    '/mentions-legales',
+    function () {
+        return view('pages.legal-notices');
+    }
+)->name('legal-notices');
+
 Route::post('/contact', [ContactController::class, 'send'])->name('contact');
 
 Route::get(

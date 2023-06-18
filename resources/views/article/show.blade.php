@@ -8,16 +8,13 @@
 
 @section('content')
 @include('elements.article.structured-data')
-<div class="relative bg-blue text-white text-center py-16 md:py-20 md:pt-32 md:-mt-24 overflow-hidden min-h-[50vh] md:min-h-0">
-    <div class="absolute h-80 bottom-0 lg:left-2/4 lg:-translate-x-1/2 opacity-10">
-        @include('elements/illustrations/write-book')
-    </div>
-    <div class="container relative px-4 md:px-8 mx-auto ">
-        <h1 class="font-title text-4xl lg:text-6xl font-bold">{{ $article->title }}</h1>
-        <p class="container mx-auto text-center my-6">
+<div class="relative bg-gradient-to-br from-blue-dark to-blue text-white text-center -mt-24 overflow-hidden min-h-[50vh] md:min-h-0">
+    <div class="px-8 py-16 pt-32 pb-24 bg-pattern-1 md:px-16">
+        <h1 class="text-4xl font-bold font-title lg:text-6xl">{{ $article->title }}</h1>
+        <p class="container mx-auto my-6 text-center">
             {{ $article->catch_phrase }}
         </p>
-        <div class="container mx-auto text-center text-sm">
+        <div class="container mx-auto text-sm text-center">
             <x-breadcrumb :links="[
                 $article->category->name => route('category', ['slug' => $article->category->slug]),
                 $article->title => route('article', ['categorySlug' => $article->category->slug, 'slug' => $article->slug])
@@ -26,8 +23,8 @@
     </div>
 </div>
 
-<div class="container px-8 py-12 mx-auto md:px-36 md:py-24 text-justify">
-    <div class="text-sm mb-6 italic text-right">
+<div class="container px-8 py-12 mx-auto text-justify md:px-36 md:py-24">
+    <div class="mb-6 text-sm italic text-right">
         Le {{ $article->published_at->format('d/m/Y') }}<br/>
         Par Matthieu
     </div>

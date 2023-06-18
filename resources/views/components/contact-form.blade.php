@@ -1,26 +1,26 @@
-<form x-data="contactForm" id="contact-form" @submit.prevent="submitForm()" class="bg-orange shadow-lg px-4 md:px-10 py-8 mb-4">
+<form x-data="contactForm" id="contact-form" @submit.prevent="submitForm()">
     <div class="mb-4">
-        <input placeholder="Prénom*" name="firstname" class=" placeholder-gray-800 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="firstname" type="text" required>
+        <input placeholder="Prénom*" name="firstname" class=" placeholder-gray-800 appearance-none border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow" id="firstname" type="text" required>
     </div>
     <div class="mb-4">
-        <input placeholder="Nom*" name="lastname" class="placeholder-gray-800 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="lastname" type="text" required>
+        <input placeholder="Nom*" name="lastname" class="placeholder-gray-800 appearance-none border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow" id="lastname" type="text" required>
     </div>
     <div class="mb-4">
-        <input placeholder="Email*" name="email" class="placeholder-gray-800 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" required>
+        <input placeholder="Email*" name="email" class="placeholder-gray-800 appearance-none border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow" id="email" type="email" required>
     </div>
     <div class="mb-4">
-        <input placeholder="Téléphone*" name="phone" class="placeholder-gray-800 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="text" required>
+        <input placeholder="Téléphone*" name="phone" class="placeholder-gray-800 appearance-none border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow" id="phone" type="text" required>
     </div>
     <div class="mb-4">
-        <textarea placeholder="Message*" name="message" id="message" cols="30" rows="10" class="placeholder-gray-800 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+        <textarea placeholder="Message*" name="message" id="message" cols="30" rows="10" class="placeholder-gray-800 appearance-none border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow"></textarea>
     </div>
     <div class="flex items-center justify-between">
-        <p x-show="!submitting && !success" class="text-white text-xs">
+        <p x-show="!submitting && !success" class="text-black text-xs">
             * Champs requis
         </p>
         <div>
             <img src="{{ asset('img/loader.svg') }}" alt="Loader" title="Chargement" x-show="submitting"/>
-            <button x-show="!submitting && !success" class="bg-blue hover:bg-blue-dark text-white shadow-md px-6 py-3 rounded">
+            <button x-show="!submitting && !success" class="block bg-orange font-medium text-white shadow-md px-6 py-3 rounded">
                 Envoyer
             </button>
             <p x-show="!submitting && success" class="text-white bold block md:flex items-center text-right md:text-left">

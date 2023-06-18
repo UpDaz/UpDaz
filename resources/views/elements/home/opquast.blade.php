@@ -52,7 +52,7 @@
                 </div>
                 <div class="sm:w-1/3 text-cente sm:py-12">
                     <img src="{{ asset('img/label-opquast-avance.png') }}"
-                    alt="Label Certification Avancée Opquast Matthieu DAZORD" width="150" class="sticky mx-auto mb-6 top-32" />
+                    alt="Label Certification Avancée Opquast Matthieu DAZORD" width="150" height="109" class="sticky mx-auto mb-6 top-32" />
                 </div>
             </div>
     </div>

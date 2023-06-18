@@ -4,7 +4,7 @@
             <div class="flex flex-col mt-10 sm:flex-row">
                 <div class="sm:w-1/3 sm:pr-8 sm:py-8">
                     <div class="sticky inline-flex items-center justify-center rounded-full w-100 top-32">
-                        <img class="object-cover object-center rounded" alt="hero"
+                        <img class="object-cover object-center rounded" alt="Photo de profil Matthieu UpDaz" width="253" height="253"
                             src="{{ asset('img/profile.jpg') }}" load="lazy">
                     </div>
                 </div>

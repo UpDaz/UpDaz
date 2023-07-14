@@ -32,6 +32,7 @@ module.exports = {
     'lg:w-1/2',
     'col-span-2',
     'gap-5',
+    'lg:w-2/3',
   ], 
   plugins: [],
 }

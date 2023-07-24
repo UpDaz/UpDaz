@@ -154,19 +154,19 @@
                     On distinguera alors plusieurs points essentiels dans l’établissement du budget :
                 <ul>
                     <li class="flex justify-start gap-2 align-top">
-                        @include('elements.svg-icons.animated.long-arrow-right')
+                        @include('elements.icon.animated', ['icon' => 'o-arrow-long-right', 'class' => 'sm:w-6 sm:h-6 min-w-[24px]'])
                         La conception du design
                     </li>
                     <li class="flex justify-start gap-2 align-top">
-                        @include('elements.svg-icons.animated.long-arrow-right')
+                        @include('elements.icon.animated', ['icon' => 'o-arrow-long-right', 'class' => 'sm:w-6 sm:h-6 min-w-[24px]'])
                         Le développement des fonctionnalités
                     </li>
                     <li class="flex justify-start gap-2 align-top">
-                        @include('elements.svg-icons.animated.long-arrow-right')
+                        @include('elements.icon.animated', ['icon' => 'o-arrow-long-right', 'class' => 'sm:w-6 sm:h-6 min-w-[24px]'])
                         La création du contenu
                     </li>
                     <li class="flex justify-start gap-2 align-top">
-                        @include('elements.svg-icons.animated.long-arrow-right')
+                        @include('elements.icon.animated', ['icon' => 'o-arrow-long-right', 'class' => 'sm:w-6 sm:h-6 min-w-[24px]'])
                         Les dépenses de fonctionnement
                     </li>
                 </ul>
@@ -192,11 +192,11 @@
             En fonction du budget alloué, plusieurs alternatives sont possibles :
         <ul class="mb-2">
             <li class="flex justify-start gap-2 align-top">
-                @include('elements.svg-icons.animated.long-arrow-right')
+                @include('elements.icon.animated', ['icon' => 'o-arrow-long-right', 'class' => 'sm:w-6 sm:h-6 min-w-[24px]'])
                 Utiliser un thème HTML pré-fabriqué en vente sur des plateformes spécialisées.
             </li>
             <li class="flex justify-start gap-2 align-top">
-                @include('elements.svg-icons.animated.long-arrow-right')
+                @include('elements.icon.animated', ['icon' => 'o-arrow-long-right', 'class' => 'sm:w-6 sm:h-6 min-w-[24px]'])
                 Faire appel à un graphiste pour définir une identité visuelle et créer des maquettes que le développeur
                 intégrera par la suite.
             </li>
@@ -231,11 +231,11 @@
         </p>
         <ul class="mb-4">
             <li class="flex justify-start gap-2 align-top">
-                @include('elements.svg-icons.animated.long-arrow-right')
+                @include('elements.icon.animated', ['icon' => 'o-arrow-long-right', 'class' => 'sm:w-6 sm:h-6 min-w-[24px]'])
                 Le design (préalablement défini) regroupant l’aspect visuel et les interactions avec l’utilisateur.
             </li>
             <li class="flex justify-start gap-2 align-top">
-                @include('elements.svg-icons.animated.long-arrow-right')
+                @include('elements.icon.animated', ['icon' => 'o-arrow-long-right', 'class' => 'sm:w-6 sm:h-6 min-w-[24px]'])
                 Les processus métiers qui définissent les actions concrètes effectuées par votre application web.
             </li>
         </ul>

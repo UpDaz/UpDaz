@@ -3,9 +3,9 @@
     x-intersect.full="visible = true"
 >
     <span
-        class="inline-block -translate-x-36 opacity-0 transition-all duration-500"
+        class="inline-block transition-all duration-500 opacity-0 -translate-x-36"
         :class="visible? '!translate-x-0 opacity-100' : ''" 
     >
-        @include('elements.svg-icons.long-arrow-right')
+        @svg('heroicon-' . $icon, $class ?? '')
     </span>
 </div>

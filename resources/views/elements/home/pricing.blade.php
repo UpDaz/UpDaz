@@ -14,31 +14,31 @@
                 <span>1000€</span>
             </h4>
             <p class="flex items-center mb-4">
-              @include('elements.svg-icons.small-check')
+              @include('elements.icon.custom.check')
               Technologie&nbsp;
                 <a target="_blank" href="https://webflow.com/" class="flex items-center gap-1 border-b-2">
                     Webflow
-                    @include('elements.svg-icons.external-link')
+                    <x-heroicon-o-arrow-top-right-on-square/>
                 </a>
             </p>
             <p class="flex items-center mb-4">
-              @include('elements.svg-icons.small-check')
+              @include('elements.icon.custom.check')
               Design personnalisable
             </p>
             <p class="flex items-center mb-4">
-              @include('elements.svg-icons.small-check')
+              @include('elements.icon.custom.check')
               Édition du contenu (CMS)
             </p>
             <p class="flex items-center mb-4">
-                @include('elements.svg-icons.small-check')
+                @include('elements.icon.custom.check')
                 Site moderne et performant
             </p>
             <p class="flex items-center mb-4">
-                @include('elements.svg-icons.small-check')
+                @include('elements.icon.custom.check')
                 Hébergement intégré sécurisé
             </p>
             <p class="flex items-center mb-4">
-                @include('elements.svg-icons.small-check')
+                @include('elements.icon.custom.check')
                 Optimisation&nbsp;
                 <x-tooltip color="#001A9E">
                     <x-slot:message>
@@ -65,7 +65,7 @@
                     <span class="">sur devis</span>
                 </h4>
               <p class="flex mb-4 items-cente">
-                @include('elements.svg-icons.small-check')
+                @include('elements.icon.custom.check')
                 <x-tooltip color="#001A9E">
                     <x-slot:message>
                         <span class="block p-6">
@@ -79,19 +79,19 @@
                 Laravel
               </p>
               <p class="flex items-center mb-4">
-                @include('elements.svg-icons.small-check')
+                @include('elements.icon.custom.check')
                 Digitalisation de vos processus métier
               </p>
               <p class="flex items-center mb-4">
-                @include('elements.svg-icons.small-check')
+                @include('elements.icon.custom.check')
                 Architecture robuste et sécurisée
               </p>
               <p class="flex items-center mb-4">
-                @include('elements.svg-icons.small-check')
+                @include('elements.icon.custom.check')
                 Performances accrues
               </p>
               <p class="flex items-center mb-4">
-                @include('elements.svg-icons.small-check')
+                @include('elements.icon.custom.check')
                 <x-tooltip color="#001A9E">
                     <x-slot:message>
                         <span class="block p-6">
@@ -104,11 +104,11 @@
                 </x-tooltip>
               </p>
               <p class="flex items-center mb-4">
-                @include('elements.svg-icons.small-check')
+                @include('elements.icon.custom.check')
                 Écosystème poussé
               </p>
               <p class="flex items-center mb-4">
-                @include('elements.svg-icons.small-check')
+                @include('elements.icon.custom.check')
                 Mises à jour régulières de la technologie
               </p>
               <a href="{{ route('laravel') }}" class="inline-block px-6 py-3 mt-6 font-medium text-center text-white rounded shadow-md bg-gradient-to-br hover:bg-gradient-to-r from-blue-dark to-blue">
@@ -125,23 +125,23 @@
                   <span>2500€</span>
               </h4>
               <p class="flex items-center mb-4 text-black">
-                @include('elements.svg-icons.small-check')
+                @include('elements.icon.custom.check')
                 CMS&nbsp;
                 <a href="https://www.prestashop.com/fr" target="_blank" class="flex items-center gap-1 border-b-2">
                     Prestashop
-                    @include('elements.svg-icons.external-link')
+                    <x-heroicon-o-arrow-top-right-on-square/>
                 </a>
               </p>
               <p class="flex items-center mb-4">
-                @include('elements.svg-icons.small-check')
+                @include('elements.icon.custom.check')
                 Aucun frais de transaction sur les ventes
               </p>
               <p class="flex items-center mb-4">
-                @include('elements.svg-icons.small-check')
+                @include('elements.icon.custom.check')
                 Gestion des produits et des commandes clé-en-main
               </p>
               <p class="flex items-center mb-4">
-                  @include('elements.svg-icons.small-check')
+                  @include('elements.icon.custom.check')
                   <span>
                     Processus de commande en 3 étapes ou 
                     <x-tooltip color="#001A9E">
@@ -157,11 +157,11 @@
                   </span>
               </p>
               <p class="flex items-center mb-4">
-                  @include('elements.svg-icons.small-check')
+                  @include('elements.icon.custom.check')
                   Interface d'administration intégrée
               </p>
               <p class="flex items-center mb-4">
-                  @include('elements.svg-icons.small-check')
+                  @include('elements.icon.custom.check')
                   Catalogue de thèmes et d'extensions mis à jour régulièrement
               </p>
               <a href="{{ route('prestashop') }}" class="inline-block px-6 py-3 mt-6 font-medium text-center text-white rounded shadow-md bg-gradient-to-br hover:bg-gradient-to-r from-blue-dark to-blue">

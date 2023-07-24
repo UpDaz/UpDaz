@@ -110,15 +110,15 @@ Créez votre landing page et site vitrine grâce à l'outils en ligne no-code We
                     3 typologies de sites sont possibles sur Webflow : <br/>
                     <ul>
                         <li class="flex justify-start gap-2 align-top">
-                            @include('elements.svg-icons.animated.long-arrow-right')              
+                            @include('elements.icon.animated', ['icon' => 'o-arrow-long-right', 'class' => 'sm:w-6 sm:h-6 min-w-[24px]'])              
                             Landing page & site vitrine
                         </li>
                         <li class="flex justify-start gap-2 align-top">
-                            @include('elements.svg-icons.animated.long-arrow-right')
+                            @include('elements.icon.animated', ['icon' => 'o-arrow-long-right', 'class' => 'sm:w-6 sm:h-6 min-w-[24px]'])
                             Site avec enregistrements CMS
                         </li>
                         <li class="flex justify-start gap-2 align-top">
-                            @include('elements.svg-icons.animated.long-arrow-right')
+                            @include('elements.icon.animated', ['icon' => 'o-arrow-long-right', 'class' => 'sm:w-6 sm:h-6 min-w-[24px]'])
                             Site E-commerce
                         </li>
                     </ul>

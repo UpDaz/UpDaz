@@ -9,8 +9,7 @@
                     </h2>
                     <div class="w-20 h-1 rounded bg-blue"></div>
                     <p class="mt-6 leading-relaxed text-md">
-                        <a href="https://www.opquast.com/" target="_blank" class="border-b-2">Opquast
-                            @include('elements.svg-icons.external-link')</a> est un programme de certification pour les professionnels du web,
+                        <a href="https://www.opquast.com/" target="_blank" class="border-b-2">Opquast <x-heroicon-o-arrow-top-right-on-square/></a> est un programme de certification pour les professionnels du web,
                         conçu pour évaluer les compétences et les connaissances en matière d'<b>optimisation et de qualité de
                             site web</b>.
                         <br />
@@ -47,7 +46,7 @@
                     </p>
                     <a href="https://directory.opquast.com/fr/certificat/PUGT87/" target="_blank"
                         class="block px-6 py-3 mt-6 font-medium text-center text-white rounded shadow-md md:inline-block bg-gradient-to-br hover:bg-gradient-to-r from-blue-dark to-blue">
-                        Ma certification @include('elements.svg-icons.external-link')
+                        Ma certification <x-heroicon-o-arrow-top-right-on-square/>
                     </a>
                 </div>
                 <div class="sm:w-1/3 text-cente sm:py-12">

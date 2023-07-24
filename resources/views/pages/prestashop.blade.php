@@ -77,7 +77,7 @@ Votre boutique e-commerce en ligne clé-en-main grâce au CMS Prestashop. Profit
                 <p class="mt-2 text-sm italic text-center">
                     Interface publique de Prestashop - thème par default
                     <br/>
-                    <a href="https://demo.prestashop.com/#/fr/front" target="_blank" class="underline">Démo @include('elements.svg-icons.external-link')</a>
+                    <a href="https://demo.prestashop.com/#/fr/front" target="_blank" class="underline">Démo <x-heroicon-o-arrow-top-right-on-square/></a>
                 </p>
             </div>
             <div>
@@ -85,7 +85,7 @@ Votre boutique e-commerce en ligne clé-en-main grâce au CMS Prestashop. Profit
                 <p class="mt-2 text-sm italic text-center">
                     Interface administration de Prestashop
                     <br/>
-                    <a href="https://demo.prestashop.com/#/fr/back" target="_blank" class="underline">Démo @include('elements.svg-icons.external-link')</a>
+                    <a href="https://demo.prestashop.com/#/fr/back" target="_blank" class="underline">Démo <x-heroicon-o-arrow-top-right-on-square/></a>
                 </p>
             </div>
         </div>
@@ -125,7 +125,7 @@ Votre boutique e-commerce en ligne clé-en-main grâce au CMS Prestashop. Profit
         </h4>
         <div class="w-10 h-1 my-2 rounded bg-blue"></div>
         <p class="mb-2">
-            Ces extensions sont proposées via la <a href="https://addons.prestashop.com/" target="_blank" class="underline">marketplace de Prestashop @include('elements.svg-icons.external-link')</a>.
+            Ces extensions sont proposées via la <a href="https://addons.prestashop.com/" target="_blank" class="underline">marketplace de Prestashop <x-heroicon-o-arrow-top-right-on-square/></a>.
             <br/>
             La plupart du temps payantes, elles sont développées par des développeurs tierces et <b>vérifiées par Prestashop</b> avant d’être mis en ligne. 
         </p>
@@ -134,27 +134,27 @@ Votre boutique e-commerce en ligne clé-en-main grâce au CMS Prestashop. Profit
         </p>
             <ul>
                 <li class="flex justify-start gap-2 align-top">
-                    @include('elements.svg-icons.animated.long-arrow-right')              
+                    @include('elements.icon.animated', ['icon' => 'o-arrow-long-right', 'class' => 'sm:w-6 sm:h-6 min-w-[24px]'])              
                     des thèmes
                 </li>
                 <li class="flex justify-start gap-2 align-top">
-                    @include('elements.svg-icons.animated.long-arrow-right')
+                    @include('elements.icon.animated', ['icon' => 'o-arrow-long-right', 'class' => 'sm:w-6 sm:h-6 min-w-[24px]'])
                     des éléments de navigation (recherche avancées, mega-menu, etc)
                 </li>
                 <li class="flex justify-start gap-2 align-top">
-                    @include('elements.svg-icons.animated.long-arrow-right')
+                    @include('elements.icon.animated', ['icon' => 'o-arrow-long-right', 'class' => 'sm:w-6 sm:h-6 min-w-[24px]'])
                     des modes paiements (banques spécifiques, paiements en plusieurs fois etc)
                 </li>
                 <li class="flex justify-start gap-2 align-top">
-                    @include('elements.svg-icons.animated.long-arrow-right')
+                    @include('elements.icon.animated', ['icon' => 'o-arrow-long-right', 'class' => 'sm:w-6 sm:h-6 min-w-[24px]'])
                     de la gestion de logistique (transporteurs, gestion du stocks poussée, etc)
                 </li>
                 <li class="flex justify-start gap-2 align-top">
-                    @include('elements.svg-icons.animated.long-arrow-right')
+                    @include('elements.icon.animated', ['icon' => 'o-arrow-long-right', 'class' => 'sm:w-6 sm:h-6 min-w-[24px]'])
                     des éléments UX pour la fiche produit
                 </li>
                 <li class="flex justify-start gap-2 align-top">
-                    @include('elements.svg-icons.animated.long-arrow-right')
+                    @include('elements.icon.animated', ['icon' => 'o-arrow-long-right', 'class' => 'sm:w-6 sm:h-6 min-w-[24px]'])
                     etc.
                 </li>
             </ul>

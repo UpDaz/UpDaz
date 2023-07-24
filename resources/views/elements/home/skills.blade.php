@@ -18,23 +18,23 @@
               <div class="w-10 h-1 mt-1 mb-4 rounded bg-blue"></div>
               <nav class="flex flex-col items-start text-left -mb-1 space-y-2.5">
                 <span>
-                    @include('elements.svg-icons.small-check')
+                    @include('elements.icon.custom.check')
                     Analyse des besoins
                 </span>
                 <span>
-                    @include('elements.svg-icons.small-check')
+                    @include('elements.icon.custom.check')
                     Rédaction du cahier des charges
                 </span>
                 <span>
-                    @include('elements.svg-icons.small-check')
+                    @include('elements.icon.custom.check')
                     Gestion et accompagnement des intervenants
                 </span>
                 <span>
-                    @include('elements.svg-icons.small-check')
+                    @include('elements.icon.custom.check')
                     Proposition du retro-planning
                 </span>
                 <span>
-                    @include('elements.svg-icons.small-check')
+                    @include('elements.icon.custom.check')
                     Suivis de projet
                 </span>
               </nav>
@@ -54,23 +54,23 @@
                 <div class="w-10 h-1 mt-1 mb-4 rounded bg-blue"></div>
                 <nav class="flex flex-col items-start text-left -mb-1 space-y-2.5">
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       Digitalisation des processus métiers
                   </span>
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       Outils adapté aux contraintes métier
                   </span>
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       Plateforme ergonomique et optimisée
                   </span>
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       Système évolutif et adaptatif
                   </span>
                   <span>
-                    @include('elements.svg-icons.small-check')
+                    @include('elements.icon.custom.check')
                         Intégration d'APIs RESTful
                     </span>
                 </nav>
@@ -90,27 +90,27 @@
                 <div class="w-10 h-1 mt-1 mb-4 rounded bg-blue"></div>
                 <nav class="flex flex-col items-start text-left -mb-1 space-y-2.5">
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       Personnalisation de thème
                   </span>
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       Gestion du contenu CMS
                   </span>
                   <span>
-                    @include('elements.svg-icons.small-check')
+                    @include('elements.icon.custom.check')
                     Mise en place de système de recherches et filtres
                   </span>
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       Raccordement domaine personnalisé
                   </span>
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       Optimisations SEO
                   </span>
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       Installation d’outils “No-Code”
                   </span>
                 </nav>
@@ -130,27 +130,27 @@
                 <div class="w-10 h-1 mt-1 mb-4 rounded bg-blue"></div>
                 <nav class="flex flex-col items-start text-left -mb-1 space-y-2.5">
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       Installation et configuration du CMS
                   </span>
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       Mise en ligne sur domaine personnalisé
                   </span>
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       Installation sur hébergement dédié
                   </span>
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       Installation et personnalisation de thème
                   </span>
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       Installation et configuration de modules
                   </span>
                   <span>
-                    @include('elements.svg-icons.small-check')
+                    @include('elements.icon.custom.check')
                     Optimisation des performances
                     </span>
                 </nav>
@@ -170,19 +170,19 @@
                 <div class="w-10 h-1 mt-1 mb-4 rounded bg-blue"></div>
                 <nav class="flex flex-col items-start text-left -mb-1 space-y-2.5">
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       Amélioration de la qualité de code
                   </span>
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       Optimisation des performances
                   </span>
                   <span>
-                        @include('elements.svg-icons.small-check')
+                        @include('elements.icon.custom.check')
                         Optimisation des assets (photos, vidéos, etc)
                   </span>
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       Proposition de contenu
                   </span>
                 </nav>
@@ -202,19 +202,19 @@
                 <div class="w-10 h-1 mt-1 mb-4 rounded bg-blue"></div>
                 <nav class="flex flex-col items-start text-left -mb-1 space-y-2.5">
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       HTML 5 
                   </span>
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       CSS 3 / TailwindCSS / Bootstrap / SASS
                   </span>
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       Javascript / AlpineJS / jQuery
                   </span>
                   <span>
-                    @include('elements.svg-icons.small-check')
+                    @include('elements.icon.custom.check')
                     Intégration en éléments réutilisables
                 </span>
                 </nav>
@@ -235,23 +235,23 @@
                 <div class="w-10 h-1 mt-1 mb-4 rounded bg-blue"></div>
                 <nav class="flex flex-col items-start text-left -mb-1 space-y-2.5">
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       Mise en ligne
                   </span>
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       Support technique
                   </span>
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       Mise à jour des modules et des packages
                   </span>
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       Correction de bugs
                   </span>
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       Reporting des erreurs
                   </span>
                 </nav>
@@ -271,19 +271,19 @@
                 <div class="w-10 h-1 mt-1 mb-4 rounded bg-blue"></div>
                 <nav class="flex flex-col items-start text-left -mb-1 space-y-2.5">
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       Installation des outils de tracking Google
                   </span>
                   <span>
-                        @include('elements.svg-icons.small-check')
+                        @include('elements.icon.custom.check')
                         Mise en place de tunnels de conversion
                     </span>
                   <span>
-                      @include('elements.svg-icons.small-check')
+                      @include('elements.icon.custom.check')
                       Système de protection ReCaptcha
                   </span>
                   <span>
-                        @include('elements.svg-icons.small-check')
+                        @include('elements.icon.custom.check')
                         Outils de gestion et de respect du RGPD
                   </span>
                 </nav>

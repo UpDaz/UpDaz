@@ -10,7 +10,7 @@
         <div class="w-20 h-1 my-2 rounded bg-blue"></div>
         <p class="text-black">
             Pour m'en dire un peu plus sur votre projet, merci de bien vouloir compléter
-            <a href="https://14r0dvle4i4.typeform.com/to/kEyCbkxN" target="_href" class="inline-block px-2 py-1 text-white rounded shadow-md bg-gradient-to-br hover:bg-gradient-to-r from-blue-dark to-blue">ce formulaire @include('elements.svg-icons.external-link')</a>.
+            <a href="https://14r0dvle4i4.typeform.com/to/kEyCbkxN" target="_href" class="inline-block px-2 py-1 text-white rounded shadow-md bg-gradient-to-br hover:bg-gradient-to-r from-blue-dark to-blue">ce formulaire <x-heroicon-o-arrow-top-right-on-square/></a>.
         </p>
         <p class="my-4">Pour toutes autres demandes :</p>
         <x-contact-form />

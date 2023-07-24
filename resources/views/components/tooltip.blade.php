@@ -5,14 +5,14 @@
         <span class="flex hover:cursor-pointer">
             {!! $content !!}
             @if ($displayIcon)
-                @include('elements.svg-icons.question')
+                <x-heroicon-m-question-mark-circle/>
             @endif
         </span>
         <span 
             class="absolute bottom-full hidden flex-col items-center mb-2 group-hover:flex w-[50vw] md:w-64 "
         >
             <span class="relative z-10 text-center text-sm leading-4 text-white whitespace-no-wrap bg-[{{ $color }}] shadow-lg rounded">
-                <span class="text-left block leading-5">
+                <span class="block leading-5 text-left">
                     {!! $message !!}
                 </span>
             </span>

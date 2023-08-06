@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <title>@yield('title', 'Développeur de site sur-mesure et CMS à Bordeaux - UpDaz')</title>
+    <title>@yield('title', 'Création de site sur-mesure et CMS à Bordeaux - UpDaz')</title>
     <meta name="description" content="@yield('meta-description', 'Création de site vitrine Webflow et Wordpress, sur-mesure Laravel et e-commerce Prestashop. Accompagnement, développement et conseils pour projet web.')"/>
     <meta name="keywords" content="Développeur web, Bordeaux, freelance, full-stach, site internet, Laravel, Prestashop, CMS, Webflow, accompagnement, HTML, CSS, JavaScript, SEO, conseils, digitalisation, web"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>

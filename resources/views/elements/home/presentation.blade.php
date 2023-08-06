@@ -1,4 +1,4 @@
-<section id="presentation" class="px-8 py-4 md:px-16 md:py-0 md:pt-24">
+<section id="presentation" class="px-8 py-4 md:px-16 md:py-0 md:pt-12">
     <div class="container flex flex-col mx-auto">
         <div class="mx-auto lg:w-4/6">
             <div class="flex flex-col mt-10 sm:flex-row">

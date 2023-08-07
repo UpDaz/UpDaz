@@ -5,8 +5,8 @@
 
     RewriteEngine On
 
-    RewriteCond %{HTTPS} off
-    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    RewriteCond %{HTTP_HOST} ^updaz\.fr [NC]
+    RewriteRule ^(.*)$ https://www.updaz.fr/$1 [R,L]
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .

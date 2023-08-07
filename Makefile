@@ -28,7 +28,8 @@ deploy-first-time:
 
 deploy:
 	@echo "Laravel app deployment..."
-	ssh $(SSH_CONNECTION_CMD) "cd $(REMOTE_PROJECT_DIR) && git pull origin master && make deploy-laravel-app && exit"
+	ssh $(SSH_CONNECTION_CMD) "cd $(REMOTE_PROJECT_DIR) && git pull origin master && exit"
+	ssh $(SSH_CONNECTION_CMD) "cd $(REMOTE_PROJECT_DIR) && make deploy-laravel-app && exit"
 
 install-laravel-app:
 	rsync -e "ssh -i $(SSH_KEY)" $(LOCAL_PROJECT_DIR).env.production $(SSH_USER)@$(SERVER_ADDR):$(REMOTE_PROJECT_DIR).env

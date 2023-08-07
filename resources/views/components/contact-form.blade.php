@@ -21,15 +21,17 @@
         <div>
             <img src="{{ asset('img/loader.svg') }}" alt="Loader" title="Chargement" x-show="submitting"/>
             <button x-show="!submitting && !success" class="block px-6 py-3 font-medium text-white rounded shadow-md bg-orange">
-                Envoyer
+                Envoyer votre message
             </button>
-            <p x-show="!submitting && success" class="items-center block text-right text-white bold md:flex md:text-left">
-                <img src="{{ asset('img/illustrations/check-rounded-orange.svg')}}" class="mx-auto md:mr-2" width="30" alt="Picto check" title="Check"/>
+            <p x-show="!submitting && success" class="items-center block px-6 py-3 text-right text-white rounded bold md:flex md:text-left bg-gradient-to-br from-blue-dark to-blue">
+                @include('elements.icon.custom.check-large')
                 Votre demande a bien été envoyé, vous allez recevoir un email de confirmation dans les plus brefs délais.
             </p>
-            <p x-show="error" class="items-center block mt-2 text-right text-red-500 bold md:flex md:text-left">
-                <img src="{{ asset('img/illustrations/warning.svg')}}" class="mx-auto md:mr-3" width="30" alt="Picto warning" title="Erreur"/>
-                Une erreur est survenue,<br/>si le problème persiste merci de me contacter via matthieu@udpaz.fr
+            <p x-show="error" class="items-center block px-6 py-3 mt-2 text-right bg-gray-100 rounded-lg bold md:flex md:text-left ">
+                <x-heroicon-o-exclamation-triangle class="!w-12 !h-8 mr-4 text-red-500"/>
+                <span>
+                    Une erreur est survenue, si le problème persiste merci de me contacter via <a href="mailto:matthieu@updaz.fr" class="underline">matthieu@udpaz.fr</a>
+                </span>
             </p>
         </div>
     </div>

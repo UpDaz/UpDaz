@@ -22,16 +22,16 @@ LOCAL_DIR = $(shell pwd)
 deploy-first-time:
 	@echo "Laravel app first deployment..."
 	ssh $(SSH_CONNECTION_CMD) "cd $(REMOTE_PROJECT_DIR) && git pull origin master && exit"
-	install-laravel-app
+	make install-laravel-app
 	ssh $(SSH_CONNECTION_CMD) "cd $(REMOTE_PROJECT_DIR) && make deploy-laravel-app && exit"
 
 
 deploy:
 	@echo "Laravel app deployment..."
-	ssh $(SSH_CONNECTION_CMD) "cd $(REMOTE_PROJECT_DIR) && git pull origin master && make deploy-laravel-app"
+	ssh $(SSH_CONNECTION_CMD) "cd $(REMOTE_PROJECT_DIR) && git pull origin master && make deploy-laravel-app && exit"
 
 install-laravel-app:
-	rsync -e "ssh -i $(SSH_KEY)" $(SSH_USER)@$(SERVER_ADDR):$(LOCAL_PROJECT_DIR).env.production $(REMOTE_PROJECT_DIR).env
+	rsync -e "ssh -i $(SSH_KEY)" $(LOCAL_PROJECT_DIR).env.production $(SSH_USER)@$(SERVER_ADDR):$(REMOTE_PROJECT_DIR).env
 	php artisan key:generate
 
 deploy-laravel-app: vendor/autoload.php public/storage build-assets generate-sitemap optimize

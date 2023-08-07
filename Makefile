@@ -35,7 +35,7 @@ install-laravel-app:
 	rsync -e "ssh -i $(SSH_KEY)" $(LOCAL_PROJECT_DIR).env.production $(SSH_USER)@$(SERVER_ADDR):$(REMOTE_PROJECT_DIR).env
 	php artisan key:generate
 
-deploy-laravel-app: vendor/autoload.php public/storage build-assets generate-sitemap optimize
+deploy-laravel-app: vendor/autoload.php public/storage build-assets generate-sitemap optimize-app
     php artisan optimize:clear
     #php artisan migrate
 
@@ -55,7 +55,7 @@ build-assets:
 generate-sitemap:
 	php artisan sitemap:generate
 
-optimize: 
+optimize-app: 
 	php artisan optimize
 
 # Add more deployment steps as needed (e.g., clearing cache, restarting services, etc.)

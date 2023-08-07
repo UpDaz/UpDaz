@@ -19,16 +19,15 @@ LOCAL_DIR = $(shell pwd)
 
 .PHONY: deploy
 
+deploy:
+	@echo "Laravel app deployment..."
+	ssh $(SSH_CONNECTION_CMD) "cd $(REMOTE_PROJECT_DIR) && git pull origin master && exit"
+	ssh $(SSH_CONNECTION_CMD) "cd $(REMOTE_PROJECT_DIR) && make deploy-laravel-app && exit"
+
 deploy-first-time:
 	@echo "Laravel app first deployment..."
 	ssh $(SSH_CONNECTION_CMD) "cd $(REMOTE_PROJECT_DIR) && git pull origin master && exit"
 	make install-laravel-app
-	ssh $(SSH_CONNECTION_CMD) "cd $(REMOTE_PROJECT_DIR) && make deploy-laravel-app && exit"
-
-
-deploy:
-	@echo "Laravel app deployment..."
-	ssh $(SSH_CONNECTION_CMD) "cd $(REMOTE_PROJECT_DIR) && git pull origin master && exit"
 	ssh $(SSH_CONNECTION_CMD) "cd $(REMOTE_PROJECT_DIR) && make deploy-laravel-app && exit"
 
 install-laravel-app:

@@ -1,6 +1,6 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/js/welcome.js": "/js/welcome.js",
-    "/js/article.js": "/js/article.js",
-    "/css/app.css": "/css/app.css"
+    "/js/app.js": "/js/app.js?id=9af7b227c4607825ede795683d7c389a",
+    "/js/welcome.js": "/js/welcome.js?id=32728b46922c3125fb82860672b0a1fe",
+    "/js/article.js": "/js/article.js?id=fd87bd55d9e8fd6c54b8943c5a03255b",
+    "/css/app.css": "/css/app.css?id=7e75d8c2611d68ba20fe0a670fbc96c0"
 }

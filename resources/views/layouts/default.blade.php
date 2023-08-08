@@ -18,7 +18,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap" rel="stylesheet" defer>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet" defer>
-    <link rel="stylesheet" href="{{ asset("css/app.css") }}" defer>
+    <link rel="stylesheet" href="{{ mix("css/app.css") }}" defer>
     @include('elements.structured-data')
     @include('elements.google-analytics')
     @include('elements.axeptio')
@@ -29,7 +29,7 @@
     @include('elements.footer')
 </body>
 
-<script src="{{ asset('js/app.js') }}" defer></script>
+<script src="{{ mix('js/app.js') }}" defer></script>
 @yield('javascript')
 
 </html>

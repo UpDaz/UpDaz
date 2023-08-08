@@ -1,23 +1,23 @@
-<div class="py-8 px-4 w-full lg:w-1/3">
-    <div class="h-full bg-gray-100 rounded-lg px-4 py-6 flex items-start">
-      <div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
+<div class="w-full px-4 py-8 lg:w-1/3">
+    <div class="flex items-start h-full px-4 py-6 bg-gray-100 rounded-lg">
+      <div class="flex flex-col flex-shrink-0 w-12 leading-none text-center">
         <span class="text-sm leading-none">{{ $article->published_at->format('M') }}</span>
-        <span class="text-sm pt-2 mt-2 border-t-2 border-gray-200">{{ $article->published_at->format('Y') }}</span>
+        <span class="pt-2 mt-2 text-sm border-t-2 border-gray-200">{{ $article->published_at->format('Y') }}</span>
       </div>
       <div class="flex-grow pl-6">
-        <h4 class="text-xs font-medium text-blue mb-1">
+        <h3 class="mb-1 text-xs font-medium text-blue">
             <a href="{{ route('category', ['slug' => $article->category->slug]) }}">
                 {{ $article->category->name }}
             </a>
-        </h4>
-        <h3 class="text-xl font-medium text-black mb-3">
-            {{ $article->title }}
         </h3>
+        <h4 class="mb-3 text-xl font-medium text-black">
+            {{ $article->title }}
+        </h4>
         <p class="mb-5">
             {{ $article->catch_phrase }}
         </p>
         <a  href="{{ route('article', ['categorySlug' => $article->category->slug, 'slug' => $article->slug]) }}"
-            class="inline-block font-medium text-center bg-gradient-to-br hover:bg-gradient-to-r from-blue-dark to-blue hover:bg-orange text-white px-6 py-3 rounded shadow-md">
+            class="inline-block px-6 py-3 font-medium text-center text-white rounded shadow-md bg-gradient-to-br hover:bg-gradient-to-r from-blue-dark to-blue hover:bg-orange">
             Lire l'article
         </a>
       </div>

@@ -30,8 +30,12 @@ deploy-first-time:
 	make install-laravel-app
 	ssh $(SSH_CONNECTION_CMD) "cd $(REMOTE_PROJECT_DIR) && make deploy-laravel-app && exit"
 
-install-laravel-app:
+install-laravel-app: copy-production-env-file generate-laravel-app-key
+
+copy-production-env-file:
 	rsync -e "ssh -i $(SSH_KEY)" $(LOCAL_PROJECT_DIR).env.production $(SSH_USER)@$(SERVER_ADDR):$(REMOTE_PROJECT_DIR).env
+
+generate-laravel-app-key:
 	php artisan key:generate
 
 deploy-laravel-app: vendor/autoload.php public/storage build-assets generate-sitemap clear-cache-server optimize-app

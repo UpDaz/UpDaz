@@ -12,7 +12,7 @@
     <meta name="author" content="Matthieu Dazord"/>
     <meta name="application-name" content="UpDaz"/>
 
-    <link rel="icon" type="image/png" href="{{ asset("img/favicon.png") }}" />
+    <link rel="icon" href="{{ asset("img/favicon.png") }}" />
 
     <x-canonical-url />
 

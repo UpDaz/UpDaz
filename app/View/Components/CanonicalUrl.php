@@ -35,12 +35,11 @@ class CanonicalUrl extends Component
 
         return str_replace(
             [
-            'http://',
-            'www.',
+                'http://updaz',
+                'https://updaz',
             ],
             [
-            'https://',
-            '',
+                'https://www.updaz',
             ],
             $currentUrl
         );

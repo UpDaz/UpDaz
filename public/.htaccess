@@ -5,9 +5,14 @@
 
     RewriteEngine On
 
+    # Redirect on https
     RewriteCond %{HTTP:X-Forwarded-Proto} !https
     RewriteCond %{HTTPS} !on
     RewriteRule ^(.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Redirect withing www if missing
+    RewriteCond %{HTTP_HOST} !^www\. [NC]
+	  RewriteRule (.*) https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .

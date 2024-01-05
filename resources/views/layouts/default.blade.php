@@ -15,9 +15,7 @@
     <link rel="icon" href="{{ asset("img/favicon.png") }}" type="image/png">
 
     <x-canonical-url />
-
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap" rel="stylesheet" defer>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet" defer>
+    @include('elements.fonts')
     <link rel="stylesheet" href="{{ mix("css/app.css") }}" defer>
     @include('elements.structured-data')
     @include('elements.google-analytics')

@@ -4,8 +4,13 @@
             <div class="flex flex-col mt-10 sm:flex-row">
                 <div class="sm:w-1/3 sm:pr-8 sm:py-8">
                     <div class="sticky inline-flex items-center justify-center rounded-full w-100 top-32">
-                        <img class="object-cover object-center rounded" alt="Photo de profil Matthieu UpDaz" width="253" height="253"
-                            src="{{ asset('img/profile.jpg') }}" load="lazy">
+                        @include('elements.html.webp-image', [
+                            'source' => asset('img/profile.jpg'),
+                            'alt' => 'Photo de profil Matthieu UpDaz',
+                            'width' => '253',
+                            'height' => '253',
+                            'class' => 'object-cover object-center rounded',
+                        ])
                     </div>
                 </div>
                 <div
@@ -36,7 +41,7 @@
                         <a href="#references" @click.prevent="scrollToTarget('#references')"
                             class="block px-6 py-3 mt-4 mb-4 font-medium text-center text-white rounded shadow-md md:mr-4 md:inline-block bg-gradient-to-br hover:bg-gradient-to-r from-blue-dark to-blue"
                             title="Les références UpDaz ?">
-                            Mes Références
+                            Mes références
                         </a>
                         <a href="#contact" @click.prevent="scrollToTarget('#contact')"
                             class="block px-6 py-3 mt-4 font-medium text-center text-white rounded shadow-md md:inline-block bg-orange hover:bg-blue-dark"

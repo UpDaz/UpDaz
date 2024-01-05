@@ -7,8 +7,13 @@
                     shuffle($images)
                 @endphp
                 @foreach($images as $image_path)
-                <img class="w-full object-cover shadow-lg p-2 bg-white border-2 rounded border-blue-dark dark:shadow-gray-900/[.75]"
-                    src="{{ $image_path }}" alt="Image Technologique UpDaz" width="100" height="100" load="lazy"/>
+                @include('elements.html.webp-image', [
+                    'source' => $image_path,
+                    'alt' => 'Image Technologique UpDaz',
+                    'width' => '100',
+                    'height' => '100',
+                    'class' => 'w-full object-cover shadow-lg p-2 bg-white border-2 rounded border-blue-dark dark:shadow-gray-900/[.75]',
+                ])
                 @endforeach
             </div>
             <div class="grid w-full gap-9 animation-sliding-img-down-1">
@@ -16,8 +21,13 @@
                     shuffle($images)
                 @endphp
                 @foreach($images as $image_path)
-                <img class="w-full object-cover shadow-lg p-2 bg-white border-2 rounded border-blue-dark dark:shadow-gray-900/[.75]"
-                    src="{{ $image_path }}" alt="Image Technologique UpDaz" width="100" height="100" load="lazy"/>
+                @include('elements.html.webp-image', [
+                    'source' => $image_path,
+                    'alt' => 'Image Technologique UpDaz',
+                    'width' => '100',
+                    'height' => '100',
+                    'class' => 'w-full object-cover shadow-lg p-2 bg-white border-2 rounded border-blue-dark dark:shadow-gray-900/[.75]',
+                ])
                 @endforeach
             </div>
             <div class="grid w-full gap-9 animation-sliding-img-up-2">
@@ -25,8 +35,13 @@
                     shuffle($images)
                 @endphp
                 @foreach($images as $image_path)
-                <img class="w-full object-cover shadow-lg p-2 bg-white border-2 rounded border-blue-dark dark:shadow-gray-900/[.75]"
-                    src="{{ $image_path }}" alt="Image Technologique UpDaz" width="100" height="100" load="lazy"/>
+                @include('elements.html.webp-image', [
+                    'source' => $image_path,
+                    'alt' => 'Image Technologique UpDaz',
+                    'width' => '100',
+                    'height' => '100',
+                    'class' => 'w-full object-cover shadow-lg p-2 bg-white border-2 rounded border-blue-dark dark:shadow-gray-900/[.75]',
+                ])
                 @endforeach
             </div>
         </div>

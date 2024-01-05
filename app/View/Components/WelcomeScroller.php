@@ -17,8 +17,21 @@ class WelcomeScroller extends Component
     public function __construct()
     {
         $this->images = File::glob(public_path('img') . '/welcome-scroller/*');
+
         foreach ($this->images as $key => $path) {
-            $this->images[$key] = str_replace(public_path('img'), URL::asset('img'), $path);
+            $this->images[$key] = [
+                'path' => str_replace(public_path('img'), URL::asset('img'), $path),
+            ];
+            $fileInformation = getimagesize($path);
+            $this->images[$key] = [
+                    'path' => str_replace(public_path('img'), URL::asset('img'), $path),
+                ];
+            if (is_array($fileInformation)) {
+                $this->images[$key] = array_merge($this->images[$key], [
+                    'width' => $fileInformation[0],
+                    'height' => $fileInformation[1]
+                ]);
+            }
         }
     }
 

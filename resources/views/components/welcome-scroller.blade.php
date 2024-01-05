@@ -6,11 +6,13 @@
                 @php
                     shuffle($images)
                 @endphp
-                @foreach($images as $image_path)
+                @foreach($images as $image_info)
                 @include('elements.html.webp-image', [
-                    'source' => $image_path,
+                    'source' => $image_info['path'],
                     'alt' => 'Image Technologique UpDaz',
-                    'width' => '215',
+                    'width' => $image_info['width'] ?? null,
+                    'height' => $image_info['height'] ?? null,
+                    'loading' => 'eager',
                     'class' => 'w-full object-cover shadow-lg p-2 bg-white border-2 rounded border-blue-dark dark:shadow-gray-900/[.75]',
                 ])
                 @endforeach
@@ -19,11 +21,13 @@
                 @php
                     shuffle($images)
                 @endphp
-                @foreach($images as $image_path)
+                @foreach($images as $image_info)
                 @include('elements.html.webp-image', [
-                    'source' => $image_path,
+                    'source' => $image_info['path'],
                     'alt' => 'Image Technologique UpDaz',
-                    'width' => '215',
+                    'width' => $image_info['width'] ?? null,
+                    'height' => $image_info['height'] ?? null,
+                    'loading' => 'eager',
                     'class' => 'w-full object-cover shadow-lg p-2 bg-white border-2 rounded border-blue-dark dark:shadow-gray-900/[.75]',
                 ])
                 @endforeach
@@ -32,11 +36,13 @@
                 @php
                     shuffle($images)
                 @endphp
-                @foreach($images as $image_path)
+                @foreach($images as $image_info)
                 @include('elements.html.webp-image', [
-                    'source' => $image_path,
+                    'source' => $image_info['path'],
                     'alt' => 'Image Technologique UpDaz',
-                    'width' => '215',
+                    'width' => $image_info['width'] ?? null,
+                    'height' => $image_info['height'] ?? null,
+                    'loading' => 'eager',
                     'class' => 'w-full object-cover shadow-lg p-2 bg-white border-2 rounded border-blue-dark dark:shadow-gray-900/[.75]',
                 ])
                 @endforeach

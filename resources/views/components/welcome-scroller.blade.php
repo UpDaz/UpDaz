@@ -10,8 +10,7 @@
                 @include('elements.html.webp-image', [
                     'source' => $image_path,
                     'alt' => 'Image Technologique UpDaz',
-                    'width' => '100',
-                    'height' => '100',
+                    'width' => '215',
                     'class' => 'w-full object-cover shadow-lg p-2 bg-white border-2 rounded border-blue-dark dark:shadow-gray-900/[.75]',
                 ])
                 @endforeach
@@ -24,8 +23,7 @@
                 @include('elements.html.webp-image', [
                     'source' => $image_path,
                     'alt' => 'Image Technologique UpDaz',
-                    'width' => '100',
-                    'height' => '100',
+                    'width' => '215',
                     'class' => 'w-full object-cover shadow-lg p-2 bg-white border-2 rounded border-blue-dark dark:shadow-gray-900/[.75]',
                 ])
                 @endforeach
@@ -38,8 +36,7 @@
                 @include('elements.html.webp-image', [
                     'source' => $image_path,
                     'alt' => 'Image Technologique UpDaz',
-                    'width' => '100',
-                    'height' => '100',
+                    'width' => '215',
                     'class' => 'w-full object-cover shadow-lg p-2 bg-white border-2 rounded border-blue-dark dark:shadow-gray-900/[.75]',
                 ])
                 @endforeach

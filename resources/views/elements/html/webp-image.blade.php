@@ -3,7 +3,7 @@
     <img 
         src="{{ $source }}" 
         alt="{{ $alt ?? '' }}" 
-        lazy="load" 
+        loading="lazy"
         width="{{ $width ?? 'auto'}}"
         height="{{ $height ?? 'auto' }}"
         class="{{ $class ?? '' }}" >

@@ -1,7 +1,7 @@
 <div class="mx-auto border-gray-200 sm:w-1/2 sm:border-t"></div>
 <section id="opquast" class="px-8 py-16 md:px-16 md:py-0">
     <div class="container flex flex-col mx-auto">
-        <div class="flex flex-col-reverse md:flex-row ">
+        <div class="flex flex-col-reverse sm:flex-row ">
             <div
                 class="pt-10 mt-4 border-t border-gray-200 sm:w-2/3 sm:pr-12 sm:py-12 sm:border-r sm:border-t-0 sm:mt-0 sm:text-left">
                 <h2 class="mb-2 text-3xl text-black font-title bold">

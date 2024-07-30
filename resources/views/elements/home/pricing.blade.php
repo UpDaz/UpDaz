@@ -10,8 +10,7 @@
           <div class="relative flex flex-col h-full p-6 bg-white border-2 border-gray-300 rounded-lg">
             <h3 class="mb-2 text-md title-font text-blue">Landing page & site vitrine</h3>
             <h4 class="pb-4 mb-4 text-4xl leading-none text-black border-b border-gray-200">
-                <span class="text-xs text-black">à partir de</span>
-                <span>1000€</span>
+                <span>sur devis</span>
             </h4>
             <p class="flex items-center mb-4">
               @include('elements.icon.custom.check')
@@ -121,8 +120,7 @@
             <div class="relative flex flex-col h-full p-6 bg-white border-2 border-gray-300 rounded-lg">
               <h3 class="mb-2 text-md title-font text-blue">E-commerce & boutique en ligne</h3>
               <h4 class="pb-4 mb-4 text-4xl leading-none text-black border-b border-gray-200">
-                  <span class="text-xs text-black">à partir de</span>
-                  <span>2500€</span>
+                  <span>sur devis</span>
               </h4>
               <p class="flex items-center mb-4 text-black">
                 @include('elements.icon.custom.check')

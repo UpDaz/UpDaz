@@ -8,11 +8,28 @@
                         sur-mesure</span> & de <span class="text-orange">site CMS</span>
                 </h1>
                 <div class="w-20 h-1 my-12 bg-white rounded"></div>
-                <a href="#presentation" @click.prevent="scrollToTarget('#contact')"
-                    class="block px-6 py-3 mt-4 font-medium text-center text-white rounded shadow-md md:inline-block bg-orange hover:bg-blue-dark"
-                    title="UpDaz : en savoir plus">
-                    En savoir plus
-                </a>
+                <div class="grid *:w-full gap-4 lg:grid-cols-2 xl:grid-cols-3 w-full">
+                    <a href="#presentation" @click.prevent="scrollToTarget('#contact')"
+                        class="block px-6 py-3 font-medium text-center text-white rounded shadow-md md:inline-block hover:bg-gradient-to-r bg-blue"
+                        title="UpDaz : en savoir plus">
+                        Présentation
+                    </a>
+                    <a href="#services" @click.prevent="scrollToTarget('#services')"
+                        class="block px-6 py-3 font-medium text-center text-white rounded shadow-md md:inline-block hover:bg-gradient-to-r bg-blue"
+                        title="UpDaz : savoir-faire">
+                        Mon savoir-faire
+                    </a>
+                    <a href="#offres" @click.prevent="scrollToTarget('#offres')"
+                        class="block px-6 py-3 font-medium text-center text-white rounded shadow-md md:inline-block hover:bg-gradient-to-r bg-blue"
+                        title="UpDaz : offres">
+                        Mes offres
+                    </a>
+                    <a href="#offres" @click.prevent="scrollToTarget('#offres')"
+                        class="block px-6 py-3 font-medium text-center text-white rounded shadow-md lg:col-span-2 xl:col-span-3 md:inline-block bg-orange hover:bg-blue-dark"
+                        title="UpDaz : offres">
+                        Me contacter
+                    </a>
+                </div>
             </div>
             <div class="w-full md:w-1/2">
                 <x-welcome-scroller />

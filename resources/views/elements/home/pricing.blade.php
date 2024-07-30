@@ -8,9 +8,9 @@
 
         <div class="w-full p-4 xl:w-1/3 md:w-1/2">
           <div class="relative flex flex-col h-full p-6 bg-white border-2 border-gray-300 rounded-lg">
-            <h3 class="mb-2 text-md title-font text-blue">Landing page & site vitrine</h3>
+            <h3 class="mb-2 text-md title-font text-blue">Landing page &</h3>
             <h4 class="pb-4 mb-4 text-4xl leading-none text-black border-b border-gray-200">
-                <span>sur devis</span>
+                <span>site vitrine</span>
             </h4>
             <p class="flex items-center mb-4">
               @include('elements.icon.custom.check')
@@ -59,9 +59,9 @@
         <div class="w-full p-4 xl:w-1/3 md:w-1/2">
             <div class="relative flex flex-col h-full p-6 bg-white border-2 rounded-lg border-orange">
               <span class="absolute top-0 right-0 px-3 py-1 text-xs tracking-widest text-white uppercase rounded-bl bg-orange">Meilleur choix</span>
-              <h3 class="mb-2 text-md title-font text-blue">Application métier & sur-mesure</h3>
+              <h3 class="mb-2 text-md title-font text-blue">Application métier &</h3>
                 <h4 class="pb-4 mb-4 text-4xl leading-none text-black border-b border-gray-200">
-                    <span class="">sur devis</span>
+                    <span class="">sur-mesure</span>
                 </h4>
               <p class="flex mb-4 items-cente">
                 @include('elements.icon.custom.check')
@@ -118,9 +118,9 @@
 
         <div class="w-full p-4 xl:w-1/3 md:w-1/2">
             <div class="relative flex flex-col h-full p-6 bg-white border-2 border-gray-300 rounded-lg">
-              <h3 class="mb-2 text-md title-font text-blue">E-commerce & boutique en ligne</h3>
+              <h3 class="mb-2 text-md title-font text-blue">E-commerce &</h3>
               <h4 class="pb-4 mb-4 text-4xl leading-none text-black border-b border-gray-200">
-                  <span>sur devis</span>
+                  <span>boutique en ligne</span>
               </h4>
               <p class="flex items-center mb-4 text-black">
                 @include('elements.icon.custom.check')

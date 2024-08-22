@@ -20,10 +20,7 @@
             }
         });
     });
-    @dump(config('app.env'))
-    @env('production')
     window.addEventListener("load", function() {
         loadGoogleAnalyticsTag();
     });
-    @endenv
 </script>

@@ -16,8 +16,13 @@
     window._axcb.push(function(axeptio) {
         axeptio.on("cookies:complete", function(choices) {
             if (choices.google_analytics) {
-                loadGoogleAnalyticsTag()
+                // loadGoogleAnalyticsTag()
             }
         });
     });
+    @env('production')
+    window.addEventListener("load", function() {
+        loadGoogleAnalyticsTag();
+    });
+    @endenv
 </script>

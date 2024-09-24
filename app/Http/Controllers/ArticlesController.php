@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Repositories\ArticleRepositoryInterface;
 use Illuminate\Http\Request;
 
-class ArticleController extends Controller
+class ArticlesController extends Controller
 {
     protected $articleRepository;
 
@@ -14,12 +14,20 @@ class ArticleController extends Controller
         $this->articleRepository = $articleRepository;
     }
 
+    public function index()
+    {
+        $articles = $this->articleRepository->all();
+        return view('articles.index', [
+            'articles' => $articles,
+        ]);
+    }
+
     public function show($slugCategory, $slug)
     {
         $article = $this->articleRepository->getByCategorySlugAndSlug($slugCategory, $slug);
 
         if ($article && $article->can_be_read) {
-            return view('article.show', [
+            return view('articles.show', [
                 'article' => $article,
             ]);
         } else {

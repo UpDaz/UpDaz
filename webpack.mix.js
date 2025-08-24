@@ -14,7 +14,14 @@ const mix = require('laravel-mix');
 mix.js("resources/js/app.js", "public/js")
     .js("resources/js/welcome.js", "public/js")
     .js("resources/js/article.js", "public/js")
-    .postCss("resources/css/app.css", "public/css", [
-        require("tailwindcss"),
-    ])
+    // .postCss("resources/css/app.css", "public/css", [
+    //     require("tailwindcss"),
+    // ])
+    .sass('resources/scss/app.scss',"public/css")
+    .sourceMaps()
+    .options({
+        postCss: [
+            require("tailwindcss"),
+        ],
+    })
     .version();

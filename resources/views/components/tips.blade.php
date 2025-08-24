@@ -6,7 +6,7 @@
         class="absolute w-24 max-h-full mx-auto text-center transition-all duration-500 opacity-0 top-10 -left-36"
         :class="visible? '!-left-12 opacity-100' : ''" 
     >
-        <x-heroicon-s-light-bulb class="sm:w-12 sm:h-12 text-orange"/>
+        <x-heroicon-s-light-bulb class="sm:w-12 sm:h-12 text-yellow"/>
     </div>
     <div>
         {!! $content !!}

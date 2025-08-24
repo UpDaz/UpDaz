@@ -1,16 +1,19 @@
-<div class="mx-auto border-gray-200 sm:w-1/2 sm:border-t"></div>
-<section id="opquast" class="px-8 py-16 md:px-16 md:py-0">
+<section id="opquast">
     <div class="container flex flex-col mx-auto">
         <div class="flex flex-col-reverse sm:flex-row ">
             <div
-                class="pt-10 mt-4 border-t border-gray-200 sm:w-2/3 sm:pr-12 sm:py-12 sm:border-r sm:border-t-0 sm:mt-0 sm:text-left">
-                <h2 class="mb-2 text-3xl text-black font-title bold">
-                    Développeur certifié <span class="uppercas">Opquast</span>
-                </h2>
-                <div class="w-20 h-1 rounded bg-blue"></div>
-                <p class="mt-6 leading-relaxed text-md">
-                    <a href="https://www.opquast.com/" target="_blank" class="border-b-2">Opquast
-                        <x-heroicon-o-arrow-top-right-on-square /></a> est un programme de certification pour les
+                class="flex flex-col items-start justify-start gap-8 border-t border-gray sm:w-3/4 sm:pr-16 sm:py-16 sm:border-r sm:border-t-0 sm:text-left">
+                <div class="flex items-center gap-8">
+                    <h2 class="text-3xl font-title">
+                        Développeur certifié <span class="uppercase text-yellow">Opquast</span>
+                    </h2>
+                    <div class="w-16">
+                        @include('elements.icon.check-list')
+                    </div>
+                </div>
+                <p class="leading-relaxed text-md">
+                    <a href="https://www.opquast.com/" target="_blank"
+                        class="inline-flex items-center gap-2 border-b text-nowrap border-gray">Opquast</a> est un programme de certification pour les
                     professionnels du web,
                     conçu pour évaluer les compétences et les connaissances en matière d'<b>optimisation et de qualité
                         de
@@ -47,7 +50,7 @@
                     long du cycle de vie et à chaque étape pour un résultat optimisé et cohérent.
                     <br /><br />
                     L'obtention de la certification "<b>Maitrise de la qualité en projet web</b>" démontre une approche
-                    transversale dans la gestion de projet et dans l'accompagnement..
+                    transversale dans la gestion de projet et dans l'accompagnement.
                     <br>
                     Le niveau "<b>Avancé</b>" correspond à d'excellentes connaissances des bonnes pratiques qualité Web
                     et
@@ -55,19 +58,39 @@
                     projets
                     avec d’autres professionnels.
                 </p>
-                <a href="https://directory.opquast.com/fr/certificat/PUGT87/" target="_blank"
-                    class="block px-6 py-3 mt-6 font-medium text-center text-white rounded shadow-md md:inline-block bg-gradient-to-br hover:bg-gradient-to-r from-blue-dark to-blue">
-                    Ma certification <x-heroicon-o-arrow-top-right-on-square />
-                </a>
+                <div>
+                    <x-button.secondary href="https://directory.opquast.com/fr/certificat/PUGT87/" target="_blank"
+                        title="Vous avez des questions ?">
+                        <span class="flex items-center gap-4 text-nowrap">
+                            Voir ma certification
+                        </span>
+                        </x-button-secondary>
+                </div>
             </div>
-            <div class="px-12 sm:w-1/3 sm:pt-12">
-                @include('elements.html.webp-image', [
-                    'source' => asset('img/label-opquast-avance.png'),
-                    'alt' => 'Label Certification Avancée Opquast Matthieu DAZORD',
-                    'width' => '150',
-                    'height' => '109',
-                    'class' => 'sticky mb-6 top-32',
-                ])
+            <div class="px-12 mb-16 md:px-16 sm:w-1/4 md:pt-16">
+                <div class="sticky top-24">
+                    <div class="relative">
+                        @include('elements.html.webp-image', [
+                            'source' => asset('img/label-opquast-avance.png'),
+                            'alt' => 'Label Certification Avancée Opquast Matthieu DAZORD',
+                            'width' => '150',
+                            'height' => '109',
+                            'class' => 'w-full',
+                        ])
+                        <div
+                            class="absolute h-[1px] left-1/2 w-[200%] -translate-x-1/2 top-0 bg-gradient-to-r from-transparent via-gray to-transparent ">
+                        </div>
+                        <div
+                            class="absolute h-[1px] left-1/2 w-[200%] -translate-x-1/2 bottom-0 bg-gradient-to-r from-transparent via-gray to-transparent ">
+                        </div>
+                        <div
+                            class="absolute w-[1px] top-1/2 h-[200%] -translate-y-1/2 left-0 bg-gradient-to-b from-transparent via-gray to-transparent ">
+                        </div>
+                        <div
+                            class="absolute w-[1px] top-1/2 h-[200%] -translate-y-1/2 right-0 bg-gradient-to-b from-transparent via-gray to-transparent ">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

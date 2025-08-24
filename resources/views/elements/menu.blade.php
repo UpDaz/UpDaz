@@ -2,7 +2,7 @@
 <nav id="menu" 
   x-data="menu"
   x-init="manageMenuDisplay();"
-  class="sticky z-50 w-full px-8 py-4 transition-all lg:px-16 md:py-6"
+  class="sticky z-50 w-full px-8 py-4 overflow-hidden transition-all lg:px-16 md:py-6"
   :class="displayMenu ? (windowScrollY > 0 ? 'top-0 bg-blue' : 'top-0') : 'md:-top-32 bg-blue'"
   @scroll.window="manageMenuDisplay();"
 >
@@ -108,6 +108,7 @@
       </div>
     </div>
   </div>
+  <div class="absolute h-[1px] left-1/2 w-[200%] -translate-x-1/2 bottom-0 bg-gray"></div>
 </nav>
 
 <script type="text/javascript">

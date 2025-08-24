@@ -1,7 +1,7 @@
 <div id="references" class="bg-blue-dark">
     <div class="container px-8 py-12 mx-auto md:px-0 md:py-24">
         <h2 class="text-white text-3xl mb-10">
-            Chez <span class="text-orange">AWAM</span> :
+            Chez <span class="text-yellow">AWAM</span> :
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center ">
 

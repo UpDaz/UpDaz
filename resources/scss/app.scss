@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+}
+
+@layer base {
+    html, body {
+      font-family: 'Oswald', system-ui, sans-serif;
+      letter-spacing: 0.5px;
+      @apply text-white;
+    }
+
+    h1, h2, h3, h4, h5, h6{
+        font-family: 'Space Mono', sans-serif;
+        letter-spacing: normal;
+    }
+
+
+    .p-relative{
+        position: relative;
+    }
+    b{font-weight: normal;}
+}
+
+a, button{
+    cursor: pointer;
+}
+
+hr{
+    margin: 3rem auto;
+}
+
+.x-center{
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.y-center{
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.x-center.y-center{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.grecaptcha-badge{
+    display: none !important;
+}
+
+/* CURSOR */
+// *{
+//     cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='%231940FF'/%3E%3C/svg%3E") 8 8, auto;
+// }
+
+// .bg-blue, .bg-blue *,
+// .bg-blue-dark, .bg-blue-dark *{
+//     cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='%23ebb100'/%3E%3C/svg%3E") 8 8, auto;
+// }
+
+
+// a, a *,
+// button, button *{
+//     cursor: url("/img/cursors/hand.svg") 10 10, auto !important;
+// }
+
+// input[type="text"], textarea{
+//     cursor: text;
+// }
+
+
+// svg {
+//     display: inline-block;
+//     vertical-align: middle;
+// }
+
+/* BACKGROUND */
+.bg-pattern-1{
+    background-image: url('/img/backgrounds/pattern-1.svg');
+    background-size: cover;
+}
+
+.bg-pattern-2{
+    background-image: url('/img/backgrounds/pattern-2.svg');
+    background-size: cover;
+}
+
+.background {
+    background-image: repeating-linear-gradient(315deg,#D9E2EC 0,#D9E2EC 1px,#24445C 0,#24445C 50%);
+    background-color: var(--color-blue);
+    background-size: 10px 10px;
+    @apply border-x border-gray
+}
+
+/* BUTTONS */
+button, a{
+    position: relative;
+}
+
+button, a{
+    position: relative;
+}
+
+// @import "welcome-scroller";
+
+// @import "animate-svg";
+
+// @import "article";

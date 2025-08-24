@@ -1,15 +1,15 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\Reference;
 
+use Closure;
+use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Reference extends Component
+class Item extends Component
 {
     /**
      * Create a new component instance.
-     *
-     * @return void
      */
     public function __construct()
     {
@@ -18,11 +18,9 @@ class Reference extends Component
 
     /**
      * Get the view / contents that represent the component.
-     *
-     * @return \Illuminate\Contracts\View\View|\Closure|string
      */
-    public function render()
+    public function render(): View|Closure|string
     {
-        return view('components.reference');
+        return view('components.reference.item');
     }
 }

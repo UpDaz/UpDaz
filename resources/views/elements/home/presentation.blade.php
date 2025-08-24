@@ -30,7 +30,7 @@
                 <div
                     class="border-y border-gray sm:w-3/4 sm:pl-16 sm:py-16 sm:border-l sm:border-t-0 sm:mt-0 sm:text-left">
                     <div class="flex items-center gap-8">
-                        <p class="mb-2 text-2xl font-title md:text-3xl">Bienvenue chez <span
+                        <p class="mb-2 text-2xl font-bold font-title md:text-3xl">Bienvenue chez <span
                                 class="text-yellow">UpDaz</span></p>
                         <div class="self-end w-16 rotate-45">
                             @include('elements.icon.hand-check')
@@ -53,9 +53,9 @@
                         problématiques.
                         <br /><br />
                         <div class="grid gap-4 lg:grid-cols-3">
-                            <x-button.secondary href="#services" @click.prevent="scrollToTarget('#services')"
+                            <x-button.secondary href="#competences" @click.prevent="scrollToTarget('#competences')"
                                 title="Ce que propose updaz">
-                                Ce que je propose
+                                Compétences
                             </x-button.secondary>
                             <x-button.secondary href="#presentation" @click.prevent="scrollToTarget('#references')"
                                 title="Références Updaz">

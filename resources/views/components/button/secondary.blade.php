@@ -1,4 +1,4 @@
-<div class="relative w-full {{ $classes }}">
+<div class="relative w-full">
     <a {{ $attributes }}
         class="inline-block w-full px-6 py-3 font-medium text-center text-gray border border-blue bg-blue-dark hover:bg-blue {{ $classes }}">
         {{ $slot }}

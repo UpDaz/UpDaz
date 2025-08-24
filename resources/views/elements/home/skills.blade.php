@@ -1,8 +1,6 @@
-<section id="services" class="px-8 py-8 border-gray md:px-16 md:py-16 sm:border-y">
-    <div class="container mx-auto">
-        <div class="flex flex-col w-full mb-6 md:text-center md:mb-10">
-            <h2 class="text-3xl font-medium sm:text-4xl title-font">Mes compétences</h2>
-        </div>
+<section id="competences" class="px-8 py-8 border-gray md:px-16 md:py-16 sm:border-t">
+    <div class="container flex flex-col gap-8 mx-auto md:gap-16">
+        <h2 class="text-3xl text-center sm:text-4xl">Mes compétences dans le web</h2>
         <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
 
             <x-skills.box>

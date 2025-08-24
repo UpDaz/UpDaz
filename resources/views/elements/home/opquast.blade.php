@@ -4,7 +4,7 @@
             <div
                 class="flex flex-col items-start justify-start gap-8 border-t border-gray sm:w-3/4 sm:pr-16 sm:py-16 sm:border-r sm:border-t-0 sm:text-left">
                 <div class="flex items-center gap-8">
-                    <h2 class="text-3xl font-title">
+                    <h2 class="text-3xl sm:text-4xl">
                         Développeur certifié <span class="uppercase text-yellow">Opquast</span>
                     </h2>
                     <div class="w-16">

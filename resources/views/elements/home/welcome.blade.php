@@ -16,12 +16,12 @@
                     title="Présentation UpDaz">
                     Qui suis-je ?
                 </x-button.secondary>
-                <x-button.secondary href="#presentation" @click.prevent="scrollToTarget('#services')"
+                <x-button.secondary href="#competences" @click.prevent="scrollToTarget('#competences')"
                     title="Compétences et savoir-faire">
                     Savoir-faire
                 </x-button.secondary>
-                <x-button.secondary href="#presentation" @click.prevent="scrollToTarget('#offres')" title="Offres">
-                    Présentation
+                <x-button.secondary href="#offres" @click.prevent="scrollToTarget('#offres')" title="Offres">
+                    Offres
                 </x-button.secondary>
                 <div class="xl:col-span-3 lg:col-span-2">
                     <x-button.primary href="#contact" title="UpDaz : formulaire de contact"

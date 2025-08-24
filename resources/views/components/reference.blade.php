@@ -1,20 +1,9 @@
-<div x-data="{ open: false }" class="flex flex-col gap-4 p-6 rounded-lg bg-gradient-to-br from-blue-dark to-blue">
-    <div class="flex flex-col items-start grid-cols-12 gap-4">
-        <div class="col-span-4 [&_img]:ml-0 [&_img]:max-w-full [&_img]:h-16 md:[&_img]:h-12 [&_img]:w-full">
-            {!! $logo !!}
-        </div>
-        <div class="w-10 h-1 bg-gray-100 rounded"></div>
-        <div class="flex flex-col col-span-7 gap-4">
-            <div class="flex flex-col items-start gap-3">
-                <h3 class="m-0 text-xl text-white">{{ $title }}</h3>
-                <button @click="open = !open" class="text-white underline" x-show="!open">
-                    En savoir plus
-                </button>
-            </div>
-            <div class="relative hidden overflow-hidden text-sm text-white transition-all duration-500 font-roboto"
-                :class="!open || '!block'">
-                {!! $content !!}
-            </div>
-        </div>
+<div class="relative w-full">
+    <div class="inline-flex items-center justify-center w-full px-6 py-3 *:w-full ">
+        {{ $slot }}
     </div>
+    <div class="absolute h-[1px] left-1/2 w-[150%] -translate-x-1/2 top-0 bg-gradient-to-r from-transparent via-gray to-transparent "></div>
+    <div class="absolute h-[1px] left-1/2 w-[150%] -translate-x-1/2 bottom-0 bg-gradient-to-r from-transparent via-gray to-transparent "></div>
+    <div class="absolute w-[1px] top-1/2 h-[150%] -translate-y-1/2 left-0 bg-gradient-to-b from-transparent via-gray to-transparent "></div>
+    <div class="absolute w-[1px] top-1/2 h-[150%] -translate-y-1/2 right-0 bg-gradient-to-b from-transparent via-gray to-transparent "></div>
 </div>

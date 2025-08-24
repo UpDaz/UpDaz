@@ -52,8 +52,8 @@
             </div>
           </li>
           <li>
-            <a href="{{ route('home') }}#services" @click.prevent="scrollToTarget('#services')" title="Mes services" class="block py-4 pl-3 pr-4 font-bold text-white bg-blue-700 rounded md:py-2 md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
-              Services
+            <a href="{{ route('home') }}#competences" @click.prevent="scrollToTarget('#competences')" title="Mes competences" class="block py-4 pl-3 pr-4 font-bold text-white bg-blue-700 rounded md:py-2 md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
+              competences
             </a>
           </li>
           <li>

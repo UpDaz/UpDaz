@@ -38,6 +38,10 @@
     b{font-weight: normal;}
 }
 
+.container{
+    padding : 0 40px;
+    overflow:hidden;
+}
 a, button{
     cursor: pointer;
 }
@@ -69,6 +73,7 @@ hr{
 .underline,
 .hover:underline:hover {
     position: relative;
+    display: inline-block;
     text-decoration-line: none;
     &:after{
         content: '';

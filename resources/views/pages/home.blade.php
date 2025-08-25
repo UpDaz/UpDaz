@@ -1,10 +1,10 @@
 @extends('layouts.default')
 
 @section('content')
-    <div class="flex flex-col gap-8 md:gap-16">
+    <div class="flex flex-col gap-16">
         @include('elements.home.welcome')
         @include('elements.separators.right')
-        <div>
+        <div class="flex flex-col gap-16 sm:gap-0">
             @include('elements.home.presentation')
             @include('elements.home.opquast')
         </div>

@@ -1,5 +1,5 @@
 <div class="relative grid items-center justify-center h-full grid-cols-3 gap-8 rounded-lg sm:flex-row">
-    <div class="relative w-12 col-span-1 justify-self-end">
+    <div class="relative w-16 col-span-1 sm:w-12 justify-self-end">
         @isset ($icon)
             {{ $icon }}
         @endif

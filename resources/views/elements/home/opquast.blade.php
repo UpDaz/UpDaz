@@ -1,13 +1,13 @@
 <section id="opquast">
-    <div class="container flex flex-col mx-auto">
-        <div class="flex flex-col-reverse sm:flex-row ">
+    <div class="container mx-auto">
+        <div class="flex flex-col-reverse gap-16 sm:gap-0 sm:flex-row ">
             <div
-                class="flex flex-col items-start justify-start gap-8 border-t border-gray sm:w-3/4 sm:pr-16 sm:py-16 sm:border-r sm:border-t-0 sm:text-left">
-                <div class="flex items-center gap-8">
+                class="flex flex-col items-start justify-start gap-8 border-gray sm:w-3/4 sm:pr-8 sm:py-8 md:pr-16 md:py-16 sm:border-r sm:border-t-0 sm:text-left">
+                <div class="flex flex-row-reverse items-center gap-8 sm:flex-row">
                     <h2 class="text-3xl sm:text-4xl">
                         Développeur certifié <span class="uppercase text-yellow">Opquast</span>
                     </h2>
-                    <div class="w-16">
+                    <div class="w-24 sm:w-16">
                         @include('elements.icon.check-list')
                     </div>
                 </div>
@@ -57,17 +57,17 @@
                     projets
                     avec d’autres professionnels.
                 </p>
-                <div>
+                <div class="flex justify-center sm:justify-start *:!w-auto">
                     <x-button.secondary href="https://directory.opquast.com/fr/certificat/PUGT87/" target="_blank"
                         title="Vous avez des questions ?">
                         <span class="flex items-center gap-4 text-nowrap">
                             Voir ma certification
                         </span>
-                        </x-button-secondary>
+                    </x-button-secondary>
                 </div>
             </div>
-            <div class="px-12 md:px-16 sm:w-1/4 md:pt-16">
-                <div class="sticky top-24">
+            <div class="max-w-full sm:pl-8 lg:px-12 md:w-1/4 sm:pt-8 md:pt-16">
+                <div class="sm:sticky sm:top-24">
                     <div class="relative">
                         @include('elements.html.webp-image', [
                             'source' => asset('img/label-opquast-avance.png'),

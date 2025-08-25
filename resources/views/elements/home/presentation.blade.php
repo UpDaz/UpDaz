@@ -1,6 +1,6 @@
 <section id="presentation">
     <div class="container flex flex-col mx-auto">
-        <div class="flex flex-col mt-10 sm:flex-row">
+        <div class="flex flex-col items-center gap-8 mt-10 md:gap-16 sm:flex-row sm:items-start">
             <div class="sm:w-1/4">
                 <div class="sticky inline-flex items-center justify-center rounded-full w-100 top-24">
                     <div class="relative">
@@ -27,9 +27,9 @@
                     </div>
                 </div>
             </div>
-            <div class="border-y border-gray sm:w-3/4 sm:pl-16 sm:pb-16 sm:border-l sm:border-t-0 sm:mt-0 sm:text-left">
-                <div class="flex items-center gap-8">
-                    <p class="mb-2 text-3xl font-bold font-title md:text-4xl">Bienvenue chez <span
+            <div class="border-b border-gray sm:w-3/4 sm:pl-8 sm:pb-8 md:pl-16 md:pb-16 sm:border-l sm:mt-0 sm:text-left">
+                <div class="flex flex-row-reverse items-center gap-8 sm:flex-row">
+                    <p class="text-3xl font-bold font-title md:text-4xl">Bienvenue chez <span
                             class="text-yellow">UpDaz</span></p>
                     <div class="self-end w-16 rotate-45">
                         @include('elements.icon.hand-check')

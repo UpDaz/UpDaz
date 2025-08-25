@@ -1,6 +1,6 @@
 <section id="references">
-    <div class="container flex flex-col gap-8 mx-auto md:gap-16">
-      <div class="flex items-center justify-center gap-8">
+    <div class="container flex flex-col gap-16 mx-auto">
+      <div class="flex flex-col-reverse items-center justify-center gap-4 sm:gap-8 sm:flex-row">
         <h2 class="text-3xl text-center sm:text-4xl">Ils me font confiance</h2>
         <div class="w-16">
           @include('elements.icon.users-check')

@@ -1,7 +1,7 @@
 <section id="offres">
     <div class="container flex flex-col gap-8 mx-auto md:gap-16">
         <h2 class="w-full mx-auto text-3xl text-center sm:text-4xl">Des offres adaptées à chaque besoin</h2>
-        <div class="grid grid-cols-3">
+        <div class="grid md:grid-cols-3">
             <x-price>
                 <x-slot:title>
                     <h3 class="text-white text-md title-font">Landing page &</h3>
@@ -49,8 +49,14 @@
                         </x-button.primary>
                     </div>
                 </x-price>
-                <div data-element="line-vertical" class="absolute w-[1px] top-1/2 h-[125%] -translate-y-1/2 left-0"></div>
-                <div data-element="line-vertical" class="absolute w-[1px] top-1/2 h-[125%] -translate-y-1/2 right-0"></div>
+                <div class="hidden md:block">
+                    <div data-element="line-vertical" class="absolute w-[1px] top-1/2 h-[125%] -translate-y-1/2 left-0"></div>
+                    <div data-element="line-vertical" class="absolute w-[1px] top-1/2 h-[125%] -translate-y-1/2 right-0"></div>
+                </div>
+                <div class="md:hidden">
+                    <div data-element="line-horizontal" class="absolute h-[1px] left-1/2 w-[125%] -translate-x-1/2 top-0"></div>
+                    <div data-element="line-horizontal" class="absolute h-[1px] left-1/2 w-[125%] -translate-x-1/2 bottom-0"></div>
+                </div>
             </div>
 
             <x-price>

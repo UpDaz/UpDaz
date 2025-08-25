@@ -12,6 +12,7 @@ class Button extends Component
      * @return void
      */
     public function __construct(
+        public bool $small = false,
         public string $classes = ""
     ) {
         //

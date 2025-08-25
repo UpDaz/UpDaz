@@ -1,4 +1,4 @@
-<section id="references" class="px-8 py-4 border-gray md:px-16 md:py-16 sm:border-t">
+<section id="references">
     <div class="container flex flex-col gap-8 mx-auto md:gap-16">
       <div class="flex items-center justify-center gap-8">
         <h2 class="text-3xl text-center sm:text-4xl">Ils me font confiance</h2>

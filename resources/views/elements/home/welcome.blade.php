@@ -6,7 +6,7 @@
                     @include('elements.icon.www')
                 </div>
                 <h1 class="text-3xl font-bold text-white font-title md:text-5xl txt-rotate">
-                    Architecte du web
+                    Architecte<br/>du web
                 </h1>
             </div>
             <h2>Développeur d'<span class="text-yellow">application web sur-mesure</span> et de <span
@@ -33,6 +33,9 @@
         </div>
         <div class="w-full md:w-1/2">
             {{-- <x-welcome-scroller /> --}}
+        </div>
+        <div class="absolute w-8 -translate-x-1/2 bottom-4 left-1/2">
+            @include('elements.icon.arrow-down')
         </div>
     </div>
 </section>

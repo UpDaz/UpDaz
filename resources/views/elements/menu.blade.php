@@ -2,8 +2,8 @@
 <nav id="menu" 
   x-data="menu"
   x-init="manageMenuDisplay();"
-  class="sticky z-50 w-full px-8 py-4 overflow-hidden transition-all lg:px-16 md:py-6"
-  :class="displayMenu ? (windowScrollY > 0 ? 'top-0 bg-blue' : 'top-0') : 'md:-top-32 bg-blue'"
+  class="sticky z-50 w-full py-4 overflow-hidden transition-all md:py-6"
+  :class="displayMenu ? (windowScrollY > 0 ? 'top-0 bg-blue-dark' : 'top-0') : 'md:-top-32 bg-blue-dark'"
   @scroll.window="manageMenuDisplay();"
 >
   <div class="container mx-auto">
@@ -43,17 +43,12 @@
                       Webflow
                     </a>
                 </li>
-                <li>
-                  <a href="{{ route('prestashop') }}" class="block pt-4 pb-2 text-base font-bold text-white md:py-4 md:text-sm md:text-blue hover:bg-blue-dark hover:text-white">
-                    Prestashop
-                  </a>
-              </li>
               </ul>
             </div>
           </li>
           <li>
             <a href="{{ route('home') }}#competences" @click.prevent="scrollToTarget('#competences')" title="Mes competences" class="block py-4 pl-3 pr-4 font-bold text-white bg-blue-700 rounded md:py-2 md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
-              competences
+              Compétences
             </a>
           </li>
           <li>
@@ -80,9 +75,9 @@
             </a>
           </li>
           <li>
-            <a href="{{ route('home') }}#contact" @click.prevent="scrollToTarget('#contact')" title="Me Contacter" class="block py-4 pl-3 pr-4 font-bold text-white bg-blue-700 rounded md:py-2 md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">
+            <x-button.primary href="{{ route('home') }}#contact" :small="true" title="Me Contacter">
               Contact
-            </a>
+            </x-button.primary>
           </li>
           <li class="hidden md:block">
             <a href="https://fr.linkedin.com/in/matthieu-dazord" target="_blank" title="Linkedin" class="block py-4 pl-3 pr-4 font-bold text-white bg-blue-700 rounded md:py-2 md:bg-transparent md:p-0 dark:text-white hover:underline" aria-current="page">

@@ -67,7 +67,7 @@
                         </x-button-secondary>
                 </div>
             </div>
-            <div class="px-12 mb-16 md:px-16 sm:w-1/4 md:pt-16">
+            <div class="px-12 md:px-16 sm:w-1/4 md:pt-16">
                 <div class="sticky top-24">
                     <div class="relative">
                         @include('elements.html.webp-image', [

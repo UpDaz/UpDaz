@@ -1,8 +1,7 @@
-<section id="competences" class="px-8 py-8 border-gray md:px-16 md:py-16 sm:border-t">
+<section id="competences">
     <div class="container flex flex-col gap-8 mx-auto md:gap-16">
-        <h2 class="text-3xl text-center sm:text-4xl">Mes compétences dans le web</h2>
-        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-
+        <h2 class="text-3xl text-center sm:text-4xl">Mes compétences pour votre projet</h2>
+        <div class="grid grid-cols-1 gap-4 md:gap-8 md:grid-cols-3">
             <x-skills.box>
                 <x-slot:icon>
                     @include('elements.icon.calendar')
@@ -97,7 +96,7 @@
                     <x-skills.item text="Logs et correction de bugs" />
                 </div>
             </x-skills.box>
-            <div class="md:col-span-2">
+            <div class="md:col-span-3">
                 <div class="mx-auto md:w-1/2">
                     <x-skills.box>
                         <x-slot:icon>

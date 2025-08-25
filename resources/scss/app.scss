@@ -38,6 +38,10 @@
     b{font-weight: normal;}
 }
 
+.container{
+    @apply px-8 md:px-16;
+}
+
 a, button{
     cursor: pointer;
 }

@@ -1,4 +1,4 @@
-<section class="flex items-center justify-center h-[100vh]">
+<section class="flex items-center justify-center h-[100vh] relative -mt-24 pt-24">
     <div class="container flex flex-col items-center mx-auto md:flex-row">
         <div class="flex flex-col gap-12 lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0">
             <div>
@@ -34,8 +34,8 @@
         <div class="w-full md:w-1/2">
             {{-- <x-welcome-scroller /> --}}
         </div>
-        <div class="absolute w-8 -translate-x-1/2 bottom-4 left-1/2">
+    </div>
+    <div class="absolute w-8 -translate-x-1/2 bottom-4 left-1/2">
             @include('elements.icon.arrow-down')
         </div>
-    </div>
 </section>

@@ -20,5 +20,7 @@
         <div id="contact">
             @include('elements.contact')
         </div>
+        @include('elements.separators.right')
+        @include('elements.home.faq')
     </div>
 @endsection

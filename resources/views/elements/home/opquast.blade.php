@@ -12,8 +12,7 @@
                     </div>
                 </div>
                 <p class="leading-relaxed text-md">
-                    <a href="https://www.opquast.com/" target="_blank"
-                        class="inline-flex items-center gap-2 border-b text-nowrap border-gray">Opquast</a> est un programme de certification pour les
+                    <a href="https://www.opquast.com/" target="_blank" class="underline">Opquast</a> est un programme de certification pour les
                     professionnels du web,
                     conçu pour évaluer les compétences et les connaissances en matière d'<b>optimisation et de qualité
                         de
@@ -77,17 +76,18 @@
                             'height' => '109',
                             'class' => 'w-full',
                         ])
-                        <div
-                            class="absolute h-[1px] left-1/2 w-[200%] -translate-x-1/2 top-0 bg-gradient-to-r from-transparent via-gray to-transparent ">
+                        <div data-element="line-horizontal"
+                            class="absolute h-[1px] left-1/2 w-[150%] -translate-x-1/2 top-0 bg-gradient-to-r  ">
+                        </div>
+                        <div data-element="line-horizontal"
+                            class="absolute h-[1px] left-1/2 w-[150%] -translate-x-1/2 bottom-0 bg-gradient-to-r  ">
+                        </div>
+                        <div data-element="line-vertical"
+                            class="absolute w-[1px] top-1/2 h-[150%] -translate-y-1/2 left-0 bg-gradient-to-b  ">
                         </div>
                         <div
-                            class="absolute h-[1px] left-1/2 w-[200%] -translate-x-1/2 bottom-0 bg-gradient-to-r from-transparent via-gray to-transparent ">
-                        </div>
-                        <div
-                            class="absolute w-[1px] top-1/2 h-[200%] -translate-y-1/2 left-0 bg-gradient-to-b from-transparent via-gray to-transparent ">
-                        </div>
-                        <div
-                            class="absolute w-[1px] top-1/2 h-[200%] -translate-y-1/2 right-0 bg-gradient-to-b from-transparent via-gray to-transparent ">
+                            data-element="line-vertical"
+                            class="absolute w-[1px] top-1/2 h-[150%] -translate-y-1/2 right-0 bg-gradient-to-b  ">
                         </div>
                     </div>
                 </div>

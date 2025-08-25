@@ -33,8 +33,6 @@ Accusé de réception - demande de contact
                                     Téléphone : <b>{{ $phone }}</b>
                                     <br/><br/>
                                     Message : <br/><i>{{ $client_message }}</i>
-                                    <br/><br/>
-                                    ☞ Si votre demande concerne un projet à venir, merci de bien vouloir renseigner ceci : @include('elements.emails.button', ['content' => "accéder au formulaire d'information", 'link' => 'https://14r0dvle4i4.typeform.com/to/kEyCbkxN'])
                                 </div>
                             </td>
                           </tr>

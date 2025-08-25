@@ -38,10 +38,6 @@
     b{font-weight: normal;}
 }
 
-.container{
-    @apply px-8 md:px-16;
-}
-
 a, button{
     cursor: pointer;
 }
@@ -68,6 +64,33 @@ hr{
 
 .grecaptcha-badge{
     display: none !important;
+}
+
+.underline,
+.hover:underline:hover {
+    position: relative;
+    text-decoration-line: none;
+    &:after{
+        content: '';
+        position: absolute;
+        top: 100%; left: 0;
+        background: linear-gradient(to left, transparent, theme('colors.gray') 10%, theme('colors.gray') 90%, transparent 100%);
+        width: 100%;
+        height: 1px;
+    }
+}
+
+.animate-spin {
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
 }
 
 /* CURSOR */
@@ -108,7 +131,7 @@ hr{
 }
 
 .background {
-    background-image: repeating-linear-gradient(315deg,#D9E2EC 0,#D9E2EC 1px,#24445C 0,#24445C 50%);
+    background-image: repeating-linear-gradient(315deg,theme('colors.gray') 0,theme('colors.gray') 1px,theme('colors.blue') 0,theme('colors.blue') 50%);
     background-color: var(--color-blue);
     background-size: 10px 10px;
     @apply border-x border-gray
@@ -119,8 +142,14 @@ button, a{
     position: relative;
 }
 
-button, a{
-    position: relative;
+[data-element^="line-"]{
+    &[data-element^="line-horizontal"] {
+        background: linear-gradient(to left, transparent, theme('colors.gray') 10%, theme('colors.gray') 90%, transparent 100%);
+    }
+
+    &[data-element^="line-vertical"] {
+        background: linear-gradient(to bottom, transparent, theme('colors.gray') 10%, theme('colors.gray') 90%, transparent 100%);
+    }
 }
 
 // @import "welcome-scroller";

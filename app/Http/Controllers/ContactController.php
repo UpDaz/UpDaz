@@ -22,17 +22,6 @@ class ContactController extends Controller
                     $data['message']
                 )
             );
-        Mail::to($data['email'])
-            ->bcc(config('custom.email.contact'))
-            ->send(
-                new ContactConfirmation(
-                    $data['lastname'],
-                    $data['firstname'],
-                    $data['email'],
-                    $data['phone'],
-                    $data['message']
-                )
-            );
         return response()->json();
     }
 }

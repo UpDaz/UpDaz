@@ -21,6 +21,8 @@
         });
     });
     window.addEventListener("load", function() {
-        loadGoogleAnalyticsTag();
     });
+    @env("production")
+    loadGoogleAnalyticsTag();
+    @endenv
 </script>

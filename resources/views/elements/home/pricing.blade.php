@@ -49,12 +49,8 @@
                         </x-button.primary>
                     </div>
                 </x-price>
-                <div
-                    class="absolute w-[1px] top-1/2 h-[100%] -translate-y-1/2 left-0 bg-gradient-to-b from-transparent via-gray to-transparent ">
-                </div>
-                <div
-                    class="absolute w-[1px] top-1/2 h-[100%] -translate-y-1/2 right-0 bg-gradient-to-b from-transparent via-gray to-transparent ">
-                </div>
+                <div data-element="line-vertical" class="absolute w-[1px] top-1/2 h-[125%] -translate-y-1/2 left-0"></div>
+                <div data-element="line-vertical" class="absolute w-[1px] top-1/2 h-[125%] -translate-y-1/2 right-0"></div>
             </div>
 
             <x-price>

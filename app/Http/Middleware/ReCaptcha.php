@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class ReCaptcha
 {
@@ -16,8 +17,8 @@ class ReCaptcha
      */
     public function handle(Request $request, Closure $next)
     {
-        if ($request->method() === 'POST' && $request->has('g-recaptcha-response')) {
-            if (!$this->verifyToken($request->get('g-recaptcha-response'))) {
+        if ($request->method() === 'POST' && $request->has('recaptcha-response')) {
+            if (!$this->verifyToken($request->get('recaptcha-response'))) {
                 abort(500);
             }
         }
@@ -26,23 +27,15 @@ class ReCaptcha
 
     private function verifyToken(string $token): bool
     {
-        $data = http_build_query(
-            array(
+        $response = Http::post(
+            'https://challenges.cloudflare.com/turnstile/v0/siteverify',
+            [
                 'secret' => config('custom.recaptcha.secret'),
                 'response' => $token,
-                'remoteip' => $_SERVER['REMOTE_ADDR']
-            )
+                'remoteip' => request()->ip(),
+            ]
         );
-        $options = array('http' =>
-            array(
-                'method'  => 'POST',
-                'header'  => 'Content-type: application/x-www-form-urlencoded',
-                'content' => $data
-            )
-        );
-        $context  = stream_context_create($options);
-        $response = file_get_contents('https://www.google.com/recaptcha/api/siteverify', false, $context);
-        $result = json_decode($response);
-        return (bool) $result->success;
+
+        return $response->json()['success'];
     }
 }

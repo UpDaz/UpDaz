@@ -11,17 +11,18 @@
                             'height' => '253',
                             'class' => 'object-cover object-center rounded',
                         ])
-                        <div
-                            class="absolute h-[1px] left-1/2 w-[200%] -translate-x-1/2 top-0 bg-gradient-to-r from-transparent via-gray to-transparent ">
+                        <div data-element="line-horizontal"
+                            class="absolute h-[1px] left-1/2 w-[150%] -translate-x-1/2 top-0 bg-gradient-to-r  ">
+                        </div>
+                        <div data-element="line-horizontal"
+                            class="absolute h-[1px] left-1/2 w-[150%] -translate-x-1/2 bottom-0 bg-gradient-to-r  ">
+                        </div>
+                        <div data-element="line-vertical"
+                            class="absolute w-[1px] top-1/2 h-[150%] -translate-y-1/2 left-0 bg-gradient-to-b  ">
                         </div>
                         <div
-                            class="absolute h-[1px] left-1/2 w-[200%] -translate-x-1/2 bottom-0 bg-gradient-to-r from-transparent via-gray to-transparent ">
-                        </div>
-                        <div
-                            class="absolute w-[1px] top-1/2 h-[200%] -translate-y-1/2 left-0 bg-gradient-to-b from-transparent via-gray to-transparent ">
-                        </div>
-                        <div
-                            class="absolute w-[1px] top-1/2 h-[200%] -translate-y-1/2 right-0 bg-gradient-to-b from-transparent via-gray to-transparent ">
+                            data-element="line-vertical"
+                            class="absolute w-[1px] top-1/2 h-[150%] -translate-y-1/2 right-0 bg-gradient-to-b  ">
                         </div>
                     </div>
                 </div>
@@ -42,7 +43,7 @@
                     vitrines, boutiques en ligne, plateformes sur-mesure…<br />
                     Après plusieurs années en agence de communication et en entreprises spécialisées, j'ai développé
                     un
-                    <span class="font-bold">savoir-faire technique</span> et <b>une expertise</b> dans les
+                    <a href="#competences" @click.prevent="scrollToTarget('#competences')" class="underline">savoir-faire technique</a> et <b>une expertise</b> dans les
                     technologies du web.
                     <br /><br />
                     Face à la multitude de possibilités et d'options proposées pour la <b>conception d'un site

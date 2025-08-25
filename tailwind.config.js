@@ -16,7 +16,7 @@ export default {
         'yellow' : '#EBB100',
         'white' : '#F5F7FA',
         'dark' : '#2F3542',
-        'gray' : '#D9E2EC'
+        'gray' : '#98abb8'
       },
       backgroundColor : {
         'blue-dark' : '#0A3D62',
@@ -24,7 +24,7 @@ export default {
         'yellow' : '#EBB100',
         'white' : '#F5F7FA',
         'dark' : '#2F3542',
-        'gray' : '#D9E2EC'
+        'gray' : '#98abb8'
       }
     },
   },

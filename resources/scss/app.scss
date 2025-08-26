@@ -47,7 +47,10 @@ a, button{
 }
 
 hr{
+    border: 0;
     margin: 3rem auto;
+    height: 1px;
+    background: linear-gradient(to left, transparent, theme('colors.gray') 10%, theme('colors.gray') 90%, transparent 100%);
 }
 
 .x-center{
@@ -161,4 +164,4 @@ button, a{
 
 // @import "animate-svg";
 
-// @import "article";
+@import './article.scss';

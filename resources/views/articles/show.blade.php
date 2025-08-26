@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('title')
-    {{ $article->meta_title }} - UpDaz
+    {{ $article->meta_title }} - Article UpDaz
 @endsection
 
 @section('meta-description')
@@ -10,15 +10,13 @@
 
 @section('content')
     @include('elements.article.structured-data')
-    <div
-        class="relative bg-gradient-to-br from-blue-dark to-blue text-white text-center -mt-24 overflow-hidden min-h-[50vh] md:min-h-0">
-        <div class="bg-pattern-1">
-            <div class="container py-16 pt-32 pb-24 mx-auto">
-                <h1 class="text-4xl font-bold font-title lg:text-6xl">{{ $article->title }}</h1>
-                <p class="container mx-auto my-6 text-center">
-                    {{ $article->catch_phrase }}
-                </p>
-                <div class="container mx-auto text-sm text-center">
+    <div class="container flex flex-col max-w-screen-lg gap-16 mx-auto">
+        <div class="relative mt-24 overflow-hidden text-center text-white ">
+            <div class="flex flex-col gap-4 mx-auto">
+                <h1 class="text-4xl font-bold font-title lg:text-5xl">{{ $article->title }}</h1>
+                <p class="text-xl ">{{ $article->catch_phrase }}</p>
+                <div class="flex flex-col gap-4 text-sm text-center">
+                    <div data-element="line-horizontal" class="h-[1px] w-1/4 mx-auto"></div>
                     <x-breadcrumb :links="[
                         $article->category->name => route('category', ['slug' => $article->category->slug]),
                         $article->title => route('article', [
@@ -29,20 +27,21 @@
                 </div>
             </div>
         </div>
+        <div class="flex flex-col gap-4">
+            <div class="flex items-center justify-between">
+                <span class="*:w-16 *:h-auto mb-2 inline-block">
+                    @include('elements.icon.write-paper')
+                </span>
+                <div class="mb-2 text-sm italic text-right">
+                    Le {{ $article->published_at->format('d/m/Y') }}, par Matthieu
+                </div>
+            </div>
+            <div class="article-content">
+                {!! $article->content !!}
+            </div>
+        </div>
     </div>
-
-    <div class="container px-8 py-12 mx-auto text-justify md:px-36 md:py-24">
-        <div class="mb-6 text-sm italic text-right">
-            Le {{ $article->published_at->format('d/m/Y') }}, par Matthieu
-        </div>
-        <div class="article-content">
-            {!! $article->content !!}
-        </div>
-        <hr />
-        <div class="mt-8">
-            <x-articles-with-same-category :article="$article" />
-        </div>
-    </div>
+    <x-articles-with-same-category :article="$article" />
 @endsection
 
 @section('javascript')

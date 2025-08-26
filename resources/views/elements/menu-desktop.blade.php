@@ -25,29 +25,14 @@
                 Références
             </a>
         </li>
-        <li class="relative" x-data="{ openSubmenu: false }" @mouseleave="openSubmenu = false" @mouseover="openSubmenu = true">
+        <li class="relative">
             <a href="{{ route('home') }}#offres" @click.prevent="scrollToTarget('#offres')" title="Offres"
                 class="block py-4 pl-3 pr-4 text-white md:py-2 md:bg-transparent md:p-0 hover:underline"
                 aria-current="page">
                 Offres
             </a>
-            <div class="hidden md:block">
-                <ul class="text-center md:hidden md:absolute top-full md:bg-blue-dark md:left-1/2 md:-translate-x-2/4 md:w-60 md:shadow-md"
-                    x-bind:class="openSubmenu ? 'md:!block' : ''">
-                    <li>
-                        <x-button.secondary href="{{ route('laravel') }}">
-                            Sur-mesure / métier
-                        </x-button.secondary>
-                    </li>
-                    <li>
-                        <x-button.secondary href="{{ route('webflow') }}">
-                            Clé en main / CMS
-                        </x-button.secondary>
-                    </li>
-                </ul>
-            </div>
         </li>
-        <li class="relative" x-data="{ openSubmenu: false }" @mouseleave="openSubmenu = false" @mouseover="openSubmenu = true">
+        <li class="relative" x-data="{ openSubmenu: false }">
             <a href="{{ route('articles') }}" title="Actualités"
                 class="block py-4 pl-3 pr-4 text-white md:py-2 md:bg-transparent md:p-0 hover:underline"
                 aria-current="page">

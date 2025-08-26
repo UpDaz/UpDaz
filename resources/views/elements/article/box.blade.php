@@ -1,4 +1,4 @@
-<div class="relative grid items-start justify-center grid-cols-3 gap-8 sm:flex-row">
+<div class="relative grid items-start justify-center grid-cols-3 gap-8 article sm:flex-row">
     <div class="relative col-span-1 justify-self-end">
         <span class="text-sm">
             {{ $article->published_at->format('M / Y') }}

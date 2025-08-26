@@ -68,7 +68,7 @@
             </div>
             <div class="max-w-full sm:pl-8 lg:px-12 md:w-1/4 sm:pt-8 md:pt-16">
                 <div class="sm:sticky sm:top-24">
-                    <div class="relative">
+                    <div class="relative mx-8 md:mx-0">
                         @include('elements.html.webp-image', [
                             'source' => asset('img/label-opquast-avance.png'),
                             'alt' => 'Label Certification Avancée Opquast Matthieu DAZORD',

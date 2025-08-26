@@ -31,11 +31,11 @@
                 </div>
             </div>
         </div>
-        <div class="flex justify-center w-full md:w-1/2 *:object-contain *:h-full">
+        <div class="flex justify-center w-full md:w-1/2 *:w-auto *:lg:h-[65vh]">
             @include('elements.home.welcome-illustration')
         </div>
     </div>
     <div class="absolute w-8 -translate-x-1/2 bottom-4 left-1/2">
-            @include('elements.icon.arrow-down')
+            @include('elements.icon.arrow-down-square')
         </div>
 </section>

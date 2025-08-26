@@ -2,7 +2,7 @@
     <div class="md:w-1/2 bg-blue px-8 md:px-32 py-16 md:py-24">
         <div class="container md:container-none">
             <h2 class="text-white text-3xl mb-10">
-                Chez <span class="text-orange">AWAM</span> :
+                Chez <span class="text-yellow">AWAM</span> :
             </h2>
             <div class="grid grid-cols-2 lg:grid-cols-3 gap-12 items-center ">
 

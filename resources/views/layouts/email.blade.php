@@ -89,11 +89,11 @@
 
 <body style="word-spacing:normal;background-color:#E7E7E7;">
   <div style="background-color:#E7E7E7;">
-    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#0027EB;background-color:#0027EB;width:100%;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#24445C;background-color:#24445C;width:100%;">
       <tbody>
         <tr>
           <td>
-            <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="#0027EB" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+            <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="#24445C" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
             <div style="margin:0px auto;max-width:600px;">
               <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
                 <tbody>

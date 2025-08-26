@@ -1,0 +1,22 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-si_1RDe_.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-Cyt6Qn9F.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/js/article.js": {
+    "file": "assets/article-DVP8HnvG.js",
+    "name": "article",
+    "src": "resources/js/article.js",
+    "isEntry": true
+  }
+}

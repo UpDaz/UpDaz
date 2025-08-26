@@ -1,15 +1,16 @@
-<div class="relative py-10 pl-16 pr-12 ml-8 text-left bg-slate-100" 
-    x-data="{ visible:false }"
-    x-intersect.once="visible = true"
->
-    <div 
-        class="absolute w-24 max-h-full mx-auto text-center transition-all duration-500 opacity-0 top-10 -left-36"
-        :class="visible? '!-left-12 opacity-100' : ''" 
-    >
-        <x-heroicon-s-light-bulb class="sm:w-12 sm:h-12 text-orange"/>
-    </div>
-    <div>
-        {!! $content !!}
+<div class="relative text-left" x-data="{ visible: false }" x-intersect.once="visible = true">
+    <div class="relative py-8 pl-16">
+        <div class="flex items-center gap-16">
+            <span class="*:w-16 *:h-auto">
+                @include('elements.icon.light')
+            </span>
+            <div>
+                {!! $content !!}
+            </div>
+        </div>
+            <div data-element="line-horizontal" class="absolute h-[1px] left-1/2 w-[125%] -translate-x-1/2 top-0"></div>
+    <div data-element="line-horizontal" class="absolute h-[1px] left-1/2 w-[125%] -translate-x-1/2 bottom-0"></div>
+    <div data-element="line-vertical" class="absolute w-[1px] top-1/2 h-[125%] -translate-y-1/2 left-0"></div>
+    <div data-element="line-vertical" class="absolute w-[1px] top-1/2 h-[125%] -translate-y-1/2 right-0"></div>
     </div>
 </div>
-

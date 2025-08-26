@@ -2,8 +2,8 @@
     <h3 class="text-xl">
         Sommaire
     </h3>
-    <div class="h-1 w-20 my-2 bg-orange rounded"></div>
-    <ul class="list-decimal list-inside">
+    <div class="w-20 h-1 my-2 rounded bg-orange"></div>
+    <ul class="flex flex-col gap-2 list-decimal list-inside">
         <li>
             <a href="{{ route('webflow') }}#introduction" class="hover:underline">
                 Présentation
@@ -13,7 +13,7 @@
             <a href="{{ route('webflow') }}#quelle-utilisation" class="hover:underline">
                 Quelle utilisation ?
             </a>
-            <ul class="list-disc list-outside ml-8">
+            <ul class="ml-8 list-disc list-outside">
                 <li>
                     <a href="{{ route('webflow') }}#landing-page-site-vitrine" class="hover:underline">
                         Landing page & site vitrine

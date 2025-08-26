@@ -3,7 +3,7 @@
         <h2 class="text-white text-3xl mb-10">
             Mon travail dans l'équipe de 
             <span class="whitespace-nowrap">
-                l'<a href="https://www.agence-awam.fr/" target="_blank" title="AWAM">agence <span class="text-orange">AWAM</span>
+                l'<a href="https://www.agence-awam.fr/" target="_blank" title="AWAM">agence <span class="text-yellow">AWAM</span>
                 </a>
             </span>
         </h2>

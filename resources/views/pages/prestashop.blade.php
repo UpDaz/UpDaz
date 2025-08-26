@@ -9,7 +9,7 @@ Votre boutique e-commerce en ligne clé-en-main grâce au CMS Prestashop. Profit
 @endsection
 
 @section('content')
-    <div class="relative bg-gradient-to-br from-blue-dark to-blue text-white text-center -mt-24 overflow-hidden min-h-[50vh] md:min-h-0">
+    <div class="relative bg-gradient-to-br from-blue-dark to-blue text-white text-center -mt-24 overflow-hidden ">
         <div class="px-8 py-16 pt-32 pb-24 bg-pattern-1 md:px-16">
             <div class="container mx-auto">
                 <h1 class="text-4xl font-bold font-title lg:text-6xl">E-commerce &<br/>boutique en ligne</h1>

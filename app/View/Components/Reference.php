@@ -11,7 +11,7 @@ class Reference extends Component
      *
      * @return void
      */
-    public function __construct(public string $title, public bool $verticaly = false)
+    public function __construct()
     {
         //
     }

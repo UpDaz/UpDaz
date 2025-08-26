@@ -1,18 +1,15 @@
 /** Article page */
 
 .article-content h1{
-    font-size: 1.875rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
 }
 
 .article-content h2{
-    font-size: 1.5rem;
     margin-bottom: .75rem;
     margin-top: 2rem;
 }
 .article-content h3{
-    font-size: 1.25rem;
     margin-bottom: .75rem;
     margin-top: 2rem;
 }
@@ -20,51 +17,17 @@
     margin-top: 0;
 }
 .article-content h4{
-    font-size: 1.125rem;
     margin-bottom: .5rem;
     margin-top: 2rem;
 }
 .article-content h5{
-    font-size: 1rem;
     margin-bottom: .5rem;
     margin-top: 2rem;
 }
 .article-content h6{
-    font-size: 1rem;
     margin-bottom: .5rem;
     margin-top: 1rem;
 }
-
-.article-content h2:after {
-    content: '';
-    display: block;
-    width: 5rem;
-    height: 0.25rem;
-    border-radius: 0.25rem;
-    --tw-bg-opacity: 1;
-    background-color: rgb(25 64 255 / var(--tw-bg-opacity));
-}
-
-.article-content h3:after {
-    content: '';
-    display: block;
-    width: 5rem;
-    height: 0.25rem;
-    border-radius: 0.25rem;
-    --tw-bg-opacity: 1;
-    background-color: rgb(235 177 0 / var(--tw-bg-opacity));
-}
-
-.article-content h4:after {
-    content: '';
-    display: block;
-    width: 5rem;
-    height: 0.25rem;
-    border-radius: 0.25rem;
-    --tw-bg-opacity: 1;
-    background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-
 
 .article-content p{
     font-size: 1rem;
@@ -90,20 +53,7 @@
 }
 
 .article-content blockquote{
-    position: relative;
-    margin: 2.5rem 0 2.5rem 1rem;
-    padding: 2.5rem 3rem 2.5rem 2rem;
-    background-color: rgb(241, 245, 249);
-    text-align: left;
-}
-
-.article-content blockquote:before{
-    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"> <path stroke-linecap="round" stroke-linejoin="round" stroke="%23EBB100" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" /></svg>');
-    position: absolute;
-    width: 3rem;
-    top: 50%;
-    left: -1.5rem;
-    transform: translateY(-50%);
+    @apply border border-gray text-white px-8 pt-4 pb-2 mb-4;
 }
 
 .article-content pre{
@@ -132,8 +82,7 @@
     max-width: 100%;
     overflow: auto;
     font-size: 80%;
-    padding: .05rem .25rem;
-    background-color: rgb(241, 245, 249);
+    @apply bg-blue px-8 py-4;
 }
 
 .article-content ul{

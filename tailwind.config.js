@@ -1,26 +1,30 @@
-module.exports = {
+ /** @type {import('tailwindcss').Config} */
+export default {
   content: [
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
-    "./resources/**/*.vue",
   ],
   theme: {
     fontFamily: {
-      'title' : ['Outfit'],
-      'text' : ['Roboto']
+      'title' : ['Space Mono'],
+      'text' : ['Inter']
     },
     extend: {
       colors : {
-        'blue' : '#1940FF',
-        'blue-dark' : '#001A9E',
-        'brown' : '#9E7700',
-        'orange' : '#EBB100'
+        'blue-dark' : '#0A3D62',
+        'blue' : '#24445C',
+        'yellow' : '#EBB100',
+        'white' : '#F5F7FA',
+        'dark' : '#2F3542',
+        'gray' : '#98abb8'
       },
       backgroundColor : {
-        'blue' : '#1940FF',
-        'blue-dark' : '#001A9E',
-        'brown' : '#9E7700',
-        'orange' : '#EBB100'
+        'blue-dark' : '#0A3D62',
+        'blue' : '#24445C',
+        'yellow' : '#EBB100',
+        'white' : '#F5F7FA',
+        'dark' : '#2F3542',
+        'gray' : '#98abb8'
       }
     },
   },

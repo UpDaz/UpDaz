@@ -1,25 +1,29 @@
-<div class="w-full px-4 py-8 lg:w-1/3">
-    <div class="flex items-start h-full px-4 py-6 bg-gray-100 rounded-lg">
-      <div class="flex flex-col flex-shrink-0 w-12 leading-none text-center">
-        <span class="text-sm leading-none">{{ $article->published_at->format('M') }}</span>
-        <span class="pt-2 mt-2 text-sm border-t-2 border-gray-200">{{ $article->published_at->format('Y') }}</span>
-      </div>
-      <div class="flex-grow pl-6">
-        <h3 class="mb-1 text-xs font-medium text-blue">
-            <a href="{{ route('category', ['slug' => $article->category->slug]) }}">
-                {{ $article->category->name }}
-            </a>
-        </h3>
-        <h4 class="mb-3 text-xl font-medium text-black">
+<div class="relative grid items-start justify-center grid-cols-3 gap-8 article sm:flex-row">
+    <div class="relative col-span-1 justify-self-end">
+        <span class="text-sm">
+            {{ $article->published_at->format('M / Y') }}
+        </span>
+        <div data-element="line-vertical" class="absolute w-[1px] top-0 h-[500%] -right-4"></div>
+    </div>
+    <div class="relative col-span-2">
+        <a class="mb-1 text-sm text-yellow" title="Lien page catégorie article {{ $article->category->name }}" href="{{ route('category', ['slug' => $article->category->slug]) }}">
+            {{ $article->category->name }}
+        </a>
+        <div data-element="line-horizontal" class="absolute h-[1px] right-0 w-[150%] -bottom-4"></div>
+    </div>
+    <div class="flex flex-col self-start justify-start col-span-2 col-start-2 gap-4">
+        <h3 class="text-xl text-white">
             {{ $article->title }}
-        </h4>
-        <p class="mb-5">
+        </h3>
+        <p>
             {{ $article->catch_phrase }}
         </p>
-        <a  href="{{ route('article', ['categorySlug' => $article->category->slug, 'slug' => $article->slug]) }}"
-            class="inline-block px-6 py-3 font-medium text-center text-white rounded shadow-md bg-gradient-to-br hover:bg-gradient-to-r from-blue-dark to-blue hover:bg-orange">
-            Lire l'article
-        </a>
-      </div>
+        <div class=" *:!w-auto *:inline-block">
+            <x-button.secondary :small="true"
+                title="Lien page article {{ $article->title }}"
+                href="{{ route('article', ['categorySlug' => $article->category->slug, 'slug' => $article->slug]) }}">
+                Lire l'article
+            </x-button.secondary>
+        </div>
     </div>
-  </div>
+</div>

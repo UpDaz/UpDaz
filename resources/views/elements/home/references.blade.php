@@ -1,12 +1,12 @@
-<section id="references" class="px-8 py-4 border-gray-200 md:px-16 md:py-16 sm:border-t">
-    <div class="container mx-auto">
-      <div class="flex flex-wrap w-full lg:mb-10">
-        <div class="w-full mb-6 lg:w-1/2 lg:mb-0">
-          <h2 class="mb-2 text-2xl font-medium text-gray-900 sm:text-3xl title-font">Ils m'ont déjà fait confiance</h2>
-          <div class="w-20 h-1 rounded bg-blue"></div>
+<section id="references">
+    <div class="container flex flex-col gap-16 mx-auto">
+      <div class="flex flex-col-reverse items-center justify-center gap-4 sm:gap-8 sm:flex-row">
+        <h2 class="text-3xl text-center sm:text-4xl">Ils me font confiance</h2>
+        <div class="w-16">
+          @include('elements.icon.users-check')
         </div>
       </div>
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div class="grid items-center gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         @include('elements.home.references-updaz')
       </div>
     </div>

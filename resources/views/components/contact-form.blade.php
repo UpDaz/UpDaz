@@ -1,77 +1,100 @@
-<form x-data="contactForm" id="contact-form" @submit.prevent="submitForm()">
-    <div class="mb-4">
-        <input placeholder="Prénom*" name="firstname" class="w-full px-3 py-2 leading-tight placeholder-gray-800 border rounded appearance-none focus:outline-none focus:shadow" id="firstname" type="text" required>
+<form x-data="contactForm" id="contact-form" @submit.prevent="submitForm()" class="flex flex-col gap-4 mb-4">
+    <div class="flex flex-col gap-1">
+        <label class="text-sm">Nom*</label>
+        <input name="lastname"
+            class="w-full px-3 py-2 leading-tight border appearance-none text-blue placeholder-gray focus:outline-none focus:shadow"
+            id="lastname" type="text" required>
     </div>
-    <div class="mb-4">
-        <input placeholder="Nom*" name="lastname" class="w-full px-3 py-2 leading-tight placeholder-gray-800 border rounded appearance-none focus:outline-none focus:shadow" id="lastname" type="text" required>
+    <div class="flex flex-col gap-1">
+        <label class="text-sm">Prénom*</label>
+        <input name="firstname"
+            class="w-full px-3 py-2 leading-tight border appearance-none text-blue placeholder-gray focus:outline-none focus:shadow"
+            id="firstname" type="text" required>
     </div>
-    <div class="mb-4">
-        <input placeholder="Email*" name="email" class="w-full px-3 py-2 leading-tight placeholder-gray-800 border rounded appearance-none focus:outline-none focus:shadow" id="email" type="email" required>
+    <div class="flex flex-col gap-1">
+        <label class="text-sm">Email*</label>
+        <input name="email"
+            class="w-full px-3 py-2 leading-tight border appearance-none text-blue placeholder-gray focus:outline-none focus:shadow"
+            id="email" type="email" required>
     </div>
-    <div class="mb-4">
-        <input placeholder="Téléphone*" name="phone" class="w-full px-3 py-2 leading-tight placeholder-gray-800 border rounded appearance-none focus:outline-none focus:shadow" id="phone" type="text" required>
+    <div class="flex flex-col gap-1">
+        <label class="text-sm">Téléphone*</label>
+        <input name="phone"
+            class="w-full px-3 py-2 leading-tight border appearance-none text-blue placeholder-gray focus:outline-none focus:shadow"
+            id="phone" type="text" required>
     </div>
-    <div class="mb-4">
-        <textarea placeholder="Message*" name="message" id="message" cols="30" rows="10" class="w-full px-3 py-2 leading-tight placeholder-gray-800 border rounded appearance-none focus:outline-none focus:shadow"></textarea>
+    <div class="flex flex-col gap-1">
+        <label class="text-sm">Message*</label>
+        <textarea name="message" id="message" cols="30" rows="10"
+            class="w-full px-3 py-2 leading-tight border appearance-none text-blue placeholder-gray focus:outline-none focus:shadow"></textarea>
     </div>
-    <div class="flex items-center justify-between">
-        <p x-show="!submitting && !success" class="text-xs text-black">
-            * Champs requis
+    <div class="flex flex-col gap-4">
+        <p x-show="submitting" class="flex gap-4 text-lg">
+            <img src="{{ asset('img/loader.svg') }}" class="w-8 animate-spin" alt="Loader" title="Chargement" />
+            Envoi en cours, merci de patienter
         </p>
-        <div>
-            <img src="{{ asset('img/loader.svg') }}" alt="Loader" title="Chargement" x-show="submitting"/>
-            <button x-show="!submitting && !success" class="block px-6 py-3 font-medium text-white rounded shadow-md bg-orange">
-                Envoyer votre message
-            </button>
-            <p x-show="!submitting && success" class="items-center block px-6 py-3 text-right text-white rounded bold md:flex md:text-left bg-gradient-to-br from-blue-dark to-blue">
-                @include('elements.icon.custom.check-large')
-                Votre demande a bien été envoyé, vous allez recevoir un email de confirmation dans les plus brefs délais.
-            </p>
-            <p x-show="error" class="items-center block px-6 py-3 mt-2 text-right bg-gray-100 rounded-lg bold md:flex md:text-left ">
-                <x-heroicon-o-exclamation-triangle class="!w-12 !h-8 mr-4 text-red-500"/>
-                <span>
-                    Une erreur est survenue, si le problème persiste merci de me contacter via <a href="mailto:matthieu@updaz.fr" class="underline">matthieu@udpaz.fr</a>
-                </span>
-            </p>
-        </div>
+        <x-button.primary tag="button" x-show="!submitting && !success" type="submit">
+            Envoyer mon message
+        </x-button.primary>
+        <p x-show="!submitting && success" class="flex gap-4 text-lg">
+            <span class="w-8">
+                @include('elements.icon.check-square')
+            </span>
+            J'ai bien reçu votre demande, je reviendrai vers vous dans les plus brefs délais.
+        </p>
+        <p x-show="error" class="flex items-start gap-4">
+            <span class="w-8">
+                @include('elements.icon.warning')
+            </span>
+            <span class="text-lg">
+                Une erreur est survenue, si le problème persiste merci de me contacter via <a
+                    href="mailto:matthieu@updaz.fr" title="email de contact UpDaz" class="underline">matthieu@udpaz.fr</a>
+            </span>
+        </p>
     </div>
+    <p x-show="!submitting && !success" class="text-xs text-gray">
+        * Champs requis
+    </p>
 </form>
 
-<script src="https://www.google.com/recaptcha/api.js?render={{ config('custom.recaptcha.public') }}" defer></script>
-
-<script type="text/javascript" defer>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"></script>
+<script>
     document.addEventListener('alpine:init', () => {
         Alpine.data('contactForm', () => ({
-            submitting : false,
-            success : false,
+            submitting: false,
+            success: false,
             error: false,
             submitForm() {
                 this.submitting = true;
                 this.success = false;
                 this.error = false;
                 let alpineComponent = this;
-                grecaptcha.ready(function() {
-                    grecaptcha.execute('{{ config('custom.recaptcha.public') }}', {action: 'submit'})
-                    .then(function(token) {
-                        var form = document.getElementById('contact-form');
-                        var formData = new FormData(form);
-                        formData.append('g-recaptcha-response', token);
-                        axios({
-                            method: "post",
-                            url: "{{ route('contact') }}",
-                            data: formData,
-                            headers: { "Content-Type": "multipart/form-data" },
-                        }).then(response => {
-                            alpineComponent.submitting = false;
-                            alpineComponent.success = true;
-                        }).catch(response => {
-                            alpineComponent.submitting = false;
-                            alpineComponent.success = false;
-                            alpineComponent.error = true;
-                        });
+                turnstile.ready(function() {
+                    turnstile.render("#contact-form", {
+                        sitekey: "{{ config('custom.recaptcha.public') }}",
+                        callback: function(token) {
+                            var form = document.getElementById('contact-form');
+                            var formData = new FormData(form);
+                            formData.append('recaptcha-response', token);
+                            axios({
+                                method: "post",
+                                url: "{{ route('contact') }}",
+                                data: formData,
+                                headers: {
+                                    "Content-Type": "multipart/form-data"
+                                },
+                            }).then(response => {
+                                alpineComponent.submitting = false;
+                                alpineComponent.success = true;
+                            }).catch(response => {
+                                alpineComponent.submitting = false;
+                                alpineComponent.success = false;
+                                alpineComponent.error = true;
+                            });
+                        },
                     });
                 });
             }
         }))
-    })
+    });
 </script>

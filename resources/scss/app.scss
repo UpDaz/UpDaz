@@ -39,7 +39,7 @@
 }
 
 .container{
-    padding : 0 40px;
+    @apply px-8;
     overflow:hidden;
 }
 a, button{

@@ -23,8 +23,8 @@
 
 <body class="text-white overflow-x-hiddenn bg-gradient-to-br from-blue-dark to-blue">
     <div class="relative">
-        <div class="background w-[20px] absolute top-0 left-0 h-full"></div>
-        <div class="background w-[20px] absolute top-0 right-0 h-full"></div>
+        <div class="absolute top-0 left-0 w-4 h-full background"></div>
+        <div class="absolute top-0 right-0 w-4 h-full background"></div>
         <div>
             @include('elements.menu')
             @yield('content')

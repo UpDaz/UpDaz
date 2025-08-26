@@ -6,7 +6,7 @@
         <div data-element="line-vertical" class="absolute w-[1px] top-0 h-[500%] -right-4"></div>
     </div>
     <div class="relative col-span-2">
-        <a class="mb-1 text-sm text-yellow" href="{{ route('category', ['slug' => $article->category->slug]) }}">
+        <a class="mb-1 text-sm text-yellow" title="Lien page catégorie article {{ $article->category->name }}" href="{{ route('category', ['slug' => $article->category->slug]) }}">
             {{ $article->category->name }}
         </a>
         <div data-element="line-horizontal" class="absolute h-[1px] right-0 w-[150%] -bottom-4"></div>
@@ -20,6 +20,7 @@
         </p>
         <div class=" *:!w-auto *:inline-block">
             <x-button.secondary :small="true"
+                title="Lien page article {{ $article->title }}"
                 href="{{ route('article', ['categorySlug' => $article->category->slug, 'slug' => $article->slug]) }}">
                 Lire l'article
             </x-button.secondary>

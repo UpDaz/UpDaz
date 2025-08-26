@@ -9,7 +9,7 @@
         </div>
         <p class="text-sm text-white">
             © {{ date('Y') }} UpDaz -
-            <a href="{{ route('legal-notices') }}" class="w-full md:w-1/12">
+            <a href="{{ route('legal-notices') }}" title="Mentions légales UpDaz" class="w-full md:w-1/12">
                 Mentions légales
             </a>
         </p>

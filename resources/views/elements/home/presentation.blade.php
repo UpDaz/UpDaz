@@ -10,6 +10,7 @@
                             'width' => '253',
                             'height' => '253',
                             'class' => 'object-cover object-center rounded',
+                            'title' => 'Photo de profile Matthieu',
                         ])
                         <div data-element="line-horizontal"
                             class="absolute h-[1px] left-1/2 w-[150%] -translate-x-1/2 top-0 bg-gradient-to-r  ">

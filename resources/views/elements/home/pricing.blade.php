@@ -17,7 +17,7 @@
                     <x-skills.item text="Optimisations SEO" />
                 </div>
                 <div class="mt-8">
-                    <x-button.secondary href="{{ route('webflow') }}">
+                    <x-button.secondary href="{{ route('webflow') }}" title="Lien page Webflow">
                         En savoir plus sur Webflow
                     </x-button.secondary>
                 </div>
@@ -44,7 +44,7 @@
                         <x-skills.item text="Mises à jour régulières de la technologie" />
                     </div>
                     <div class="mt-8">
-                        <x-button.primary href="{{ route('laravel') }}">
+                        <x-button.primary href="{{ route('laravel') }}" title="Lien page Laravel">
                             En savoir plus<br />sur le sur-mesure
                         </x-button.primary>
                     </div>

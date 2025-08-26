@@ -48,7 +48,7 @@
             </span>
             <span class="text-lg">
                 Une erreur est survenue, si le problème persiste merci de me contacter via <a
-                    href="mailto:matthieu@updaz.fr" class="underline">matthieu@udpaz.fr</a>
+                    href="mailto:matthieu@updaz.fr" title="email de contact UpDaz" class="underline">matthieu@udpaz.fr</a>
             </span>
         </p>
     </div>

@@ -101,43 +101,7 @@ hr{
   }
 }
 
-/* CURSOR */
-// *{
-//     cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='%231940FF'/%3E%3C/svg%3E") 8 8, auto;
-// }
-
-// .bg-blue, .bg-blue *,
-// .bg-blue-dark, .bg-blue-dark *{
-//     cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='%23ebb100'/%3E%3C/svg%3E") 8 8, auto;
-// }
-
-
-// a, a *,
-// button, button *{
-//     cursor: url("/img/cursors/hand.svg") 10 10, auto !important;
-// }
-
-// input[type="text"], textarea{
-//     cursor: text;
-// }
-
-
-// svg {
-//     display: inline-block;
-//     vertical-align: middle;
-// }
-
 /* BACKGROUND */
-.bg-pattern-1{
-    background-image: url('/img/backgrounds/pattern-1.svg');
-    background-size: cover;
-}
-
-.bg-pattern-2{
-    background-image: url('/img/backgrounds/pattern-2.svg');
-    background-size: cover;
-}
-
 .background {
     background-image: repeating-linear-gradient(315deg,theme('colors.gray') 0,theme('colors.gray') 1px,theme('colors.blue') 0,theme('colors.blue') 50%);
     background-color: var(--color-blue);
@@ -159,9 +123,5 @@ button, a{
         background: linear-gradient(to bottom, transparent, theme('colors.gray') 10%, theme('colors.gray') 90%, transparent 100%);
     }
 }
-
-// @import "welcome-scroller";
-
-// @import "animate-svg";
 
 @import './article.scss';

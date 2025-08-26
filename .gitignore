@@ -22,3 +22,4 @@ yarn-error.log
 Makefile
 production.makefile
 storage/debugbar/*
+public/build/assets/*

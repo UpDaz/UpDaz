@@ -32,5 +32,5 @@
     );
 @endphp
 <script type="application/ld+json">
-{{ $result }}
+{!! $result !!}
 </script>

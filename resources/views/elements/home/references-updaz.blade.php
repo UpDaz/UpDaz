@@ -1,19 +1,25 @@
+<x-reference title="SOLART Etude">
+    <a href="https://solart-etude.com/" target="_blank" title="SOLART Etude">
+        <img src="{{ asset('img/references/solart.svg') }}" width="138" height="30" alt="B-Records logo"
+            title="SOLART Etude logo" loading="lazy" class="w-auto h-16 mx-auto" />
+    </a>
+</x-reference>
 <x-reference title="B.Records">
-    <a href="https://www.b-records.fr/" target="_blank" title="B.Recordsb">
+    <a href="https://www.b-records.fr/" target="_blank" title="B.Records">
         <img src="{{ asset('img/references/b-records.png') }}" width="138" height="30" alt="B-Records logo"
-            title="PadelReference" loading="lazy" class="w-auto h-16 mx-auto" />
+            title="B.Records logo" loading="lazy" class="w-auto h-16 mx-auto" />
     </a>
 </x-reference>
 <x-reference title="F.ABM">
     <a href="https://www.fabm-menuiseries.fr/" target="_blank" title="F.ABM">
         <img src="{{ asset('img/references/fabm.png') }}" width="138" height="30" alt="F.ABM logo"
-            title="PadelReference" loading="lazy" class="w-auto h-16 mx-auto" />
+            title="F.ABM logo" loading="lazy" class="w-auto h-16 mx-auto" />
     </a>
 </x-reference>
 <x-reference title="PadelReference">
     <a href="https://www.padelreference.com/fr/" target="_blank" title="PadelReference">
         <img src="{{ asset('img/references/padelreference.svg') }}" width="138" height="30" alt="PadelReference logo"
-            title="PadelReference" loading="lazy" class="w-auto h-16 mx-auto" />
+            title="PadelReference logo" loading="lazy" class="w-auto h-16 mx-auto" />
     </a>
 </x-reference>
 

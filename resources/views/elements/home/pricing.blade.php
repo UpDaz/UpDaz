@@ -1,4 +1,4 @@
-<section id="offres">
+<section id="offres" class="pt-24 -mt-24">
     <div class="container flex flex-col gap-8 mx-auto md:gap-16">
         <h2 class="w-full mx-auto text-3xl text-center sm:text-4xl">Des offres adaptées à chaque besoin</h2>
         <div class="grid md:grid-cols-3">

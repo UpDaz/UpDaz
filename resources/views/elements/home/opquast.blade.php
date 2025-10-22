@@ -1,4 +1,4 @@
-<section id="opquast">
+<section id="opquast" class="pt-24 -mt-24">
     <div class="container mx-auto">
         <div class="flex flex-col-reverse gap-16 sm:gap-0 sm:flex-row ">
             <div

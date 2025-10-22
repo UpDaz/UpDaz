@@ -6,21 +6,21 @@ export default {
   ],
   theme: {
     fontFamily: {
-      'title' : ['Space Mono'],
-      'text' : ['Inter']
+      'title' : ['Space Mono', 'monospace', 'sans-serif'],
+      'text' : ['FiraCode', 'monospace', 'sans-serif']
     },
     extend: {
       colors : {
-        'blue-dark' : '#0A3D62',
-        'blue' : '#24445C',
+        'blue' : '#2E5676',
+        'blue-dark' : '#24445C',
         'yellow' : '#EBB100',
         'white' : '#F5F7FA',
         'dark' : '#2F3542',
         'gray' : '#98abb8'
       },
       backgroundColor : {
-        'blue-dark' : '#0A3D62',
-        'blue' : '#24445C',
+        'blue' : '#2E5676',
+        'blue-dark' : '#24445C',
         'yellow' : '#EBB100',
         'white' : '#F5F7FA',
         'dark' : '#2F3542',

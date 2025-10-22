@@ -1,4 +1,4 @@
-<section id="presentation">
+<section id="presentation" class="pt-24 -mt-24">
     <div class="container flex flex-col mx-auto">
         <div class="flex flex-col items-center gap-8 mt-10 md:gap-16 sm:flex-row sm:items-start">
             <div class="sm:w-1/4">
@@ -62,7 +62,7 @@
                         Références
                     </x-button.secondary>
                     <x-button.primary href="#contact" title="Vous avez des questions ?">
-                        Vous avez une question ?
+                        Une question ?
                         </x-button-primary>
                 </div>
                 </p>

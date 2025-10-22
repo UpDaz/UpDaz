@@ -9,7 +9,7 @@
                     Artisan du web
                 </h1>
             </div>
-            <h2>Développeur d'<span class="text-yellow">application web sur-mesure</span> et de <span
+            <h2 class="font-text">Développeur d'<span class="text-yellow">application web sur-mesure</span> et de <span
                     class="text-yellow">sites internet</span> sur Bordeaux</h2>
             <div class="grid *:w-full gap-4 lg:grid-cols-2 xl:grid-cols-3 w-full">
                 <x-button.secondary href="#presentation" @click.prevent="scrollToTarget('#presentation')"
@@ -27,7 +27,7 @@
                     <x-button.primary href="#contact" title="UpDaz : formulaire de contact"
                         @click.prevent="scrollToTarget('#contact')" classes="lg:col-span-2 xl:col-span-3">
                         Me contacter
-                    </x-button-primary>
+                        </x-button-primary>
                 </div>
             </div>
         </div>
@@ -36,6 +36,8 @@
         </div>
     </div>
     <div class="absolute w-8 -translate-x-1/2 bottom-4 left-1/2">
+        <a href="#presentation" @click.prevent="scrollToTarget('#presentation')">
             @include('elements.icon.arrow-down-square')
-        </div>
+        </a>
+    </div>
 </section>

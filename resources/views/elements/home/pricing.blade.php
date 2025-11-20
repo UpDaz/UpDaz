@@ -4,9 +4,9 @@
         <div class="grid md:grid-cols-3">
             <x-price>
                 <x-slot:title>
-                    <h3 class="text-white text-md title-font">Landing page &</h3>
+                    <h3 class="text-white text-md title-font">Site vitrine</h3>
                     <h4 class="pb-4 mb-4 text-4xl leading-none text-yellow">
-                        <span>site vitrine</span>
+                        <span>CMS</span>
                     </h4>
                 </x-slot:title>
                 <div class="flex flex-col gap-2">
@@ -30,7 +30,7 @@
                             <span class="*:w-6">@include('elements.icon.check')</span>
                             Meilleur choix
                         </span>
-                        <h3 class="text-white text-md title-font">Application métier &</h3>
+                        <h3 class="text-white text-md title-font">Application web</h3>
                         <h4 class="pb-4 mb-4 text-4xl leading-none text-yellow">
                             <span>sur-mesure</span>
                         </h4>
@@ -61,7 +61,7 @@
 
             <x-price>
                 <x-slot:title>
-                    <h3 class="mb-2 text-white text-md title-font">E-commerce &</h3>
+                    <h3 class="mb-2 text-white text-md title-font">Site e-commerce</h3>
                     <h4 class="pb-4 mb-4 text-4xl leading-none text-yellow">
                         <span>boutique en ligne</span>
                     </h4>

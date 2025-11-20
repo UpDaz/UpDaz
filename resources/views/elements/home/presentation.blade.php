@@ -57,11 +57,11 @@
                         title="Ce que propose updaz">
                         Compétences
                     </x-button.secondary>
-                    <x-button.secondary href="#presentation" @click.prevent="scrollToTarget('#references')"
+                    <x-button.secondary href="#references" @click.prevent="scrollToTarget('#references')"
                         title="Références Updaz">
                         Références
                     </x-button.secondary>
-                    <x-button.primary href="#contact" title="Vous avez des questions ?">
+                    <x-button.primary href="#contact" title="Vous avez des questions ?" @click.prevent="scrollToTarget('#contact')">
                         Une question ?
                         </x-button-primary>
                 </div>

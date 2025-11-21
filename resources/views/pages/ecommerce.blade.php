@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('title')
-    Accomapgnement boutique en ligne & e-commerce - UpDaz
+    Accompagnement boutique en ligne & e-commerce - UpDaz
 @endsection
 
 @section('meta-description')

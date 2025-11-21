@@ -34,7 +34,6 @@ class GenerateSitemap extends Command
                 if (substr($url->path(), -1, 1) == '/') {
                     return;
                 }
-                dump($url->segment(1));
                 if ($url->segment(1) == 'articles') {
                     $url->setPriority(0.9);
                 } elseif ($url->segment(1) == "mentions-legales") {

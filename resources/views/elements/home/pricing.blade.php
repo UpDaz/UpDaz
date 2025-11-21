@@ -1,6 +1,6 @@
 <section id="offres" class="pt-24 -mt-24">
     <div class="container flex flex-col gap-8 mx-auto md:gap-16">
-        <h2 class="w-full mx-auto text-3xl text-center sm:text-4xl">Des offres adaptées à chaque besoin</h2>
+        <h2 class="w-full mx-auto text-3xl text-center sm:text-4xl">À chaque besoin son offre</h2>
         <div class="grid md:grid-cols-3">
             <x-price>
                 <x-slot:title>
@@ -26,10 +26,6 @@
             <div class="relative">
                 <x-price>
                     <x-slot:title>
-                        <span class="absolute flex items-center gap-2 text-xs tracking-widest uppercase top-2 right-4 text-yellow">
-                            <span class="*:w-6">@include('elements.icon.check')</span>
-                            Meilleur choix
-                        </span>
                         <h3 class="text-white text-md title-font">Application web</h3>
                         <h4 class="pb-4 mb-4 text-4xl leading-none text-yellow">
                             <span>sur-mesure</span>
@@ -67,12 +63,16 @@
                     </h4>
                 </x-slot:title>
                 <div class="flex flex-col gap-2">
-                    <x-skills.item text="CMS Prestashop" />
+                    <x-skills.item text="Application sur-mesure e-commerce grace à l'extension Lunar" />
                     <x-skills.item text="Aucun frais de transaction sur les ventes" />
-                    <x-skills.item text="Gestion des produits et des commandes clé-en-main" />
-                    <x-skills.item text="Processus de commande en 3 étapes ou OnePage Checkout" />
-                    <x-skills.item text="Interface d'administration intégrée" />
-                    <x-skills.item text="Catalogue de thèmes et d'extensions mis à jour régulièrement" />
+                    <x-skills.item text="Gestion des produits et des commandes via un panneau d'administration" />
+                    <x-skills.item text="Tunnel de commande optimisé pour convertir le visiteur en client" />
+                    <x-skills.item text="Interface d'administration adaptable" />
+                </div>
+                <div class="mt-8">
+                    <x-button.secondary href="{{ route('ecommerce') }}" title="Lien page Laravel section Lunar">
+                        En savoir plus sur le <span class="text-nowrap">e-commerce</span>
+                    </x-button.secondary>
                 </div>
             </x-price>
         </div>

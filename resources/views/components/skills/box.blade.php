@@ -4,7 +4,7 @@
             {{ $icon }}
         @endif
     </div>
-    <div class="relative flex items-center h-12 col-span-2">
+    <div class="relative flex items-center col-span-2">
         @isset ($title)
             {{ $title }}
             <div data-element="line-horizontal" class="absolute h-[1px] right-0 w-[150%] -bottom-4 bg-gradient-to-r"></div>

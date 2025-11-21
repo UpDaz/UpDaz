@@ -1,4 +1,4 @@
-<section id="competences" class="pt-24 -mt-24">
+<section id="accompagnement" class="pt-24 -mt-24">
     <div class="container flex flex-col gap-8 mx-auto md:gap-16">
         <h2 class="text-3xl text-center sm:text-4xl">Mon accompagnement,<br/>de la conception à la mise en ligne</h2>
         <p class="text-center">Webflow rend la création de sites plus accessible, mais obtenir un résultat professionnel demande méthode et expertise.<br/>Chez UpDaz, je vous aide à :</p>

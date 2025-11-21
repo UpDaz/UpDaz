@@ -1,16 +1,14 @@
 <section class="flex items-center justify-center min-h-[100vh] relative md:-mt-24 pt-8 md:pt-24">
-    <div class="container flex flex-col items-center gap-16 mx-auto md:flex-row">
+    <div class="container flex flex-col items-center gap-20 mx-auto md:flex-row">
         <div class="flex flex-col gap-12 lg:flex-grow md:w-1/2 md:items-start md:text-left">
             <div class="flex items-center gap-8 md:block">
-                <div class="w-16 md:mb-6">
-                    @include('elements.icon.www')
-                </div>
                 <h1 class="text-4xl font-bold text-white font-title md:text-5xl txt-rotate">
                     Artisan du web
                 </h1>
             </div>
-            <h2 class="font-text">Développeur d'<span class="text-yellow">application web sur-mesure</span> et de <span
-                    class="text-yellow">sites internet</span> sur Bordeaux</h2>
+            <h2 class="font-text">Développeur d'<span class="text-yellow">application web sur-mesure</span>, <span class="text-yellow">e-commerce</span> et
+                <span class="text-yellow">CMS</span> sur Bordeaux
+            </h2>
             <div class="grid *:w-full gap-4 lg:grid-cols-2 xl:grid-cols-3 w-full">
                 <x-button.secondary href="#presentation" @click.prevent="scrollToTarget('#presentation')"
                     title="Présentation UpDaz">
@@ -18,12 +16,21 @@
                 </x-button.secondary>
                 <x-button.secondary href="#competences" @click.prevent="scrollToTarget('#competences')"
                     title="Compétences et savoir-faire">
-                    Savoir-faire
+                    Compétences
                 </x-button.secondary>
                 <x-button.secondary href="#offres" @click.prevent="scrollToTarget('#offres')" title="Offres">
                     Offres
                 </x-button.secondary>
-                <div class="xl:col-span-3">
+                <div class="flex flex-col gap-4 xl:col-span-3">
+                    <x-button.secondary href="{{ route('laravel') }}" title="Lien page sur-mesure">
+                        Application web sur-mesure
+                    </x-button.secondary>
+                    <x-button.secondary href="{{ route('ecommerce') }}"  title="Lien page e-commerce">
+                        Boutique en ligne et e-commerce
+                    </x-button.secondary>
+                    <x-button.secondary href="{{ route('webflow') }}" title="Lien page Webflow">
+                        Site CMS
+                    </x-button.secondary>
                     <x-button.primary href="#contact" title="UpDaz : formulaire de contact"
                         @click.prevent="scrollToTarget('#contact')" classes="lg:col-span-2 xl:col-span-3">
                         Me contacter

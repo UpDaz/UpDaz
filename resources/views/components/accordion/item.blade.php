@@ -9,8 +9,8 @@
             {!! $title !!}
         </h3>
         <div>
-            <div class="w-8 *:max-w-full" :class="open ? '' : '-rotate-90'">
-                @include('elements.icon.arrow-down-square')
+            <div class="w-8 h-8 *:w-full *:max-w-full" :class="open ? '' : '-rotate-90'">
+                @include('elements.icon.arrow-down')
             </div>
         </div>
     </div>

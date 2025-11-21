@@ -16,6 +16,9 @@ use App\Http\Controllers\ContactController;
 |
 */
 
+Route::redirect('/prestashop', '/sur-mesure/e-commerce-bordeaux', 301);
+Route::redirect('/laravel', '/sur-mesure-bordeaux', 301);
+
 Route::get(
     '/',
     function () {
@@ -24,25 +27,32 @@ Route::get(
 )->name('home');
 
 Route::get(
-    '/webflow',
+    '/webflow-bordeaux',
     function () {
         return view('pages.webflow');
     }
 )->name('webflow');
 
 Route::get(
-    '/laravel',
+    '/sur-mesure-bordeaux',
     function () {
         return view('pages.laravel');
     }
 )->name('laravel');
 
+// Route::get(
+//     '/prestashop',
+//     function () {
+//         return view('pages.prestashop');
+//     }
+// )->name('prestashop');
+
 Route::get(
-    '/prestashop',
+    '/sur-mesure/e-commerce-bordeaux',
     function () {
-        return view('pages.prestashop');
+        return view('pages.ecommerce');
     }
-)->name('prestashop');
+)->name('ecommerce');
 
 Route::get(
     '/contact',

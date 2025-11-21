@@ -34,12 +34,15 @@ class GenerateSitemap extends Command
                 if (substr($url->path(), -1, 1) == '/') {
                     return;
                 }
-                if ($url->segment(1) === 'actualites') {
+                dump($url->segment(1));
+                if ($url->segment(1) == 'articles') {
                     $url->setPriority(0.9);
+                } elseif ($url->segment(1) == "mentions-legales") {
+                    $url->setPriority(0.5);
                 } else {
                     $url->setPriority(1);
                 }
-                $url->setChangeFrequency(URL::CHANGE_FREQUENCY_NEVER);
+                $url->setChangeFrequency(URL::CHANGE_FREQUENCY_WEEKLY);
                 return $url;
             })
             ->writeToFile(public_path('sitemap.xml'));

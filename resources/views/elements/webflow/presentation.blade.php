@@ -5,7 +5,7 @@
                 <div class="flex flex-row-reverse items-center gap-8 sm:flex-row">
                     <p class="text-3xl font-bold font-title md:text-3xl"><span class="text-yellow">Webflow</span>
                         qu'est-ce que c'est ?</p>
-                    <div class="self-end w-12">
+                    <div class="w-12">
                         @include('elements.icon.question-mark')
                     </div>
                 </div>

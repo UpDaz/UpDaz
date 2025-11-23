@@ -2,7 +2,7 @@
     <div class="container flex flex-col items-center gap-20 mx-auto md:flex-row">
         <div class="flex flex-col gap-12 lg:flex-grow md:w-1/2 md:items-start md:text-left">
             <div class="flex items-center gap-8 md:block">
-                <h1 class="text-4xl font-bold text-white font-title md:text-5xl txt-rotate">
+                <h1 class="text-5xl font-bold text-white font-title txt-rotate">
                     Création de site sur-mesure à Bordeaux
                 </h1>
             </div>
@@ -17,19 +17,19 @@
                 <x-button.secondary href="#accompagnement" @click.prevent="scrollToTarget('#accompagnement')" title="Accompagnement Laravel">
                     Mon accompagnement
                 </x-button.secondary>
-                <div class="xl:col-span-3">
+                <div class="lg:col-span-2">
                     <x-button.primary href="#contact" title="Laravel : formulaire de contact"
                         @click.prevent="scrollToTarget('#contact')" classes="lg:col-span-2 xl:col-span-3">
-                        Discutons de votre projet
+                        Discutons de votre projet sur-mesure
                     </x-button-primary>
                 </div>
             </div>
         </div>
-        <div class="flex justify-center w-full md:w-1/2 *:w-auto *:lg:h-[65vh]">
+        <div class="flex justify-center w-full *:w-full *:h-auto md:w-1/2 *:lg:w-auto *:lg:h-[65vh]">
             @include('elements.laravel.hero-illustration')
         </div>
     </div>
-    <div class="absolute w-8 -translate-x-1/2 bottom-4 left-1/2">
+    <div class="absolute hidden w-8 -translate-x-1/2 md:block bottom-4 left-1/2">
         <a href="#presentation" @click.prevent="scrollToTarget('#presentation')">
             @include('elements.icon.arrow-down-square')
         </a>

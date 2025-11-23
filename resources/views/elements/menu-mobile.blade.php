@@ -28,15 +28,27 @@
                 </x-button.secondary>
             </li>
             <li>
-                <x-button.secondary href="{{ route('home') }}#references" @click.prevent="scrollToTarget('#references')"
+                <x-button.secondary href="{{ route('home') }}#references"
                     title="Mes Références">
                     Références
                 </x-button.secondary>
             </li>
             <li>
-                <x-button.secondary href="{{ route('home') }}#offres" @click.prevent="scrollToTarget('#offres')"
-                    title="Offres">
-                    Offres
+                <x-button.secondary href="{{ route('laravel') }}"
+                    title="Sur-mesure">
+                    Sur-mesure
+                </x-button.secondary>
+            </li>
+            <li>
+                <x-button.secondary href="{{ route('ecommerce') }}"
+                    title="E-commerce">
+                    E-commerce
+                </x-button.secondary>
+            </li>
+            <li>
+                <x-button.secondary href="{{ route('webflow') }}"
+                    title="CMS">
+                    CMS
                 </x-button.secondary>
             </li>
             <li>

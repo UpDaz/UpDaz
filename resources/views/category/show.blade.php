@@ -16,12 +16,6 @@
                 <h1 class="text-4xl font-bold font-title lg:text-5xl">Les articles <span
                         class="lowercase">{{ $category->name }}</span></h1>
                 <p class="text-xl">{{ $category->catch_phrase }}</p>
-                <div class="flex flex-col gap-4 text-sm text-center">
-                    <div data-element="line-horizontal" class="h-[1px] w-1/4 mx-auto"></div>
-                    <x-breadcrumb :links="[
-                        $category->name => route('category', ['slug' => $category->slug]),
-                    ]" />
-                </div>
             </div>
         </div>
         @if ($category->has_articles)

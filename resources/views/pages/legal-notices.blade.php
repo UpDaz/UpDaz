@@ -14,10 +14,6 @@
             <div class="flex flex-col gap-4 mx-auto">
                 <h1 class="text-4xl font-bold font-title lg:text-5xl">Mentions légales</h1>
                 <h2 class="text-xl ">Retrouvez toute l'actualité UpDaz</h2>
-                <div class="flex flex-col gap-4 text-sm text-center">
-                    <div data-element="line-horizontal" class="h-[1px] w-1/4 mx-auto"></div>
-                    <x-breadcrumb :links="['Mentions légales' => route('legal-notices')]" />
-                </div>
             </div>
         </div>
         <div class="max-w-lg mx-auto">

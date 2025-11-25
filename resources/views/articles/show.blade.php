@@ -15,16 +15,6 @@
             <div class="flex flex-col gap-4 mx-auto">
                 <h1 class="text-4xl font-bold font-title lg:text-5xl">{{ $article->title }}</h1>
                 <p class="text-xl ">{{ $article->catch_phrase }}</p>
-                <div class="flex flex-col gap-4 text-sm text-center">
-                    <div data-element="line-horizontal" class="h-[1px] w-1/4 mx-auto"></div>
-                    <x-breadcrumb :links="[
-                        $article->category->name => route('category', ['slug' => $article->category->slug]),
-                        $article->title => route('article', [
-                            'categorySlug' => $article->category->slug,
-                            'slug' => $article->slug,
-                        ]),
-                    ]" />
-                </div>
             </div>
         </div>
         <div class="flex flex-col gap-4">

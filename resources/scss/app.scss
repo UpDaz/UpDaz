@@ -130,15 +130,18 @@ button, a{
 .article-content h1{
     margin-bottom: 2rem;
     margin-top: 2rem;
+    font-size: 2.5rem;
 }
 
 .article-content h2{
     margin-bottom: .75rem;
     margin-top: 2rem;
+    font-size: 2rem;
 }
 .article-content h3{
     margin-bottom: .75rem;
     margin-top: 2rem;
+    font-size: 1.5rem;
 }
 .article-content h2 + h3{
     margin-top: 0;
@@ -146,14 +149,17 @@ button, a{
 .article-content h4{
     margin-bottom: .5rem;
     margin-top: 2rem;
+    font-size: 1.25rem;
 }
 .article-content h5{
     margin-bottom: .5rem;
     margin-top: 2rem;
+    font-size: 1.15rem;
 }
 .article-content h6{
     margin-bottom: .5rem;
     margin-top: 1rem;
+    font-size: 1rem;
 }
 
 .article-content p{

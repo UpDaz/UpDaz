@@ -34,7 +34,7 @@ class ArticleRepository extends BaseRepository implements ArticleRepositoryInter
     {
         return $this->model
                 ->where('is_published', true)
-                ->where('published_at', '<=', date('Y-m-d'))
+                ->where('published_at', '<=', date('Y-m-d 23:59:59'))
                 ->whereHas('category', function ($q) {
                     $q->where('is_active', true);
                 })

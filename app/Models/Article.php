@@ -18,6 +18,7 @@ class Article extends Model
         'catch_phrase',
         'slug',
         'category_id',
+        'published_at',
     ];
 
     /**

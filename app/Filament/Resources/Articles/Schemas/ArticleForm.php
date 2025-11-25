@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Articles\Schemas;
 
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -19,10 +20,10 @@ class ArticleForm
     public static function configure(Schema $schema): Schema
     {
         return $schema
-            ->columns(3)
+            ->columns(2)
             ->components([
                 TextInput::make('title')
-                    ->columnSpan(2)
+                    ->columnSpan(1)
                     ->autofocus()
                     ->live(true)
                     ->afterStateUpdated(
@@ -54,7 +55,7 @@ class ArticleForm
                     ->onColor('success')
                     ->offColor('danger')
                     ->inline(false),
-                RichEditor::make('content')
+                MarkdownEditor::make('content')
                     ->columnSpanFull()
                     ->fileAttachmentsAcceptedFileTypes(['image/png', 'image/jpeg']),
             ]);

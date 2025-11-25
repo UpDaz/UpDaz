@@ -16,7 +16,7 @@ class ArticlesController extends Controller
 
     public function index()
     {
-        $articles = $this->articleRepository->all();
+        $articles = $this->articleRepository->published();
         return view('articles.index', [
             'articles' => $articles,
         ]);
@@ -31,7 +31,7 @@ class ArticlesController extends Controller
                 'article' => $article,
             ]);
         } else {
-            return redirect()->route('home');
+            return redirect()->route('articles');
         }
     }
 }

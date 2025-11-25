@@ -31,17 +31,19 @@ class GenerateSitemap extends Command
     {
         SitemapGenerator::create(config('app.url'))
             ->hasCrawled(function (Url $url) {
+                $url->setChangeFrequency(URL::CHANGE_FREQUENCY_WEEKLY);
                 if (substr($url->path(), -1, 1) == '/') {
                     return;
                 }
                 if ($url->segment(1) == 'articles') {
-                    $url->setPriority(0.9);
-                } elseif ($url->segment(1) == "mentions-legales") {
                     $url->setPriority(0.5);
+                    $url->setChangeFrequency(URL::CHANGE_FREQUENCY_NEVER);
+                } elseif ($url->segment(1) == "mentions-legales") {
+                    $url->setPriority(0.1);
+                    $url->setChangeFrequency(URL::CHANGE_FREQUENCY_NEVER);
                 } else {
-                    $url->setPriority(1);
+                    $url->setPriority(0.9);
                 }
-                $url->setChangeFrequency(URL::CHANGE_FREQUENCY_WEEKLY);
                 return $url;
             })
             ->writeToFile(public_path('sitemap.xml'));

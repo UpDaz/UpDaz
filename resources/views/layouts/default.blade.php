@@ -25,7 +25,7 @@
     <div class="relative">
         <div class="absolute top-0 left-0 w-2 h-full md:w-4 background"></div>
         <div class="absolute top-0 right-0 w-2 h-full md:w-4 background"></div>
-        <div>
+        <div class="min-h-[90vh]">
             @include('elements.menu')
             @yield('content')
         </div>

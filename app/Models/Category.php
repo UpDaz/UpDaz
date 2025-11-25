@@ -10,11 +10,30 @@ class Category extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'is_active',
+        'slug',
+        'catch_phrase',
+        'meta-title',
+        'meta-description'
+    ];
+
+    /**
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'is_active' => 'boolean',
+        ];
+    }
+
     public function articles()
     {
         return $this->hasMany(Article::class)
                     ->where('is_published', true)
-                    ->where('published_at', '<=', date('Y-m-d'));
+                    ->where('published_at', '<=', date('Y-m-d Y:m:s'));
     }
 
     /**

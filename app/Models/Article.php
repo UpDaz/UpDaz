@@ -11,6 +11,15 @@ class Article extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+        'content',
+        'is_published',
+        'catch_phrase',
+        'slug',
+        'category_id',
+    ];
+
     /**
      * The attributes that should be cast.
      *

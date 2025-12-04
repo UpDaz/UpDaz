@@ -6,9 +6,9 @@
                     Création de site sur-mesure à Bordeaux
                 </h1>
             </div>
-            <h2 class="font-text">
+            <p class="font-text">
                 UpDaz vous accompagne pour concevoir un site sur-mesure, adapté à vos besoins et à vos contraintes métier, <span class="text-yellow">performant, durable et sécurisé</span>.
-            </h2>
+            </p>
             <div class="grid *:w-full gap-4 lg:grid-cols-2 w-full">
                 <x-button.secondary href="#presentation" @click.prevent="scrollToTarget('#presentation')"
                     title="Présentation Laravel">

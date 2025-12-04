@@ -4,6 +4,7 @@ namespace App\Repositories\Eloquent;
 
 use App\Models\Article;
 use App\Repositories\ArticleRepositoryInterface;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
 
 class ArticleRepository extends BaseRepository implements ArticleRepositoryInterface
@@ -30,13 +31,20 @@ class ArticleRepository extends BaseRepository implements ArticleRepositoryInter
    /**
     * @return Collection
     */
-    public function published($limit = null, $orderField = 'title', $orderDirection = 'asc'): Collection
-    {
+    public function published(
+        ?int $categoryId = null,
+        ?int $limit = null,
+        $orderField = 'title',
+        $orderDirection = 'asc'
+    ): Collection {
         return $this->model
                 ->where('is_published', true)
                 ->where('published_at', '<=', date('Y-m-d 23:59:59'))
-                ->whereHas('category', function ($q) {
+                ->whereHas('category', function (Builder $q) {
                     $q->where('is_active', true);
+                })
+                ->when($categoryId, function (Builder $query) use ($categoryId) {
+                    $query->where('category_id', $categoryId);
                 })
                 ->with('category')
                 ->orderBy($orderField, $orderDirection)

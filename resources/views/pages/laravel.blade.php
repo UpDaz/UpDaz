@@ -23,6 +23,8 @@
             @include('elements.laravel.contact')
         </div>
         @include('elements.separators.right')
+        @include('elements.laravel.articles')
+        @include('elements.separators.extern')
         @include('elements.laravel.faq')
     </div>
 @endsection

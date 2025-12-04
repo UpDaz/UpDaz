@@ -6,9 +6,9 @@
                     Création de site Webflow à Bordeaux
                 </h1>
             </div>
-            <h2 class="font-text">
+            <p class="font-text">
                 UpDaz vous accompagne pour concevoir un <span class="text-yellow">site CMS, performant et adapté à vos besoins</span>.
-            </h2>
+            </p>
             <div class="grid *:w-full gap-4 lg:grid-cols-2 w-full">
                 <x-button.secondary href="#presentation" @click.prevent="scrollToTarget('#presentation')"
                     title="Présentation Webflow">

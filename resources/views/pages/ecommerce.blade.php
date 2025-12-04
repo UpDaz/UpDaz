@@ -23,6 +23,8 @@
             @include('elements.ecommerce.contact')
         </div>
         @include('elements.separators.right')
+        @include('elements.ecommerce.articles')
+        @include('elements.separators.extern')
         @include('elements.ecommerce.faq')
     </div>
 @endsection

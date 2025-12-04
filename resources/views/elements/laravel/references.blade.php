@@ -1,7 +1,7 @@
 <section id="references" class="pt-24 -mt-24">
     <div class="container flex flex-col gap-16 mx-auto">
         <div class="flex flex-col-reverse items-center justify-center gap-4 sm:gap-8 sm:flex-row">
-            <h2 class="text-3xl text-center sm:text-4xl">Mes références d'applications Laravel</h2>
+            <h2 class="text-3xl text-center sm:text-4xl">Mes références d'applications sur-mesure avec Laravel</h2>
             <div class="w-16">
                 @include('elements.icon.users-check')
             </div>

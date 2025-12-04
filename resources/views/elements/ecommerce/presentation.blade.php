@@ -3,8 +3,8 @@
         <div class="flex flex-col items-center gap-8 mt-10 md:gap-16 sm:flex-row sm:items-start">
             <div class="border-b border-gray sm:pl-8 sm:pb-8 md:pl-16 md:pb-16 sm:border-l sm:mt-0 sm:text-left">
                 <div class="flex flex-row-reverse items-center gap-8 sm:flex-row">
-                    <p class="text-3xl font-bold font-title md:text-3xl"><span class="text-yellow">Lunar</span>
-                        qu'est-ce que c'est ?</p>
+                    <h2 class="text-3xl font-bold font-title md:text-3xl"><span class="text-yellow">Lunar</span>
+                        qu'est-ce que c'est ?</h2>
                     <div class="w-12">
                         @include('elements.icon.question-mark')
                     </div>

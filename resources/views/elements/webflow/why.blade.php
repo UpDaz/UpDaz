@@ -18,7 +18,7 @@
                 </p>
                 <div class="flex flex-row-reverse items-center gap-8 sm:flex-row">
                     <h2 class="text-3xl sm:text-4xl">
-                        Pour quels types de sites ?
+                        Utiliser Webblow pour quels types de sites ?
                     </h2>
                     <div class="w-24 sm:w-12">
                         @include('elements.icon.www')

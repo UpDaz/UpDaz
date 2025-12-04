@@ -5,7 +5,7 @@
                 class="flex flex-col items-start justify-start gap-8 border-gray sm:w-3/4 sm:pr-8 sm:py-8 md:pr-16 md:py-16 sm:border-r sm:border-t-0 sm:text-left">
                 <div class="flex flex-row-reverse items-center gap-8 sm:flex-row">
                     <h2 class="text-3xl sm:text-4xl">
-                        Quelle utilisation ?
+                        Laravel, quelle utilisation ?
                     </h2>
                     <div class="w-24 sm:w-12">
                         @include('elements.icon.check-list')

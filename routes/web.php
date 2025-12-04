@@ -4,6 +4,8 @@ use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +17,27 @@ use App\Http\Controllers\ContactController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get(
+    '/articles/prestashop/{slug}',
+    function ($slug) {
+        return Redirect::to(
+            route('article', [
+                'categorySlug' => 'e-commerce',
+                'slug' => $slug
+            ]),
+            301
+        );
+    }
+);
+
+Route::get('/articles/prestashop', function () {
+    return Redirect::to(route('category', ['slug' => 'e-commerce']), 301);
+});
+
+/**
+ * Routes
+ */
 
 Route::redirect('/prestashop', '/sur-mesure/e-commerce-bordeaux', 301);
 Route::redirect('/laravel', '/sur-mesure-bordeaux', 301);
@@ -39,13 +62,6 @@ Route::get(
         return view('pages.laravel');
     }
 )->name('laravel');
-
-// Route::get(
-//     '/prestashop',
-//     function () {
-//         return view('pages.prestashop');
-//     }
-// )->name('prestashop');
 
 Route::get(
     '/sur-mesure/e-commerce-bordeaux',

@@ -6,9 +6,9 @@
                     Création de site e-commerce à Bordeaux
                 </h1>
             </div>
-            <h2 class="font-text">
+            <p class="font-text">
                 UpDaz vous accompagne pour concevoir un site e-commerce, générer des ventes et optimiser votre boutique en ligne <span class="text-yellow">performant</b>, et <span class="text-yellow">sécurisé</span>.
-            </h2>
+            </p>
             <div class="grid *:w-full gap-4 lg:grid-cols-2 w-full">
                 <x-button.secondary href="#presentation" @click.prevent="scrollToTarget('#presentation')"
                     title="Présentation Laravel">

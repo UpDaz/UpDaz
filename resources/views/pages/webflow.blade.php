@@ -24,6 +24,8 @@
             @include('elements.webflow.contact')
         </div>
         @include('elements.separators.right')
+        @include('elements.webflow.articles')
+        @include('elements.separators.extern')
         @include('elements.webflow.faq')
     </div>
 @endsection

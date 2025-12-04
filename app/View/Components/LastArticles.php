@@ -19,11 +19,11 @@ class LastArticles extends Component
      * @param  int  $limit
      * @return void
      */
-    public function __construct(ArticleRepositoryInterface $articleRepository, $limit = 6)
+    public function __construct(ArticleRepositoryInterface $articleRepository, ?int $categoryId = null, ?int $limit = 6)
     {
         $this->articleRepository = $articleRepository;
         $this->limit = $limit;
-        $this->articles = $this->articleRepository->published($limit, 'published_at', 'desc');
+        $this->articles = $this->articleRepository->published($categoryId, $limit, 'published_at', 'desc');
     }
 
     /**

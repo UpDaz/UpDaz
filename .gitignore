@@ -24,3 +24,4 @@ production.makefile
 storage/debugbar/*
 public/build/assets/*
 .nvmrc
+makefiles*

@@ -25,3 +25,4 @@ storage/debugbar/*
 public/build/assets/*
 .nvmrc
 makefiles*
+.dependabot-current-branch

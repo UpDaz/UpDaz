@@ -74,7 +74,7 @@ Votre boutique e-commerce en ligne clé-en-main grâce au CMS Prestashop. Profit
                 <p class="mt-2 text-sm italic text-center">
                     Interface publique de Prestashop - thème par default
                     <br/>
-                    <a href="https://demo.prestashop.com/#/fr/front" target="_blank" class="underline">Démo <x-heroicon-o-arrow-top-right-on-square/></a>
+                    <a href="https://demo.prestashop.com/#/fr/front" target="_blank" class="underline">Démo</a>
                 </p>
             </div>
             <div>
@@ -82,7 +82,7 @@ Votre boutique e-commerce en ligne clé-en-main grâce au CMS Prestashop. Profit
                 <p class="mt-2 text-sm italic text-center">
                     Interface administration de Prestashop
                     <br/>
-                    <a href="https://demo.prestashop.com/#/fr/back" target="_blank" class="underline">Démo <x-heroicon-o-arrow-top-right-on-square/></a>
+                    <a href="https://demo.prestashop.com/#/fr/back" target="_blank" class="underline">Démo</a>
                 </p>
             </div>
         </div>
@@ -122,7 +122,7 @@ Votre boutique e-commerce en ligne clé-en-main grâce au CMS Prestashop. Profit
         </h4>
         <div class="w-10 h-1 my-2 rounded bg-blue"></div>
         <p class="mb-2">
-            Ces extensions sont proposées via la <a href="https://addons.prestashop.com/" target="_blank" class="underline">marketplace de Prestashop <x-heroicon-o-arrow-top-right-on-square/></a>.
+            Ces extensions sont proposées via la <a href="https://addons.prestashop.com/" target="_blank" class="underline">marketplace de Prestashop</a>.
             <br/>
             La plupart du temps payantes, elles sont développées par des développeurs tierces et <b>vérifiées par Prestashop</b> avant d’être mis en ligne. 
         </p>

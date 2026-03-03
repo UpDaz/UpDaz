@@ -10,7 +10,7 @@
         </span>
         <span class="absolute bottom-full hidden flex-col items-center mb-2 group-hover:flex w-[50vw] md:w-64 ">
             <span
-                class="relative z-10 text-sm leading-4 text-center text-white whitespace-no-wrap rounded shadow-lg bg-blue">
+                class="relative z-10 px-3 py-2 text-sm leading-4 text-center text-white whitespace-no-wrap rounded shadow-lg bg-blue-dark">
                 <span class="block leading-5 text-left">
                     {!! $message !!}
                 </span>
@@ -23,7 +23,7 @@
                 <span data-element="line-vertical" class="absolute w-[1px] top-1/2 h-[125%] -translate-y-1/2 right-0">
                 </span>
             </span>
-            <span class="w-3 h-3 -mt-2 rotate-45 bg-blue"></span>
+            <span class="w-3 h-3 -mt-2 rotate-45 bg-blue-dark"></span>
         </span>
     </span>
 </span>

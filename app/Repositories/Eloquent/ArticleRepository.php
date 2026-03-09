@@ -9,64 +9,47 @@ use Illuminate\Support\Collection;
 
 class ArticleRepository extends BaseRepository implements ArticleRepositoryInterface
 {
-   /**
-    * ArticleRepository constructor.
-    *
-    * @param Article $model
-    */
     public function __construct(Article $model)
     {
         parent::__construct($model);
     }
 
-   /**
-    * @return Collection
-    */
     public function all(): Collection
     {
         return $this->model
-                ->all();
+            ->all();
     }
 
-   /**
-    * @return Collection
-    */
     public function published(
         ?int $categoryId = null,
         ?int $limit = null,
-        $orderField = 'title',
-        $orderDirection = 'asc'
+        string $orderField = 'title',
+        string $orderDirection = 'asc'
     ): Collection {
         return $this->model
-                ->where('is_published', true)
-                ->where('published_at', '<=', date('Y-m-d 23:59:59'))
-                ->whereHas('category', function (Builder $q) {
-                    $q->where('is_active', true);
-                })
-                ->when($categoryId, function (Builder $query) use ($categoryId) {
-                    $query->where('category_id', $categoryId);
-                })
-                ->with('category')
-                ->orderBy($orderField, $orderDirection)
-                ->limit($limit)
-                ->get();
+            ->where('is_published', true)
+            ->where('published_at', '<=', date('Y-m-d 23:59:59'))
+            ->whereHas('category', function (Builder $q) {
+                $q->where('is_active', true);
+            })
+            ->when($categoryId, function (Builder $query) use ($categoryId) {
+                $query->where('category_id', $categoryId);
+            })
+            ->with('category')
+            ->orderBy($orderField, $orderDirection)
+            ->limit($limit)
+            ->get();
     }
 
-    /**
-     *
-     * @param string $categorySlug
-     * @param string $slug
-     * @return Article
-     */
-    public function getByCategorySlugAndSlug($categorySlug, $slug): ?Article
+    public function getByCategorySlugAndSlug(string $categorySlug, string $slug): ?Article
     {
         return $this->model
-        ->where('slug', $slug)
-        ->whereHas('category', function ($q) use ($categorySlug) {
-            $q->where('slug', $categorySlug)
-                ->where('is_active', true);
-        })
-        ->with('category')
-        ->first();
+            ->where('slug', $slug)
+            ->whereHas('category', function ($q) use ($categorySlug) {
+                $q->where('slug', $categorySlug)
+                    ->where('is_active', true);
+            })
+            ->with('category')
+            ->first();
     }
 }

@@ -24,7 +24,7 @@ class ArticleResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'title';
 
-    protected static string | UnitEnum | null $navigationGroup = NavigationGroups::BLOG;
+    protected static string|UnitEnum|null $navigationGroup = NavigationGroups::Blog;
 
     public static function form(Schema $schema): Schema
     {

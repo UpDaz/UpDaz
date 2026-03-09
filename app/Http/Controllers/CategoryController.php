@@ -3,20 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\CategoryRepositoryInterface;
-use Illuminate\Http\Request;
+use Illuminate\Contracts\View\View;
 
 class CategoryController extends Controller
 {
-    protected $categoryController;
-
-    public function __construct(CategoryRepositoryInterface $categoryController)
+    public function __construct(private CategoryRepositoryInterface $categoryRepository)
     {
-        $this->categoryController = $categoryController;
     }
 
-    public function show($slug)
+    public function show(string $slug): View
     {
-        $category = $this->categoryController->getBySlug($slug);
+        $category = $this->categoryRepository->getBySlug($slug);
 
         return view('category.show', [
             'category' => $category,

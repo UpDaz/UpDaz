@@ -11,5 +11,5 @@ interface ArticleRepositoryInterface
 
     public function published(): Collection;
 
-    public function getByCategorySlugAndSlug($categorySlug, $slug): ?Article;
+    public function getByCategorySlugAndSlug(string $categorySlug, string $slug): ?Article;
 }

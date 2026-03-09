@@ -32,7 +32,7 @@ class CategoryResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'name';
 
-    protected static string | UnitEnum | null $navigationGroup = NavigationGroups::BLOG;
+    protected static string|UnitEnum|null $navigationGroup = NavigationGroups::Blog;
 
     public static function form(Schema $schema): Schema
     {
@@ -102,9 +102,9 @@ class CategoryResource extends Resource
             ->recordActions([
                 ActionGroup::make([
                     Action::make('Voir en ligne')
-                    ->icon('heroicon-o-eye')
-                    ->url(fn (Category $category): string => route('category', ['slug' => $category->slug]))
-                    ->openUrlInNewTab(),
+                        ->icon('heroicon-o-eye')
+                        ->url(fn (Category $category): string => route('category', ['slug' => $category->slug]))
+                        ->openUrlInNewTab(),
                     EditAction::make(),
                     DeleteAction::make(),
                 ]),

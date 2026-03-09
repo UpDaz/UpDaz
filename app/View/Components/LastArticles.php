@@ -3,35 +3,22 @@
 namespace App\View\Components;
 
 use App\Repositories\ArticleRepositoryInterface;
-use App\Repositories\Eloquent\ArticleRepository;
+use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
 class LastArticles extends Component
 {
-    private $articleRepository;
-    private $limit;
-    public $articles = [];
+    public mixed $articles = [];
 
-    /**
-     * Create the component instance.
-     *
-     * @param  \App\Repositories\ArticleRepositoryInterface  $articleRepository
-     * @param  int  $limit
-     * @return void
-     */
-    public function __construct(ArticleRepositoryInterface $articleRepository, ?int $categoryId = null, ?int $limit = 6)
-    {
-        $this->articleRepository = $articleRepository;
-        $this->limit = $limit;
+    public function __construct(
+        private ArticleRepositoryInterface $articleRepository,
+        ?int $categoryId = null,
+        private ?int $limit = 6,
+    ) {
         $this->articles = $this->articleRepository->published($categoryId, $limit, 'published_at', 'desc');
     }
 
-    /**
-     * Get the view / contents that represent the component.
-     *
-     * @return \Illuminate\Contracts\View\View|\Closure|string
-     */
-    public function render()
+    public function render(): View
     {
         return view('components.last-articles');
     }

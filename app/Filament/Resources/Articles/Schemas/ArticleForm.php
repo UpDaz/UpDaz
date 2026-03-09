@@ -3,12 +3,9 @@
 namespace App\Filament\Resources\Articles\Schemas;
 
 use Filament\Forms\Components\DatePicker;
-use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\MarkdownEditor;
-use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Utilities\Get;
 use Filament\Schemas\Components\Utilities\Set;
@@ -28,7 +25,7 @@ class ArticleForm
                     ->live(true)
                     ->afterStateUpdated(
                         function (Get $get, Set $set, ?string $operation, ?string $old, ?string $state) {
-                            if ($operation == 'create') {
+                            if ($operation === 'create') {
                                 $set('slug', Str::slug($state));
                             }
                         }

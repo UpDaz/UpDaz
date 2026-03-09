@@ -2,35 +2,16 @@
 
 namespace App\View\Components;
 
+use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
 class Breadcrumb extends Component
 {
-    /**
-     * The additional links.
-     *
-     * @var array
-     */
-
-    public $links = [];
-
-    /**
-     * Create a new component instance.
-     *
-     * @param  array  $links
-     * @return void
-     */
-    public function __construct($links)
+    public function __construct(public array $links = [])
     {
-        $this->links = $links;
     }
 
-    /**
-     * Get the view / contents that represent the component.
-     *
-     * @return \Illuminate\Contracts\View\View|\Closure|string
-     */
-    public function render()
+    public function render(): View
     {
         return view('components.breadcrumb');
     }

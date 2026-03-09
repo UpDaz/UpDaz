@@ -8,6 +8,7 @@ This file contains Laravel and PHP coding standards optimized for AI code assist
 
 ## PHP Standards
 
+- use the ./phpcs.xml as base rules file
 - Follow PSR-1, PSR-2, and PSR-12
 - Use camelCase for non-public-facing strings
 - Use short nullable notation: `?string` not `string|null`

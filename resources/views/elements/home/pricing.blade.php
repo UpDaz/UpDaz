@@ -4,7 +4,7 @@
         <div class="grid md:grid-cols-3">
             <x-price>
                 <x-slot:title>
-                    <h3 class="text-white text-md title-font">Site vitrine</h3>
+                    <h3 class="text-white text-md font-text font-normal">Site vitrine</h3>
                     <h4 class="pb-4 mb-4 text-4xl leading-none text-yellow">
                         <span>CMS</span>
                     </h4>
@@ -26,7 +26,7 @@
             <div class="relative">
                 <x-price>
                     <x-slot:title>
-                        <h3 class="text-white text-md title-font">Application web</h3>
+                        <h3 class="text-white text-md font-text font-normal">Application web</h3>
                         <h4 class="pb-4 mb-4 text-4xl leading-none text-yellow">
                             <span>sur-mesure</span>
                         </h4>
@@ -57,7 +57,7 @@
 
             <x-price>
                 <x-slot:title>
-                    <h3 class="mb-2 text-white text-md title-font">Site e-commerce</h3>
+                    <h3 class="mb-2 text-white font-text font-normal">Site e-commerce</h3>
                     <h4 class="pb-4 mb-4 text-4xl leading-none text-yellow">
                         <span>boutique en ligne</span>
                     </h4>

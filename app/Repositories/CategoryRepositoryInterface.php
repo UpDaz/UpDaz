@@ -11,5 +11,5 @@ interface CategoryRepositoryInterface
 
     public function actives(): Collection;
 
-    public function getBySlug($slug): ?Category;
+    public function getBySlug(string $slug): ?Category;
 }

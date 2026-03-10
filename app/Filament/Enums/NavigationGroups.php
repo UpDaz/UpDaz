@@ -4,5 +4,5 @@ namespace App\Filament\Enums;
 
 enum NavigationGroups: string
 {
-    case BLOG = 'blog';
+    case Blog = 'blog';
 }

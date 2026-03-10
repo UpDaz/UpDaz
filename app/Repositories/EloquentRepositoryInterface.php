@@ -5,14 +5,9 @@ namespace App\Repositories;
 use Illuminate\Database\Eloquent\Model;
 
 /**
-* Interface EloquentRepositoryInterface
-* @package App\Repositories
-*/
+ * Interface EloquentRepositoryInterface
+ */
 interface EloquentRepositoryInterface
 {
-   /**
-    * @param $id
-    * @return Model
-    */
-    public function find($id): ?Model;
+    public function find(int|string $id): ?Model;
 }

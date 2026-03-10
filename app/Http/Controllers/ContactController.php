@@ -3,13 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactRequest;
-use Illuminate\Support\Facades\Mail;
 use App\Mail\Contact;
-use App\Mail\ContactConfirmation;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
-    public function send(ContactRequest $request)
+    public function send(ContactRequest $request): \Illuminate\Http\JsonResponse
     {
         $data = $request->validated();
         Mail::to(config('custom.email.contact'))
@@ -22,6 +21,7 @@ class ContactController extends Controller
                     $data['message']
                 )
             );
+
         return response()->json();
     }
 }

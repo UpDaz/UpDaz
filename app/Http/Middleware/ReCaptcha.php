@@ -11,17 +11,17 @@ class ReCaptcha
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
-    public function handle(Request $request, Closure $next)
+    public function handle(Request $request, Closure $next): mixed
     {
         if ($request->method() === 'POST' && $request->has('recaptcha-response')) {
-            if (!$this->verifyToken($request->get('recaptcha-response'))) {
+            if (! $this->verifyToken($request->get('recaptcha-response'))) {
                 abort(500);
             }
         }
+
         return $next($request);
     }
 
@@ -36,6 +36,6 @@ class ReCaptcha
             ]
         );
 
-        return $response->json()['success'];
+        return $response->json()['success'] ?? false;
     }
 }

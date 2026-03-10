@@ -3,35 +3,34 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\ArticleRepositoryInterface;
-use Illuminate\Http\Request;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 
 class ArticlesController extends Controller
 {
-    protected $articleRepository;
-
-    public function __construct(ArticleRepositoryInterface $articleRepository)
+    public function __construct(private ArticleRepositoryInterface $articleRepository)
     {
-        $this->articleRepository = $articleRepository;
     }
 
-    public function index()
+    public function index(): View
     {
         $articles = $this->articleRepository->published();
+
         return view('articles.index', [
             'articles' => $articles,
         ]);
     }
 
-    public function show($slugCategory, $slug)
+    public function show(string $slugCategory, string $slug): View|RedirectResponse
     {
         $article = $this->articleRepository->getByCategorySlugAndSlug($slugCategory, $slug);
 
-        if ($article && $article->can_be_read) {
-            return view('articles.show', [
-                'article' => $article,
-            ]);
-        } else {
+        if (! $article || ! $article->can_be_read) {
             return redirect()->route('articles');
         }
+
+        return view('articles.show', [
+            'article' => $article,
+        ]);
     }
 }

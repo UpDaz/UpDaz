@@ -5,7 +5,6 @@ namespace App\Filament\Resources\Articles\Tables;
 use App\Models\Article;
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
-use Filament\Actions\BulkAction;
 use Filament\Actions\EditAction;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\IconColumn;
@@ -17,6 +16,7 @@ class ArticlesTable
     public static function configure(Table $table): Table
     {
         return $table
+            ->modifyQueryUsing(fn ($query) => $query->with('category'))
             ->defaultSort('published_at', 'desc')
             ->columns([
                 TextColumn::make('title')
@@ -48,11 +48,11 @@ class ArticlesTable
                     Action::make('Voir en ligne')
                         ->icon('heroicon-o-eye')
                         ->url(fn (Article $article): string => route('article', [
-                                'categorySlug' => $article->category->slug,
-                                'slug' => $article->slug
-                            ]))
+                            'categorySlug' => $article->category->slug,
+                            'slug' => $article->slug,
+                        ]))
                         ->openUrlInNewTab(),
-                ])
+                ]),
             ]);
     }
 }

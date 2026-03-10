@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Category extends Model
 {
@@ -16,7 +16,7 @@ class Category extends Model
         'slug',
         'catch_phrase',
         'meta-title',
-        'meta-description'
+        'meta-description',
     ];
 
     /**
@@ -29,16 +29,13 @@ class Category extends Model
         ];
     }
 
-    public function articles()
+    public function articles(): HasMany
     {
         return $this->hasMany(Article::class)
-                    ->where('is_published', true)
-                    ->where('published_at', '<=', date('Y-m-d Y:m:s'));
+            ->where('is_published', true)
+            ->where('published_at', '<=', date('Y-m-d H:i:s'));
     }
 
-    /**
-     * @return bool
-     */
     protected function getHasArticlesAttribute(): bool
     {
         return $this->articles->isNotEmpty();

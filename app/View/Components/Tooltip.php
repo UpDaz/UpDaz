@@ -2,29 +2,18 @@
 
 namespace App\View\Components;
 
+use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
 class Tooltip extends Component
 {
-    public $color;
-    public $displayIcon;
-    /**
-     * Create a new component instance.
-     *
-     * @return void
-     */
-    public function __construct($color = "#000000", $displayIcon = true)
-    {
-        $this->color = $color;
-        $this->displayIcon = $displayIcon;
+    public function __construct(
+        public string $color = '#000000',
+        public bool $displayIcon = true,
+    ) {
     }
 
-    /**
-     * Get the view / contents that represent the component.
-     *
-     * @return \Illuminate\Contracts\View\View|\Closure|string
-     */
-    public function render()
+    public function render(): View
     {
         return view('components.tooltip');
     }

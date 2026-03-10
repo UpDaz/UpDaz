@@ -3,7 +3,7 @@
       <div class="grid items-start justify-start gap-8 md:grid-cols-2 md:gap-16">
         <div class="flex flex-col gap-4 md:gap-8">
           <div class="flex items-center justify-start gap-8">
-            <div class="w-20 sm:w-16">
+            <div class="w-18 md:w-20">
               @include('elements.icon.discussion-question')
             </div>
             <h2 class="text-3xl sm:text-4xl">Vous avez un projet ? Une question ?</h2>

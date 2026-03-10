@@ -1,11 +1,11 @@
 <section id="articles" class="pt-24 -mt-24">
     <div class="container mx-auto">
         <div class="flex flex-col w-full max-w-xl gap-8 mx-auto mb-8 md:gap-16 md:mb-16">
-            <div class="flex flex-col-reverse items-center justify-center gap-8 md:flex-row">
-                <h2 class="text-3xl text-center sm:text-4xl">Questions fréquentes</h2>
-                <div class="w-16">
+            <div class="flex flex-col items-center justify-center gap-8 md:flex-row">
+                <div class="w-18 md:w-12">
                     @include('elements.icon.question-mark')
                 </div>
+                <h2 class="text-3xl text-center sm:text-4xl">Questions fréquentes</h2>
             </div>
             <div>
                 <x-accordion.item

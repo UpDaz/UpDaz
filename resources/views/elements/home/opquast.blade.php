@@ -3,27 +3,27 @@
         <div class="flex flex-col-reverse gap-16 sm:gap-0 sm:flex-row ">
             <div
                 class="flex flex-col items-start justify-start gap-8 border-gray sm:w-3/4 sm:pr-8 sm:py-8 md:pr-16 md:py-16 sm:border-r sm:border-t-0 sm:text-left">
-                <div class="flex flex-row-reverse items-center gap-8 sm:flex-row">
-                    <h2 class="text-3xl sm:text-4xl">
+                <div class="flex flex-col-reverse justify-center items-center gap-8 lg:flex-row">
+                    <h2 class="text-3xl sm:text-4xl text-center">
                         Développeur certifié <span class="uppercase text-yellow">Opquast</span>
                     </h2>
-                    <div class="w-24 sm:w-16">
+                    <div class="w-18 md:w-12">
                         @include('elements.icon.check-list')
                     </div>
                 </div>
                 <p class="leading-relaxed text-md">
-                    <a href="https://www.opquast.com/" title="Opquast site" target="_blank" class="underline">Opquast</a> est un programme de certification pour les
+                    <a href="https://www.opquast.com/" title="Opquast site" target="_blank" class="underline text-yellow">Opquast</a> est un programme de certification pour les
                     professionnels du web,
                     conçu pour évaluer les compétences et les connaissances en matière d'<b>optimisation et de qualité
                         de
                         site web</b>.
                     <br />
-                    La certification repose sur un ensemble de <b>bonnes pratiques</b> pour le développement de sites
+                    La certification repose sur un ensemble de <b class="text-yellow">bonnes pratiques</b> pour le développement de sites
                     web,
-                    connues sous le nom de "Référentiel de qualité"" et couvre des thèmes tels que l'accessibilité, les
+                    connues sous le nom de <b class="text-yellow">Référentiel de qualité</b> et couvre des thèmes tels que l'accessibilité, les
                     performances, le SEO et l'expérience utilisateur.
                     <br /><br />
-                    Les <b>240 règles du référentiel</b> Opquast se veulent vérifiables, universelles et réalistes afin
+                    Les <b class="text-yellow">240 règles du référentiel</b> Opquast se veulent vérifiables, universelles et réalistes afin
                     de
                     pouvoir être appliquées dans un maximum de contextes utilisateurs. Ce référentiel est mis à jour
                     tous
@@ -48,10 +48,10 @@
                     et à son adaptation à chaque projet, l'amélioration de la qualité de votre projet s'effectue tout au
                     long du cycle de vie et à chaque étape pour un résultat optimisé et cohérent.
                     <br /><br />
-                    L'obtention de la certification "<b>Maitrise de la qualité en projet web</b>" démontre une approche
+                    L'obtention de la certification "<b class="text-yellow">Maitrise de la qualité en projet web</b>" démontre une approche
                     transversale dans la gestion de projet et dans l'accompagnement.
                     <br>
-                    Le niveau "<b>Avancé</b>" correspond à d'excellentes connaissances des bonnes pratiques qualité Web
+                    Le niveau "<b class="text-yellow">Avancé</b>" correspond à d'excellentes connaissances des bonnes pratiques qualité Web
                     et
                     du vocabulaire associé ainsi que des compétences réelles et appréciables pour participer à des
                     projets

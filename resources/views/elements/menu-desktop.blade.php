@@ -1,4 +1,4 @@
-<div class="hidden md:block">
+<div class="hidden lg:block">
     <ul
         class="flex flex-col justify-around mt-24 text-lg text-center md:mt-0 h-2/3 md:flex-row md:space-x-4 lg:space-x-8 md:text-sm md:font-medium md:text-left">
         <li>

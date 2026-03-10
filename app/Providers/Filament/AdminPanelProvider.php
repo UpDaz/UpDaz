@@ -58,8 +58,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->navigationGroups([
             NavigationGroup::make('Blog')
-                ->label('Blog')
-                ->icon('heroicon-o-pencil-square'),
+                ->label('Blog'),
             ])
             ->favicon(asset('img/favicon.png'))
             ->brandLogo(asset('img/logo-blue.png'));

@@ -26,3 +26,6 @@ production.makefile
 public/build*
 storage/debugbar/*
 yarn-error.log
+.mcp.json
+.claude/
+CLAUDE.md

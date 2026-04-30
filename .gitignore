@@ -29,3 +29,4 @@ yarn-error.log
 .mcp.json
 .claude/
 CLAUDE.md
+graphify-out/*

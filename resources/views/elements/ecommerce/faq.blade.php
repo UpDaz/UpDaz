@@ -1,6 +1,6 @@
 <section id="articles" class="pt-24 -mt-24">
     <div class="container mx-auto">
-        <div class="flex flex-col w-full max-w-xl gap-8 mx-auto mb-8 md:gap-16 md:mb-16">
+        <div class="flex flex-col w-full max-w-4xl gap-8 mx-auto mb-8 md:gap-16 md:mb-16">
             <div class="flex flex-col-reverse items-center justify-center gap-8 md:flex-row">
                 <h2 class="text-3xl text-center sm:text-4xl">Questions fréquentes</h2>
                 <div class="w-16">

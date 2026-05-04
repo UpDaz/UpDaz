@@ -1,6 +1,6 @@
 <section id="competences" class="pt-24 -mt-24">
     <div class="container flex flex-col gap-8 mx-auto md:gap-16">
-        <h2 class="text-3xl text-center sm:text-4xl">Mes compétences pour votre projet</h2>
+        <h2 class="text-3xl text-center sm:text-4xl">Une maitrise technique <span class="text-yellow">de A à Z</span></h2>
         <div class="grid grid-cols-1 gap-16 md:gap-x-8 md:gap-y-16 md:grid-cols-3">
             <x-skills.box>
                 <x-slot:icon>

@@ -1,10 +1,10 @@
 <section id="offres" class="pt-24 -mt-24">
-    <div class="container flex flex-col gap-8 mx-auto md:gap-16">
-        <h2 class="w-full mx-auto text-3xl text-center sm:text-4xl">À chaque besoin son offre</h2>
+    <div class="container !px-0 flex flex-col gap-8 mx-auto md:gap-16">
+        <h2 class="w-full mx-auto text-3xl text-center sm:text-4xl">À chaque projet son offre adaptée<br/>et personnalisée</h2>
         <div class="grid md:grid-cols-3">
             <x-price>
                 <x-slot:title>
-                    <h3 class="text-white text-md font-text font-normal">Site vitrine</h3>
+                    <h3 class="text-white text-md font-text font-normal">Site web</h3>
                     <h4 class="pb-4 mb-4 text-4xl leading-none text-yellow">
                         <span>CMS</span>
                     </h4>
@@ -57,17 +57,17 @@
 
             <x-price>
                 <x-slot:title>
-                    <h3 class="mb-2 text-white font-text font-normal">Site e-commerce</h3>
+                    <h3 class="text-white font-text font-normal">Site</h3>
                     <h4 class="pb-4 mb-4 text-4xl leading-none text-yellow">
-                        <span>boutique en ligne</span>
+                        <span>e-commerce</span>
                     </h4>
                 </x-slot:title>
                 <div class="flex flex-col gap-2">
-                    <x-skills.item text="Application sur-mesure e-commerce grace à l'extension Lunar" />
-                    <x-skills.item text="Aucun frais de transaction sur les ventes" />
+                    <x-skills.item text="Application sur-mesure e-commerce grace à l'extension LunarPHP" />
                     <x-skills.item text="Gestion des produits et des commandes via un panneau d'administration" />
                     <x-skills.item text="Tunnel de commande optimisé pour convertir le visiteur en client" />
-                    <x-skills.item text="Interface d'administration adaptable" />
+                    <x-skills.item text="Aucun frais de transaction sur les ventes" />
+                    <x-skills.item text="Interface d'administration personnalisable" />
                 </div>
                 <div class="mt-8">
                     <x-button.secondary href="{{ route('ecommerce') }}" title="Lien page Laravel section Lunar">

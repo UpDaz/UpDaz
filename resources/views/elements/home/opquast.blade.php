@@ -11,52 +11,70 @@
                         @include('elements.icon.check-list')
                     </div>
                 </div>
-                <p class="leading-relaxed text-md">
-                    <a href="https://www.opquast.com/" title="Opquast site" target="_blank" class="underline text-yellow">Opquast</a> est un programme de certification pour les
-                    professionnels du web,
-                    conçu pour évaluer les compétences et les connaissances en matière d'<b>optimisation et de qualité
-                        de
-                        site web</b>.
-                    <br />
-                    La certification repose sur un ensemble de <b class="text-yellow">bonnes pratiques</b> pour le développement de sites
-                    web,
-                    connues sous le nom de <b class="text-yellow">Référentiel de qualité</b> et couvre des thèmes tels que l'accessibilité, les
-                    performances, le SEO et l'expérience utilisateur.
-                    <br /><br />
-                    Les <b class="text-yellow">240 règles du référentiel</b> Opquast se veulent vérifiables, universelles et réalistes afin
-                    de
-                    pouvoir être appliquées dans un maximum de contextes utilisateurs. Ce référentiel est mis à jour
-                    tous
-                    les 3 ans via un processus reposant sur une communauté active de professionnels afin de correspondre
-                    au
-                    mieux aux évolutions des usages du web.
-                    <br>
-                    Grâce à l'appropriation du modèle
-                    <x-tooltip color="#001A9E">
-                        <x-slot:message>
-                            <span class="block p-6">
-                                Modèle conçu comme base pour la gestion de la qualité web par E.Sloïm et E.Gateau en
-                                2001
-                                prenant en compte la Visibilité, la Perception, la Technique, les Contenus et les
-                                Services
-                            </span>
-                        </x-slot>
-                        <x-slot:content>
-                            <i>VPTCS</i>
-                        </x-slot>
-                    </x-tooltip>
-                    et à son adaptation à chaque projet, l'amélioration de la qualité de votre projet s'effectue tout au
-                    long du cycle de vie et à chaque étape pour un résultat optimisé et cohérent.
-                    <br /><br />
-                    L'obtention de la certification "<b class="text-yellow">Maitrise de la qualité en projet web</b>" démontre une approche
-                    transversale dans la gestion de projet et dans l'accompagnement.
-                    <br>
-                    Le niveau "<b class="text-yellow">Avancé</b>" correspond à d'excellentes connaissances des bonnes pratiques qualité Web
-                    et
-                    du vocabulaire associé ainsi que des compétences réelles et appréciables pour participer à des
-                    projets
-                    avec d’autres professionnels.
-                </p>
+                <div x-data="{ expanded: false }">
+                    <p class="leading-relaxed text-md">
+                        <a href="https://www.opquast.com/" title="Opquast site" target="_blank" class="underline text-yellow">Opquast</a> est un programme de certification pour les
+                        professionnels du web,
+                        conçu pour évaluer les compétences et les connaissances en matière d’<b>optimisation et de qualité
+                            de
+                            site web</b>.
+                        <br />
+                        La certification repose sur un ensemble de <b class="text-yellow">bonnes pratiques</b> pour le développement de sites
+                        web,
+                        connues sous le nom de <b class="text-yellow">Référentiel de qualité</b> et couvre des thèmes tels que l’accessibilité, les
+                        performances, le SEO et l’expérience utilisateur.
+                        <span
+                            x-show="expanded"
+                            x-transition:enter="transition-all duration-300 ease-out"
+                            x-transition:enter-start="opacity-0"
+                            x-transition:enter-end="opacity-100"
+                            x-transition:leave="transition-all duration-200 ease-in"
+                            x-transition:leave-start="opacity-100"
+                            x-transition:leave-end="opacity-0"
+                            style="display: none;">
+                            <br /><br />
+                            Les <b class="text-yellow">240 règles du référentiel</b> Opquast se veulent vérifiables, universelles et réalistes afin
+                            de
+                            pouvoir être appliquées dans un maximum de contextes utilisateurs. Ce référentiel est mis à jour
+                            tous
+                            les 3 ans via un processus reposant sur une communauté active de professionnels afin de correspondre
+                            au
+                            mieux aux évolutions des usages du web.
+                            <br>
+                            Grâce à l’appropriation du modèle
+                            <x-tooltip color="#001A9E">
+                                <x-slot:message>
+                                    <span class="block p-6">
+                                        Modèle conçu comme base pour la gestion de la qualité web par E.Sloïm et E.Gateau en
+                                        2001
+                                        prenant en compte la Visibilité, la Perception, la Technique, les Contenus et les
+                                        Services
+                                    </span>
+                                </x-slot>
+                                <x-slot:content>
+                                    <i>VPTCS</i>
+                                </x-slot>
+                            </x-tooltip>
+                            et à son adaptation à chaque projet, l’amélioration de la qualité de votre projet s’effectue tout au
+                            long du cycle de vie et à chaque étape pour un résultat optimisé et cohérent.
+                            <br /><br />
+                            L’obtention de la certification "<b class="text-yellow">Maitrise de la qualité en projet web</b>" démontre une approche
+                            transversale dans la gestion de projet et dans l’accompagnement.
+                            <br>
+                            Le niveau "<b class="text-yellow">Avancé</b>" correspond à d’excellentes connaissances des bonnes pratiques qualité Web
+                            et
+                            du vocabulaire associé ainsi que des compétences réelles et appréciables pour participer à des
+                            projets
+                            avec d’autres professionnels.
+                        </span>
+                    </p>
+                    <button
+                        @click="expanded = !expanded"
+                        class="mt-2 text-sm underline underline-offset-4 cursor-pointer"
+                        :aria-expanded="expanded">
+                        <span x-text="expanded ? 'Voir moins ↑' : 'Lire plus →'">Voir plus →</span>
+                    </button>
+                </div>
                 <div class="flex justify-center sm:justify-start *:!w-auto">
                     <x-button.secondary href="https://directory.opquast.com/fr/certificat/PUGT87/" target="_blank"
                         title="Vous avez des questions ?">

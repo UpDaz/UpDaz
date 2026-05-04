@@ -1,6 +1,6 @@
 <section id="accompagnement" class="pt-24 -mt-24">
     <div class="container flex flex-col gap-8 mx-auto md:gap-16">
-        <h2 class="text-3xl text-center sm:text-4xl">Mon accompagnement,<br/>pour votre site sur-mesure</h2>
+        <h2 class="text-3xl text-center sm:text-4xl">Mon accompagnement,<br/>pour votre application web sur-mesure</h2>
         <p class="text-center">Laravel est un outils puissant mais obtenir un résultat professionnel demande méthode et expertise.<br/>Chez UpDaz, je vous aide à :</p>
         <div class="grid grid-cols-1 gap-16 md:gap-x-8 md:gap-y-16 md:grid-cols-2">
 

@@ -4,7 +4,7 @@
             <div class="w-18 md:w-12">
                 @include('elements.icon.write')
             </div>
-            <h2 class="text-3xl text-center sm:text-4xl">Articles</h2>
+            <h2 class="text-3xl text-center sm:text-4xl">Blog</h2>
         </div>
         <x-last-articles />
         <div class="text-center *:!w-auto *:inline-block">

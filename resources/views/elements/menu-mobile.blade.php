@@ -25,13 +25,13 @@
                 <li>
                     <x-button.secondary href="{{ route('home') }}#presentation"
                         @click.prevent="scrollToTarget('#presentation')" title="Présentation">
-                        Présentation
+                        À propos
                     </x-button.secondary>
                 </li>
                 <li>
                     <x-button.secondary href="{{ route('home') }}#competences"
                         @click.prevent="scrollToTarget('#competences')" title="Mes competences">
-                        Compétences
+                        Savoir-faire
                     </x-button.secondary>
                 </li>
                 <li>
@@ -41,7 +41,7 @@
                 </li>
                 <li>
                     <x-button.secondary href="{{ route('laravel') }}" title="Sur-mesure">
-                        Sur-mesure
+                        Application web
                     </x-button.secondary>
                 </li>
                 <li>
@@ -56,12 +56,12 @@
                 </li>
                 <li>
                     <x-button.secondary href="{{ route('articles') }}" title="Actualités / articles">
-                        Articles
+                        Blog
                     </x-button.secondary>
                 </li>
                 <li>
                     <x-button.primary href="{{ route('home') }}#contact" title="Me contacter">
-                        Contact
+                        J'ai un projet web
                     </x-button.primary>
                 </li>
                 <li>

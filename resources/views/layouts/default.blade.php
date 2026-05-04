@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>@yield('title', 'Création de site sur-mesure et CMS à Bordeaux - UpDaz')</title>
-    <meta name="description" content="@yield('meta-description', 'Création de site vitrine Webflow et Wordpress, sur-mesure Laravel et e-commerce Prestashop. Accompagnement, développement et conseils pour projet web.')" />
+    <title>@yield('title', 'Développement et maintenant d\'application web Laravel et CMS Webflow à Bordeaux - UpDaz')</title>
+    <meta name="description" content="@yield('meta-description', 'Développement d\'applications web métier et e-commerce avec Laravel et de sites web CMS avec Webflow. Accompagnement, conseils, développement et maintenance pour vos projet web.')" />
     <meta name="keywords"
-        content="Développeur web, Bordeaux, freelance, full-stach, site internet, Laravel, Prestashop, CMS, Webflow, accompagnement, HTML, CSS, JavaScript, SEO, conseils, digitalisation, web" />
+        content="Développeur web, Bordeaux, application web, freelance, full-stack, site internet, Laravel, CMS, Webflow, accompagnement, HTML, CSS, JavaScript, SEO, conseils, digitalisation, web" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index,follow" />
     <meta name="author" content="Matthieu Dazord" />
@@ -27,7 +27,9 @@
         <div class="absolute top-0 right-0 w-2 h-full md:w-4 background"></div>
         <div class="min-h-[90vh]">
             @include('elements.menu')
-            @yield('content')
+            <div class="md:-mt-24 md:pt-24">
+                @yield('content')
+            </div>
         </div>
     </div>
     @include('elements.footer')

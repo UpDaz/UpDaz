@@ -6,7 +6,7 @@
                 title="Présentation"
                 class="block py-4 pl-3 pr-4 text-white bg-blue-700 md:py-2 md:bg-transparent md:p-0 dark:text-white hover:underline"
                 aria-current="page">
-                Présentation
+                À propos
             </a>
         </li>
         <li>
@@ -14,22 +14,14 @@
                 title="Mes competences"
                 class="block py-4 pl-3 pr-4 text-white bg-blue-700 md:py-2 md:bg-transparent md:p-0 dark:text-white hover:underline"
                 aria-current="page">
-                Compétences
-            </a>
-        </li>
-        <li>
-            <a href="{{ route('home') }}#references"
-                title="Mes Références"
-                class="block py-4 pl-3 pr-4 text-white bg-blue-700 md:py-2 md:bg-transparent md:p-0 dark:text-white hover:underline"
-                aria-current="page">
-                Références
+                Savoir-faire
             </a>
         </li>
         <li class="relative">
             <a href="{{ route('laravel') }}" title="Sur-mesure"
                 class="block py-4 pl-3 pr-4 text-white md:py-2 md:bg-transparent md:p-0 hover:underline"
                 aria-current="page">
-                Sur-mesure
+                Application web
             </a>
         </li>
         <li class="relative">
@@ -50,29 +42,13 @@
             <a href="{{ route('articles') }}" title="Actualités"
                 class="block py-4 pl-3 pr-4 text-white md:py-2 md:bg-transparent md:p-0 hover:underline"
                 aria-current="page">
-                Articles
+                Blog
             </a>
         </li>
         <li>
             <x-button.primary href="{{ route('home') }}#contact" :small="true" title="Me Contacter">
-                Contact
+                J'ai un projet web
             </x-button.primary>
-        </li>
-        <li class="hidden md:block">
-            <a href="https://fr.linkedin.com/in/matthieu-dazord" target="_blank" title="Linkedin"
-                class="block py-4 pl-3 pr-4 text-white bg-blue-700 md:py-2 md:bg-transparent md:p-0 dark:text-white hover:underline"
-                aria-current="page">
-                <img src="{{ asset('img/logos/white/linkedin.svg') }}" width="20" height="20" alt="Logo Linkedin"
-                    title="Linkedin" class="mx-auto">
-            </a>
-        </li>
-        <li class="hidden md:block">
-            <a href="https://github.com/UpDaz" target="_blank" title="Github"
-                class="block py-4 pl-3 pr-4 text-white bg-blue-700 md:py-2 md:bg-transparent md:p-0 dark:text-white hover:underline"
-                aria-current="page">
-                <img src="{{ asset('img/logos/white/github.svg') }}" width="20" height="20" alt="Logo Github"
-                    title="Github" class="mx-auto">
-            </a>
         </li>
     </ul>
 </div>

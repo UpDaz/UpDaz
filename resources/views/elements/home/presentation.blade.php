@@ -34,7 +34,7 @@
                     <p class="text-3xl font-bold font-title md:text-4xl text-center lg:text-left">Vous avez frappé à la bonne porte</p>
                 </div>
                 <p class="my-4 leading-relaxed text-md">
-                    Je suis <b class="text-yellow">Matthieu</b>, <b class="text-yellow">développeur d'application web</b> et de <b class="text-yellow">site CMS</b> depuis 10 ans sur la région
+                    Je suis <b class="text-yellow">Matthieu</b>, développeur d'<b class="text-yellow">applications web</b> et de <b class="text-yellow">sites CMS</b> depuis 10 ans sur la région
                     bordelaise.<br /><br />
                     Après plusieurs années en agence de communication et dans des entreprises spécialisées, j'ai acquis
                     un

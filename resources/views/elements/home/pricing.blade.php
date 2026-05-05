@@ -1,6 +1,6 @@
 <section id="offres" class="pt-24 -mt-24">
     <div class="container !px-0 flex flex-col gap-8 mx-auto md:gap-16">
-        <h2 class="w-full mx-auto text-3xl text-center sm:text-4xl">À chaque projet son offre adaptée<br/>et personnalisée</h2>
+        <h2 class="w-full mx-auto text-3xl text-center sm:text-4xl">À chaque projet son offre adaptée</h2>
         <div class="grid md:grid-cols-3">
             <x-price>
                 <x-slot:title>

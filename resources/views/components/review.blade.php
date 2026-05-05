@@ -41,9 +41,9 @@
             </div>
         </div>
         @if ($logoPath)
-            <img src="{{ asset($logoPath) }}" alt="{{ $source }}" class="h-4 w-auto shrink-0 opacity-60" loading="lazy" />
+            <img src="{{ asset($logoPath) }}" alt="{{ $source }}" class="h-4 w-auto shrink-0" loading="lazy" />
         @else
-            <span class="text-xs uppercase tracking-widest text-gray opacity-60">{{ $source }}</span>
+            <span class="text-xs uppercase tracking-widest text-gray">{{ $source }}</span>
         @endif
     </div>
     <p class="text-sm leading-relaxed text-white before:content-['«\00a0'] after:content-['\00a0»'] italic">{{ $slot }}</p>

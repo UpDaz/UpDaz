@@ -4,11 +4,11 @@
             <div class="flex flex-col gap-12 lg:flex-grow md:w-1/2 md:items-start md:text-left">
                 <div class="flex items-center gap-8 md:block">
                     <h1 class="text-5xl font-bold text-white font-title txt-rotate">
-                        Création de site sur-mesure à Bordeaux
+                        Création d'applications web à Bordeaux
                     </h1>
                 </div>
                 <p class="font-text">
-                    UpDaz vous accompagne pour concevoir un site sur-mesure, adapté à vos besoins et à vos contraintes
+                    UpDaz vous accompagne pour concevoir votre application web, adapté à vos besoins et à vos contraintes
                     métier, <span class="text-yellow">performant, durable et sécurisé</span>.
                 </p>
                 <div class="grid *:w-full gap-4 lg:grid-cols-2 w-full">
@@ -23,7 +23,7 @@
                     <div class="lg:col-span-2">
                         <x-button.primary href="#contact" title="Laravel : formulaire de contact"
                             @click.prevent="scrollToTarget('#contact')" classes="lg:col-span-2 xl:col-span-3">
-                            Discutons de votre projet sur-mesure
+                            Discutons de votre application
                             </x-button-primary>
                     </div>
                 </div>

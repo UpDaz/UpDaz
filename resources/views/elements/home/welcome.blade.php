@@ -7,7 +7,7 @@
                         Artisan de votre<br />application web
                     </h1>
                 </div>
-                <h2 class="font-text font-normal text-lg">UpDaz développe et entretient votre <span
+                <h2 class="font-text font-light text-lg">UpDaz développe et entretient votre <span
                         class="text-yellow">application
                         web</span>, <span class="text-yellow text-nowrap ">e-commerce</span> et
                     <span class="text-yellow">site web CMS</span> à Bordeaux depuis 10 ans.

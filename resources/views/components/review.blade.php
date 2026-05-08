@@ -46,7 +46,7 @@
             <span class="text-xs uppercase tracking-widest text-gray">{{ $source }}</span>
         @endif
     </div>
-    <p class="text-sm leading-relaxed text-white before:content-['«\00a0'] after:content-['\00a0»'] italic">{{ $slot }}</p>
+    <p class="text-white before:content-['«\00a0'] after:content-['\00a0»'] italic">{{ $slot }}</p>
 
     <div data-element="line-horizontal" class="absolute h-[1px] left-1/2 w-[110%] -translate-x-1/2 top-0 bg-gradient-to-r from-transparent via-gray to-transparent"></div>
     <div data-element="line-horizontal" class="absolute h-[1px] left-1/2 w-[110%] -translate-x-1/2 bottom-0 bg-gradient-to-r from-transparent via-gray to-transparent"></div>

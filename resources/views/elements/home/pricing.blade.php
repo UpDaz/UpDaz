@@ -4,7 +4,7 @@
         <div class="grid md:grid-cols-3">
             <x-price>
                 <x-slot:title>
-                    <h3 class="text-white text-md font-text font-normal">Site web</h3>
+                    <h3 class="text-white text-md font-text font-light">Site web</h3>
                     <h4 class="pb-4 mb-4 text-4xl leading-none text-yellow">
                         <span>CMS</span>
                     </h4>
@@ -26,7 +26,7 @@
             <div class="relative">
                 <x-price>
                     <x-slot:title>
-                        <h3 class="text-white text-md font-text font-normal">Application web</h3>
+                        <h3 class="text-white text-md font-text font-light">Application web</h3>
                         <h4 class="pb-4 mb-4 text-4xl leading-none text-yellow">
                             <span>sur-mesure</span>
                         </h4>
@@ -41,7 +41,7 @@
                     </div>
                     <div class="mt-8">
                         <x-button.primary href="{{ route('laravel') }}" title="Lien page Laravel">
-                            En savoir plus<br />sur le sur-mesure
+                            Découvrir
                         </x-button.primary>
                     </div>
                 </x-price>
@@ -57,7 +57,7 @@
 
             <x-price>
                 <x-slot:title>
-                    <h3 class="text-white font-text font-normal">Site</h3>
+                    <h3 class="text-white font-text font-light">Site</h3>
                     <h4 class="pb-4 mb-4 text-4xl leading-none text-yellow">
                         <span>e-commerce</span>
                     </h4>

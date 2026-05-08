@@ -1,13 +1,13 @@
 <div class="relative flex flex-col items-start justify-center grid-cols-3 gap-8 article">
     <div class="flex gap-8 w-full relative">
         <div class="relative col-span-1 justify-self-end">
-            <div class="text-sm flex flex-col items-end">
+            <div class="text-sm font-title flex flex-col items-end">
                 {{ $article->published_at->format('M / Y') }}
             </div>
             <div data-element="line-vertical" class="absolute w-[1px] h-[250%] -top-2 -right-4"></div>
         </div>
         <div class="relative col-span-2">
-            <a class="mb-1 text-sm text-yellow" title="Lien page catégorie article {{ $article->category->name }}"
+            <a class="mb-1 font-title text-sm text-yellow" title="Lien page catégorie article {{ $article->category->name }}"
                 href="{{ route('category', ['slug' => $article->category->slug]) }}">
                 {{ $article->category->name }}
             </a>

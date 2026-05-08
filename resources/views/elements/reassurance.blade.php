@@ -23,7 +23,7 @@
             </div>
         </div>
         {{-- <div class="flex flex-col gap-4 w-full lg:w-auto md:flex-row items-start justify-between lg:items-center"> --}}
-            <div class="flex md:flex-col gap-4 md:gap-1 items-center">
+            <div class="flex md:flex-col gap-4 md:gap-1">
                 <span class="whitespace-nowrap text-sm">Partenaires de confiance</span>
                 <div class="flex w-full gap-4 md:gap-8 items-center">
                     <a href="https://www.zaka-services.com/" target="_blank" class="flex gap-2 items-center col-span-2">

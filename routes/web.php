@@ -41,6 +41,7 @@ Route::get('/articles/prestashop', function () {
 
 Route::redirect('/prestashop', '/sur-mesure/e-commerce-bordeaux', 301);
 Route::redirect('/laravel', '/sur-mesure-bordeaux', 301);
+Route::redirect('/sur-mesure-bordeaux', 'application-web-bordeaux', 301);
 
 Route::get(
     '/',
@@ -57,7 +58,7 @@ Route::get(
 )->name('webflow');
 
 Route::get(
-    '/sur-mesure-bordeaux',
+    '/application-web-bordeaux',
     function () {
         return view('pages.laravel');
     }

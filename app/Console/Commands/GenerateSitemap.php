@@ -57,14 +57,14 @@ class GenerateSitemap extends Command
                         $url->setPriority(0.5);
                         $article = $articles->get($articleSlug);
 
-                        if ($article) {
+                        if ($article?->updated_at) {
                             $url->setLastModificationDate($article->updated_at);
                         }
                     } elseif ($categorySlug !== null) {
                         $url->setPriority(0.5);
                         $category = $categories->get($categorySlug);
 
-                        if ($category) {
+                        if ($category?->updated_at) {
                             $url->setLastModificationDate($category->updated_at);
                         }
                     } else {

@@ -4,7 +4,8 @@
 @theme {
     /* Polices */
     --font-title: "Space Mono", monospace, sans-serif;
-    --font-text: "FiraCode", monospace, sans-serif;
+    --font-button: "Space Mono", monospace, sans-serif;
+    --font-text: "Fira Sans", sans-serif;
 
     /* Couleurs (Tailwind 4 applique automatiquement les couleurs aux bg/text/border/etc.) */
     --color-blue: #2E5676;
@@ -37,9 +38,7 @@
 
     html,
     body {
-        font-family: 'FiraCode', monospace, sans-serif;
-        font-size: 0.95rem;
-        @apply text-white;
+        @apply text-white font-text font-light leading-6;
     }
 
     h1,
@@ -71,6 +70,19 @@
 a,
 button {
     cursor: pointer;
+}
+
+.btn {
+    @apply font-button w-full inline-block text-center py-3 px-6;
+    &.btn-primary {
+        @apply bg-yellow text-dark hover:bg-white border-yellow uppercase border font-semibold;
+    }
+    &.btn-secondary {
+        @apply text-white border border-blue bg-transparent hover:bg-blue;
+    }
+    &.btn-small {
+        @apply px-4 py-2 lg:text-sm;
+    }
 }
 
 hr {

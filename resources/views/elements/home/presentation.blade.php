@@ -54,7 +54,7 @@
                     </x-button.secondary>
                     <x-button.primary href="#contact" title="Vous avez des questions ?"
                         @click.prevent="scrollToTarget('#contact')">
-                        J'ai un projet web
+                        J'ai un projet
                         </x-button-primary>
                 </div>
                 </p>

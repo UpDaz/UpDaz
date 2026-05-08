@@ -47,7 +47,7 @@
         </li>
         <li>
             <x-button.primary href="{{ route('home') }}#contact" :small="true" title="Me Contacter">
-                J'ai un projet web
+                J'ai un projet
             </x-button.primary>
         </li>
     </ul>

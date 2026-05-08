@@ -61,7 +61,7 @@
                 </li>
                 <li>
                     <x-button.primary href="{{ route('home') }}#contact" title="Me contacter">
-                        J'ai un projet web
+                        J'ai un projet
                     </x-button.primary>
                 </li>
                 <li>

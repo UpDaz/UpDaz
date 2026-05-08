@@ -41,7 +41,7 @@
                     </div>
                     <div class="mt-8">
                         <x-button.primary href="{{ route('laravel') }}" title="Lien page Laravel">
-                            En savoir plus<br />sur le sur-mesure
+                            Découvrir
                         </x-button.primary>
                     </div>
                 </x-price>

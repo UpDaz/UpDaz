@@ -7,7 +7,7 @@
                         Artisan de votre<br />application web
                     </h1>
                 </div>
-                <h2 class="font-text font-light text-lg">UpDaz développe et entretient votre <span
+                <h2 class="font-text font-light text-lg"><b>UpDaz</b> développe et maintient votre <span
                         class="text-yellow">application
                         web</span>, <span class="text-yellow text-nowrap ">e-commerce</span> et
                     <span class="text-yellow">site web CMS</span> à Bordeaux depuis 10 ans.
@@ -20,7 +20,7 @@
                 <div class="grid *:w-full gap-4  w-full items-start">
                     <x-button.primary href="#contact" title="UpDaz : formulaire de contact"
                         @click.prevent="scrollToTarget('#contact')" classes="xl:col-span-2">
-                        Je souhaite développer un site web
+                        Je souhaite réaliser un site web
                         </x-button-primary>
                 </div>
             </div>

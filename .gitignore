@@ -5,6 +5,7 @@
 .env.backup
 .env.production
 .nvmrc
+.phpunit.cache
 .phpunit.result.cache
 /.idea
 /.vscode

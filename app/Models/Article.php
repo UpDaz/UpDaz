@@ -19,6 +19,9 @@ class Article extends Model
         'slug',
         'category_id',
         'published_at',
+        'meta_description',
+        'tags',
+        'generated_by_agent',
     ];
 
     /**
@@ -28,7 +31,10 @@ class Article extends Model
      */
     protected $casts = [
         'content' => CastMarkdown::class,
+        'is_published' => 'boolean',
         'published_at' => 'datetime',
+        'tags' => 'array',
+        'generated_by_agent' => 'boolean',
     ];
 
     public function category()
@@ -48,6 +54,6 @@ class Article extends Model
 
     public function getMetaDescriptionAttribute()
     {
-        return substr($this->catch_phrase, 0, 150);
+        return $this->attributes['meta_description'] ?? substr((string) $this->catch_phrase, 0, 150);
     }
 }

@@ -22,6 +22,7 @@ class RawArticle extends Model
         'summary',
         'keywords',
         'analyzed_at',
+        'digested_at',
     ];
 
     /**
@@ -33,6 +34,7 @@ class RawArticle extends Model
             'published_at' => 'datetime',
             'keywords' => 'array',
             'analyzed_at' => 'datetime',
+            'digested_at' => 'datetime',
         ];
     }
 

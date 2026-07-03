@@ -6,6 +6,7 @@ use App\Enums\SourceType;
 use Database\Factories\SourceFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Source extends Model
 {
@@ -28,5 +29,10 @@ class Source extends Model
             'type' => SourceType::class,
             'active' => 'boolean',
         ];
+    }
+
+    public function rawArticles(): HasMany
+    {
+        return $this->hasMany(RawArticle::class);
     }
 }

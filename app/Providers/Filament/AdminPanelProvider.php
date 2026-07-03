@@ -59,6 +59,8 @@ class AdminPanelProvider extends PanelProvider
             ->navigationGroups([
                 NavigationGroup::make('Blog')
                     ->label('Blog'),
+                NavigationGroup::make('Agent IA')
+                    ->label('Agent IA'),
             ])
             ->favicon(asset('img/favicon.png'))
             ->brandLogo(asset('img/logo-blue.png'));

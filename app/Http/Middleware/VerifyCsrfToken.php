@@ -12,6 +12,8 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
-        //
+        // Authenticated by its own Ed25519 signature check
+        // (VerifyDiscordSignature), not a session-bound CSRF token.
+        'discord/interactions',
     ];
 }

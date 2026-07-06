@@ -15,8 +15,8 @@ class Category extends Model
         'is_active',
         'slug',
         'catch_phrase',
-        'meta-title',
-        'meta-description',
+        'meta_title',
+        'meta_description',
     ];
 
     /**

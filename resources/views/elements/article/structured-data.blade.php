@@ -5,7 +5,7 @@
         "@type" => "NewsArticle",
         "headline" => "{{ $article->title }}",
         "datePublished" => "{{ $article->published_at->format('Y-m-d') }}T08:00:00+01:00",
-        "articleSection" => "{{ $article->category->name }}",
+        "articleSection" => "{{ $article->category?->name }}",
         "author" => [
             "@type" => "Organism",
             "name" => "UpDaz",

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use App\Repositories\ArticleRepositoryInterface;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
@@ -29,6 +30,19 @@ class ArticlesController extends Controller
             return redirect()->route('articles');
         }
 
+        return view('articles.show', [
+            'article' => $article,
+        ]);
+    }
+
+    /**
+     * Preview a draft article regardless of its publication status.
+     * Only reachable via a signed URL (see the `signed` middleware on
+     * the `articles.preview` route), so it grants dedicated access to
+     * reviewers without making the draft publicly reachable.
+     */
+    public function preview(Article $article): View
+    {
         return view('articles.show', [
             'article' => $article,
         ]);

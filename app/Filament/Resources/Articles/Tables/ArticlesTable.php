@@ -47,10 +47,7 @@ class ArticlesTable
                     EditAction::make(),
                     Action::make('Voir en ligne')
                         ->icon('heroicon-o-eye')
-                        ->url(fn (Article $article): string => route('article', [
-                            'categorySlug' => $article->category->slug,
-                            'slug' => $article->slug,
-                        ]))
+                        ->url(fn (Article $article): string => $article->frontendUrl())
                         ->openUrlInNewTab(),
                 ]),
             ]);

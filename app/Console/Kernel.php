@@ -10,6 +10,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule): void
     {
         $schedule->command('sitemap:generate')->daily();
+        $schedule->command('blog:generate-pipeline')->weeklyOn(Schedule::MONDAY, '09:00');
     }
 
     protected function commands(): void

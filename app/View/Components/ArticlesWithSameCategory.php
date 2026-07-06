@@ -13,11 +13,12 @@ class ArticlesWithSameCategory extends Component
 
     public function __construct(private Article $article)
     {
-        $this->articles =
-        Article::where('category_id', $article->category_id)
-            ->whereNot('id', $article->id)
-            ->orderBy('published_at', 'desc')
-            ->get();
+        $this->articles = $article->category_id === null
+            ? new Collection()
+            : Article::where('category_id', $article->category_id)
+                ->whereNot('id', $article->id)
+                ->orderBy('published_at', 'desc')
+                ->get();
     }
 
     public function render(): View

@@ -11,7 +11,7 @@
                         </span>
                         <h2 class="mb-2 text-3xl">Ces articles pourraient vous intéresser</h2>
                     </div>
-                    <div class="grid gap-8 md:grid-cols-2">
+                    <div class="grid gap-8 md:grid-cols-2 items-start">
                         @foreach ($articles as $article)
                             @include('elements.article.box')
                         @endforeach

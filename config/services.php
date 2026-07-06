@@ -33,6 +33,15 @@ return [
 
     'discord' => [
         'token' => env('DISCORD_BOT_TOKEN'),
+
+        /*
+         * From the application's "General Information" page in the
+         * Discord Developer Portal — used to verify the Ed25519
+         * signature on every request sent to the Interactions Endpoint
+         * URL. This, not a session or bot connection, is what
+         * authorizes those requests.
+         */
+        'public_key' => env('DISCORD_PUBLIC_KEY'),
     ],
 
 ];

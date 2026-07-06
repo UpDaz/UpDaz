@@ -6,15 +6,13 @@ use App\Jobs\AnalyzeAndGroupArticlesJob;
 use App\Jobs\FetchArticlesJob;
 use App\Jobs\GenerateSeoArticleJob;
 use Illuminate\Support\Facades\Bus;
-use Illuminate\Support\Facades\Process;
 use Tests\TestCase;
 
 class WeeklyBlogPipelineTest extends TestCase
 {
-    public function testDispatchesThePipelineChainAndStartsTheDiscordBotInTheBackground(): void
+    public function testDispatchesThePipelineChain(): void
     {
         Bus::fake();
-        Process::fake();
 
         $this->artisan('blog:generate-pipeline')->assertExitCode(0);
 
@@ -23,7 +21,5 @@ class WeeklyBlogPipelineTest extends TestCase
             AnalyzeAndGroupArticlesJob::class,
             GenerateSeoArticleJob::class,
         ]);
-
-        Process::assertRan(fn ($process) => $process->command === [PHP_BINARY, 'artisan', 'discord:serve']);
     }
 }

@@ -13,6 +13,7 @@ This file contains Laravel and PHP coding standards optimized for AI code assist
 - Use camelCase for non-public-facing strings
 - Use short nullable notation: `?string` not `string|null`
 - Always specify `void` return types when methods return nothing
+- Always use parentheses when instantiating a class: `new Foo()`, never `new Foo`. The phpcs.xml (PSR-12) sniffer rejects the parentheses-less form — `pint.json` sets `"new_with_parentheses": true` to keep Pint from stripping them back out (Laravel's default preset removes them otherwise).
 
 ## Class Structure
 - Use typed properties, not docblocks:

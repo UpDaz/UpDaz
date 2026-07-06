@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DiscordInteractionController;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
@@ -84,6 +85,11 @@ Route::get(
 )->name('legal-notices');
 
 Route::post('/contact', [ContactController::class, 'send'])->name('contact');
+
+Route::post(
+    '/discord/interactions',
+    [DiscordInteractionController::class, 'handle']
+)->middleware('discord.signature')->name('discord.interactions');
 
 Route::get(
     '/articles',

@@ -17,6 +17,7 @@ class RawArticle extends Model
         'title',
         'url',
         'content',
+        'image_url',
         'published_at',
         'theme',
         'summary',

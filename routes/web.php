@@ -2,10 +2,9 @@
 
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\CategoryController;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +23,7 @@ Route::get(
         return Redirect::to(
             route('article', [
                 'categorySlug' => 'e-commerce',
-                'slug' => $slug
+                'slug' => $slug,
             ]),
             301
         );
@@ -38,7 +37,6 @@ Route::get('/articles/prestashop', function () {
 /**
  * Routes
  */
-
 Route::redirect('/prestashop', '/sur-mesure/e-commerce-bordeaux', 301);
 Route::redirect('/laravel', '/sur-mesure-bordeaux', 301);
 Route::redirect('/sur-mesure-bordeaux', 'application-web-bordeaux', 301);
@@ -91,6 +89,11 @@ Route::get(
     '/articles',
     [ArticlesController::class, 'index']
 )->name('articles');
+
+Route::get(
+    '/articles/preview/{article}',
+    [ArticlesController::class, 'preview']
+)->middleware('signed')->name('articles.preview');
 
 Route::get(
     '/articles/{slug}',

@@ -3,6 +3,7 @@
 namespace Tests\Feature\Jobs;
 
 use App\Jobs\AnalyzeAndGroupArticlesJob;
+use App\Models\Category;
 use App\Models\RawArticle;
 use App\Models\Source;
 use App\Models\WeeklyDigest;
@@ -52,6 +53,8 @@ class AnalyzeAndGroupArticlesJobTest extends TestCase
 
     public function testAnalyzesUnanalyzedRawArticles(): void
     {
+        Category::factory()->create(['name' => 'IA générative', 'is_active' => true]);
+
         Prism::fake([
             $this->fakeAnalysis('IA générative', 'Résumé 1.'),
         ]);
@@ -68,6 +71,43 @@ class AnalyzeAndGroupArticlesJobTest extends TestCase
         $this->assertSame('Résumé 1.', $article->summary);
         $this->assertSame(['ia', 'llm', 'agent'], $article->keywords);
         $this->assertNotNull($article->analyzed_at);
+    }
+
+    public function testSkipsArticlesThatDoNotMatchAnyActiveCategory(): void
+    {
+        Category::factory()->create(['name' => 'Laravel', 'is_active' => true]);
+
+        Prism::fake([
+            $this->fakeAnalysis('Sujet hors périmètre', 'Résumé.'),
+        ]);
+
+        $article = RawArticle::factory()->for(Source::factory())->create([
+            'analyzed_at' => null,
+        ]);
+
+        (new AnalyzeAndGroupArticlesJob())->handle();
+
+        $article->refresh();
+
+        $this->assertNull($article->theme);
+        $this->assertNull($article->summary);
+        $this->assertNull($article->keywords);
+        $this->assertNotNull($article->analyzed_at);
+    }
+
+    public function testDoesNothingWhenNoActiveCategoryExists(): void
+    {
+        $fake = Prism::fake();
+
+        RawArticle::factory()->for(Source::factory())->create([
+            'analyzed_at' => null,
+        ]);
+
+        (new AnalyzeAndGroupArticlesJob())->handle();
+
+        $fake->assertCallCount(0);
+        $this->assertDatabaseCount(RawArticle::class, 1);
+        $this->assertNull(RawArticle::first()->analyzed_at);
     }
 
     public function testGroupsAnalyzedArticlesIntoADigestWhenThemeHasEnoughMatter(): void

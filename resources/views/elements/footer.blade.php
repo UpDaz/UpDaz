@@ -19,7 +19,7 @@
                 <img src="{{ asset('img/logos/white/linkedin.svg') }}" width="30" height="30" alt="Logo Linkedin"
                     title="Linkedin" class="mx-auto" loading="lazy">
             </a>
-            <a href="https://github.com/UpDaz" target="_blank" title="Github" class="text-white underline"
+            <a href="https://github.com/UpDaz" target="_blank" title="Github" class="text-white"
                 aria-current="page">
                 <img src="{{ asset('img/logos/white/github.svg') }}" width="30" height="30" alt="Logo Github"
                     title="Github" class="mx-auto">

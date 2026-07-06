@@ -4,5 +4,5 @@ namespace App\AI;
 
 interface Agent
 {
-    public function instructions(): string;
+    public function instructions(?string $instructions = null): string;
 }

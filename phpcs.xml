@@ -2,7 +2,9 @@
 <ruleset name="PHPCS-PSR2">
     <description>The coding standard for php files into Laravel Project</description>
     <rule ref="PSR1"/>
-    <rule ref="PSR12"/>
+    <rule ref="PSR12">
+        <exclude name="Generic.Files.LineLength"/>
+    </rule>
 
     <file>app</file>
     <file>bootstrap</file>

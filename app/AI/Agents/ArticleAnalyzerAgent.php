@@ -14,7 +14,7 @@ class ArticleAnalyzerAgent implements Agent
 {
     use Promptable;
 
-    public function instructions(): string
+    public function instructions(?string $instructions = null): string
     {
         return <<<'PROMPT'
         Tu analyses un article de blog technique. Détermine son thème

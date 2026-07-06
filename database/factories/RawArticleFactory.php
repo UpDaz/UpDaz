@@ -23,6 +23,7 @@ class RawArticleFactory extends Factory
             'title' => fake()->sentence(),
             'url' => fake()->unique()->url(),
             'content' => fake()->paragraphs(5, true),
+            'image_url' => null,
             'published_at' => fake()->dateTimeBetween('-1 month'),
             'theme' => null,
             'summary' => null,
@@ -38,6 +39,13 @@ class RawArticleFactory extends Factory
             'summary' => fake()->paragraph(),
             'keywords' => fake()->words(5),
             'analyzed_at' => now(),
+        ]);
+    }
+
+    public function withImage(): static
+    {
+        return $this->state(fn (array $attributes): array => [
+            'image_url' => fake()->imageUrl(),
         ]);
     }
 }

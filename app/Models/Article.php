@@ -6,10 +6,16 @@ use App\Casts\Markdown as CastMarkdown;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\URL;
 
 class Article extends Model
 {
     use HasFactory;
+
+    /**
+     * How long a signed preview link stays valid (see `frontendUrl()`).
+     */
+    public const PREVIEW_LINK_VALIDITY_DAYS = 30;
 
     protected $fillable = [
         'title',
@@ -55,5 +61,27 @@ class Article extends Model
     public function getMetaDescriptionAttribute()
     {
         return $this->attributes['meta_description'] ?? substr((string) $this->catch_phrase, 0, 150);
+    }
+
+    /**
+     * Where this article can be read on the front-office: its normal
+     * public URL once published and categorized, or a signed preview
+     * link otherwise (dedicated, non-public access — see
+     * `ArticlesController::preview()`).
+     */
+    public function frontendUrl(): string
+    {
+        if ($this->can_be_read && $this->category_id !== null) {
+            return route('article', [
+                'categorySlug' => $this->category->slug,
+                'slug' => $this->slug,
+            ]);
+        }
+
+        return URL::temporarySignedRoute(
+            'articles.preview',
+            now()->addDays(self::PREVIEW_LINK_VALIDITY_DAYS),
+            ['article' => $this->id],
+        );
     }
 }

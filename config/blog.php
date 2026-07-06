@@ -29,4 +29,19 @@ return [
         ? (int) env('BLOG_MAX_ARTICLES_PER_SOURCE')
         : null,
 
+    /*
+    |--------------------------------------------------------------------------
+    | Articles Generated Per Run
+    |--------------------------------------------------------------------------
+    |
+    | AnalyzeAndGroupArticlesJob groups raw articles into one WeeklyDigest
+    | per eligible theme, and GenerateSeoArticleJob turns every digest
+    | without a post into an article — so left uncapped, one pipeline run
+    | can produce as many articles as there are eligible themes that week.
+    | This keeps only the N richest themes (most raw articles) per run.
+    |
+    */
+
+    'max_articles_per_run' => (int) env('BLOG_MAX_ARTICLES_PER_RUN', 1),
+
 ];

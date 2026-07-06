@@ -152,4 +152,43 @@ class AnalyzeAndGroupArticlesJobTest extends TestCase
 
         $this->assertDatabaseCount(WeeklyDigest::class, 0);
     }
+
+    /**
+     * Regression test: GenerateSeoArticleJob turns every digest without
+     * a post into an article, so left uncapped, a run with several
+     * eligible themes produced one article per theme instead of one
+     * article overall.
+     */
+    public function testCapsDigestsCreatedPerRunToTheRichestThemes(): void
+    {
+        config(['blog.max_articles_per_run' => 1]);
+
+        Prism::fake([
+            $this->fakeSynthesis('Synthèse retenue.'),
+        ]);
+
+        $source = Source::factory()->create();
+
+        $richTheme = RawArticle::factory()->for($source)->count(3)->create([
+            'theme' => 'IA générative',
+            'summary' => 'Résumé.',
+            'analyzed_at' => now(),
+            'digested_at' => null,
+        ]);
+
+        $poorTheme = RawArticle::factory()->for($source)->count(2)->create([
+            'theme' => 'DevOps',
+            'summary' => 'Résumé.',
+            'analyzed_at' => now(),
+            'digested_at' => null,
+        ]);
+
+        (new AnalyzeAndGroupArticlesJob())->handle();
+
+        $this->assertDatabaseCount(WeeklyDigest::class, 1);
+        $this->assertSame('IA générative', WeeklyDigest::first()->theme);
+
+        $richTheme->each(fn (RawArticle $article) => $this->assertNotNull($article->refresh()->digested_at));
+        $poorTheme->each(fn (RawArticle $article) => $this->assertNull($article->refresh()->digested_at));
+    }
 }

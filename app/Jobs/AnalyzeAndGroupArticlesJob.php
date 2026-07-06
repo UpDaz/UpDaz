@@ -46,14 +46,26 @@ class AnalyzeAndGroupArticlesJob implements ShouldQueue
         $this->analyzeUnanalyzedArticles();
 
         // Regroupement par thème, uniquement les thèmes avec assez de matière
-        $themeGroups = RawArticle::whereNull('digested_at')
+        $eligibleThemeGroups = RawArticle::whereNull('digested_at')
             ->whereNotNull('theme')
             ->get()
             ->groupBy('theme')
             ->filter(fn ($group) => $group->count() >= 2);
 
+        // Un digest par thème deviendra un article : on ne garde que les
+        // thèmes les plus riches, dans la limite voulue par run. Les
+        // thèmes laissés de côté restent éligibles au prochain run (leurs
+        // articles ne sont pas marqués `digested_at`).
+        $maxArticlesPerRun = max(1, (int) config('blog.max_articles_per_run', 1));
+
+        $themeGroups = $eligibleThemeGroups
+            ->sortByDesc(fn ($group) => $group->count())
+            ->take($maxArticlesPerRun);
+
         notice('[AnalyzeAndGroupArticlesJob] Thèmes éligibles à la synthèse', [
-            'themes' => $themeGroups->keys()->all(),
+            'themes_eligibles' => $eligibleThemeGroups->keys()->all(),
+            'themes_retenus' => $themeGroups->keys()->all(),
+            'max_articles_per_run' => $maxArticlesPerRun,
         ]);
 
         $digestsCreated = 0;

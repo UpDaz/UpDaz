@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Articles\Tables;
 use App\Models\Article;
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
+use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\IconColumn;
@@ -49,6 +50,7 @@ class ArticlesTable
                         ->icon('heroicon-o-eye')
                         ->url(fn (Article $article): string => $article->frontendUrl())
                         ->openUrlInNewTab(),
+                    DeleteAction::make(),
                 ]),
             ]);
     }

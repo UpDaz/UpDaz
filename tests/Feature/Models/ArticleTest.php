@@ -4,6 +4,7 @@ namespace Tests\Feature\Models;
 
 use App\Models\Article;
 use App\Models\Category;
+use App\Models\WeeklyDigest;
 use Illuminate\Contracts\Console\Kernel as ConsoleKernel;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Artisan;
@@ -81,5 +82,16 @@ class ArticleTest extends TestCase
         ]);
 
         $this->assertStringContainsString('/articles/preview/' . $article->id, $article->frontendUrl());
+    }
+
+    public function testDeletingAnArticleNullsTheLinkedWeeklyDigestInsteadOfFailing(): void
+    {
+        $article = Article::factory()->create();
+        $digest = WeeklyDigest::factory()->create(['post_id' => $article->id]);
+
+        $article->delete();
+
+        $this->assertModelMissing($article);
+        $this->assertNull($digest->fresh()->post_id);
     }
 }

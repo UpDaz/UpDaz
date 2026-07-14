@@ -4,7 +4,7 @@
 @theme {
     /* Polices */
     --font-title: "Space Mono", monospace, sans-serif;
-    --font-button: "Space Mono", monospace, sans-serif;
+    --font-button: "Fira Sans", sans-serif;
     --font-text: "Fira Sans", sans-serif;
 
     /* Couleurs (Tailwind 4 applique automatiquement les couleurs aux bg/text/border/etc.) */
@@ -47,7 +47,7 @@
     h4,
     h5,
     h6 {
-        font-family: 'Space Mono', monospace, sans-serif;
+        font-family: var(--font-title);
         letter-spacing: normal;
         font-weight: bold;
         line-height: 1.2;
@@ -76,7 +76,7 @@ button {
 .btn {
     @apply font-button w-full inline-block text-center py-3 px-6;
     &.btn-primary {
-        @apply bg-yellow text-dark hover:bg-white border-yellow uppercase border font-semibold;
+        @apply bg-yellow text-dark hover:bg-white border-yellow border font-bold;
     }
     &.btn-secondary {
         @apply text-white border border-blue bg-transparent hover:bg-blue;

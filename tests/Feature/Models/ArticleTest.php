@@ -4,12 +4,28 @@ namespace Tests\Feature\Models;
 
 use App\Models\Article;
 use App\Models\Category;
+use Illuminate\Contracts\Console\Kernel as ConsoleKernel;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Artisan;
+use Mockery;
 use Tests\TestCase;
 
 class ArticleTest extends TestCase
 {
     use RefreshDatabase;
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        // Prevents the ArticleObserver's real sitemap:generate call (see
+        // ArticleObserverTest) from writing files during these unrelated
+        // model tests. RefreshDatabase already cached the facade's kernel
+        // instance by this point, so swap() is required, not partialMock().
+        $kernel = Mockery::mock(ConsoleKernel::class)->makePartial();
+        $kernel->shouldReceive('call')->with('sitemap:generate')->zeroOrMoreTimes();
+        Artisan::swap($kernel);
+    }
 
     public function testFrontendUrlIsThePublicRouteWhenPublishedAndCategorized(): void
     {

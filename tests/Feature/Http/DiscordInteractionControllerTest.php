@@ -3,8 +3,11 @@
 namespace Tests\Feature\Http;
 
 use App\Models\Article;
+use Illuminate\Contracts\Console\Kernel as ConsoleKernel;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Process;
+use Mockery;
 use Tests\TestCase;
 
 class DiscordInteractionControllerTest extends TestCase
@@ -71,6 +74,13 @@ class DiscordInteractionControllerTest extends TestCase
 
     public function testApproveButtonPublishesTheArticleAndUpdatesTheMessage(): void
     {
+        // RefreshDatabase migrates via Artisan::call('migrate') during setUp,
+        // which caches the facade's resolved kernel instance, so a plain
+        // partialMock() rebind of the container wouldn't be seen by it.
+        $kernel = Mockery::mock(ConsoleKernel::class)->makePartial();
+        $kernel->shouldReceive('call')->once()->with('sitemap:generate');
+        Artisan::swap($kernel);
+
         $article = Article::factory()->create(['is_published' => false]);
 
         [$payload, $headers] = $this->signedRequest([

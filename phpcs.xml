@@ -19,6 +19,11 @@
     <exclude-pattern>*/migrations/*</exclude-pattern>
     <exclude-pattern>*/seeds/*</exclude-pattern>
     <exclude-pattern>*.blade.php</exclude-pattern>
+    <!-- Laravel's stock front controller: defining LARAVEL_START then
+         bootstrapping the app is an inherent side effect of this file's
+         role, not something PSR1's "one symbol or side effects" rule
+         can be satisfied for without deviating from the framework. -->
+    <exclude-pattern>public/index.php</exclude-pattern>
 
     <!-- Show progression -->
     <arg value="p"/>

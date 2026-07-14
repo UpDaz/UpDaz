@@ -4,6 +4,9 @@
         "php_unit_method_casing": {
             "case": "camel_case"
         },
-        "new_with_parentheses": true
+        "new_with_parentheses": true,
+        "concat_space": {
+            "spacing": "one"
+        }
     }
 }

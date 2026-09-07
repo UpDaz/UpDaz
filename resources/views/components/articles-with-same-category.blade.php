@@ -12,10 +12,19 @@
                         <h2 class="mb-2 text-3xl">Ces articles pourraient vous intéresser</h2>
                     </div>
                     <div class="grid gap-8 md:grid-cols-2 items-start">
-                        @foreach ($articles as $article)
+                        @foreach ($articles->take(4) as $article)
                             @include('elements.article.box')
                         @endforeach
                     </div>
+                    @if ($articles->count() > 1)
+                    <div class="flex justify-center *:md:!w-auto">
+                        <x-button.secondary 
+                            title="Lien page catégorie article {{ $article->category->name }}"
+                            href="{{ route('category', ['slug' => $article->category->slug]) }}">
+                            Voir plus d'articles sur le thème {{ $articles->first()->category->name}}
+                        </x-button.secondary>
+                    </div>
+                    @endif
                 </div>
             </div>
         </div>

@@ -2,7 +2,7 @@
     <div class="flex gap-8 w-full relative">
         <div class="relative col-span-1 justify-self-end">
             <div class="text-sm font-title flex flex-col items-end">
-                {{ $article->published_at->format('M / Y') }}
+                {{ $article->published_at->format('d/m/Y') }}
             </div>
             <div data-element="line-vertical" class="absolute w-[1px] h-[250%] -top-2 -right-4"></div>
         </div>
@@ -16,7 +16,7 @@
     </div>
     <div class="flex flex-col self-start justify-start col-span-3 gap-4">
         <h3 class="text-xl text-white">
-            {{ $article->title }}
+            <a class="hover:underline" href="{{ route('article', ['categorySlug' => $article->category->slug, 'slug' => $article->slug]) }}">{{ $article->title }}</a>
         </h3>
         <p>
             {{ $article->catch_phrase }}

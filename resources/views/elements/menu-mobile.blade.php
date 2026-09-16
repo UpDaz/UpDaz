@@ -1,14 +1,14 @@
 <div class="lg:hidden">
     <button @click.prevent="toggleMobileMenu()" aria-label="Ouvrir menu" type="button"
         class="inline-flex items-center text-sm text-white" aria-controls="mobile-menu" aria-expanded="false">
-        <span class="*:w-full font-title  text-lg font-bold uppercase hover:text-yellow">
-            Menu
+        <span class="*:w-full">
+            @include('elements.icon.plus')
         </span>
     </button>
     <div x-bind:class="openMobileMenu ? 'left-0!' : 'left-full'"
         class="fixed top-0 z-50 w-screen h-screen overflow-y-scroll transition-all bg-linear-to-br from-blue to-blue-dark lg:bg-none left-full"
         id="mobile-menu">
-        <div class="relative flex flex-col gap-8">
+        <div class="relative flex flex-col gap-8 h-full">
             <div class="container mx-auto border-b border-gray py-4 ">
                 <div class="flex flex-wrap items-center justify-between">
                     <a href="{{ route('home') }}" class="flex items-center" title="UpDaz">

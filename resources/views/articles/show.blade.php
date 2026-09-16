@@ -12,7 +12,7 @@
     @include('elements.article.structured-data')
     <div class="container flex flex-col max-w-screen-lg gap-8 mx-auto">
         <div class="relative mt-24 overflow-hidden text-white ">
-            <div class="flex flex-col gap-4 items-start">
+            <div class="flex flex-col gap-8 items-start">
                 <div class="flex gap-8 items-center">
                     <span class="*:w-16 *:h-auto mb-2 inline-block">
                         @include('elements.icon.write-paper')

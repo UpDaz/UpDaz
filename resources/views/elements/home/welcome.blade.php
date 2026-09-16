@@ -17,10 +17,10 @@
                     <x-skills.item text="Création de sites web avec Webflow" />
                     <x-skills.item text="Conseils, gestion de projet, développement web" />
                 </div>
-                <div class="grid *:w-full gap-4  w-full items-start">
+                <div class="grid gap-4 items-start">
                     <x-button.primary href="#contact" title="UpDaz : formulaire de contact"
                         @click.prevent="scrollToTarget('#contact')" classes="xl:col-span-2">
-                        Je souhaite réaliser un site web
+                        Je souhaite créer une application web
                         </x-button-primary>
                 </div>
             </div>

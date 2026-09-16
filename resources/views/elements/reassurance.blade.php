@@ -34,6 +34,9 @@
                 </a>
             </div>
         </div>
+        <div class="text-blue hidden lg:block">
+            @include('elements.icon.scribble')
+        </div>
         <div class="flex justify-between md:justify-start gap-4 md:gap-8 w-full lg:w-auto">
             <div class="flex flex-col gap-4 md:gap-1">
                 <span class="whitespace-nowrap text-sm">Partenaires de confiance</span>

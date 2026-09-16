@@ -74,15 +74,15 @@ button {
 }
 
 .btn {
-    @apply font-button w-full inline-block text-center py-3 px-6;
+    @apply font-title inline-block hover:text-yellow border-0;
     &.btn-primary {
-        @apply bg-yellow text-dark hover:bg-white border-yellow border font-bold;
+        @apply font-title uppercase text-center text-lg block w-full;
     }
     &.btn-secondary {
-        @apply text-white border border-blue bg-transparent hover:bg-blue;
+        @apply text-base inline-flex flex-col;
     }
     &.btn-small {
-        @apply px-4 py-2 lg:text-sm;
+        @apply lg:text-sm;
     }
 }
 

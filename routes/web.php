@@ -84,7 +84,9 @@ Route::get(
     }
 )->name('legal-notices');
 
-Route::post('/contact', [ContactController::class, 'send'])->name('contact');
+Route::post('/contact', [ContactController::class, 'send'])
+    ->middleware('throttle:5,1')
+    ->name('contact');
 
 Route::post(
     '/discord/interactions',

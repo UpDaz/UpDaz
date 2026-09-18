@@ -13,6 +13,11 @@
     <meta name="author" content="Matthieu Dazord" />
     <meta name="application-name" content="UpDaz" />
     <link rel="icon" href="{{ asset('img/favicon.png') }}" type="image/png">
+    <link rel="preconnect" href="https://static.axept.io">
+    <link rel="preconnect" href="https://client.axept.io">
+    <link rel="preconnect" href="https://fonts.axept.io" crossorigin>
+    <link rel="preconnect" href="https://api.axept.io">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
     <x-canonical-url />
     @include('elements.fonts')
     @vite('resources/css/app.css')

@@ -28,6 +28,10 @@
         <textarea name="message" id="message" cols="30" rows="10"
             class="w-full px-3 py-2 leading-tight border appearance-none text-blue placeholder-gray focus:outline-none focus:shadow bg-white"></textarea>
     </div>
+    <div class="absolute -left-[9999px]" aria-hidden="true">
+        <label for="company">Ne pas remplir ce champ</label>
+        <input type="text" name="company" id="company" tabindex="-1" autocomplete="off">
+    </div>
     <div class="flex flex-col gap-4">
         <p x-show="submitting" class="flex gap-4 text-lg">
             <img src="{{ asset('img/loader.svg') }}" class="w-8 animate-spin" alt="Loader" title="Chargement" />
@@ -57,7 +61,6 @@
     </p>
 </form>
 
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
 <script>
     document.addEventListener('alpine:init', () => {
         Alpine.data('contactForm', () => ({
@@ -69,30 +72,22 @@
                 this.success = false;
                 this.error = false;
                 let alpineComponent = this;
-                turnstile.ready(function() {
-                    turnstile.render("#contact-form", {
-                        sitekey: "{{ config('custom.recaptcha.public') }}",
-                        callback: function(token) {
-                            var form = document.getElementById('contact-form');
-                            var formData = new FormData(form);
-                            formData.append('recaptcha-response', token);
-                            axios({
-                                method: "post",
-                                url: "{{ route('contact') }}",
-                                data: formData,
-                                headers: {
-                                    "Content-Type": "multipart/form-data"
-                                },
-                            }).then(response => {
-                                alpineComponent.submitting = false;
-                                alpineComponent.success = true;
-                            }).catch(response => {
-                                alpineComponent.submitting = false;
-                                alpineComponent.success = false;
-                                alpineComponent.error = true;
-                            });
-                        },
-                    });
+                var form = document.getElementById('contact-form');
+                var formData = new FormData(form);
+                axios({
+                    method: "post",
+                    url: "{{ route('contact') }}",
+                    data: formData,
+                    headers: {
+                        "Content-Type": "multipart/form-data"
+                    },
+                }).then(response => {
+                    alpineComponent.submitting = false;
+                    alpineComponent.success = true;
+                }).catch(response => {
+                    alpineComponent.submitting = false;
+                    alpineComponent.success = false;
+                    alpineComponent.error = true;
                 });
             }
         }))

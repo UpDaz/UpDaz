@@ -36,7 +36,8 @@
             <div class="max-w-full sm:pl-8 lg:px-12 md:w-1/4 sm:pt-8 md:pt-16">
                 <div class="sticky sm:top-24">
                     <div class="relative mx-8 md:mx-0">
-                        <img src="{{ asset('img/logos/webflow.svg') }}" class="w-full bg-white" alt="Logo Webflow">
+                        <img src="{{ asset('img/logos/webflow.svg') }}" class="w-full bg-white" alt="Logo Webflow"
+                            width="64" height="64">
                         <div data-element="line-horizontal"
                             class="absolute h-[1px] left-1/2 w-[150%] -translate-x-1/2 top-0 bg-gradient-to-r  ">
                         </div>

@@ -1,30 +1,30 @@
 <form x-data="contactForm" id="contact-form" @submit.prevent="submitForm()" class="flex flex-col gap-4 mb-4">
     <div class="flex flex-col gap-1">
-        <label class="text-sm">Nom*</label>
+        <label for="lastname" class="text-sm">Nom*</label>
         <input name="lastname"
             class="w-full px-3 py-2 leading-tight border appearance-none text-blue placeholder-gray focus:outline-none focus:shadow bg-white"
             id="lastname" type="text" required>
     </div>
     <div class="flex flex-col gap-1">
-        <label class="text-sm">Prénom*</label>
+        <label for="firstname" class="text-sm">Prénom*</label>
         <input name="firstname"
             class="w-full px-3 py-2 leading-tight border appearance-none text-blue placeholder-gray focus:outline-none focus:shadow bg-white"
             id="firstname" type="text" required>
     </div>
     <div class="flex flex-col gap-1">
-        <label class="text-sm">Email*</label>
+        <label for="email" class="text-sm">Email*</label>
         <input name="email"
             class="w-full px-3 py-2 leading-tight border appearance-none text-blue placeholder-gray focus:outline-none focus:shadow bg-white"
             id="email" type="email" required>
     </div>
     <div class="flex flex-col gap-1">
-        <label class="text-sm">Téléphone*</label>
+        <label for="phone" class="text-sm">Téléphone*</label>
         <input name="phone"
             class="w-full px-3 py-2 leading-tight border appearance-none text-blue placeholder-gray focus:outline-none focus:shadow bg-white"
             id="phone" type="text" required>
     </div>
     <div class="flex flex-col gap-1">
-        <label class="text-sm">Message*</label>
+        <label for="message" class="text-sm">Message*</label>
         <textarea name="message" id="message" cols="30" rows="10"
             class="w-full px-3 py-2 leading-tight border appearance-none text-blue placeholder-gray focus:outline-none focus:shadow bg-white"></textarea>
     </div>

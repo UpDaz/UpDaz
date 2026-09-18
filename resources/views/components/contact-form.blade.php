@@ -57,7 +57,7 @@
     </p>
 </form>
 
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
 <script>
     document.addEventListener('alpine:init', () => {
         Alpine.data('contactForm', () => ({

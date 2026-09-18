@@ -27,9 +27,9 @@
         <div class="absolute top-0 right-0 w-2 h-full md:w-4 background"></div>
         <div class="min-h-[90vh]">
             @include('elements.menu')
-            <div class="md:-mt-24 md:pt-24">
+            <main class="md:-mt-24 md:pt-24">
                 @yield('content')
-            </div>
+            </main>
         </div>
     </div>
     @include('elements.footer')

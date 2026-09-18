@@ -17,6 +17,13 @@
         'cosme'  => 'img/logos/cosme.svg',
         default  => null,
     };
+
+    $logoWidth = match (strtolower($source)) {
+        'google' => 47,
+        'malt'   => 46,
+        'cosme'  => 59,
+        default  => null,
+    };
 @endphp
 
 <div class="relative flex flex-col gap-5 p-6">
@@ -41,7 +48,8 @@
             </div>
         </div>
         @if ($logoPath)
-            <img src="{{ asset($logoPath) }}" alt="{{ $source }}" class="h-4 w-auto shrink-0" loading="lazy" />
+            <img src="{{ asset($logoPath) }}" alt="{{ $source }}" class="h-4 w-auto shrink-0" loading="lazy"
+                width="{{ $logoWidth }}" height="16" />
         @else
             <span class="text-xs uppercase tracking-widest text-gray">{{ $source }}</span>
         @endif

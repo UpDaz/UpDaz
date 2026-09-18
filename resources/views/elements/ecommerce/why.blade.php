@@ -32,7 +32,8 @@
             <div class="max-w-full sm:pl-8 lg:px-12 md:w-1/4 sm:pt-8 md:pt-16">
                 <div class="sticky sm:top-24">
                     <div class="relative mx-8 md:mx-0">
-                        <img src="{{ asset('img/logos/lunar.svg') }}" class="w-full p-5 bg-blue-dark" alt="Logo Lunar">
+                        <img src="{{ asset('img/logos/lunar.svg') }}" class="w-full p-5 bg-blue-dark" alt="Logo Lunar"
+                            width="204" height="58">
                         <div data-element="line-horizontal"
                             class="absolute h-[1px] left-1/2 w-[150%] -translate-x-1/2 top-0 bg-gradient-to-r  ">
                         </div>

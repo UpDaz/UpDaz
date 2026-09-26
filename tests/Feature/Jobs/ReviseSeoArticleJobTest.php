@@ -35,8 +35,7 @@ class ReviseSeoArticleJobTest extends TestCase
 
         $article = Article::factory()->create([
             'title' => 'Titre original',
-            'content' =>
-                $originalContent . WeeklyDigest::SOURCES_SEPARATOR . "- <a href=\"https://example.com/article-source\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Article source original</a> — {$rawArticle->source->name}",
+            'content' => $originalContent . WeeklyDigest::SOURCES_SEPARATOR . "- <a href=\"https://example.com/article-source\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Article source original</a> — {$rawArticle->source->name}",
             'is_published' => false,
             'generated_by_agent' => true,
         ]);
@@ -98,6 +97,7 @@ class ReviseSeoArticleJobTest extends TestCase
         $fake->assertRequest(function (array $requests): void {
             foreach ($requests as $request) {
                 $this->assertStringNotContainsString('## Sources', $request->prompt());
+                $this->assertStringContainsString('URL : https://example.com/article-source', $request->prompt());
             }
         });
 

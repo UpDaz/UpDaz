@@ -35,19 +35,23 @@ class ReviseSeoArticleJob implements ShouldQueue
         ]);
 
         $schema = new ObjectSchema('article', 'Article de blog', [
-            new StringSchema('title', ''),
-            new StringSchema('catch_phrase', 'Accroche d\'une phrase affichée sous le titre'),
-            new StringSchema('meta_description', ''),
-            new StringSchema('slug', ''),
-            new StringSchema('content', 'Contenu en Markdown'),
-            new ArraySchema('tags', '', new StringSchema('tag', '')),
+            new StringSchema('title', 'Titre SEO de moins de 60 caractères, mot-clé principal au début'),
+            new StringSchema('catch_phrase', 'Accroche d\'une phrase affichée sous le titre, sans répéter le titre'),
+            new StringSchema('meta_description', 'Meta description de 140 à 155 caractères avec le mot-clé principal'),
+            new StringSchema('slug', 'Slug de 3 à 6 mots en minuscules séparés par des tirets'),
+            new StringSchema('content', 'Contenu en Markdown, sans H1 ni section Sources'),
+            new ArraySchema('tags', 'Entre 3 et 5 tags', new StringSchema('tag', '')),
         ], ['title', 'catch_phrase', 'meta_description', 'slug', 'content', 'tags']);
 
         $digest = WeeklyDigest::where('post_id', $this->article->id)->first();
 
         $currentContent = Str::before($this->article->getRawOriginal('content'), WeeklyDigest::SOURCES_SEPARATOR);
         debug('Feedback', ['feedback' => $this->feedback]);
+        $brief = $digest?->writerBrief() ?? '';
+
         $input = <<<PROMPT
+        {$brief}
+
         Voici l'article précédemment généré :
 
         Titre : {$this->article->title}

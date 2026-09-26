@@ -25,12 +25,12 @@ class GenerateSeoArticleJob implements ShouldQueue
     public function handle(): void
     {
         $schema = new ObjectSchema('article', 'Article de blog', [
-            new StringSchema('title', ''),
-            new StringSchema('catch_phrase', 'Accroche d\'une phrase affichée sous le titre'),
-            new StringSchema('meta_description', ''),
-            new StringSchema('slug', ''),
-            new StringSchema('content', 'Contenu en Markdown'),
-            new ArraySchema('tags', '', new StringSchema('tag', '')),
+            new StringSchema('title', 'Titre SEO de moins de 60 caractères, mot-clé principal au début'),
+            new StringSchema('catch_phrase', 'Accroche d\'une phrase affichée sous le titre, sans répéter le titre'),
+            new StringSchema('meta_description', 'Meta description de 140 à 155 caractères avec le mot-clé principal'),
+            new StringSchema('slug', 'Slug de 3 à 6 mots en minuscules séparés par des tirets'),
+            new StringSchema('content', 'Contenu en Markdown, sans H1 ni section Sources'),
+            new ArraySchema('tags', 'Entre 3 et 5 tags', new StringSchema('tag', '')),
         ], ['title', 'catch_phrase', 'meta_description', 'slug', 'content', 'tags']);
 
         $throttle = max(0, (int) config('ai.throttle_seconds', 5));
@@ -48,7 +48,7 @@ class GenerateSeoArticleJob implements ShouldQueue
             try {
                 $article = (new SeoArticleWriterAgent())
                     ->withSchema($schema)
-                    ->prompt($digest->summary);
+                    ->prompt($digest->writerBrief());
             } catch (Throwable $e) {
                 warning('[GenerateSeoArticleJob] Échec de génération d\'article', [
                     'digest_id' => $digest->id,
@@ -84,9 +84,22 @@ class GenerateSeoArticleJob implements ShouldQueue
                 'title' => $post->title,
             ]);
 
-            // notifie l'équipe éditoriale
-            Notification::route('discord', config('blog.discord_channel_id'))
-                ->notify(new DraftReadyForReview($post));
+            try {
+                Notification::route('discord', config('blog.discord_channel_id'))
+                    ->notify(new DraftReadyForReview($post));
+            } catch (Throwable $e) {
+                warning('[GenerateSeoArticleJob] Échec d\'envoi de la demande de relecture Discord', [
+                    'article_id' => $post->id,
+                    'channel_id' => config('blog.discord_channel_id'),
+                    'error' => $e->getMessage(),
+                ]);
+
+                return;
+            }
+
+            notice('[GenerateSeoArticleJob] Demande de relecture envoyée', ['article_id' => $post->id]);
         });
+
+        notice('[GenerateSeoArticleJob] Terminé', ['articles_crees' => $articlesCreated]);
     }
 }

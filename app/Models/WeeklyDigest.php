@@ -92,6 +92,43 @@ class WeeklyDigest extends Model
     }
 
     /**
+     * Input handed to the SEO writer: the editorial synthesis plus each
+     * raw article behind it (title, outlet, URL, individual summary).
+     * The synthesis alone is only a few sentences with attribution
+     * deliberately stripped out, which leaves the writer too little
+     * factual material and nothing to cite.
+     */
+    public function writerBrief(): string
+    {
+        $sources = $this->rawArticles()
+            ->map(function (RawArticle $rawArticle): string {
+                $sourceName = $this->cleanLinkText($rawArticle->source?->name ?? 'Source inconnue');
+                $title = $this->cleanLinkText($rawArticle->title);
+                $summary = trim($rawArticle->summary ?? '');
+
+                return <<<SOURCE
+                <source>
+                Titre : {$title}
+                Média : {$sourceName}
+                URL : {$rawArticle->url}
+                Résumé : {$summary}
+                </source>
+                SOURCE;
+            })
+            ->implode("\n");
+
+        return <<<BRIEF
+        <recapitulatif>
+        {$this->summary}
+        </recapitulatif>
+
+        <sources>
+        {$sources}
+        </sources>
+        BRIEF;
+    }
+
+    /**
      * Strips any tags, collapses whitespace/newlines to single spaces,
      * and bounds the length, so text placed inside an `<a>` can never
      * break its display regardless of how messy the source data is.

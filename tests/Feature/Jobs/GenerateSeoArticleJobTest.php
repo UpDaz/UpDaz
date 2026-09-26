@@ -87,6 +87,34 @@ class GenerateSeoArticleJobTest extends TestCase
         Notification::assertSentOnDemand(DraftReadyForReview::class);
     }
 
+    public function testSendsTheSourcesAndTheirSummariesToTheWriter(): void
+    {
+        Notification::fake();
+        $fake = Prism::fake([$this->fakeArticle()]);
+
+        $rawArticle = RawArticle::factory()->analyzed()->create([
+            'url' => 'https://example.com/source-article',
+            'summary' => 'Résumé individuel de l\'article source.',
+        ]);
+
+        WeeklyDigest::factory()->create([
+            'week_start' => now()->startOfWeek(),
+            'post_id' => null,
+            'summary' => 'Synthèse de la semaine.',
+            'raw_article_ids' => [$rawArticle->id],
+        ]);
+
+        (new GenerateSeoArticleJob())->handle();
+
+        $fake->assertRequest(function (array $requests): void {
+            $prompt = $requests[0]->prompt();
+
+            $this->assertStringContainsString('Synthèse de la semaine.', $prompt);
+            $this->assertStringContainsString('URL : https://example.com/source-article', $prompt);
+            $this->assertStringContainsString('Résumé individuel de l\'article source.', $prompt);
+        });
+    }
+
     public function testInjectsASourceImageBeforeGeneratedHeadings(): void
     {
         Notification::fake();

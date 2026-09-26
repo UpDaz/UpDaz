@@ -12,6 +12,31 @@ class WeeklyDigestTest extends TestCase
 {
     use RefreshDatabase;
 
+    public function testWriterBriefContainsTheSynthesisAndEverySourceWithItsSummary(): void
+    {
+        $source = Source::factory()->create(['name' => 'Laravel News']);
+
+        $rawArticle = RawArticle::factory()->analyzed()->create([
+            'source_id' => $source->id,
+            'title' => 'Laravel 13 est disponible',
+            'url' => 'https://example.com/laravel-13',
+            'summary' => 'Laravel 13 introduit un nouveau système de queues.',
+        ]);
+
+        $digest = WeeklyDigest::factory()->create([
+            'summary' => 'Synthèse de la semaine sur Laravel.',
+            'raw_article_ids' => [$rawArticle->id],
+        ]);
+
+        $brief = $digest->writerBrief();
+
+        $this->assertStringContainsString("<recapitulatif>\nSynthèse de la semaine sur Laravel.\n</recapitulatif>", $brief);
+        $this->assertStringContainsString('Titre : Laravel 13 est disponible', $brief);
+        $this->assertStringContainsString('Média : Laravel News', $brief);
+        $this->assertStringContainsString('URL : https://example.com/laravel-13', $brief);
+        $this->assertStringContainsString('Résumé : Laravel 13 introduit un nouveau système de queues.', $brief);
+    }
+
     public function testSourcesMarkdownStripsHtmlTagsFromTitleAndSourceName(): void
     {
         $source = Source::factory()->create(['name' => '<b>Korben</b>']);

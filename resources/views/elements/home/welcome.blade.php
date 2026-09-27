@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="hidden w-full justify-center *:h-auto *:w-full md:w-1/2 lg:flex *:lg:h-[65vh] *:lg:w-auto">
-                @include('elements.home.welcome-illustration')
+                <img src="{{ asset('img/illustrations/home.svg') }}" alt="" width="263" height="213" loading="lazy" />
             </div>
         </div>
     </div>

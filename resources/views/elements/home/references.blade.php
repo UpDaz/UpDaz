@@ -1,10 +1,10 @@
 <section id="references" class="pt-24 -mt-24">
     <div class="container flex flex-col gap-16 mx-auto">
-        <div class="flex flex-col items-center justify-center gap-4 sm:gap-8 sm:flex-row">
-            <div class="w-18 md:w-12">
+        <div class="flex items-center justify-center gap-4 sm:gap-8">
+            <div class="*:w-12 *:h-auto">
                 @include('elements.icon.users-check')
             </div>
-            <h2 class="text-3xl text-center sm:text-4xl">Une confiance gagnante</h2>
+            <h2>Une confiance gagnante</h2>
         </div>
         <div class="flex flex-col gap-4">
             <h3 class="text-lg">Des retours qui parlent d'eux-mêmes</h3>

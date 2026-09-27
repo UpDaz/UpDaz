@@ -1,12 +1,20 @@
 @extends('layouts.default')
 
-@section('title')
-    Accompagnement boutique en ligne & e-commerce - UpDaz
-@endsection
+@section('title', 'Création de site e-commerce sur mesure à Bordeaux – UpDaz')
 
-@section('meta-description')
-    Développement de site e-commerce et de boutiques en ligne avec le framework Laravel. Accompagnement, optimisation, conseils, maintenance...
-@endsection
+@section('meta-description', 'Création de site e-commerce sur mesure à Bordeaux avec Laravel et Lunar : catalogue, paiement, intégrations ERP et CRM, sans commission ni abonnement. Développement et maintenance.')
+
+@push('structured-data')
+    @include('elements.schema.service', [
+        'name' => 'Création de site e-commerce sur mesure à Bordeaux',
+        'serviceType' => 'Développement de site e-commerce sur mesure',
+        'description' => 'Développement de boutiques en ligne sur mesure avec Laravel et Lunar : catalogue, paiement, intégrations ERP et CRM, maintenance.',
+        'url' => route('ecommerce'),
+    ])
+    @include('elements.schema.breadcrumb', [
+        'links' => ['Création de site e-commerce' => route('ecommerce')],
+    ])
+@endpush
 
 @section('content')
     @include('elements.ecommerce.header')

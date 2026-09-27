@@ -7,7 +7,7 @@
                     @include('elements.icon.calendar')
                 </x-slot:icon>
                 <x-slot:title>
-                    <h3 class="text-lg font-medium title-font">Gestion de projet</h3>
+                    <h3>Gestion de projet</h3>
                 </x-slot:title>
                 <div class="flex flex-col items-start text-left -mb-1 space-y-2.5">
                     <x-skills.item text="Analyse des besoins" />
@@ -23,7 +23,7 @@
                     @include('elements.icon.hand-tag')
                 </x-slot:icon>
                 <x-slot:title>
-                    <h3 class="text-lg font-medium title-font">Développement sur-mesure</h3>
+                    <h3>Développement sur-mesure</h3>
                 </x-slot:title>
                 <div class="flex flex-col items-start text-left -mb-1 space-y-2.5">
                     <x-skills.item text="Digitalisation de vos processus métiers" />
@@ -39,7 +39,7 @@
                     @include('elements.icon.view-dot-com')
                 </x-slot:icon>
                 <x-slot:title>
-                    <h3 class="text-lg font-medium title-font">Création de site Webflow</h3>
+                    <h3>Création de site Webflow</h3>
                 </x-slot:title>
                 <div class="flex flex-col items-start text-left -mb-1 space-y-2.5">
                     <x-skills.item text="Personnalisation de thème" />
@@ -55,7 +55,7 @@
                     @include('elements.icon.view-search')
                 </x-slot:icon>
                 <x-slot:title>
-                    <h3 class="text-lg font-medium title-font">SEO - Référencement naturel</h3>
+                    <h3>SEO - Référencement naturel</h3>
                 </x-slot:title>
                 <div class="flex flex-col items-start text-left -mb-1 space-y-2.5">
                     <x-skills.item text="Amélioration de la qualité de code" />
@@ -71,7 +71,7 @@
                     @include('elements.icon.pencil')
                 </x-slot:icon>
                 <x-slot:title>
-                    <h3 class="text-lg font-medium title-font">Intégration</h3>
+                    <h3>Intégration</h3>
                 </x-slot:title>
                 <div class="flex flex-col items-start text-left -mb-1 space-y-2.5">
                     <x-skills.item text="Structure des pages optimisées avec HTML 5" />
@@ -86,7 +86,7 @@
                     @include('elements.icon.database')
                 </x-slot:icon>
                 <x-slot:title>
-                    <h3 class="text-lg font-medium title-font">Hébergement / Maintenance</h3>
+                    <h3>Hébergement / Maintenance</h3>
                 </x-slot:title>
                 <div class="flex flex-col items-start text-left -mb-1 space-y-2.5">
                     <x-skills.item text="Mise en ligne" />
@@ -103,7 +103,7 @@
                             @include('elements.icon.fingerprint')
                         </x-slot:icon>
                         <x-slot:title>
-                            <h3 class="text-lg font-medium title-font">Data / Analytics</h3>
+                            <h3>Data / Analytics</h3>
                         </x-slot:title>
                         <div class="flex flex-col items-start text-left -mb-1 space-y-2.5">
                             <x-skills.item text="Installation des outils de tracking Google" />

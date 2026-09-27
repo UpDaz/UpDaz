@@ -2,12 +2,12 @@
     <div class="container flex flex-col mx-auto">
         <div class="flex flex-col items-center gap-8 mt-10 md:gap-16 sm:flex-row sm:items-start">
             <div class="border-b border-gray sm:pl-8 sm:pb-8 md:pl-16 md:pb-16 sm:border-l sm:mt-0 sm:text-left">
-                <div class="flex flex-row-reverse items-center gap-8 sm:flex-row">
-                    <h2 class="text-3xl font-bold font-title md:text-3xl"><span class="text-yellow">Lunar</span>
-                        qu'est-ce que c'est ?</h2>
-                    <div class="w-12">
+                <div class="flex items-center gap-8">
+                    <div class="*:w-12 *:h-auto">
                         @include('elements.icon.question-mark')
                     </div>
+                    <h2><span class="text-yellow">Lunar</span>
+                        qu'est-ce que c'est ?</h2>
                 </div>
                 <p class="my-4 leading-relaxed text-md">
                     <a target="_blank" href="https://lunarphp.com/" class="underline">Lunar</a> est un moteur e-commerce conçu pour les développeurs, offrant une base technique robuste pour

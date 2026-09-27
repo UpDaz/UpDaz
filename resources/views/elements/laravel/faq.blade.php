@@ -30,11 +30,11 @@
 <section id="faq" class="pt-24 -mt-24">
     <div class="container mx-auto">
         <div class="flex flex-col w-full max-w-4xl gap-8 mx-auto mb-8 md:gap-16 md:mb-16">
-            <div class="flex flex-col-reverse items-center justify-center gap-8 md:flex-row">
-                <h2 class="text-3xl text-center sm:text-4xl">Questions fréquentes sur le développement Laravel</h2>
-                <div class="w-16">
+            <div class="flex items-center justify-center gap-8">
+                <div class="*:w-12 *:h-auto">
                     @include('elements.icon.question-mark')
                 </div>
+                <h2>Questions fréquentes sur le développement Laravel</h2>
             </div>
             <div>
                 @foreach ($questions as $question => $answer)

@@ -3,13 +3,13 @@
         <div class="flex flex-col-reverse gap-16 sm:gap-0 sm:flex-row ">
             <div
                 class="flex flex-col items-start justify-start gap-8 border-gray sm:w-3/4 sm:pr-8 sm:py-8 md:pr-16 md:py-16 sm:border-r sm:border-t-0 sm:text-left">
-                <div class="flex flex-col-reverse justify-center items-center gap-8 lg:flex-row">
-                    <h2 class="text-3xl sm:text-4xl text-center">
-                        Développeur certifié <span class="uppercase text-yellow">Opquast</span>
-                    </h2>
-                    <div class="w-18 md:w-12">
+                <div class="flex justify-center items-center gap-8">
+                    <div class="*:w-12 *:h-auto">
                         @include('elements.icon.check-list')
                     </div>
+                    <h2>
+                        Développeur certifié <span class="uppercase text-yellow">Opquast</span>
+                    </h2>
                 </div>
                 <div x-data="{ expanded: false }">
                     <p class="leading-relaxed text-md">

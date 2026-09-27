@@ -1,10 +1,10 @@
 <section id="articles" class="pt-24 -mt-24">
     <div class="container flex flex-col gap-8 mx-auto md:gap-16">
-        <div class="flex flex-col items-center justify-center gap-8 sm:flex-row">
-            <div class="w-18 md:w-12">
+        <div class="flex items-center justify-center gap-8">
+            <div class="*:w-12 *:h-auto">
                 @include('elements.icon.write')
             </div>
-            <h2 class="text-3xl text-center sm:text-4xl">Blog</h2>
+            <h2>Blog</h2>
         </div>
         <x-last-articles />
         <div class="text-center *:!w-auto *:inline-block">

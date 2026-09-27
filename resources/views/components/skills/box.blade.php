@@ -1,16 +1,16 @@
-<div class="relative grid items-center justify-center h-full grid-cols-4 gap-y-8 md:gap-8 rounded-lg sm:flex-row">
-    <div class="relative w-12 col-span-1 justify-self-center">
+<div class="relative grid items-center h-full grid-cols-[auto_1fr] gap-x-4 gap-y-8 md:gap-8 rounded-lg">
+    <div class="relative justify-self-center *:w-12 *:h-auto">
         @isset ($icon)
             {{ $icon }}
         @endif
     </div>
-    <div class="relative flex items-center col-span-3 min-h-16">
+    <div class="relative flex items-center min-h-16">
         @isset ($title)
             {{ $title }}
             <div data-element="line-horizontal" class="absolute h-[1px] right-0 w-[150%] -bottom-4 bg-gradient-to-r"></div>
         @endif
     </div>
-    <div class="flex-grow col-span-4 pl-12">
+    <div class="grow col-span-2 pl-12">
         {{ $slot }}
     </div>
 </div>

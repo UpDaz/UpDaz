@@ -1,7 +1,7 @@
 <section id="references" class="pt-24 -mt-24">
     <div class="container flex flex-col gap-16 mx-auto">
-        <div class="flex flex-col-reverse items-center justify-center gap-4 sm:gap-8 sm:flex-row">
-            <div class="*:w-24 md:*:w-12 *:h-auto">
+        <div class="flex items-center justify-center gap-4 sm:gap-8">
+            <div class="*:w-12 *:h-auto">
                 @include('elements.icon.users-check')
             </div>
             <h2>Ils ont choisi Laravel pour leur application web</h2>

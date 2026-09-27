@@ -3,13 +3,13 @@
         <div class="flex flex-col-reverse gap-16 sm:gap-0 sm:flex-row ">
             <div
                 class="flex flex-col items-start justify-start gap-8 border-gray sm:w-3/4 sm:pr-8 sm:py-8 md:pr-16 md:py-16 sm:border-r sm:border-t-0 sm:text-left">
-                <div class="flex flex-row-reverse items-center gap-8 sm:flex-row">
-                    <h2 class="text-3xl sm:text-4xl">
-                        Quels avantages à utiliser Lunar ?
-                    </h2>
-                    <div class="w-24 sm:w-12">
+                <div class="flex items-center gap-8">
+                    <div class="*:w-12 *:h-auto">
                         @include('elements.icon.check-list')
                     </div>
+                    <h2>
+                        Quels avantages à utiliser Lunar ?
+                    </h2>
                 </div>
                 <p class="leading-relaxed text-md">
                     Lunar permet une maîtrise complète du fonctionnement d’un site e-commerce, là où Prestashop et

@@ -6,10 +6,10 @@
 
                 <div class="flex flex-col gap-8">
                     <div class="flex items-center gap-8">
-                        <span class="*:w-16 *:h-auto">
+                        <div class="*:w-12 *:h-auto">
                             @include('elements.icon.book')
-                        </span>
-                        <h2 class="mb-2 text-3xl">Ces articles pourraient vous intéresser</h2>
+                        </div>
+                        <h2>Ces articles pourraient vous intéresser</h2>
                     </div>
                     <div class="grid gap-8 md:grid-cols-2 items-start">
                         @foreach ($articles->take(4) as $article)

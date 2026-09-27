@@ -2,14 +2,13 @@
     <div class="container mx-auto flex flex-col">
         <div class="flex flex-col items-center gap-8 sm:flex-row sm:items-start md:gap-16">
             <div class="border-gray border-t sm:mt-0 sm:border-l sm:pt-8 sm:pl-8 sm:text-left md:pt-16 md:pl-16">
-                <div class="flex flex-row-reverse items-center gap-8 sm:flex-row">
-                    <div class="w-24 sm:w-12">
+                <div class="flex items-center gap-8">
+                    <div class="*:w-12 *:h-auto">
                         @include('elements.icon.window-cloud')
                     </div>
                     <h2>Reprise et maintenance de votre
                         <span class="text-yellow">application Laravel</span>
                     </h2>
-
                 </div>
                 <p class="text-md my-4 leading-relaxed">
                     Votre application Laravel existe déjà, mais le développeur n’est plus disponible, la version du

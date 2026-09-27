@@ -2,8 +2,8 @@
     <div class="container mx-auto flex flex-col">
         <div class="mt-10 flex flex-col items-center gap-8 sm:flex-row sm:items-start md:gap-16">
             <div class="border-gray border-b sm:mt-0 sm:border-l sm:pb-8 sm:pl-8 sm:text-left md:pb-16 md:pl-16">
-                <div class="flex flex-row-reverse items-center gap-8 sm:flex-row">
-                    <div class="w-24 sm:w-12">
+                <div class="flex items-center gap-8">
+                    <div class="*:w-12 *:h-auto">
                         @include('elements.icon.question-mark')
                     </div>
                     <h2>Pourquoi choisir <span class="text-yellow">Laravel</span> pour votre application métier ?</h2>

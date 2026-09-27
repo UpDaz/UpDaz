@@ -12,7 +12,7 @@
                     @include('elements.icon.view-dot-com')
                 </x-slot:icon>
                 <x-slot:title>
-                    <h3 class="text-lg font-medium title-font">Définir une structure claire et cohérente</h3>
+                    <h3>Définir une structure claire et cohérente</h3>
                 </x-slot:title>
             </x-skills.box>
 
@@ -21,7 +21,7 @@
                     @include('elements.icon.view-search')
                 </x-slot:icon>
                 <x-slot:title>
-                    <h3 class="text-lg font-medium title-font">Optimiser le référencement (SEO) et les performances</h3>
+                    <h3>Optimiser le référencement (SEO) et les performances</h3>
                 </x-slot:title>
             </x-skills.box>
 
@@ -30,7 +30,7 @@
                     @include('elements.icon.pencil')
                 </x-slot:icon>
                 <x-slot:title>
-                    <h3 class="text-lg font-medium title-font">Concevoir une interface fluide et engageante</h3>
+                    <h3>Concevoir une interface fluide et engageante</h3>
                 </x-slot:title>
             </x-skills.box>
 
@@ -39,7 +39,7 @@
                     @include('elements.icon.hand-tag')
                 </x-slot:icon>
                 <x-slot:title>
-                    <h3 class="text-lg font-medium title-font">Vous former à la prise en main du CMS</h3>
+                    <h3>Vous former à la prise en main du CMS</h3>
                 </x-slot:title>
             </x-skills.box>
         </div>

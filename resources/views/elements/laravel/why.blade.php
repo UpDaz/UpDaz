@@ -2,8 +2,8 @@
     <div class="container mx-auto">
         <div class="flex flex-col-reverse gap-16 sm:flex-row sm:gap-0">
             <div class="border-gray flex flex-col items-start justify-start gap-8 sm:w-3/4 sm:border-r sm:border-t-0 sm:py-8 sm:pr-8 sm:text-left md:py-16 md:pr-16">
-                <div class="flex flex-row-reverse items-center gap-8 sm:flex-row">
-                    <div class="w-24 sm:w-12">
+                <div class="flex items-center gap-8">
+                    <div class="*:w-12 *:h-auto">
                         @include('elements.icon.check-list')
                     </div>
                     <h2>

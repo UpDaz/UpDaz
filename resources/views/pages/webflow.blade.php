@@ -1,13 +1,20 @@
 @extends('layouts.default')
 
-@section('title')
-    Création de site web CMS et vitrine à Bordeaux - UpDaz
-@endsection
+@section('title', 'Création de site Webflow à Bordeaux – UpDaz')
 
-@section('meta-description')
-    Créez votre site CMS et site vitrine grâce à Webflow un outils en ligne no-code. Obtenez un site moderne et
-    performant tout en gardant la main sur son contenu.
-@endsection
+@section('meta-description', 'Développeur Webflow à Bordeaux : création de sites vitrines et CMS modernes, rapides et bien référencés, dont vous gardez la main sur le contenu. Design, intégration et SEO.')
+
+@push('structured-data')
+    @include('elements.schema.service', [
+        'name' => 'Création de site Webflow à Bordeaux',
+        'serviceType' => 'Création de site vitrine et CMS avec Webflow',
+        'description' => 'Conception de sites vitrines et CMS avec Webflow : design, intégration, optimisation SEO et formation à la gestion du contenu.',
+        'url' => route('webflow'),
+    ])
+    @include('elements.schema.breadcrumb', [
+        'links' => ['Création de site Webflow' => route('webflow')],
+    ])
+@endpush
 
 @section('content')
     @include('elements.webflow.header')

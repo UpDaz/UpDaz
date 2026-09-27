@@ -1,12 +1,10 @@
 <section>
     <div class="flex items-center justify-center relative py-16 pb-8 lg:pt-8 lg:min-h-[80vh]">
         <div class="container flex flex-col items-center gap-20 mx-auto md:flex-row">
-            <div class="flex flex-col gap-12 lg:flex-grow md:w-1/2 md:items-start md:text-left">
-                <div class="flex items-center gap-8 md:block">
-                    <h1 class="text-5xl font-bold text-white font-title txt-rotate">
-                        Création de site Webflow à Bordeaux
-                    </h1>
-                </div>
+            <div class="flex flex-col gap-12 lg:grow md:w-1/2 md:items-start md:text-left">
+                <h1 class="text-4xl xl:text-5xl font-bold text-white font-title">
+                    Création de site Webflow à Bordeaux
+                </h1>
                 <p class="font-text">
                     UpDaz vous accompagne pour concevoir un <span class="text-yellow">site CMS, performant et adapté à
                         vos besoins</span>.
@@ -29,7 +27,7 @@
                 </div>
             </div>
             <div class="hidden lg:flex justify-center w-full *:w-full *:h-auto md:w-1/2 *:lg:w-auto *:lg:h-[65vh]">
-                @include('elements.webflow.hero-illustration')
+                <img src="{{ asset('img/illustrations/webflow.svg') }}" alt="" width="355" height="364" loading="lazy" />
             </div>
         </div>
     </div>

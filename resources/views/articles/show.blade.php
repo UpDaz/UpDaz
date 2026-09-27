@@ -14,10 +14,10 @@
         <div class="relative mt-24 overflow-hidden text-white ">
             <div class="flex flex-col gap-8 items-start">
                 <div class="flex gap-8 items-center">
-                    <span class="*:w-16 *:h-auto mb-2 inline-block">
+                    <div class="*:w-12 *:h-auto">
                         @include('elements.icon.write-paper')
-                    </span>
-                    <h1 class="text-4xl font-bold font-title lg:text-5xl">{{ $article->title }}</h1>
+                    </div>
+                    <h1>{{ $article->title }}</h1>
                 </div>
                 <p class="text-lg">{{ $article->catch_phrase }}</p>
                 <div class="mb-2 text-sm italic text-right w-full">

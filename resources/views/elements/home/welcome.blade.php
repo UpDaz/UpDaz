@@ -1,30 +1,26 @@
 <section class="-mb-18">
-    <div class="flex items-center justify-center relative py-16 pb-8 lg:pt-8 lg:min-h-[80vh]">
-        <div class="container flex flex-col items-center gap-20 mx-auto lg:flex-row">
-            <div class="flex flex-col gap-8 lg:grow xl:w-1/2 md:items-start md:text-left">
-                <div class="flex items-center gap-8 md:block">
-                    <h1 class="text-5xl font-bold text-white font-title txt-rotate">
-                        Artisan de votre<br />application web
-                    </h1>
-                </div>
-                <h2 class="font-text font-light text-lg"><b>UpDaz</b> développe et maintient votre <span
-                        class="text-yellow">application
-                        web</span>, <span class="text-yellow text-nowrap ">e-commerce</span> et
-                    <span class="text-yellow">site web CMS</span> à Bordeaux depuis 10 ans.
+    <div class="relative flex items-center justify-center py-16 pb-8 lg:min-h-[80vh] lg:pt-8">
+        <div class="container mx-auto flex flex-col items-center gap-20 lg:flex-row">
+            <div class="flex flex-col gap-8 md:items-start md:text-left lg:grow xl:w-1/2">
+                <h1 class="font-title text-4xl font-bold text-white">
+                    Développeur Laravel et Webflow à Bordeaux
+                </h1>
+                <h2 class="font-text text-lg font-light"><b>UpDaz</b> développe et maintient votre <span class="text-yellow">application
+                        web métier</span>, votre site <span class="text-yellow text-nowrap">e-commerce</span> et votre
+                    <span class="text-yellow">site web CMS</span> à Bordeaux depuis plus de 10 ans.
                 </h2>
                 <div class="flex flex-col gap-2">
                     <x-skills.item text="Développement d'applications web avec Laravel" />
                     <x-skills.item text="Création de sites web avec Webflow" />
                     <x-skills.item text="Conseils, gestion de projet, développement web" />
                 </div>
-                <div class="grid gap-4 items-start">
-                    <x-button.primary href="#contact" title="UpDaz : formulaire de contact"
-                        @click.prevent="scrollToTarget('#contact')" classes="xl:col-span-2">
+                <div class="grid items-start gap-4">
+                    <x-button.primary href="#contact" title="UpDaz : formulaire de contact" @click.prevent="scrollToTarget('#contact')" classes="xl:col-span-2">
                         Je souhaite créer une application web
                         </x-button-primary>
                 </div>
             </div>
-            <div class="hidden lg:flex justify-center w-full *:w-full *:h-auto md:w-1/2 *:lg:w-auto *:lg:h-[65vh]">
+            <div class="hidden w-full justify-center *:h-auto *:w-full md:w-1/2 lg:flex *:lg:h-[65vh] *:lg:w-auto">
                 @include('elements.home.welcome-illustration')
             </div>
         </div>

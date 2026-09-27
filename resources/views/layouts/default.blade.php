@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>@yield('title', 'Développement et maintenant d\'application web Laravel et CMS Webflow à Bordeaux - UpDaz')</title>
+    <title>@yield('title', 'Développeur Laravel & Webflow freelance à Bordeaux – UpDaz')</title>
     <meta name="description" content="@yield('meta-description', 'Développement d\'applications web métier et e-commerce avec Laravel et de sites web CMS avec Webflow. Accompagnement, conseils, développement et maintenance pour vos projet web.')" />
     <meta name="keywords"
         content="Développeur web, Bordeaux, application web, freelance, full-stack, site internet, Laravel, CMS, Webflow, accompagnement, HTML, CSS, JavaScript, SEO, conseils, digitalisation, web" />

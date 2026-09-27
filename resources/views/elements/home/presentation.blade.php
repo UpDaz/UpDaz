@@ -37,16 +37,16 @@
                     Je suis <b class="text-yellow">Matthieu</b>, développeur d'<b class="text-yellow">applications web</b> et de <b class="text-yellow">sites CMS</b> depuis 10 ans sur la région
                     bordelaise.<br /><br />
                     Après plusieurs années en agence de communication et dans des entreprises spécialisées, j'ai acquis
-                    un
+                    des
                     <a href="#competences" @click.prevent="scrollToTarget('#competences')"
-                        class="underline text-yellow">savoir-faire technique</a> et <b>une expertise</b> dans la réalisation et la maintenance d'applications web.
+                        class="underline text-yellow">compétences techniques</a> et <b>une expertise</b> dans la réalisation et la maintenance d'applications web.
                     <br /><br />
                     Je vous accompage dans votre projet afin de trouver et mettre en place <b class="text-yellow">les meilleures solutions techniques</b> en prenant en compte vos enjeux métier.
                     <br /><br />
                 <div class="grid gap-4 lg:grid-cols-3">
                     <x-button.secondary href="#competences" @click.prevent="scrollToTarget('#competences')"
                         title="Ce que propose updaz">
-                        Savoir-faire
+                        Compétences
                     </x-button.secondary>
                     <x-button.secondary href="#references" @click.prevent="scrollToTarget('#references')"
                         title="Références Updaz">

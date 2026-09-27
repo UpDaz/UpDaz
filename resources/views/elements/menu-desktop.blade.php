@@ -12,7 +12,7 @@
             <a href="{{ route('home') }}#competences"
                 title="Mes competences"
                 class="block py-4 pl-3 pr-4 text-white bg-blue-700 md:py-2 md:bg-transparent md:p-0 dark:text-white hover:underline">
-                Savoir-faire
+                Compétences
             </a>
         </li>
         <li class="relative">

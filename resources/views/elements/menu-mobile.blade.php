@@ -31,7 +31,7 @@
                 <li>
                     <x-button.secondary href="{{ route('home') }}#competences"
                         @click.prevent="scrollToTarget('#competences')" title="Mes competences">
-                        Savoir-faire
+                        Compétences
                     </x-button.secondary>
                 </li>
                 <li>

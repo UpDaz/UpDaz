@@ -11,12 +11,12 @@
         @include('elements.home.references')
         @include('elements.separators.center')
         @include('elements.home.pricing')
-        @include('elements.separators.left')
-        @include('elements.home.articles')
         @include('elements.separators.extern')
         <div id="contact">
             @include('elements.contact')
         </div>
+        @include('elements.separators.left')
+        @include('elements.home.articles')
         @include('elements.separators.right')
         @include('elements.home.faq')
     </div>

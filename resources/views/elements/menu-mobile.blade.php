@@ -40,8 +40,8 @@
                     </x-button.secondary>
                 </li>
                 <li>
-                    <x-button.secondary href="{{ route('laravel') }}" title="Sur-mesure">
-                        Application web
+                    <x-button.secondary href="{{ route('laravel') }}" title="Développeur Laravel à Bordeaux">
+                        Application Laravel
                     </x-button.secondary>
                 </li>
                 <li>
@@ -67,12 +67,12 @@
                 <li>
                     <div class="flex justify-center gap-10 my-4 align-middle md:hidden">
                         <a href="https://fr.linkedin.com/in/matthieu-dazord" target="_blank" title="Linkedin"
-                            class="block text-white md:p-0 hover:underline" aria-current="page">
+                            class="block text-white md:p-0 hover:underline">
                             <img src="{{ asset('img/logos/white/linkedin.svg') }}" width="30" height="30"
                                 alt="Logo Linkedin" title="Linkedin" class="mx-auto">
                         </a>
                         <a href="https://github.com/UpDaz" target="_blank" title="Github"
-                            class="block text-white md:p-0 hover:underline" aria-current="page">
+                            class="block text-white md:p-0 hover:underline">
                             <img src="{{ asset('img/logos/white/github.svg') }}" width="30" height="30"
                                 alt="Logo Github" title="GIthub" class="mx-auto">
                         </a>

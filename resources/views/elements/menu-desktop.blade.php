@@ -4,44 +4,42 @@
         <li>
             <a href="{{ route('home') }}#presentation"
                 title="Présentation"
-                class="block py-4 pl-3 pr-4 text-white bg-blue-700 md:py-2 md:bg-transparent md:p-0 dark:text-white hover:underline"
-                aria-current="page">
+                class="block py-4 pl-3 pr-4 text-white bg-blue-700 md:py-2 md:bg-transparent md:p-0 dark:text-white hover:underline">
                 À propos
             </a>
         </li>
         <li>
             <a href="{{ route('home') }}#competences"
                 title="Mes competences"
-                class="block py-4 pl-3 pr-4 text-white bg-blue-700 md:py-2 md:bg-transparent md:p-0 dark:text-white hover:underline"
-                aria-current="page">
+                class="block py-4 pl-3 pr-4 text-white bg-blue-700 md:py-2 md:bg-transparent md:p-0 dark:text-white hover:underline">
                 Savoir-faire
             </a>
         </li>
         <li class="relative">
-            <a href="{{ route('laravel') }}" title="Sur-mesure"
+            <a href="{{ route('laravel') }}" title="Développeur Laravel à Bordeaux"
                 class="block py-4 pl-3 pr-4 text-white md:py-2 md:bg-transparent md:p-0 hover:underline"
-                aria-current="page">
-                Application web
+                @if(request()->routeIs('laravel')) aria-current="page" @endif>
+                Application Laravel
             </a>
         </li>
         <li class="relative">
             <a href="{{ route('ecommerce') }}" title="E-commerce"
                 class="block py-4 pl-3 pr-4 text-white md:py-2 md:bg-transparent md:p-0 hover:underline"
-                aria-current="page">
+                @if(request()->routeIs('ecommerce')) aria-current="page" @endif>
                 E-commerce
             </a>
         </li>
         <li class="relative">
             <a href="{{ route('webflow') }}" title="CMS"
                 class="block py-4 pl-3 pr-4 text-white md:py-2 md:bg-transparent md:p-0 hover:underline"
-                aria-current="page">
+                @if(request()->routeIs('webflow')) aria-current="page" @endif>
                 CMS
             </a>
         </li>
         <li class="relative" x-data="{ openSubmenu: false }">
             <a href="{{ route('articles') }}" title="Actualités"
                 class="block py-4 pl-3 pr-4 text-white md:py-2 md:bg-transparent md:p-0 hover:underline"
-                aria-current="page">
+                @if(request()->routeIs('articles')) aria-current="page" @endif>
                 Blog
             </a>
         </li>

@@ -15,12 +15,11 @@
         </p>
         <span class="inline-flex justify-center mt-4 sm:ml-auto sm:mt-0 sm:justify-start">
             <a href="https://fr.linkedin.com/in/matthieu-dazord" target="_blank" title="Linkedin"
-                class="mr-6 text-white" aria-current="page">
+                class="mr-6 text-white">
                 <img src="{{ asset('img/logos/white/linkedin.svg') }}" width="30" height="30" alt="Logo Linkedin"
                     title="Linkedin" class="mx-auto" loading="lazy">
             </a>
-            <a href="https://github.com/UpDaz" target="_blank" title="Github" class="text-white"
-                aria-current="page">
+            <a href="https://github.com/UpDaz" target="_blank" title="Github" class="text-white">
                 <img src="{{ asset('img/logos/white/github.svg') }}" width="30" height="30" alt="Logo Github"
                     title="Github" class="mx-auto">
             </a>

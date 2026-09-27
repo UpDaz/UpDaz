@@ -1,7 +1,7 @@
 <section id="accompagnement" class="pt-24 -mt-24">
     <div class="container flex flex-col gap-8 mx-auto md:gap-16">
         <h2 class="text-3xl text-center sm:text-4xl">Mon accompagnement,<br/>pour votre application web sur-mesure</h2>
-        <p class="text-center">Laravel est un outils puissant mais obtenir un résultat professionnel demande méthode et expertise.<br/>Chez UpDaz, je vous aide à :</p>
+        <p class="text-center">Laravel est un outil puissant mais obtenir un résultat professionnel demande méthode et expertise.<br/>En tant que développeur Laravel à Bordeaux, je vous aide à :</p>
         <div class="grid grid-cols-1 gap-16 md:gap-x-8 md:gap-y-16 md:grid-cols-2">
 
             <x-skills.box>
@@ -36,7 +36,7 @@
                     @include('elements.icon.view-dot-com')
                 </x-slot:icon>
                 <x-slot:title>
-                    <h3 class="text-lg font-medium title-font">Définission d'une structure claire et cohérente pour le contenu</h3>
+                    <h3 class="text-lg font-medium title-font">Définition d'une structure claire et cohérente pour le contenu</h3>
                 </x-slot:title>
             </x-skills.box>
 

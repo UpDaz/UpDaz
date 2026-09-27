@@ -13,7 +13,7 @@
                 'postalCode' => '33000',
                 'addressCountry' => 'FR',
             ],
-            'funder' => [
+            'founder' => [
                 '@type' => 'Person',
                 'name' => 'Matthieu Dazord',
             ],

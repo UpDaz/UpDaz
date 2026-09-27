@@ -39,8 +39,8 @@ Route::get('/articles/prestashop', function () {
  * Routes
  */
 Route::redirect('/prestashop', '/sur-mesure/e-commerce-bordeaux', 301);
-Route::redirect('/laravel', '/sur-mesure-bordeaux', 301);
-Route::redirect('/sur-mesure-bordeaux', 'application-web-bordeaux', 301);
+Route::redirect('/laravel', '/application-web-bordeaux', 301);
+Route::redirect('/sur-mesure-bordeaux', '/application-web-bordeaux', 301);
 
 Route::get(
     '/',

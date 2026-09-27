@@ -1,35 +1,40 @@
-<section id="presentation" class="pt-24 -mt-24">
-    <div class="container flex flex-col mx-auto">
-        <div class="flex flex-col items-center gap-8 mt-10 md:gap-16 sm:flex-row sm:items-start">
-            <div class="border-b border-gray sm:pl-8 sm:pb-8 md:pl-16 md:pb-16 sm:border-l sm:mt-0 sm:text-left">
+<section id="presentation" class="-mt-24 pt-24">
+    <div class="container mx-auto flex flex-col">
+        <div class="mt-10 flex flex-col items-center gap-8 sm:flex-row sm:items-start md:gap-16">
+            <div class="border-gray border-b sm:mt-0 sm:border-l sm:pb-8 sm:pl-8 sm:text-left md:pb-16 md:pl-16">
                 <div class="flex flex-row-reverse items-center gap-8 sm:flex-row">
-                    <h2 class="text-3xl font-bold font-title md:text-3xl"><span class="text-yellow">Laravel</span>
-                        qu'est-ce que c'est ?</h2>
-                    <div class="w-12">
+                    <div class="w-24 sm:w-12">
                         @include('elements.icon.question-mark')
                     </div>
+                    <h2>Pourquoi choisir <span class="text-yellow">Laravel</span> pour votre application métier ?</h2>
                 </div>
-                <p class="my-4 leading-relaxed text-md">
-                    <a target="_blank" href="https://laravel.com/" class="underline">Laravel</a> est un <i>Framework</i>, c'est à dire une boite à outils pour les développeurs, permettant
-                    la conception techniques de sites et d’applications web.
-                    <br /><br />
-                    Basé sur le langage de programmation PHP, il met à la disposition des développeurs un ensemble de
-                    composants
-                    <b>facilement utilisables et évolutifs</b> afin de construire des <b>applications complexes et
-                        autonomes</b>.
+                <p class="text-md my-4 leading-relaxed">
+                    <a target="_blank" href="https://laravel.com/" class="underline">Laravel</a> est le framework PHP
+                    le plus utilisé pour développer des applications web professionnelles. Pour vous, cela se traduit
+                    par des bénéfices concrets :
                 </p>
-                <p class="my-4 leading-relaxed text-md">
-                    Reposant sur un modèle d’architecture <i>MVC</i> (Modèle-Vue-Controller : séparation logique entre
-                    les données, le design et les processus métier), les projets conçus avec Laravel se caractérisent
-                    par leur fiabilité, leur <i>scalabilité</i> (conçu pour évoluer facilement) et leur performance.
-                <br/><br/>
-                    Laravel propose tout un <b>écosystème d’outils et de services</b> facilitant le développement et le
-                    fonctionnement de votre projet (on peut par exemple citer “Vapor” pour gérer la mise en ligne de
-                    votre
-                    projet,
-                    “Nova” pour ajouter un tableau d’administration ou encore ”Cashier” pour ajouter un système de
-                    facturation).
-                </p>
+                <ul class="text-md my-4 flex list-disc flex-col gap-2 pl-6 leading-relaxed">
+                    <li>
+                        <b>Une application qui colle à votre métier</b> : pas de fonctionnalités imposées ni de
+                        contournements, chaque écran et chaque règle de gestion est conçu pour vos processus.
+                    </li>
+                    <li>
+                        <b>Un code qui vous appartient</b> : pas d’abonnement par utilisateur ni de dépendance à un
+                        éditeur SaaS, vous restez propriétaire de votre outil.
+                    </li>
+                    <li>
+                        <b>Une base fiable et sécurisée</b> : protections natives (CSRF, injections SQL, hachage des
+                        mots de passe), tests automatisés et mises à jour régulières du framework.
+                    </li>
+                    <li>
+                        <b>Un projet qui peut grandir</b> : files d’attente, tâches planifiées, cache et API
+                        permettent d’ajouter des fonctionnalités et d’absorber la montée en charge sans tout réécrire.
+                    </li>
+                    <li>
+                        <b>Un écosystème reconnu</b> : une large communauté de développeurs, ce qui facilite la
+                        reprise ou le renfort de votre projet à long terme.
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

@@ -40,7 +40,7 @@
                         <x-skills.item text="Mises à jour régulières de la technologie" />
                     </div>
                     <div class="mt-8">
-                        <x-button.primary href="{{ route('laravel') }}" title="Lien page Laravel">
+                        <x-button.primary href="{{ route('laravel') }}" title="Développement d’application Laravel à Bordeaux">
                             Découvrir
                         </x-button.primary>
                     </div>

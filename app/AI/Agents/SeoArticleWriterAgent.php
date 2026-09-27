@@ -74,9 +74,13 @@ class SeoArticleWriterAgent implements Agent
         <maillage>
         Insère au moins un lien vers la page Updaz la plus cohérente avec le sujet,
         avec un texte d'ancre descriptif :
-        - https://www.updaz.fr/application-web-bordeaux
-        - https://www.updaz.fr/sur-mesure/e-commerce-bordeaux
-        - https://www.updaz.fr/webflow-bordeaux
+        - https://www.updaz.fr/application-web-bordeaux : tout sujet Laravel, PHP,
+          application métier, CRM, API ou reprise et maintenance d'application
+          (ex. d'ancres : « développement d'application Laravel à Bordeaux »,
+          « application métier sur mesure », « reprise d'application Laravel »)
+        - https://www.updaz.fr/sur-mesure/e-commerce-bordeaux : sujets e-commerce
+        - https://www.updaz.fr/webflow-bordeaux : sujets Webflow, sites vitrines, no-code
+        Varie le texte d'ancre d'un article à l'autre.
         </maillage>
 
         <style>

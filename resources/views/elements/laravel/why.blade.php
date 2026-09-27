@@ -1,45 +1,47 @@
-<section id="opquast" class="pt-24 -mt-24">
+<section id="quelle-utilisation" class="-mt-24 pt-24">
     <div class="container mx-auto">
-        <div class="flex flex-col-reverse gap-16 sm:gap-0 sm:flex-row ">
-            <div
-                class="flex flex-col items-start justify-start gap-8 border-gray sm:w-3/4 sm:pr-8 sm:py-8 md:pr-16 md:py-16 sm:border-r sm:border-t-0 sm:text-left">
+        <div class="flex flex-col-reverse gap-16 sm:flex-row sm:gap-0">
+            <div class="border-gray flex flex-col items-start justify-start gap-8 sm:w-3/4 sm:border-r sm:border-t-0 sm:py-8 sm:pr-8 sm:text-left md:py-16 md:pr-16">
                 <div class="flex flex-row-reverse items-center gap-8 sm:flex-row">
-                    <h2 class="text-3xl sm:text-4xl">
-                        Laravel, quelle utilisation ?
-                    </h2>
                     <div class="w-24 sm:w-12">
                         @include('elements.icon.check-list')
                     </div>
+                    <h2>
+                        Quelles applications je développe avec Laravel ?
+                    </h2>
                 </div>
-                <p class="leading-relaxed text-md">
-                    L’intérêt d’utiliser un framework comme base est de pouvoir modeler votre application web en
-                    fonction de vos besoins.<br/>
-                    Des outils comme <a href="{{ route('webflow') }}">Webflow</a>, Prestashop ou Wordpress offrent une expérience formatée et vous impose une
-                    base standardisée (aussi bien pour l’affichage du site que pour son fonctionnement) demandant
-                    d’importantes ressources pour s’adapter aux spécificités métiers.<br/>
-                    Un framework permet de gagner en <b>flexibilité</b>, en spécialisation et en <b>performance</b> tout en garantissant une <b>sécurité importante</b>.
-                    <br /><br />
-                    Les possibilités sont donc “infinies” et vont des plus classiques aux plus spécifiques :
-                    landing page, site vitrine, boutique en ligne, e-learning, CRM, annuaires en ligne, API, gestion
-                    d’abonnements, extranet, …
+                <p class="text-md leading-relaxed">
+                    Contrairement à des outils comme <a href="{{ route('webflow') }}" class="underline">Webflow</a>,
+                    Prestashop ou WordPress, qui imposent une base standardisée, un framework permet de modeler votre
+                    application selon vos besoins, avec plus de <b>flexibilité</b>, de <b>performance</b> et de
+                    <b>sécurité</b>. Quelques exemples de projets :
                 </p>
+                <ul class="text-md flex list-disc flex-col gap-2 pl-6 leading-relaxed">
+                    <li><b>CRM et outils de gestion sur mesure</b> : suivi des clients, devis, facturation, planning.</li>
+                    <li><b>Outils internes et back-offices</b> : digitalisation de processus métier, tableaux de bord,
+                        gestion des stocks ou des commandes.</li>
+                    <li><b>Extranets et portails clients</b> : espaces sécurisés pour vos clients, partenaires ou
+                        équipes.</li>
+                    <li><b>API et connecteurs</b> : échanges avec votre ERP, votre CRM, une application mobile ou des
+                        services tiers (paiement, logistique, emailing).</li>
+                    <li><b>Plateformes SaaS et gestion d’abonnements</b> : comptes utilisateurs, rôles, paiement
+                        récurrent.</li>
+                    <li><b>E-commerce sur mesure</b> : lorsque les solutions standards atteignent leurs limites, voir
+                        la <a href="{{ route('ecommerce') }}" class="underline">création de site e-commerce à
+                            Bordeaux</a>.</li>
+                </ul>
             </div>
-            <div class="max-w-full sm:pl-8 lg:px-12 md:w-1/4 sm:pt-8 md:pt-16">
+            <div class="max-w-full sm:pl-8 sm:pt-8 md:w-1/4 md:pt-16 lg:px-12">
                 <div class="sticky sm:top-24">
                     <div class="relative mx-8 md:mx-0">
-                        <img src="{{ asset('img/logos/laravel.svg') }}" class="w-full p-5 bg-white" alt="Logo Laravel"
-                            width="50" height="52">
-                        <div data-element="line-horizontal"
-                            class="absolute h-[1px] left-1/2 w-[150%] -translate-x-1/2 top-0 bg-gradient-to-r  ">
+                        <img src="{{ asset('img/logos/laravel.svg') }}" class="w-full bg-white p-5" alt="Logo Laravel" width="50" height="52">
+                        <div data-element="line-horizontal" class="absolute left-1/2 top-0 h-[1px] w-[150%] -translate-x-1/2 bg-gradient-to-r">
                         </div>
-                        <div data-element="line-horizontal"
-                            class="absolute h-[1px] left-1/2 w-[150%] -translate-x-1/2 bottom-0 bg-gradient-to-r  ">
+                        <div data-element="line-horizontal" class="absolute bottom-0 left-1/2 h-[1px] w-[150%] -translate-x-1/2 bg-gradient-to-r">
                         </div>
-                        <div data-element="line-vertical"
-                            class="absolute w-[1px] top-1/2 h-[150%] -translate-y-1/2 left-0 bg-gradient-to-b  ">
+                        <div data-element="line-vertical" class="absolute left-0 top-1/2 h-[150%] w-[1px] -translate-y-1/2 bg-gradient-to-b">
                         </div>
-                        <div data-element="line-vertical"
-                            class="absolute w-[1px] top-1/2 h-[150%] -translate-y-1/2 right-0 bg-gradient-to-b  ">
+                        <div data-element="line-vertical" class="absolute right-0 top-1/2 h-[150%] w-[1px] -translate-y-1/2 bg-gradient-to-b">
                         </div>
                     </div>
                 </div>

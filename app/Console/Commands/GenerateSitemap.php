@@ -25,7 +25,7 @@ class GenerateSitemap extends Command
      */
     private const SERVICE_PAGE_CATEGORIES = [
         'webflow' => 1,
-        'laravel' => 3,
+        'laravel' => 5,
         'ecommerce' => 4,
     ];
 

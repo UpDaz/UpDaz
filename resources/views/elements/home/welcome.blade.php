@@ -5,9 +5,9 @@
                 <h1 class="font-title text-4xl font-bold text-white">
                     Développeur Laravel et Webflow à Bordeaux
                 </h1>
-                <h2 class="font-text text-lg font-light"><b>UpDaz</b> développe et maintient votre <span class="text-yellow">application
-                        web métier</span>, votre site <span class="text-yellow text-nowrap">e-commerce</span> et votre
-                    <span class="text-yellow">site web CMS</span> à Bordeaux depuis plus de 10 ans.
+                <h2 class="font-text text-lg font-light"><b>UpDaz</b> développe et maintient votre <a href="{{ route('laravel') }}" class="text-yellow underline">application
+                        web métier</a>, votre site <a href="{{ route('ecommerce') }}" class="text-yellow text-nowrap underline">e-commerce</a> et votre
+                    <a href="{{ route('webflow') }}" class="text-yellow underline">site web CMS</a> à Bordeaux depuis plus de 10 ans.
                 </h2>
                 <div class="flex flex-col gap-2">
                     <x-skills.item text="Développement d'applications web avec Laravel" />

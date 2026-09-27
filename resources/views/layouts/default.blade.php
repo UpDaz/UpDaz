@@ -22,6 +22,7 @@
     @include('elements.fonts')
     @vite('resources/css/app.css')
     @include('elements.structured-data')
+    @stack('structured-data')
     @include('elements.google-analytics')
     @include('elements.axeptio')
 </head>

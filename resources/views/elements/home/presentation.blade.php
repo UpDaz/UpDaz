@@ -21,7 +21,7 @@
                     </div>
                 </div>
             </div>
-            <div class="border-gray border-b sm:mt-0 sm:border-l sm:pb-8 sm:pl-8 sm:text-left md:pb-16 md:pl-16">
+            <div class="sm:mt-0 sm:pb-8 sm:pl-8 sm:text-left md:pb-16 md:pl-16">
                 <div class="flex flex-row items-center justify-center gap-8 lg:justify-start">
                     <div class="rotate-45 *:h-auto *:w-12">
                         @include('elements.icon.hand-check')

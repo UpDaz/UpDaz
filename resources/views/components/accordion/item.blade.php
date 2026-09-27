@@ -4,7 +4,7 @@
     <div data-element="line-vertical" class="absolute left-0 top-1/2 h-[125%] w-[1px] -translate-y-1/2"></div>
     <div data-element="line-vertical" class="absolute right-0 top-1/2 h-[125%] w-[1px] -translate-y-1/2"></div>
     <div class="hover:bg-blue flex items-center justify-between gap-8 p-8 hover:cursor-pointer md:px-16" @click="open = !open">
-        <h3 class="font-text font-normal text-base md:text-lg">
+        <h3 class="text-base md:text-lg">
             {!! $title !!}
         </h3>
         <div>

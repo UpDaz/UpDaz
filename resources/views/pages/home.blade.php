@@ -4,10 +4,7 @@
     <div class="flex flex-col gap-16">
         @include('elements.home.welcome')
         @include('elements.separators.right')
-        <div class="flex flex-col gap-16 sm:gap-0">
-            @include('elements.home.presentation')
-            @include('elements.home.opquast')
-        </div>
+        @include('elements.home.presentation')
         @include('elements.separators.left')
         @include('elements.home.skills')
         @include('elements.separators.extern')

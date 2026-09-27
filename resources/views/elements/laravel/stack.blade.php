@@ -1,6 +1,6 @@
 <section id="stack" class="-mt-24 pt-24">
     <div class="container mx-auto flex flex-col gap-8 md:gap-16">
-        <div class="flex items-center justify-center gap-4 sm:gap-8">
+        <div class="flex items-center justify-center gap-8">
             <div class="*:w-12 *:h-auto">
                 @include('elements.icon.programming')
             </div>

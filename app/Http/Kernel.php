@@ -6,6 +6,7 @@ use App\Http\Middleware\Authenticate;
 use App\Http\Middleware\EncryptCookies;
 use App\Http\Middleware\PreventRequestsDuringMaintenance;
 use App\Http\Middleware\RedirectIfAuthenticated;
+use App\Http\Middleware\RedirectToCanonicalHost;
 use App\Http\Middleware\TrimStrings;
 use App\Http\Middleware\TrustProxies;
 use App\Http\Middleware\VerifyCsrfToken;
@@ -41,6 +42,7 @@ class Kernel extends HttpKernel
     protected $middleware = [
         // \App\Http\Middleware\TrustHosts::class,
         TrustProxies::class,
+        RedirectToCanonicalHost::class,
         HandleCors::class,
         PreventRequestsDuringMaintenance::class,
         ValidatePostSize::class,

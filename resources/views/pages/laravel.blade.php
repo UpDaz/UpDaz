@@ -1,12 +1,8 @@
 @extends('layouts.default')
 
-@section('title')
-    Création de site sur-mesure à Bordeaux - UpDaz
-@endsection
+@section('title', 'Création d’applications web Laravel à Bordeaux – UpDaz')
 
-@section('meta-description')
-    Développement d'application et de site web sur-mesure avec le framework Laravel. Accompagnement, conseils, maintenance...
-@endsection
+@section('meta-description', 'Développeur Laravel à Bordeaux : création d’applications web métier sur mesure (CRM, outils internes, API, e-commerce). Accompagnement, développement et maintenance.')
 
 @section('content')
     @include('elements.laravel.header')

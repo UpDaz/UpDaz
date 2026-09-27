@@ -12,8 +12,8 @@
                 </span>
             </div>
             <div class="flex w-full justify-between md:justify-start gap-4 md:gap-8 sm:items-center">
-                <a href="https://www.google.com/search?sca_esv=c615aacbb620d3c2&q=updaz&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOd8Zdi8KcL1I_n53ekY2Jk7ehhj2kbcj5IMZ8DoJOxfaSNucXUbjLAk5tNEfUSyAcfpkRew%3D&uds=ALYpb_k0Bh0O5_BGI7GnVPXtbDn98JgG5R9oJZCdLYDRRytz5XwICe9DwpHsqOzORY8bDEDVeEMJROab--dE9Rj1cyBfOb1FcJhW0-n8Mu1dtiSdDT9Nn5k&sa=X&ved=2ahUKEwjViLqi1Z-UAxVxTKQEHdyaGr0Q3PALegQIGBAE&biw=1512&bih=827&dpr=2"
-                    target="_blank" class="flex flex-col sm:flex-row gap-2 justify-start sm:items-center">
+                <a href="https://www.google.com/search?q=updaz" target="_blank" rel="nofollow noopener"
+                    class="flex flex-col sm:flex-row gap-2 justify-start sm:items-center">
                     <img src="{{ asset('img/logos/google.svg') }}" alt="Google"
                         class="h-8 w-auto max-w-none self-start" width="95" height="32" />
                     <span class="text-yellow hidden sm:flex">

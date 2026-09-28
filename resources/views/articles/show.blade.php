@@ -10,17 +10,25 @@
 
 @section('content')
     @include('elements.article.structured-data')
-    <div class="container flex flex-col max-w-screen-lg gap-8 mx-auto">
-        <div class="relative mt-24 overflow-hidden text-white ">
-            <div class="flex flex-col gap-8 items-start">
-                <div class="flex flex-col md:flex-row gap-8 md:items-center">
-                    <div class="*:w-12 *:h-auto">
+    <div class="container mx-auto flex max-w-screen-lg flex-col gap-8">
+        <div class="relative mt-24 overflow-hidden text-white">
+            <div class="flex flex-col items-start gap-8">
+                <div class="flex flex-col gap-8 md:flex-row md:items-center">
+                    <div class="*:h-auto *:w-12">
                         @include('elements.icon.write-paper')
                     </div>
                     <h1>{{ $article->title }}</h1>
                 </div>
                 <p class="text-lg">{{ $article->catch_phrase }}</p>
-                <div class="mb-2 text-sm italic text-right w-full">
+                <div class="font-title text-yellow relative col-span-2 mb-1 min-w-0 truncate">
+                    @foreach ($article->categoriesWithMainFirst() as $articleCategory)
+                        <a title="Lien page catégorie article {{ $articleCategory->name }}" href="{{ route('category', ['slug' => $articleCategory->slug]) }}">{{ $articleCategory->name }}</a>
+                        @if (!$loop->last)
+                            /
+                        @endif
+                    @endforeach
+                </div>
+                <div class="mb-2 w-full text-right text-sm italic">
                     Le {{ $article->published_at->format('d/m/Y') }}, par Matthieu
                 </div>
             </div>

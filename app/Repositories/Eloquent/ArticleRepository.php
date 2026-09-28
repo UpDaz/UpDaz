@@ -5,6 +5,7 @@ namespace App\Repositories\Eloquent;
 use App\Models\Article;
 use App\Repositories\ArticleRepositoryInterface;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Collection;
 
 class ArticleRepository extends BaseRepository implements ArticleRepositoryInterface
@@ -49,7 +50,10 @@ class ArticleRepository extends BaseRepository implements ArticleRepositoryInter
                 $q->where('slug', $categorySlug)
                     ->where('is_active', true);
             })
-            ->with('category')
+            ->with([
+                'category',
+                'categories' => fn (BelongsToMany $query) => $query->where('is_active', true),
+            ])
             ->first();
     }
 }

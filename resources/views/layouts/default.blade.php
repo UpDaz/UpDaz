@@ -10,7 +10,7 @@
         content="Développeur web, Bordeaux, application web, freelance, full-stack, site internet, Laravel, CMS, Webflow, accompagnement, HTML, CSS, JavaScript, SEO, conseils, digitalisation, web" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index,follow" />
-    <meta name="author" content="Matthieu Dazord" />
+    <meta name="author" content="Matthieu DAZORD" />
     <meta name="application-name" content="UpDaz" />
     <link rel="icon" href="{{ asset('img/favicon.png') }}" type="image/png">
     <link rel="preconnect" href="https://static.axept.io">

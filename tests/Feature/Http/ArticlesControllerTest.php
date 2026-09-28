@@ -95,8 +95,11 @@ class ArticlesControllerTest extends TestCase
         $this->assertSame('Laravel face aux défis de la scalabilité', $blogPosting['headline']);
         $this->assertSame($article->published_at->toIso8601String(), $blogPosting['datePublished']);
         $this->assertSame('Person', $blogPosting['author']['@type']);
+        $this->assertSame('Matthieu DAZORD', $blogPosting['author']['name']);
+        $this->assertSame(route('home') . '#presentation', $blogPosting['author']['@id']);
         $this->assertSame('Organization', $blogPosting['publisher']['@type']);
         $this->assertStringNotContainsString('{{', json_encode($blogPosting));
+        $response->assertSee('href="' . route('home') . '#presentation" rel="author"', false);
     }
 
     public function testRelatedArticlesOnlyListReadableArticles(): void

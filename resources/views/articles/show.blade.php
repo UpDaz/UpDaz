@@ -29,7 +29,7 @@
                     @endforeach
                 </div>
                 <div class="mb-2 w-full text-right text-sm italic">
-                    Le {{ $article->published_at->format('d/m/Y') }}, par Matthieu
+                    Le {{ $article->published_at->format('d/m/Y') }}, par <a href="{{ route('home') }}#presentation" rel="author" class="underline">Matthieu DAZORD</a>
                 </div>
             </div>
         </div>

@@ -15,7 +15,16 @@
             ],
             'founder' => [
                 '@type' => 'Person',
-                'name' => 'Matthieu Dazord',
+                '@id' => route('home') . '#presentation',
+                'name' => 'Matthieu DAZORD',
+                'jobTitle' => 'Développeur web freelance',
+                'url' => route('home') . '#presentation',
+                'image' => asset('img/profile.jpg'),
+                'sameAs' => [
+                    'https://fr.linkedin.com/in/matthieu-dazord',
+                    'https://github.com/UpDaz',
+                    'https://www.malt.fr/profile/matthieudazord',
+                ],
             ],
             'logo' => asset('img/logo-blue.png'),
             'url' => route('home'),

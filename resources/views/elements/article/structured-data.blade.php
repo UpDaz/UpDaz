@@ -17,8 +17,9 @@
             'articleSection' => $article->categories->pluck('name')->all(),
             'author' => [
                 '@type' => 'Person',
-                'name' => 'Matthieu UpDaz',
-                'url' => route('home'),
+                '@id' => route('home') . '#presentation',
+                'name' => 'Matthieu DAZORD',
+                'url' => route('home') . '#presentation',
             ],
             'publisher' => [
                 '@type' => 'Organization',

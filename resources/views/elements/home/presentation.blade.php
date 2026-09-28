@@ -5,11 +5,11 @@
                 <div class="relative">
                     @include('elements.html.webp-image', [
                         'source' => asset('img/profile.jpg'),
-                        'alt' => 'Photo de profil Matthieu UpDaz',
+                        'alt' => 'Photo de profil de Matthieu DAZORD, développeur web freelance à Bordeaux',
                         'width' => '253',
                         'height' => '253',
                         'class' => 'object-cover object-center rounded',
-                        'title' => 'Photo de profile Matthieu',
+                        'title' => 'Matthieu DAZORD',
                     ])
                     <div data-element="line-horizontal" class="absolute left-1/2 top-0 h-[1px] w-[150%] -translate-x-1/2 bg-gradient-to-r">
                     </div>
@@ -29,24 +29,43 @@
                     <p class="font-title text-3xl font-bold">Vous avez frappé à la bonne porte</p>
                 </div>
                 <div class="text-md my-4 leading-relaxed">
-                    Je suis <b class="text-yellow">Matthieu</b>, développeur d'<b class="text-yellow">applications web</b> et de <b class="text-yellow">sites CMS</b> depuis 10 ans sur la région
+                    Je suis <b class="text-yellow">Matthieu DAZORD</b>, développeur d'<b class="text-yellow">applications web</b> et de <b class="text-yellow">sites CMS</b> depuis 10 ans sur la région
                     bordelaise.<br /><br />
                     Après plusieurs années en agence de communication et dans des entreprises spécialisées, j'ai acquis
                     des
                     <a href="#competences" @click.prevent="scrollToTarget('#competences')" class="text-yellow underline">compétences techniques</a> et <b>une expertise</b> dans la réalisation et la maintenance d'applications web.
                     <br /><br />
-                    Je vous accompage dans votre projet afin de trouver et mettre en place <b class="text-yellow">les meilleures solutions techniques</b> en prenant en compte vos enjeux métier.
+                    Je vous accompagne dans votre projet afin de trouver et mettre en place <b class="text-yellow">les meilleures solutions techniques</b> en prenant en compte vos enjeux métier.
                     <br /><br />
-                    <div class="grid gap-4 lg:grid-cols-3">
-                        <x-button.secondary href="#competences" @click.prevent="scrollToTarget('#competences')" title="Ce que propose updaz">
-                            Compétences
-                        </x-button.secondary>
-                        <x-button.secondary href="#references" @click.prevent="scrollToTarget('#references')" title="Références Updaz">
-                            Références
-                        </x-button.secondary>
-                        <x-button.primary href="#contact" title="Vous avez des questions ?" @click.prevent="scrollToTarget('#contact')">
-                            J'ai un projet
-                            </x-button-primary>
+                    <div class="flex justify-between gap-16 items-center">
+                        <div class="grid gap-4 lg:grid-cols-3">
+                            <x-button.secondary href="#competences" @click.prevent="scrollToTarget('#competences')" title="Ce que propose updaz">
+                                Compétences
+                            </x-button.secondary>
+                            <x-button.secondary href="#references" @click.prevent="scrollToTarget('#references')" title="Références Updaz">
+                                Références
+                            </x-button.secondary>
+                            <x-button.primary href="#contact" title="Vous avez des questions ?" @click.prevent="scrollToTarget('#contact')">
+                                J'ai un projet
+                                </x-button-primary>
+                        </div>
+                        <ul class="flex flex-wrap items-center justify-center gap-4 sm:justify-start" aria-label="Profils de Matthieu DAZORD">
+                            <li>
+                                <a href="https://fr.linkedin.com/in/matthieu-dazord" target="_blank" rel="me noopener" title="Profil LinkedIn de Matthieu DAZORD">
+                                    <img src="{{ asset('img/logos/white/linkedin.svg') }}" width="24" height="24" alt="" loading="lazy">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/UpDaz" target="_blank" rel="me noopener" title="Profil GitHub de Matthieu DAZORD">
+                                    <img src="{{ asset('img/logos/white/github.svg') }}" width="24" height="24" alt="" loading="lazy">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.malt.fr/profile/matthieudazord" target="_blank" rel="me noopener" title="Profil Malt de Matthieu DAZORD">
+                                    <img src="{{ asset('img/logos/white/malt.svg') }}" width="24" height="24" alt="" loading="lazy">
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

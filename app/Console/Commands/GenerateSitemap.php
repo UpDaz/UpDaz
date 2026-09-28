@@ -120,7 +120,7 @@ class GenerateSitemap extends Command
     {
         $updatedAt = Article::query()
             ->where('is_published', true)
-            ->when($categoryId, fn ($query) => $query->where('category_id', $categoryId))
+            ->when($categoryId, fn ($query) => $query->whereRelation('categories', 'categories.id', $categoryId))
             ->max('updated_at');
 
         return $updatedAt ? Carbon::parse($updatedAt) : null;

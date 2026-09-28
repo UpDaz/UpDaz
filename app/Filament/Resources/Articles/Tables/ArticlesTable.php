@@ -17,7 +17,7 @@ class ArticlesTable
     public static function configure(Table $table): Table
     {
         return $table
-            ->modifyQueryUsing(fn ($query) => $query->with('category'))
+            ->modifyQueryUsing(fn ($query) => $query->with('categories'))
             ->defaultSort('published_at', 'desc')
             ->columns([
                 TextColumn::make('title')
@@ -26,9 +26,9 @@ class ArticlesTable
                     ->label('Date de publication')
                     ->dateTime('d/m/Y')
                     ->sortable(),
-                TextColumn::make('category')
-                    ->label('Catégorie')
-                    ->formatStateUsing(fn (Article $article): string => $article->category->name),
+                TextColumn::make('categories.name')
+                    ->label('Catégories')
+                    ->badge(),
                 IconColumn::make('is_published')
                     ->label('Publié')
                     ->icon(fn (int $state): Heroicon => match ($state) {

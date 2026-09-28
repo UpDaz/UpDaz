@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Articles\Schemas;
 
+use App\Models\Article;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Select;
@@ -39,8 +40,22 @@ class ArticleForm
                     ->columnSpanFull()
                     ->required(),
                 Select::make('category_id')
+                    ->label('Catégorie principale')
+                    ->helperText("Utilisée dans l'URL de l'article.")
                     ->columnSpan(1)
                     ->relationship(name: 'category', titleAttribute: 'name'),
+                Select::make('categories')
+                    ->label('Catégories')
+                    ->helperText('La catégorie principale y est ajoutée automatiquement.')
+                    ->columnSpan(1)
+                    ->multiple()
+                    ->preload()
+                    ->relationship(name: 'categories', titleAttribute: 'name')
+                    ->saveRelationshipsUsing(function (Article $record, array $state): void {
+                        $record->categories()->sync(
+                            collect($state)->push($record->category_id)->filter()->unique()->all()
+                        );
+                    }),
                 DatePicker::make('published_at')
                     ->label('Date de publication')
                     ->columnSpan(1)

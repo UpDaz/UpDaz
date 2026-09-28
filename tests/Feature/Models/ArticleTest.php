@@ -84,6 +84,34 @@ class ArticleTest extends TestCase
         $this->assertStringContainsString('/articles/preview/' . $article->id, $article->frontendUrl());
     }
 
+    public function testMainCategoryIsAttachedToCategoriesWhenSaved(): void
+    {
+        $mainCategory = Category::factory()->create();
+        $newMainCategory = Category::factory()->create();
+
+        $article = Article::factory()->create(['category_id' => $mainCategory->id]);
+        $article->update(['category_id' => $newMainCategory->id]);
+
+        $this->assertEqualsCanonicalizing(
+            [$mainCategory->id, $newMainCategory->id],
+            $article->categories()->pluck('categories.id')->all()
+        );
+    }
+
+    public function testCategoriesWithMainFirstStartsWithTheMainCategory(): void
+    {
+        $secondaryCategory = Category::factory()->create();
+        $mainCategory = Category::factory()->create();
+
+        $article = Article::factory()->create(['category_id' => $mainCategory->id]);
+        $article->categories()->attach($secondaryCategory);
+
+        $this->assertSame(
+            [$mainCategory->id, $secondaryCategory->id],
+            $article->categoriesWithMainFirst()->pluck('id')->all()
+        );
+    }
+
     public function testDeletingAnArticleNullsTheLinkedWeeklyDigestInsteadOfFailing(): void
     {
         $article = Article::factory()->create();

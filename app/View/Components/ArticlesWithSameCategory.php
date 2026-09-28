@@ -4,6 +4,7 @@ namespace App\View\Components;
 
 use App\Models\Article;
 use Illuminate\Contracts\View\View;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\View\Component;
 
@@ -13,10 +14,13 @@ class ArticlesWithSameCategory extends Component
 
     public function __construct(private Article $article)
     {
-        $this->articles = $article->category_id === null
+        $categoryIds = $article->categories()->pluck('categories.id');
+
+        $this->articles = $categoryIds->isEmpty()
             ? new Collection()
-            : Article::where('category_id', $article->category_id)
+            : Article::whereHas('categories', fn (Builder $query) => $query->whereIn('categories.id', $categoryIds))
                 ->whereNot('id', $article->id)
+                ->with(['category', 'categories'])
                 ->orderBy('published_at', 'desc')
                 ->get();
     }
@@ -25,6 +29,7 @@ class ArticlesWithSameCategory extends Component
     {
         return view('components.articles-with-same-category', [
             'articles' => $this->articles,
+            'category' => $this->article->category,
         ]);
     }
 }

@@ -291,7 +291,7 @@ button, a {
 
 .article-content {
     table {
-        @apply w-full border-spacing-2 border border-gray mt-8 max-w-full overflow-x-scroll;
+        @apply w-full border-spacing-2 border border-gray my-8 max-w-full overflow-x-scroll;
 
         th {
             @apply text-left font-title;

@@ -33,9 +33,9 @@ class ArticleRepository extends BaseRepository implements ArticleRepositoryInter
                 $q->where('is_active', true);
             })
             ->when($categoryId, function (Builder $query) use ($categoryId) {
-                $query->where('category_id', $categoryId);
+                $query->whereRelation('categories', 'categories.id', $categoryId);
             })
-            ->with('category')
+            ->with(['category', 'categories'])
             ->orderBy($orderField, $orderDirection)
             ->limit($limit)
             ->get();
@@ -45,7 +45,7 @@ class ArticleRepository extends BaseRepository implements ArticleRepositoryInter
     {
         return $this->model
             ->where('slug', $slug)
-            ->whereHas('category', function ($q) use ($categorySlug) {
+            ->whereHas('categories', function (Builder $q) use ($categorySlug) {
                 $q->where('slug', $categorySlug)
                     ->where('is_active', true);
             })

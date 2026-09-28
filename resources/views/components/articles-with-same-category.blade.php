@@ -16,12 +16,12 @@
                             @include('elements.article.box')
                         @endforeach
                     </div>
-                    @if ($articles->count() > 1)
+                    @if ($category && $articles->count() > 1)
                     <div class="flex justify-center *:md:!w-auto">
                         <x-button.secondary 
-                            title="Lien page catégorie article {{ $article->category->name }}"
-                            href="{{ route('category', ['slug' => $article->category->slug]) }}">
-                            Voir plus d'articles sur le thème {{ $articles->first()->category->name}}
+                            title="Lien page catégorie article {{ $category->name }}"
+                            href="{{ route('category', ['slug' => $category->slug]) }}">
+                            Voir plus d'articles sur le thème {{ $category->name }}
                         </x-button.secondary>
                     </div>
                     @endif

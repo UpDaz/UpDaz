@@ -3,8 +3,11 @@
 namespace App\Models;
 
 use App\Casts\Markdown as CastMarkdown;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\URL;
 
@@ -43,9 +46,28 @@ class Article extends Model
         'generated_by_agent' => 'boolean',
     ];
 
-    public function category()
+    /**
+     * The main category: it builds the article's canonical URL.
+     */
+    public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
+    }
+
+    /**
+     * Every category the article is listed in, main category included.
+     */
+    public function categories(): BelongsToMany
+    {
+        return $this->belongsToMany(Category::class);
+    }
+
+    /** @return Collection<int, Category> */
+    public function categoriesWithMainFirst(): Collection
+    {
+        return $this->categories
+            ->sortBy(fn (Category $category): int => $category->id === $this->category_id ? 0 : 1)
+            ->values();
     }
 
     public function getCanBeReadAttribute()

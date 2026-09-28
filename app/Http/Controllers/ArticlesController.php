@@ -30,6 +30,13 @@ class ArticlesController extends Controller
             return redirect()->route('articles');
         }
 
+        if ($article->category && $article->category->slug !== $slugCategory) {
+            return redirect()->route('article', [
+                'categorySlug' => $article->category->slug,
+                'slug' => $article->slug,
+            ], 301);
+        }
+
         return view('articles.show', [
             'article' => $article,
         ]);

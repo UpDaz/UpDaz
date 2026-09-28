@@ -28,7 +28,7 @@ class CategoryRepository extends BaseRepository implements CategoryRepositoryInt
         return $this->model
             ->where('slug', $slug)
             ->where('is_active', true)
-            ->with('articles')
+            ->with(['articles.category', 'articles.categories'])
             ->first();
     }
 }

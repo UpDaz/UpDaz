@@ -27,7 +27,7 @@
     @include('elements.axeptio')
 </head>
 
-<body class="text-white overflow-x-hiddenn bg-linear-to-br from-blue to-blue-dark">
+<body class="text-white overflow-x-hidden bg-linear-to-br from-blue to-blue-dark">
     <div class="relative">
         <div class="absolute top-0 left-0 w-2 h-full md:w-4 background"></div>
         <div class="absolute top-0 right-0 w-2 h-full md:w-4 background"></div>

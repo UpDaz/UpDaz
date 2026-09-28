@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Casts\Markdown as CastMarkdown;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -10,6 +11,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Str;
 
 class Article extends Model
 {
@@ -70,14 +72,23 @@ class Article extends Model
             ->values();
     }
 
+    /**
+     * Same rule as `can_be_read`, as a query: published and already due.
+     */
+    public function scopeReadable(Builder $query): void
+    {
+        $query->where('is_published', true)
+            ->where('published_at', '<=', Carbon::now());
+    }
+
     public function getCanBeReadAttribute()
     {
         return $this->is_published && $this->published_at->lte(Carbon::now());
     }
 
-    public function getMetaTitleAttribute()
+    public function getMetaTitleAttribute(): string
     {
-        return substr($this->title, 0, 52);
+        return Str::limit($this->title, 52, '…', preserveWords: true);
     }
 
     public function getMetaDescriptionAttribute()

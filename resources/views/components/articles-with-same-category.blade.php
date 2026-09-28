@@ -11,7 +11,7 @@
                         </div>
                         <h2>Ces articles pourraient vous intéresser</h2>
                     </div>
-                    <div class="grid gap-8 md:grid-cols-2 items-start">
+                    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 items-start">
                         @foreach ($articles->take(4) as $article)
                             @include('elements.article.box')
                         @endforeach

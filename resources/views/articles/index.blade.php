@@ -19,7 +19,7 @@
                 </div>
             </div>
         </div>
-        <div class="grid gap-16 mb-16 md:grid-cols-2">
+        <div class="grid grid-cols-1 gap-16 mb-16 md:grid-cols-2">
             @foreach ($articles->sortByDesc('published_at') as $article)
                 @include('elements.article.box')
             @endforeach

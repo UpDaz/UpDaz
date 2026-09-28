@@ -20,6 +20,8 @@ class ArticlesWithSameCategory extends Component
             ? new Collection()
             : Article::whereHas('categories', fn (Builder $query) => $query->whereIn('categories.id', $categoryIds))
                 ->whereNot('id', $article->id)
+                ->readable()
+                ->whereNotNull('category_id')
                 ->with(['category', 'categories'])
                 ->orderBy('published_at', 'desc')
                 ->get();

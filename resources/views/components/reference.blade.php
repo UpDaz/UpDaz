@@ -1,4 +1,4 @@
-<div class="relative w-full">
+<div class="relative w-full {{ $style }}">
     <div class="inline-flex items-center justify-center w-full px-6 py-3 *:w-full ">
         {{ $slot }}
     </div>

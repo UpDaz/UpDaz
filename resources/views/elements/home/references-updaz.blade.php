@@ -1,21 +1,26 @@
+<x-reference title="VisaEntreprendre" style="bg-white">
+    <a href="https://visaentreprendre.fr/" target="_blank" title="VisaEntreprendre CCI CMA Bordeaux">
+        <img src="{{ asset('img/references/visaentreprendre.svg') }}" width="138" height="30" alt="VisaEntreprendre logo" title="VisaEntreprendre logo" loading="lazy" class="mx-auto w-auto max-h-16" />
+    </a>
+</x-reference>
 <x-reference title="SOLART Etude">
     <a href="https://solart-etude.com/" target="_blank" title="SOLART Etude">
-        <img src="{{ asset('img/references/solart.svg') }}" width="138" height="30" alt="B-Records logo" title="SOLART Etude logo" loading="lazy" class="mx-auto h-16 w-auto" />
+        <img src="{{ asset('img/references/solart.svg') }}" width="138" height="30" alt="Solart Etude logo" title="SOLART Etude logo" loading="lazy" class="mx-auto w-auto max-h-16" />
     </a>
 </x-reference>
-<x-reference title="B.Records">
+<x-reference title="B.Records" style="bg-white">
     <a href="https://www.b-records.fr/" target="_blank" title="B.Records">
-        <img src="{{ asset('img/references/b-records.png') }}" width="138" height="30" alt="B-Records logo" title="B.Records logo" loading="lazy" class="mx-auto h-16 w-auto" />
+        <img src="{{ asset('img/references/b-records.png') }}" width="138" height="30" alt="B-Records logo" title="B.Records logo" loading="lazy" class="mx-auto w-auto max-h-16" />
     </a>
 </x-reference>
-<x-reference title="F.ABM">
+<x-reference title="F.ABM" style="bg-white">
     <a href="https://www.fabm-menuiseries.fr/" target="_blank" title="F.ABM">
-        <img src="{{ asset('img/references/fabm.png') }}" width="138" height="30" alt="F.ABM logo" title="F.ABM logo" loading="lazy" class="mx-auto h-16 w-auto" />
+        <img src="{{ asset('img/references/fabm.png') }}" width="138" height="30" alt="F.ABM logo" title="F.ABM logo" loading="lazy" class="mx-auto w-auto max-h-16" />
     </a>
 </x-reference>
 <x-reference title="PadelReference">
     <a href="https://www.padelreference.com/fr/" target="_blank" title="PadelReference">
-        <img src="{{ asset('img/references/padelreference.svg') }}" width="138" height="30" alt="PadelReference logo" title="PadelReference logo" loading="lazy" class="mx-auto h-16 w-auto" />
+        <img src="{{ asset('img/references/padelreference.svg') }}" width="138" height="30" alt="PadelReference logo" title="PadelReference logo" loading="lazy" class="mx-auto w-auto max-h-16" />
     </a>
 </x-reference>
 
@@ -28,36 +33,36 @@
 
 <x-reference title="Asphodèle Créations">
     <a href="https://www.asphodele-creations.fr/" target="_blank" title="Asphodèle Créations">
-        <img src="{{ asset('img/references/asphodele-creations.svg') }}" width="138" height="30" alt="Asphodèle Créations logo" title="Asphodèle Créations" loading="lazy" class="mx-auto h-16 w-auto" />
+        <img src="{{ asset('img/references/asphodele-creations.svg') }}" width="138" height="30" alt="Asphodèle Créations logo" title="Asphodèle Créations" loading="lazy" class="mx-auto w-auto max-h-16" />
     </a>
 </x-reference>
 
 <x-reference title="Éditions Vetiver" :verticaly="true">
-    <img src="{{ asset('img/references/editions-vetiver.svg') }}" width="138" height="50" alt="Éditions Vetiver logo" title="Éditions Vetiver" loading="lazy" class="mx-auto h-16 w-auto" />
+    <img src="{{ asset('img/references/editions-vetiver.svg') }}" width="138" height="50" alt="Éditions Vetiver logo" title="Éditions Vetiver" loading="lazy" class="mx-auto w-auto max-h-16" />
 </x-reference>
 
 <x-reference title="C&C Graphic" :verticaly="true">
-    <img src="{{ asset('img/references/candc.svg') }}" width="138" height="30" alt="C&C Graphic" title="CAndC Agence de communication visuelle Paris" loading="lazy" class="mx-auto h-16 w-auto" />
+    <img src="{{ asset('img/references/candc.svg') }}" width="138" height="30" alt="C&C Graphic" title="CAndC Agence de communication visuelle Paris" loading="lazy" class="mx-auto w-auto max-h-16" />
 </x-reference>
 
 <x-reference title="Le5eme">
-    <img src="{{ asset('img/references/le5eme.svg') }}" width="138" height="50" alt="Le5eme" title="Le5eme.com" loading="lazy" class="mx-auto h-16 w-auto" />
+    <img src="{{ asset('img/references/le5eme.svg') }}" width="138" height="50" alt="Le5eme" title="Le5eme.com" loading="lazy" class="mx-auto w-auto max-h-16" />
 </x-reference>
 
-<x-reference title="Mediaffiliation">
-    <img src="{{ asset('img/references/mediaffiliation.png') }}" class="bg-white p-2" width="138" height="30" alt="C" title="Mediaffiliation" loading="lazy" class="mx-auto h-16 w-auto" />
+<x-reference title="Mediaffiliation" style="bg-white">
+    <img src="{{ asset('img/references/mediaffiliation.png') }}" class="bg-white p-2" width="138" height="30" alt="C" title="Mediaffiliation" loading="lazy" class="mx-auto w-auto max-h-16" />
 </x-reference>
 
-<x-reference title="GPBL Consulting">
-    <img src="{{ asset('img/references/gpbl.png') }}" class="bg-white p-2" width="138" height="30" alt="GPBL logo" title="Mediaffiliation" loading="lazy" class="mx-auto h-16 w-auto" />
+<x-reference title="GPBL Consulting" style="bg-white">
+    <img src="{{ asset('img/references/gpbl.png') }}" class="bg-white p-2" width="138" height="30" alt="GPBL logo" title="Mediaffiliation" loading="lazy" class="mx-auto w-auto max-h-16" />
 </x-reference>
 
-<x-reference title="Agence Fruiteo">
-    <img src="{{ asset('img/references/fruiteo.png') }}" class="bg-white p-2" width="138" height="30" alt="Agence Fruiteo logo" title="Fruiteo" loading="lazy" class="mx-auto h-16 w-auto" />
+<x-reference title="Agence Fruiteo" style="bg-white">
+    <img src="{{ asset('img/references/fruiteo.png') }}" class="bg-white p-2" width="138" height="30" alt="Agence Fruiteo logo" title="Fruiteo" loading="lazy" class="mx-auto w-auto max-h-16" />
 </x-reference>
 
-<x-reference title="Le Petit Paumé">
+<x-reference title="Le Petit Paumé" style="bg-white">
     <a href="https://www.petitpaume.com/" target="_blank" title="Le Petit Paumé">
-        <img src="{{ asset('img/references/le-petit-paume.webp') }}" width="138" height="30" alt="Le petit paumé logo" title="Le Petit Paumé" loading="lazy" class="mx-auto h-16 w-auto" />
+        <img src="{{ asset('img/references/le-petit-paume.webp') }}" width="138" height="30" alt="Le petit paumé logo" title="Le Petit Paumé" loading="lazy" class="mx-auto w-auto max-h-16" />
     </a>
 </x-reference>

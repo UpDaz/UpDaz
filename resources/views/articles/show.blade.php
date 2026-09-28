@@ -13,7 +13,7 @@
     <div class="container flex flex-col max-w-screen-lg gap-8 mx-auto">
         <div class="relative mt-24 overflow-hidden text-white ">
             <div class="flex flex-col gap-8 items-start">
-                <div class="flex gap-8 items-center">
+                <div class="flex flex-col md:flex-row gap-8 md:items-center">
                     <div class="*:w-12 *:h-auto">
                         @include('elements.icon.write-paper')
                     </div>

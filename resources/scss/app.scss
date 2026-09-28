@@ -17,8 +17,7 @@
 }
 
 @layer utilities {
-    .safelisted {
-    }
+    .safelisted {}
 
     /* Hide scrollbar for Chrome, Safari and Opera */
     .no-scrollbar::-webkit-scrollbar {
@@ -87,12 +86,15 @@ button {
 
 .btn {
     @apply font-title inline-block hover:text-yellow border-0;
+
     &.btn-primary {
         @apply font-title uppercase text-center text-lg block w-full;
     }
+
     &.btn-secondary {
         @apply text-base inline-flex flex-col;
     }
+
     &.btn-small {
         @apply lg:text-sm;
     }
@@ -285,6 +287,19 @@ button, a {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 40px;
+}
+
+.article-content {
+    table {
+        @apply w-full border-spacing-2 border border-gray mt-8 max-w-full overflow-x-scroll;
+
+        th {
+            @apply text-left font-title;
+        }
+        th, td{
+            @apply border border-gray p-2
+        }
+    }
 }
 
 

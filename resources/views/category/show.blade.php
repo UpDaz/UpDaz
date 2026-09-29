@@ -1,12 +1,17 @@
 @extends('layouts.default')
 
-@section('title')
-    {{ $category->meta_title }} - UpDaz
-@endsection
+@section('title', $category->meta_title ?: "{$category->name} | UpDaz")
 
-@section('meta-description')
-    {{ $category->meta_description }}
-@endsection
+@section('meta-description', $category->meta_description ?: $category->catch_phrase)
+
+@push('structured-data')
+    @include('elements.schema.breadcrumb', [
+        'links' => [
+            'Articles' => route('articles'),
+            $category->name => route('category', ['slug' => $category->slug]),
+        ],
+    ])
+@endpush
 
 @section('content')
 

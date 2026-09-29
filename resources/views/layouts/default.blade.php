@@ -5,9 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>@yield('title', 'Développeur Laravel & Webflow freelance à Bordeaux – UpDaz')</title>
-    <meta name="description" content="@yield('meta-description', 'Développeur web freelance à Bordeaux : applications métier et e-commerce sur mesure avec Laravel, sites vitrines avec Webflow. Conseil, développement et maintenance de vos projets web.')" />
-    <meta name="keywords"
-        content="Développeur web, Bordeaux, application web, freelance, full-stack, site internet, Laravel, CMS, Webflow, accompagnement, HTML, CSS, JavaScript, SEO, conseils, digitalisation, web" />
+    <meta name="description" content="@yield('meta-description', 'Développeur web freelance à Bordeaux : applications métier et e-commerce sur mesure avec Laravel, sites vitrines Webflow. Conseil et maintenance.')" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index,follow" />
     <meta name="author" content="Matthieu DAZORD" />

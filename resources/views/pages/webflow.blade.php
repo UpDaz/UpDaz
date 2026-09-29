@@ -2,7 +2,7 @@
 
 @section('title', 'Création de site Webflow à Bordeaux – UpDaz')
 
-@section('meta-description', 'Développeur Webflow à Bordeaux : création de sites vitrines et CMS modernes, rapides et bien référencés, dont vous gardez la main sur le contenu. Design, intégration et SEO.')
+@section('meta-description', 'Développeur Webflow à Bordeaux : sites vitrines et CMS rapides, bien référencés, dont vous gardez la main sur le contenu. Design, intégration, SEO.')
 
 @push('structured-data')
     @include('elements.schema.service', [

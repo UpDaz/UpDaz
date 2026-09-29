@@ -4,9 +4,7 @@
     Mentions légales - UpDaz
 @endsection
 
-@section('meta-description')
-    Mentions légales du site ww.updaz.fr
-@endsection
+@section('meta-description', 'Mentions légales du site www.updaz.fr : éditeur, hébergement, crédits et informations légales d\'UpDaz, développeur web freelance à Bordeaux.')
 
 @section('content')
     <div class="container flex flex-col gap-16 mx-auto">

@@ -96,10 +96,19 @@ class ArticlesControllerTest extends TestCase
         $this->assertSame($article->published_at->toIso8601String(), $blogPosting['datePublished']);
         $this->assertSame('Person', $blogPosting['author']['@type']);
         $this->assertSame('Matthieu DAZORD', $blogPosting['author']['name']);
-        $this->assertSame(route('home') . '#presentation', $blogPosting['author']['@id']);
+        $this->assertSame(route('home') . '#matthieu-dazord', $blogPosting['author']['@id']);
         $this->assertSame('Organization', $blogPosting['publisher']['@type']);
         $this->assertStringNotContainsString('{{', json_encode($blogPosting));
         $response->assertSee('href="' . route('home') . '#presentation" rel="author"', false);
+
+        $breadcrumb = collect($matches[1])
+            ->map(fn (string $json): ?array => json_decode($json, true))
+            ->firstWhere('@type', 'BreadcrumbList');
+
+        $this->assertSame(
+            ['Accueil', 'Articles', $category->name, $article->title],
+            array_column($breadcrumb['itemListElement'], 'name')
+        );
     }
 
     public function testRelatedArticlesOnlyListReadableArticles(): void

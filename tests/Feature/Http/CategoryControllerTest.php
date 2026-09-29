@@ -32,6 +32,15 @@ class CategoryControllerTest extends TestCase
         $response->assertOk();
     }
 
+    public function testCategoryTitleDoesNotRepeatTheBrand(): void
+    {
+        $category = Category::factory()->create(['meta_title' => 'Laravel : actualités | UpDaz']);
+
+        $response = $this->get(route('category', ['slug' => $category->slug]));
+
+        $response->assertSee('<title>Laravel : actualités | UpDaz</title>', false);
+    }
+
     public function testUnknownCategorySlugRedirectsToBlog(): void
     {
         $response = $this->get(route('category', ['slug' => 'unknown-category']));

@@ -23,7 +23,7 @@ class ContactRequest extends FormRequest
             'lastname' => ['required', 'string'],
             'firstname' => ['required', 'string'],
             'email' => ['required', 'string', 'email'],
-            'phone' => ['required', 'string'],
+            'phone' => ['nullable', 'string'],
             'message' => ['required', 'string'],
             'company' => ['prohibited'],
         ];

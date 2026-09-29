@@ -2,7 +2,7 @@
 
 @section('title', 'Création d’applications web Laravel à Bordeaux – UpDaz')
 
-@section('meta-description', 'Développeur Laravel à Bordeaux : création d’applications web métier sur mesure (CRM, outils internes, API, e-commerce). Accompagnement, développement et maintenance.')
+@section('meta-description', 'Développeur Laravel à Bordeaux : applications web métier sur mesure (CRM, outils internes, API, e-commerce), développement et maintenance.')
 
 @push('structured-data')
     @include('elements.schema.service', [

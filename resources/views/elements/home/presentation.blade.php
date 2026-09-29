@@ -37,19 +37,19 @@
                     <br /><br />
                     Je vous accompagne dans votre projet afin de trouver et mettre en place <b class="text-yellow">les meilleures solutions techniques</b> en prenant en compte vos enjeux métier.
                     <br /><br />
-                    <div class="flex justify-between gap-16 items-center">
-                        <div class="grid gap-4 lg:grid-cols-3">
+                    <div class="flex flex-col w-full md:flex-row justify-between gap-16 md:items-center">
+                        <div class="grid gap-4 grid-cols-2 lg:grid-cols-3">
                             <x-button.secondary href="#competences" @click.prevent="scrollToTarget('#competences')" title="Ce que propose updaz">
                                 Compétences
                             </x-button.secondary>
                             <x-button.secondary href="#references" @click.prevent="scrollToTarget('#references')" title="Références Updaz">
                                 Références
                             </x-button.secondary>
-                            <x-button.primary href="#contact" title="Vous avez des questions ?" @click.prevent="scrollToTarget('#contact')">
+                            <x-button.primary href="#contact" classes="col-span-2 md:col-span-1" title="Vous avez des questions ?" @click.prevent="scrollToTarget('#contact')">
                                 J'ai un projet
                                 </x-button-primary>
                         </div>
-                        <ul class="flex flex-wrap items-center justify-center gap-4 sm:justify-start" aria-label="Profils de Matthieu DAZORD">
+                        <ul class="flex flex-wrap w-full md:w-auto items-center justify-center gap-16 md:gap-4 sm:justify-start" aria-label="Profils de Matthieu DAZORD">
                             <li>
                                 <a href="https://fr.linkedin.com/in/matthieu-dazord" target="_blank" rel="me noopener" title="Profil LinkedIn de Matthieu DAZORD">
                                     <img src="{{ asset('img/logos/white/linkedin.svg') }}" width="24" height="24" alt="" loading="lazy">

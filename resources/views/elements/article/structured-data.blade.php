@@ -17,12 +17,13 @@
             'articleSection' => $article->categories->pluck('name')->all(),
             'author' => [
                 '@type' => 'Person',
-                '@id' => route('home') . '#presentation',
+                '@id' => route('home') . '#matthieu-dazord',
                 'name' => 'Matthieu DAZORD',
                 'url' => route('home') . '#presentation',
             ],
             'publisher' => [
                 '@type' => 'Organization',
+                '@id' => route('home') . '#organization',
                 'name' => 'UpDaz',
                 'url' => route('home'),
                 'logo' => [

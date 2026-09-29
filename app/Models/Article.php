@@ -93,7 +93,7 @@ class Article extends Model
 
     public function getMetaDescriptionAttribute()
     {
-        return $this->attributes['meta_description'] ?? substr((string) $this->catch_phrase, 0, 150);
+        return $this->attributes['meta_description'] ?? Str::limit((string) $this->catch_phrase, 155, '…', preserveWords: true);
     }
 
     /**

@@ -1,4 +1,13 @@
-<form x-data="contactForm" id="contact-form" @submit.prevent="submitForm()" class="flex flex-col gap-4 mb-4">
+<form x-data="contactForm" id="contact-form" method="POST" action="{{ route('contact') }}" @submit.prevent="submitForm()" class="flex flex-col gap-4 mb-4">
+    @csrf
+    @if (request('contact') === 'envoye')
+        <p class="flex gap-4 text-lg" role="status">
+            <span class="w-8">
+                @include('elements.icon.check-square')
+            </span>
+            J'ai bien reçu votre demande, je reviendrai vers vous dans les plus brefs délais.
+        </p>
+    @endif
     <div class="flex flex-col gap-1">
         <label for="lastname" class="text-sm font-title">Nom*</label>
         <input name="lastname"
@@ -18,14 +27,14 @@
             id="email" type="email" required>
     </div>
     <div class="flex flex-col gap-1">
-        <label for="phone" class="text-sm font-title">Téléphone*</label>
+        <label for="phone" class="text-sm font-title">Téléphone</label>
         <input name="phone"
             class="w-full px-3 py-2 leading-tight border appearance-none text-blue placeholder-gray focus:outline-none focus:shadow bg-white"
-            id="phone" type="text" required>
+            id="phone" type="tel" autocomplete="tel">
     </div>
     <div class="flex flex-col gap-1">
         <label for="message" class="text-sm font-title">Message*</label>
-        <textarea name="message" id="message" cols="30" rows="10"
+        <textarea name="message" id="message" cols="30" rows="10" required
             class="w-full px-3 py-2 leading-tight border appearance-none text-blue placeholder-gray focus:outline-none focus:shadow bg-white"></textarea>
     </div>
     <div class="absolute -left-[9999px]" aria-hidden="true">
@@ -52,7 +61,7 @@
             </span>
             <span class="text-lg">
                 Une erreur est survenue, si le problème persiste merci de me contacter via <a
-                    href="mailto:matthieu@updaz.fr" title="email de contact UpDaz" class="underline">matthieu@udpaz.fr</a>
+                    href="mailto:matthieu@updaz.fr" title="email de contact UpDaz" class="underline">matthieu@updaz.fr</a>
             </span>
         </p>
     </div>

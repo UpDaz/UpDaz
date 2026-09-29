@@ -1,16 +1,36 @@
 @php
+    $articleUrl = $article->category
+        ? route('article', ['categorySlug' => $article->category->slug, 'slug' => $article->slug])
+        : url()->current();
+
     $result = json_encode(
         [
-           "@context" => "https://schema.org",
-        "@type" => "NewsArticle",
-        "headline" => "{{ $article->title }}",
-        "datePublished" => "{{ $article->published_at->format('Y-m-d') }}T08:00:00+01:00",
-        "articleSection" => $article->categories->pluck('name')->all(),
-        "author" => [
-            "@type" => "Organism",
-            "name" => "UpDaz",
-            "url" => "{{ Request::url() }}"
-        ]
+            '@context' => 'https://schema.org',
+            '@type' => 'BlogPosting',
+            'headline' => $article->title,
+            'description' => $article->meta_description,
+            'datePublished' => $article->published_at->toIso8601String(),
+            'dateModified' => ($article->updated_at ?? $article->published_at)->toIso8601String(),
+            'mainEntityOfPage' => $articleUrl,
+            'url' => $articleUrl,
+            'inLanguage' => 'fr-FR',
+            'articleSection' => $article->categories->pluck('name')->all(),
+            'author' => [
+                '@type' => 'Person',
+                '@id' => route('home') . '#matthieu-dazord',
+                'name' => 'Matthieu DAZORD',
+                'url' => route('home') . '#presentation',
+            ],
+            'publisher' => [
+                '@type' => 'Organization',
+                '@id' => route('home') . '#organization',
+                'name' => 'UpDaz',
+                'url' => route('home'),
+                'logo' => [
+                    '@type' => 'ImageObject',
+                    'url' => asset('img/logo-blue.png'),
+                ],
+            ],
         ],
         JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT,
     );

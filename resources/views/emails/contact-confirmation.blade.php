@@ -30,7 +30,7 @@ Accusé de réception - demande de contact
                                     <br/><br/>
                                     Email : <b>{{ $email }}</b>
                                     <br/><br/>
-                                    Téléphone : <b>{{ $phone }}</b>
+                                    Téléphone : <b>{{ $phone ?: 'non renseigné' }}</b>
                                     <br/><br/>
                                     Message : <br/><i>{{ $client_message }}</i>
                                 </div>

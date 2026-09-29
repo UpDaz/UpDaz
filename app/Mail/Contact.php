@@ -15,7 +15,7 @@ class Contact extends Mailable
         public string $lastname,
         public string $firstname,
         public string $email,
-        public string $phone,
+        public ?string $phone,
         public string $client_message,
     ) {
     }

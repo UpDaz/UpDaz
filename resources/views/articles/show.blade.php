@@ -1,12 +1,20 @@
 @extends('layouts.default')
 
-@section('title')
-    {{ $article->meta_title }} - Article UpDaz
-@endsection
+@section('title', "{$article->meta_title} | UpDaz")
 
-@section('meta-description')
-    {{ $article->meta_description }}
-@endsection
+@section('meta-description', $article->meta_description)
+
+@if ($article->category)
+    @push('structured-data')
+        @include('elements.schema.breadcrumb', [
+            'links' => [
+                'Articles' => route('articles'),
+                $article->category->name => route('category', ['slug' => $article->category->slug]),
+                $article->title => route('article', ['categorySlug' => $article->category->slug, 'slug' => $article->slug]),
+            ],
+        ])
+    @endpush
+@endif
 
 @section('content')
     @include('elements.article.structured-data')
@@ -29,7 +37,7 @@
                     @endforeach
                 </div>
                 <div class="mb-2 w-full text-right text-sm italic">
-                    Le {{ $article->published_at->format('d/m/Y') }}, par Matthieu
+                    Le {{ $article->published_at->format('d/m/Y') }}, par <a href="{{ route('home') }}#presentation" rel="author" class="underline">Matthieu DAZORD</a>
                 </div>
             </div>
         </div>

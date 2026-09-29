@@ -2,7 +2,7 @@
 
 @section('title', 'Création de site e-commerce sur mesure à Bordeaux – UpDaz')
 
-@section('meta-description', 'Création de site e-commerce sur mesure à Bordeaux avec Laravel et Lunar : catalogue, paiement, intégrations ERP et CRM, sans commission ni abonnement. Développement et maintenance.')
+@section('meta-description', 'Création de site e-commerce sur mesure à Bordeaux avec Laravel et Lunar : catalogue, paiement, ERP et CRM, sans commission ni abonnement.')
 
 @push('structured-data')
     @include('elements.schema.service', [

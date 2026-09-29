@@ -5,12 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>@yield('title', 'Développeur Laravel & Webflow freelance à Bordeaux – UpDaz')</title>
-    <meta name="description" content="@yield('meta-description', 'Développeur web freelance à Bordeaux : applications métier et e-commerce sur mesure avec Laravel, sites vitrines avec Webflow. Conseil, développement et maintenance de vos projets web.')" />
-    <meta name="keywords"
-        content="Développeur web, Bordeaux, application web, freelance, full-stack, site internet, Laravel, CMS, Webflow, accompagnement, HTML, CSS, JavaScript, SEO, conseils, digitalisation, web" />
+    <meta name="description" content="@yield('meta-description', 'Développeur web freelance à Bordeaux : applications métier et e-commerce sur mesure avec Laravel, sites vitrines Webflow. Conseil et maintenance.')" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index,follow" />
-    <meta name="author" content="Matthieu Dazord" />
+    <meta name="author" content="Matthieu DAZORD" />
     <meta name="application-name" content="UpDaz" />
     <link rel="icon" href="{{ asset('img/favicon.png') }}" type="image/png">
     <link rel="preconnect" href="https://static.axept.io">
@@ -27,7 +25,7 @@
     @include('elements.axeptio')
 </head>
 
-<body class="text-white overflow-x-hiddenn bg-linear-to-br from-blue to-blue-dark">
+<body class="text-white overflow-x-hidden bg-linear-to-br from-blue to-blue-dark">
     <div class="relative">
         <div class="absolute top-0 left-0 w-2 h-full md:w-4 background"></div>
         <div class="absolute top-0 right-0 w-2 h-full md:w-4 background"></div>

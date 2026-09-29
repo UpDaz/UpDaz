@@ -92,7 +92,7 @@ class GenerateSitemap extends Command
             });
 
         Article::query()
-            ->where('is_published', true)
+            ->readable()
             ->whereNotNull('category_id')
             ->with('category')
             ->get()
@@ -104,8 +104,10 @@ class GenerateSitemap extends Command
                     ->setPriority(0.5)
                     ->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY);
 
-                if ($article->updated_at) {
-                    $articlePage->setLastModificationDate($article->updated_at);
+                $lastModified = $article->updated_at ?? $article->published_at;
+
+                if ($lastModified) {
+                    $articlePage->setLastModificationDate($lastModified);
                 }
 
                 $sitemap->add($articlePage);
@@ -119,7 +121,7 @@ class GenerateSitemap extends Command
     private function latestPublishedUpdate(?int $categoryId = null): ?Carbon
     {
         $updatedAt = Article::query()
-            ->where('is_published', true)
+            ->readable()
             ->when($categoryId, fn ($query) => $query->whereRelation('categories', 'categories.id', $categoryId))
             ->max('updated_at');
 

@@ -48,4 +48,36 @@ class GenerateSitemapTest extends TestCase
 
         unlink(public_path('sitemap.xml'));
     }
+
+    public function testExcludesScheduledArticlesAndFallsBackToPublicationDateForLastmod(): void
+    {
+        $category = Category::factory()->create(['is_active' => true]);
+
+        $scheduledArticle = Article::factory()->create([
+            'slug' => 'article-programme',
+            'is_published' => true,
+            'published_at' => now()->addDays(2),
+            'category_id' => $category->id,
+        ]);
+
+        $articleWithoutTimestamps = Article::factory()->create([
+            'slug' => 'article-sans-timestamps',
+            'is_published' => true,
+            'published_at' => '2024-03-15 08:00:00',
+            'category_id' => $category->id,
+        ]);
+        Article::query()->whereKey($articleWithoutTimestamps->id)->update(['created_at' => null, 'updated_at' => null]);
+
+        $this->artisan('sitemap:generate')->assertExitCode(0);
+
+        $sitemap = file_get_contents(public_path('sitemap.xml'));
+
+        $this->assertStringNotContainsString($scheduledArticle->slug, $sitemap);
+        $this->assertMatchesRegularExpression(
+            '#article-sans-timestamps</loc>\s*<lastmod>2024-03-15#',
+            $sitemap
+        );
+
+        unlink(public_path('sitemap.xml'));
+    }
 }

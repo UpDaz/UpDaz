@@ -1,32 +1,23 @@
 <div class="bg-blue-dark bottom-0 flex w-full justify-center py-8 lg:px-0 lg:py-4">
-    <div class="container flex flex-row flex-wrap items-start md:justify-between gap-8 md:gap-4 lg:items-center">
+    <div class="container flex flex-row flex-wrap items-start gap-8 md:justify-between md:gap-4 lg:items-center">
         <div class="flex flex-col gap-2">
             <div class="flex items-center gap-2">
                 <a href="#references" class="whitespace-nowrap text-sm">Notes et avis <span class="text-xs underline">(voir
                         plus)</span></a>
-                <span class="text-yellow flex sm:hidden">
-                    @for ($i = 1; $i <= 5; $i++)
-                        @include('elements.icon.star')
-                    @endfor
-                </span>
             </div>
-            <div class="flex w-full justify-between gap-4 sm:items-center md:justify-start md:gap-8">
-                <a href="https://www.google.com/search?q=updaz" target="_blank" rel="nofollow noopener" class="flex flex-col justify-start gap-2 sm:flex-row sm:items-center">
-                    <img src="{{ asset('img/logos/google.svg') }}" alt="Google" class="h-8 w-auto max-w-none self-start" width="95" height="32" />
-                    <span class="text-yellow hidden sm:flex">
-                        @for ($i = 1; $i <= 5; $i++)
-                            @include('elements.icon.star')
-                        @endfor
-                    </span>
-                </a>
-                <a href="https://www.malt.fr/profile/matthieudazord" target="_blank" class="flex flex-col gap-2 sm:flex-row sm:items-center">
-                    <img src="{{ asset('img/logos/malt.svg') }}" alt="Malt" class="h-8 w-auto max-w-none self-start" width="92" height="32" />
-                    <span class="text-yellow hidden sm:flex">
-                        @for ($i = 1; $i <= 5; $i++)
-                            @include('elements.icon.star')
-                        @endfor
-                    </span>
-                </a>
+            <div class="flex flex-col md:flex-row w-full justify-between gap-4 sm:items-center md:justify-start md:gap-8">
+                @include('elements.reassurance.review-platform', [
+                    'platform' => config('custom.reviews.google'),
+                    'logo' => 'img/logos/google.svg',
+                    'name' => 'Google',
+                    'width' => 95,
+                ])
+                @include('elements.reassurance.review-platform', [
+                    'platform' => config('custom.reviews.malt'),
+                    'logo' => 'img/logos/malt.svg',
+                    'name' => 'Malt',
+                    'width' => 92,
+                ])
             </div>
         </div>
         <div class="text-blue hidden lg:block">

@@ -122,4 +122,14 @@ class ArticleTest extends TestCase
         $this->assertModelMissing($article);
         $this->assertNull($digest->fresh()->post_id);
     }
+
+    public function testMetaTitleIsCutOnAWordBoundaryWithoutBreakingAccents(): void
+    {
+        $article = Article::factory()->make([
+            'title' => 'Laravel face aux défis de l\'IA et de la scalabilité des applications',
+        ]);
+
+        $this->assertSame('Laravel face aux défis de l\'IA et de la…', $article->meta_title);
+        $this->assertTrue(mb_check_encoding($article->meta_title, 'UTF-8'));
+    }
 }

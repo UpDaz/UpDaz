@@ -1,3 +1,7 @@
+User-agent: *
+Allow: /
+
 User-agent: Googlebot-Image
 Disallow: /img/*/*
-Disallow: /img/profile.jpg
+
+Sitemap: https://www.updaz.fr/sitemap.xml

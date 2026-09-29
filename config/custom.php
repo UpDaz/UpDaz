@@ -7,4 +7,16 @@ return [
     'g-analytics' => [
         'id' => 'G-2GRRDDQSJM',
     ],
+    'reviews' => [
+        'google' => [
+            'rating' => 5,
+            'count' => 4,
+            'url' => 'https://maps.app.goo.gl/haXpfw6D6HNPYJBA6',
+        ],
+        'malt' => [
+            'rating' => 5,
+            'count' => 1,
+            'url' => 'https://www.malt.fr/profile/matthieudazord',
+        ],
+    ],
 ];

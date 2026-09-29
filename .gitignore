@@ -1,5 +1,6 @@
 
 */.DS_Store
+*-audit/
 .DS_Store
 .claude/
 .dependabot-current-branch
@@ -36,3 +37,4 @@ storage/debugbar/*
 storage/lighthouse/*
 yarn-error.log
 scripts/lighthouse-audit.mjs
+

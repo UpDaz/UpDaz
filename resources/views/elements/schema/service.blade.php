@@ -8,7 +8,8 @@
             'description' => $description,
             'url' => $url,
             'provider' => [
-                '@type' => 'LocalBusiness',
+                '@type' => 'ProfessionalService',
+                '@id' => route('home') . '#organization',
                 'name' => 'UpDaz',
                 'url' => route('home'),
             ],

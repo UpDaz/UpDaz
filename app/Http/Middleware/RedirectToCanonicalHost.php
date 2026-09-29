@@ -8,9 +8,10 @@ use Symfony\Component\HttpFoundation\Response;
 
 /**
  * The production docroot is the project root, whose .htaccess hands every
- * request to server.php, so the www rule in public/.htaccess never runs.
- * Without this, updaz.fr and www.updaz.fr both answer 200 and Laravel builds
- * internal links from whichever host was requested.
+ * request to server.php, so the https, www and trailing-slash rules in
+ * public/.htaccess never run. Without this, updaz.fr and www.updaz.fr both
+ * answer 200 and Laravel builds internal links from whichever host was
+ * requested. Scheme, host and trailing slash are fixed in a single 301.
  */
 class RedirectToCanonicalHost
 {
@@ -25,12 +26,22 @@ class RedirectToCanonicalHost
             return $next($request);
         }
 
-        if ($request->getHost() === $canonicalHost) {
+        $canonicalScheme = parse_url(config('app.url'), PHP_URL_SCHEME) ?? 'https';
+
+        $path = $request->getPathInfo();
+        $canonicalPath = $path === '/' ? $path : rtrim($path, '/');
+
+        $isCanonical = $request->getHost() === $canonicalHost
+            && $request->getScheme() === $canonicalScheme
+            && $path === $canonicalPath;
+
+        if ($isCanonical) {
             return $next($request);
         }
 
-        $canonicalScheme = parse_url(config('app.url'), PHP_URL_SCHEME) ?? 'https';
+        $queryString = $request->getQueryString();
+        $canonicalUrl = "{$canonicalScheme}://{$canonicalHost}{$request->getBaseUrl()}{$canonicalPath}";
 
-        return redirect()->away("{$canonicalScheme}://{$canonicalHost}{$request->getRequestUri()}", 301);
+        return redirect()->away($queryString ? "{$canonicalUrl}?{$queryString}" : $canonicalUrl, 301);
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Articles\Tables;
 
+use App\Filament\Resources\Articles\Schemas\ObsoleteUrlTargetSelect;
 use App\Models\Article;
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
@@ -50,7 +51,7 @@ class ArticlesTable
                         ->icon('heroicon-o-eye')
                         ->url(fn (Article $article): string => $article->frontendUrl())
                         ->openUrlInNewTab(),
-                    DeleteAction::make(),
+                    ObsoleteUrlTargetSelect::configureDeleteAction(DeleteAction::make()),
                 ]),
             ]);
     }

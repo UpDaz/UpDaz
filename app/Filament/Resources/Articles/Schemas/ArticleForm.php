@@ -11,6 +11,7 @@ use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Utilities\Get;
 use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
 
 class ArticleForm
@@ -59,6 +60,7 @@ class ArticleForm
                 DatePicker::make('published_at')
                     ->label('Date de publication')
                     ->columnSpan(1)
+                    ->live()
                     ->required(),
                 Toggle::make('is_published')
                     ->columnSpan(1)
@@ -66,10 +68,28 @@ class ArticleForm
                     ->default(false)
                     ->onColor('success')
                     ->offColor('danger')
+                    ->live()
                     ->inline(false),
+                ObsoleteUrlTargetSelect::make()
+                    ->columnSpanFull()
+                    ->visible(fn (Get $get, ?Article $record): bool => self::isBeingTakenOffline($get, $record))
+                    ->required(fn (Get $get, ?Article $record): bool => self::isBeingTakenOffline($get, $record)),
                 MarkdownEditor::make('content')
                     ->columnSpanFull()
                     ->fileAttachmentsAcceptedFileTypes(['image/png', 'image/jpeg']),
             ]);
+    }
+
+    private static function isBeingTakenOffline(Get $get, ?Article $record): bool
+    {
+        if (! $record?->can_be_read) {
+            return false;
+        }
+
+        if (! $get('is_published')) {
+            return true;
+        }
+
+        return Carbon::parse($get('published_at'))->isFuture();
     }
 }

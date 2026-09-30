@@ -114,6 +114,17 @@ class ArticleResourceTest extends TestCase
         $this->assertTrue(Redirect::findForPath('/articles/laravel/mon-article')->isGone());
     }
 
+    public function testLabelCategoriesCannotBeTheMainCategory(): void
+    {
+        $label = Category::factory()->create(['slug' => Category::WATCH_SLUG]);
+        $article = Article::factory()->create(['category_id' => Category::factory()->create()->id]);
+
+        Livewire::test(EditArticle::class, ['record' => $article->getRouteKey()])
+            ->fillForm(['category_id' => $label->id])
+            ->call('save')
+            ->assertHasFormErrors(['category_id']);
+    }
+
     private function readableArticle(): Article
     {
         return Article::factory()->create([

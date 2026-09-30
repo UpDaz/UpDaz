@@ -80,4 +80,17 @@ class GenerateSitemapTest extends TestCase
 
         unlink(public_path('sitemap.xml'));
     }
+
+    public function testWatchCategoryHasALowerPriority(): void
+    {
+        Category::factory()->create(['slug' => Category::WATCH_SLUG, 'is_active' => true]);
+
+        $this->artisan('sitemap:generate')->assertExitCode(0);
+
+        $sitemap = file_get_contents(public_path('sitemap.xml'));
+
+        $this->assertMatchesRegularExpression('#/articles/veille</loc>.*?<priority>0\.3</priority>#s', $sitemap);
+
+        unlink(public_path('sitemap.xml'));
+    }
 }

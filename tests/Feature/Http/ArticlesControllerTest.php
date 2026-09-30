@@ -195,4 +195,23 @@ class ArticlesControllerTest extends TestCase
 
         $response->assertRedirect(route('articles'));
     }
+
+    public function testOfflineArticleReachedThroughASecondaryCategoryFollowsItsCanonicalRedirect(): void
+    {
+        $mainCategory = Category::factory()->create(['slug' => 'laravel']);
+        $secondaryCategory = Category::factory()->create(['slug' => 'developpement']);
+
+        $article = Article::factory()->create([
+            'slug' => 'retire',
+            'category_id' => $mainCategory->id,
+            'is_published' => false,
+        ]);
+        $article->categories()->attach($secondaryCategory);
+
+        Redirect::factory()->gone()->create(['from_path' => '/articles/laravel/retire']);
+
+        $response = $this->get('/articles/developpement/retire');
+
+        $response->assertStatus(410);
+    }
 }

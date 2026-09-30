@@ -29,7 +29,7 @@ class ArticlesController extends Controller
         $article = $this->articleRepository->getByCategorySlugAndSlug($slugCategory, $slug);
 
         if (! $article || ! $article->can_be_read) {
-            return $this->redirectObsoleteUrl($request->path());
+            return $this->redirectObsoleteUrl($request->path(), $article);
         }
 
         if ($article->category && $article->category->slug !== $slugCategory) {
@@ -46,11 +46,16 @@ class ArticlesController extends Controller
 
     /**
      * An article URL that no longer serves content: its registered 301 or
-     * 410, or the blog index for URLs nobody has decided about.
+     * 410, or the blog index for URLs nobody has decided about. Only the
+     * canonical URL gets a redirect, so an offline article reached through
+     * one of its secondary categories follows the canonical decision.
      */
-    private function redirectObsoleteUrl(string $path): RedirectResponse
+    private function redirectObsoleteUrl(string $path, ?Article $article): RedirectResponse
     {
-        $redirect = Redirect::findForPath($path);
+        $canonicalPath = $article?->publicPath();
+
+        $redirect = Redirect::findForPath($path)
+            ?? ($canonicalPath ? Redirect::findForPath($canonicalPath) : null);
 
         if (! $redirect) {
             return redirect()->route('articles');

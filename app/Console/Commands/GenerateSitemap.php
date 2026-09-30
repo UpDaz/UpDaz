@@ -81,7 +81,7 @@ class GenerateSitemap extends Command
             ->get()
             ->each(function (Category $category) use ($sitemap): void {
                 $categoryPage = Url::create(route('category', ['slug' => $category->slug]))
-                    ->setPriority(0.6)
+                    ->setPriority($category->slug === Category::WATCH_SLUG ? 0.3 : 0.6)
                     ->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY);
 
                 if ($category->updated_at) {

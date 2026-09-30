@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Articles\Schemas;
 
 use App\Models\Article;
+use App\Models\Category;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Select;
@@ -11,6 +12,7 @@ use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Utilities\Get;
 use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
 
@@ -44,7 +46,11 @@ class ArticleForm
                     ->label('Catégorie principale')
                     ->helperText("Utilisée dans l'URL de l'article.")
                     ->columnSpan(1)
-                    ->relationship(name: 'category', titleAttribute: 'name'),
+                    ->relationship(
+                        name: 'category',
+                        titleAttribute: 'name',
+                        modifyQueryUsing: fn (Builder $query) => $query->whereNotIn('slug', Category::LABEL_SLUGS),
+                    ),
                 Select::make('categories')
                     ->label('Catégories')
                     ->helperText('La catégorie principale y est ajoutée automatiquement.')

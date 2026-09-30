@@ -97,6 +97,38 @@ class Article extends Model
     }
 
     /**
+     * The relative public URL (`/articles/{category}/{slug}`), built from
+     * the attributes as they were loaded when `$original` is true: the
+     * observer needs the URL an article had before being saved.
+     */
+    public function publicPath(bool $original = false): ?string
+    {
+        $categoryId = $original ? $this->getOriginal('category_id') : $this->category_id;
+        $slug = $original ? $this->getOriginal('slug') : $this->slug;
+
+        if ($categoryId === null) {
+            return null;
+        }
+
+        $category = Category::query()->find($categoryId);
+
+        if (! $category) {
+            return null;
+        }
+
+        return route('article', ['categorySlug' => $category->slug, 'slug' => $slug], false);
+    }
+
+    public function wasReadable(): bool
+    {
+        $publishedAt = $this->getOriginal('published_at');
+
+        return (bool) $this->getOriginal('is_published')
+            && $publishedAt !== null
+            && $publishedAt->lte(Carbon::now());
+    }
+
+    /**
      * Where this article can be read on the front-office: its normal
      * public URL once published and categorized, or a signed preview
      * link otherwise (dedicated, non-public access — see

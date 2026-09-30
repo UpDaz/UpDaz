@@ -10,6 +10,18 @@ class Category extends Model
 {
     use HasFactory;
 
+    public const WATCH_SLUG = 'veille';
+
+    public const FIELD_EXPERIENCE_SLUG = 'retour-d-experience';
+
+    /**
+     * Status labels, only ever attached as secondary categories: an
+     * article's URL is built from its main, thematic category.
+     *
+     * @var array<int, string>
+     */
+    public const LABEL_SLUGS = [self::WATCH_SLUG, self::FIELD_EXPERIENCE_SLUG];
+
     protected $fillable = [
         'name',
         'is_active',

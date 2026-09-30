@@ -11,6 +11,7 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('sitemap:generate')->daily();
         $schedule->command('blog:generate-pipeline')->weeklyOn(Schedule::MONDAY, '08:00');
+        $schedule->command('blog:expire-topics')->dailyAt('09:00');
     }
 
     protected function commands(): void

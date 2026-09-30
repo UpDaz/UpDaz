@@ -3,7 +3,9 @@
 namespace Tests\Feature\Notifications;
 
 use App\Models\Article;
+use App\Models\WeeklyDigest;
 use App\Notifications\DraftReadyForReview;
+use Discord\Builders\Components\Button;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Notifications\AnonymousNotifiable;
 use NotificationChannels\Discord\DiscordChannel;
@@ -26,9 +28,46 @@ class DraftReadyForReviewTest extends TestCase
         $components = json_decode(json_encode($message->components), true);
         $buttons = $components[0]['components'];
 
-        $this->assertCount(2, $buttons);
-        $this->assertSame('article:approve:' . $article->id, $buttons[0]['custom_id']);
-        $this->assertSame('article:revise:' . $article->id, $buttons[1]['custom_id']);
+        $this->assertCount(3, $buttons);
+        $this->assertSame('article:approve-experience:' . $article->id, $buttons[0]['custom_id']);
+        $this->assertSame('article:approve-watch:' . $article->id, $buttons[1]['custom_id']);
+        $this->assertSame('article:revise:' . $article->id, $buttons[2]['custom_id']);
+    }
+
+    public function testSuggestsWatchWhenTheInterviewBroughtNoExperience(): void
+    {
+        $article = Article::factory()->create();
+        WeeklyDigest::factory()->create(['post_id' => $article->id, 'interview_answers' => ['', '']]);
+
+        $buttons = $this->buttons(new DraftReadyForReview($article));
+
+        $this->assertSame(Button::STYLE_SECONDARY, $buttons[0]['style']);
+        $this->assertSame(Button::STYLE_SUCCESS, $buttons[1]['style']);
+    }
+
+    public function testSuggestsFieldExperienceWhenTheInterviewWasAnswered(): void
+    {
+        $article = Article::factory()->create();
+        WeeklyDigest::factory()->create([
+            'post_id' => $article->id,
+            'interview_questions' => ['Quel projet ?'],
+            'interview_answers' => ['Une reprise Laravel 8.'],
+        ]);
+
+        $buttons = $this->buttons(new DraftReadyForReview($article));
+
+        $this->assertSame(Button::STYLE_SUCCESS, $buttons[0]['style']);
+        $this->assertSame(Button::STYLE_SECONDARY, $buttons[1]['style']);
+    }
+
+    /**
+     * @return array<int, array<string, mixed>>
+     */
+    private function buttons(DraftReadyForReview $notification): array
+    {
+        $message = $notification->toDiscord(new AnonymousNotifiable());
+
+        return json_decode(json_encode($message->components), true)[0]['components'];
     }
 
     public function testDiscordMessageEmbedContainsTheArticleContent(): void

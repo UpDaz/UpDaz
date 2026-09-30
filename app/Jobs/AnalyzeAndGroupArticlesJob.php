@@ -4,6 +4,7 @@ namespace App\Jobs;
 
 use App\AI\Agents\ArticleAnalyzerAgent;
 use App\AI\Agents\ThemeSynthesizerAgent;
+use App\Enums\TopicStatus;
 use App\Models\Category;
 use App\Models\RawArticle;
 use App\Models\WeeklyDigest;
@@ -52,20 +53,20 @@ class AnalyzeAndGroupArticlesJob implements ShouldQueue
             ->groupBy('theme')
             ->filter(fn ($group) => $group->count() >= 2);
 
-        // Un digest par thème deviendra un article : on ne garde que les
-        // thèmes les plus riches, dans la limite voulue par run. Les
-        // thèmes laissés de côté restent éligibles au prochain run (leurs
-        // articles ne sont pas marqués `digested_at`).
-        $maxArticlesPerRun = max(1, (int) config('blog.max_articles_per_run', 1));
+        // Un digest par thème devient un sujet proposé sur Discord : on ne
+        // garde que les thèmes les plus riches, dans la limite voulue par
+        // run. Les thèmes laissés de côté restent éligibles au prochain run
+        // (leurs articles ne sont pas marqués `digested_at`).
+        $topicsPerRun = max(1, (int) config('blog.topics_per_run', 3));
 
         $themeGroups = $eligibleThemeGroups
             ->sortByDesc(fn ($group) => $group->count())
-            ->take($maxArticlesPerRun);
+            ->take($topicsPerRun);
 
         notice('[AnalyzeAndGroupArticlesJob] Thèmes éligibles à la synthèse', [
             'themes_eligibles' => $eligibleThemeGroups->keys()->all(),
             'themes_retenus' => $themeGroups->keys()->all(),
-            'max_articles_per_run' => $maxArticlesPerRun,
+            'topics_per_run' => $topicsPerRun,
         ]);
 
         $digestsCreated = 0;
@@ -96,6 +97,7 @@ class AnalyzeAndGroupArticlesJob implements ShouldQueue
                 'theme' => $theme,
                 'summary' => $synthesis->text,
                 'raw_article_ids' => $articles->pluck('id'),
+                'status' => TopicStatus::Proposed,
             ]);
 
             $digestsCreated++;
@@ -113,7 +115,10 @@ class AnalyzeAndGroupArticlesJob implements ShouldQueue
 
     private function analyzeUnanalyzedArticles(): void
     {
-        $categories = Category::where('is_active', true)->pluck('name')->all();
+        $categories = Category::where('is_active', true)
+            ->whereNotIn('slug', Category::LABEL_SLUGS)
+            ->pluck('name')
+            ->all();
 
         if ($categories === []) {
             warning('[AnalyzeAndGroupArticlesJob] Aucune catégorie active : analyse des articles annulée.');

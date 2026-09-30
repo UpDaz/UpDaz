@@ -1,5 +1,5 @@
 <section class="-mb-18">
-    <div class="relative flex items-center justify-center py-16 pb-8 lg:min-h-[80vh] lg:pt-8">
+    <div class="relative flex items-center justify-center py-16 pb-8 lg:pt-8">
         <div class="container mx-auto flex flex-col items-center gap-20 lg:flex-row">
             <div class="flex flex-col gap-8 md:items-start md:text-left lg:grow xl:w-1/2">
                 <h1 class="font-title text-4xl font-bold text-white">

@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @use './animate-svg.scss';
 
+[x-cloak] {
+    display: none !important;
+}
+
 @theme {
     /* Polices */
     --font-title: "Space Mono", monospace, sans-serif;

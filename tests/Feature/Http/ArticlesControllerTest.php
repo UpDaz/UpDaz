@@ -4,6 +4,7 @@ namespace Tests\Feature\Http;
 
 use App\Models\Article;
 use App\Models\Category;
+use App\Models\Redirect;
 use Illuminate\Contracts\Console\Kernel as ConsoleKernel;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Artisan;
@@ -144,5 +145,73 @@ class ArticlesControllerTest extends TestCase
         $response->assertSee($readableArticle->slug);
         $response->assertDontSee($scheduledArticle->slug);
         $response->assertDontSee($draftArticle->slug);
+    }
+
+    public function testObsoleteArticleUrlIsPermanentlyRedirectedToItsRegisteredTarget(): void
+    {
+        Redirect::factory()->create([
+            'from_path' => '/articles/laravel/ancien-article',
+            'to_path' => '/articles/laravel/nouvel-article',
+        ]);
+
+        $response = $this->get('/articles/laravel/ancien-article');
+
+        $response->assertStatus(301);
+        $response->assertRedirect('/articles/laravel/nouvel-article');
+    }
+
+    public function testGoneArticleUrlAnswers410(): void
+    {
+        Redirect::factory()->gone()->create(['from_path' => '/articles/developpement/hors-sujet']);
+
+        $response = $this->get('/articles/developpement/hors-sujet');
+
+        $response->assertStatus(410);
+    }
+
+    public function testUnpublishedArticleWithARegisteredRedirectIsRedirected(): void
+    {
+        $category = Category::factory()->create();
+
+        $article = Article::factory()->create([
+            'category_id' => $category->id,
+            'is_published' => false,
+        ]);
+
+        Redirect::factory()->create([
+            'from_path' => "/articles/{$category->slug}/{$article->slug}",
+            'to_path' => '/application-web-bordeaux',
+        ]);
+
+        $response = $this->get(route('article', ['categorySlug' => $category->slug, 'slug' => $article->slug]));
+
+        $response->assertStatus(301);
+        $response->assertRedirect('/application-web-bordeaux');
+    }
+
+    public function testUnknownArticleUrlWithoutRedirectStillFallsBackToTheBlog(): void
+    {
+        $response = $this->get('/articles/laravel/inconnu');
+
+        $response->assertRedirect(route('articles'));
+    }
+
+    public function testOfflineArticleReachedThroughASecondaryCategoryFollowsItsCanonicalRedirect(): void
+    {
+        $mainCategory = Category::factory()->create(['slug' => 'laravel']);
+        $secondaryCategory = Category::factory()->create(['slug' => 'developpement']);
+
+        $article = Article::factory()->create([
+            'slug' => 'retire',
+            'category_id' => $mainCategory->id,
+            'is_published' => false,
+        ]);
+        $article->categories()->attach($secondaryCategory);
+
+        Redirect::factory()->gone()->create(['from_path' => '/articles/laravel/retire']);
+
+        $response = $this->get('/articles/developpement/retire');
+
+        $response->assertStatus(410);
     }
 }

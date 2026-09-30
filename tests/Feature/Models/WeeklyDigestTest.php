@@ -6,6 +6,7 @@ use App\Models\RawArticle;
 use App\Models\Source;
 use App\Models\WeeklyDigest;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Http;
 use Tests\TestCase;
 
 class WeeklyDigestTest extends TestCase
@@ -97,6 +98,8 @@ class WeeklyDigestTest extends TestCase
 
     public function testInjectSourceImagesInsertsOneImagePerHeadingUntilImagesRunOut(): void
     {
+        Http::fake(['*' => Http::response('', 200, ['Content-Type' => 'image/jpeg', 'Content-Length' => 80 * 1024])]);
+
         $rawArticles = RawArticle::factory()->count(3)->sequence(
             ['image_url' => 'https://example.com/one.jpg'],
             ['image_url' => null],

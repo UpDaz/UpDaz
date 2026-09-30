@@ -4,7 +4,7 @@ namespace Tests\Feature\Console;
 
 use App\Jobs\AnalyzeAndGroupArticlesJob;
 use App\Jobs\FetchArticlesJob;
-use App\Jobs\GenerateSeoArticleJob;
+use App\Jobs\ProposeTopicsJob;
 use Illuminate\Support\Facades\Bus;
 use Tests\TestCase;
 
@@ -19,7 +19,7 @@ class WeeklyBlogPipelineTest extends TestCase
         Bus::assertChained([
             FetchArticlesJob::class,
             AnalyzeAndGroupArticlesJob::class,
-            GenerateSeoArticleJob::class,
+            ProposeTopicsJob::class,
         ]);
     }
 }

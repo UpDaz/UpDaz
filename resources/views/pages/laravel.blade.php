@@ -31,6 +31,7 @@
         @include('elements.laravel.stack')
         @include('elements.separators.extern')
         @include('elements.laravel.references')
+        @include('elements.laravel.use-case')
         @include('elements.separators.left')
         <div id="contact">
             @include('elements.laravel.contact')

@@ -33,7 +33,7 @@
                 {{ $initials }}
             </div>
             <div class="flex flex-col gap-1">
-                <span class="font-semibold leading-none">{{ $name }}</span>
+                <span class="font-semibold leading-none text-left">{{ $name }}</span>
                 <div class="flex items-center gap-2 text-xs text-gray">
                     <span class="flex">
                         @for ($i = 1; $i <= 5; $i++)
@@ -43,7 +43,7 @@
                         @endfor
                     </span>
                     <span>·</span>
-                    <span>{{ $date }}</span>
+                    <span class="text-nowrap">{{ $date }}</span>
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@
             <span class="text-xs uppercase tracking-widest text-gray">{{ $source }}</span>
         @endif
     </div>
-    <p class="text-white before:content-['«\00a0'] after:content-['\00a0»'] italic">{{ $slot }}</p>
+    <p class="text-white before:content-['«\00a0'] after:content-['\00a0»'] italic text-left">{{ $slot }}</p>
 
     <div data-element="line-horizontal" class="absolute h-[1px] left-1/2 w-[110%] -translate-x-1/2 top-0 bg-gradient-to-r from-transparent via-gray to-transparent"></div>
     <div data-element="line-horizontal" class="absolute h-[1px] left-1/2 w-[110%] -translate-x-1/2 bottom-0 bg-gradient-to-r from-transparent via-gray to-transparent"></div>

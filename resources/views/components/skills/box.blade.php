@@ -7,7 +7,7 @@
     <div class="relative flex items-center min-h-16">
         @isset ($title)
             {{ $title }}
-            <div data-element="line-horizontal" class="absolute h-[1px] right-0 w-[150%] -bottom-4 bg-gradient-to-r"></div>
+            <div data-element="line-horizontal" class="absolute h-px left-0 -translate-x-1/6 w-full -bottom-4 bg-gradient-to-r"></div>
         @endif
     </div>
     <div class="grow col-span-2 pl-12">

@@ -26,13 +26,13 @@
                     <dt class="order-2">lots mis en avant sur le site avant la vente</dt>
                 </div>
             </x-reference>
-            <div class="sm:col-span-3 lg:col-span-2">
-                <x-review name="David" source="google" date="sept. 2025" :rating="5">
-                    Matthieu m'accompagné sur une réalisation d'un site web.<br />
-                    Disponibilité, écoute et réactivité.<br />
-                    Je recommande.
-                </x-review>
-            </div>
+            @if($caseStudyReview)
+                <div class="sm:col-span-3 lg:col-span-2">
+                    <x-review :name="$caseStudyReview->name" :source="$caseStudyReview->platform->value" :date="$caseStudyReview->formattedDate()" :rating="$caseStudyReview->rating">
+                        {!! nl2br(e($caseStudyReview->content)) !!}
+                    </x-review>
+                </div>
+            @endif
         </dl>
 
         <div class="grid grid-cols-1 gap-8 md:grid-cols-3">

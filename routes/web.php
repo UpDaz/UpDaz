@@ -1,9 +1,11 @@
 <?php
 
+use App\Enums\ReviewPlatform;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DiscordInteractionController;
+use App\Models\Review;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
@@ -45,7 +47,9 @@ Route::redirect('/sur-mesure-bordeaux', '/application-web-bordeaux', 301);
 Route::get(
     '/',
     function () {
-        return view('pages.home');
+        return view('pages.home', [
+            'reviews' => Review::query()->mostRecentFirst()->get(),
+        ]);
     }
 )->name('home');
 
@@ -59,7 +63,12 @@ Route::get(
 Route::get(
     '/application-web-bordeaux',
     function () {
-        return view('pages.laravel');
+        return view('pages.laravel', [
+            'caseStudyReview' => Review::query()
+                ->where('name', 'David')
+                ->where('platform', ReviewPlatform::Google)
+                ->first(),
+        ]);
     }
 )->name('laravel');
 

@@ -31,17 +31,16 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Articles Generated Per Run
+    | Topics Proposed Per Run
     |--------------------------------------------------------------------------
     |
     | AnalyzeAndGroupArticlesJob groups raw articles into one WeeklyDigest
-    | per eligible theme, and GenerateSeoArticleJob turns every digest
-    | without a post into an article — so left uncapped, one pipeline run
-    | can produce as many articles as there are eligible themes that week.
-    | This keeps only the N richest themes (most raw articles) per run.
+    | per eligible theme, each proposed as a topic on Discord. Only the N
+    | richest themes (most raw articles) are kept per run: the editor
+    | picks the ones worth an interview, the others expire.
     |
     */
 
-    'max_articles_per_run' => (int) env('BLOG_MAX_ARTICLES_PER_RUN', 1),
+    'topics_per_run' => (int) env('BLOG_TOPICS_PER_RUN', 3),
 
 ];

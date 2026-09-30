@@ -4,7 +4,7 @@ namespace App\Console\Commands;
 
 use App\Jobs\AnalyzeAndGroupArticlesJob;
 use App\Jobs\FetchArticlesJob;
-use App\Jobs\GenerateSeoArticleJob;
+use App\Jobs\ProposeTopicsJob;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Bus;
 use Throwable;
@@ -15,12 +15,12 @@ class WeeklyBlogPipeline extends Command
 
     public function handle(): void
     {
-        notice('[WeeklyBlogPipeline] Dispatch de la chaîne FetchArticlesJob -> AnalyzeAndGroupArticlesJob -> GenerateSeoArticleJob');
+        notice('[WeeklyBlogPipeline] Dispatch de la chaîne FetchArticlesJob -> AnalyzeAndGroupArticlesJob -> ProposeTopicsJob');
 
         Bus::chain([
             new FetchArticlesJob(),
             new AnalyzeAndGroupArticlesJob(),
-            new GenerateSeoArticleJob(),
+            new ProposeTopicsJob(),
         ])
             ->onQueue('ai-pipeline')
             ->catch(function (Throwable $e) {

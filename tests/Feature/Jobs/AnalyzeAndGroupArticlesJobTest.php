@@ -95,6 +95,24 @@ class AnalyzeAndGroupArticlesJobTest extends TestCase
         $this->assertNotNull($article->analyzed_at);
     }
 
+    public function testLabelCategoriesAreNeverUsedAsThemes(): void
+    {
+        config(['ai.throttle_seconds' => 0]);
+
+        Category::factory()->create(['name' => 'Laravel', 'is_active' => true]);
+        Category::factory()->create(['name' => 'Veille', 'slug' => Category::WATCH_SLUG, 'is_active' => true]);
+
+        Prism::fake([
+            $this->fakeAnalysis('Veille', 'Résumé.'),
+        ]);
+
+        $article = RawArticle::factory()->for(Source::factory())->create(['analyzed_at' => null]);
+
+        (new AnalyzeAndGroupArticlesJob())->handle();
+
+        $this->assertNull($article->fresh()->theme);
+    }
+
     public function testDoesNothingWhenNoActiveCategoryExists(): void
     {
         $fake = Prism::fake();
@@ -161,7 +179,7 @@ class AnalyzeAndGroupArticlesJobTest extends TestCase
      */
     public function testCapsDigestsCreatedPerRunToTheRichestThemes(): void
     {
-        config(['blog.max_articles_per_run' => 1]);
+        config(['blog.topics_per_run' => 1]);
 
         Prism::fake([
             $this->fakeSynthesis('Synthèse retenue.'),

@@ -2,11 +2,13 @@
 
 namespace App\Models;
 
+use App\Enums\TopicStatus;
 use Database\Factories\WeeklyDigestFactory;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Collection as SupportCollection;
 use Illuminate\Support\Str;
 
 class WeeklyDigest extends Model
@@ -21,12 +23,30 @@ class WeeklyDigest extends Model
      */
     public const SOURCES_SEPARATOR = "\n\n---\n\n## Sources\n\n";
 
+    /**
+     * Topics left unanswered on Discord are dropped after this delay,
+     * with one reminder halfway through the interview.
+     */
+    public const EXPIRES_AFTER_DAYS = 7;
+
+    public const REMIND_AFTER_DAYS = 3;
+
     protected $fillable = [
         'week_start',
         'theme',
+        'topic_title',
         'summary',
+        'status',
+        'interview_questions',
+        'interview_answers',
+        'proposed_update',
+        'proposed_update_summary',
         'raw_article_ids',
         'post_id',
+        'overlapping_article_id',
+        'proposed_at',
+        'interview_sent_at',
+        'reminded_at',
     ];
 
     /**
@@ -37,12 +57,42 @@ class WeeklyDigest extends Model
         return [
             'week_start' => 'date',
             'raw_article_ids' => 'array',
+            'status' => TopicStatus::class,
+            'interview_questions' => 'array',
+            'interview_answers' => 'array',
+            'proposed_at' => 'datetime',
+            'interview_sent_at' => 'datetime',
+            'reminded_at' => 'datetime',
         ];
     }
 
     public function post(): BelongsTo
     {
         return $this->belongsTo(Article::class, 'post_id');
+    }
+
+    /**
+     * An already published article covering the same subject: the topic
+     * is then offered as an update of it rather than a new article.
+     */
+    public function overlappingArticle(): BelongsTo
+    {
+        return $this->belongsTo(Article::class, 'overlapping_article_id');
+    }
+
+    public function displayTitle(): string
+    {
+        return $this->topic_title ?: $this->theme;
+    }
+
+    /**
+     * True when the interview brought first-hand material: the article is
+     * then suggested as a "Retour d'expérience" rather than "Veille".
+     */
+    public function hasFieldExperience(): bool
+    {
+        return collect($this->interview_answers ?? [])
+            ->contains(fn (?string $answer): bool => filled($answer));
     }
 
     /**
@@ -125,7 +175,73 @@ class WeeklyDigest extends Model
         <sources>
         {$sources}
         </sources>
+
+        <experience>
+        {$this->experienceBrief()}
+        </experience>
         BRIEF;
+    }
+
+    /**
+     * Writes the validated update into the published article, keeping its
+     * existing sources and adding this week's ones after them.
+     */
+    public function applyProposedUpdate(): void
+    {
+        $article = $this->overlappingArticle;
+
+        if (! $article || $this->proposed_update === null) {
+            return;
+        }
+
+        $sources = $this->sourceLines((string) $article->getRawOriginal('content'))
+            ->merge($this->sourceLines($this->sourcesMarkdown()))
+            ->unique();
+
+        $article->update([
+            'content' => $sources->isEmpty()
+                ? $this->proposed_update
+                : $this->proposed_update . self::SOURCES_SEPARATOR . $sources->implode("\n"),
+        ]);
+
+        $this->update(['proposed_update' => null]);
+    }
+
+    /**
+     * @return SupportCollection<int, string>
+     */
+    private function sourceLines(string $content): SupportCollection
+    {
+        if (! str_contains($content, self::SOURCES_SEPARATOR)) {
+            return collect();
+        }
+
+        return Str::of($content)
+            ->after(self::SOURCES_SEPARATOR)
+            ->explode("\n")
+            ->map(fn (string $line): string => trim($line))
+            ->filter()
+            ->values();
+    }
+
+    /**
+     * The interview as question/answer pairs, or an explicit "none" so the
+     * writer never fills the gap with made-up experience.
+     */
+    private function experienceBrief(): string
+    {
+        if (! $this->hasFieldExperience()) {
+            return 'Aucune expérience fournie.';
+        }
+
+        return collect($this->interview_questions ?? [])
+            ->map(function (string $question, int $index): ?string {
+                $answer = trim($this->interview_answers[$index] ?? '');
+
+                return $answer === '' ? null : "Question : {$question}\nRéponse : {$answer}";
+            })
+            ->filter()
+            ->implode("\n\n");
     }
 
     /**

@@ -2,6 +2,7 @@
 
 namespace Tests\Feature\Jobs;
 
+use App\Enums\TopicStatus;
 use App\Jobs\GenerateSeoArticleJob;
 use App\Models\Article;
 use App\Models\Category;
@@ -41,7 +42,7 @@ class GenerateSeoArticleJobTest extends TestCase
         );
     }
 
-    public function testGeneratesADraftArticleFromDigestsOfTheCurrentWeek(): void
+    public function testGeneratesADraftArticleFromTheChosenTopic(): void
     {
         Notification::fake();
         Prism::fake([$this->fakeArticle()]);
@@ -55,7 +56,7 @@ class GenerateSeoArticleJobTest extends TestCase
             'summary' => 'Synthèse de la semaine sur l\'IA générative.',
         ]);
 
-        (new GenerateSeoArticleJob())->handle();
+        (new GenerateSeoArticleJob($digest))->handle();
 
         $digest->refresh();
 
@@ -97,14 +98,14 @@ class GenerateSeoArticleJobTest extends TestCase
             'summary' => 'Résumé individuel de l\'article source.',
         ]);
 
-        WeeklyDigest::factory()->create([
+        $digest = WeeklyDigest::factory()->create([
             'week_start' => now()->startOfWeek(),
             'post_id' => null,
             'summary' => 'Synthèse de la semaine.',
             'raw_article_ids' => [$rawArticle->id],
         ]);
 
-        (new GenerateSeoArticleJob())->handle();
+        (new GenerateSeoArticleJob($digest))->handle();
 
         $fake->assertRequest(function (array $requests): void {
             $prompt = $requests[0]->prompt();
@@ -128,7 +129,7 @@ class GenerateSeoArticleJobTest extends TestCase
             'raw_article_ids' => [$rawArticle->id],
         ]);
 
-        (new GenerateSeoArticleJob())->handle();
+        (new GenerateSeoArticleJob($digest))->handle();
 
         $digest->refresh();
         $article = Article::find($digest->post_id);
@@ -152,7 +153,7 @@ class GenerateSeoArticleJobTest extends TestCase
             'theme' => 'Thème sans catégorie correspondante',
         ]);
 
-        (new GenerateSeoArticleJob())->handle();
+        (new GenerateSeoArticleJob($digest))->handle();
 
         $digest->refresh();
         $article = Article::find($digest->post_id);
@@ -165,27 +166,59 @@ class GenerateSeoArticleJobTest extends TestCase
         Notification::fake();
 
         $article = Article::factory()->create();
-        WeeklyDigest::factory()->create([
+        $digest = WeeklyDigest::factory()->create([
             'week_start' => now()->startOfWeek(),
             'post_id' => $article->id,
         ]);
 
-        (new GenerateSeoArticleJob())->handle();
+        (new GenerateSeoArticleJob($digest))->handle();
 
         Notification::assertNothingSent();
     }
 
-    public function testIgnoresDigestsFromPreviousWeeks(): void
+    public function testMarksTheTopicAsDrafted(): void
     {
         Notification::fake();
+        Prism::fake([$this->fakeArticle()]);
 
-        WeeklyDigest::factory()->create([
-            'week_start' => now()->subWeek()->startOfWeek(),
-            'post_id' => null,
+        $digest = WeeklyDigest::factory()->create(['status' => TopicStatus::Drafting]);
+
+        (new GenerateSeoArticleJob($digest))->handle();
+
+        $this->assertSame(TopicStatus::Drafted, $digest->fresh()->status);
+    }
+
+    public function testSendsTheInterviewAnswersAsFieldExperience(): void
+    {
+        Notification::fake();
+        $fake = Prism::fake([$this->fakeArticle()]);
+
+        $digest = WeeklyDigest::factory()->create([
+            'interview_questions' => ['Quel projet récent ?', 'Combien de temps ?'],
+            'interview_answers' => ['Une reprise d\'app Laravel 8 pour un transporteur.', ''],
         ]);
 
-        (new GenerateSeoArticleJob())->handle();
+        (new GenerateSeoArticleJob($digest))->handle();
 
-        Notification::assertNothingSent();
+        $fake->assertRequest(function (array $requests): void {
+            $prompt = $requests[0]->prompt();
+
+            $this->assertStringContainsString("Question : Quel projet récent ?\nRéponse : Une reprise d'app Laravel 8 pour un transporteur.", $prompt);
+            $this->assertStringNotContainsString('Combien de temps ?', $prompt);
+        });
+    }
+
+    public function testTellsTheWriterWhenNoExperienceWasGiven(): void
+    {
+        Notification::fake();
+        $fake = Prism::fake([$this->fakeArticle()]);
+
+        $digest = WeeklyDigest::factory()->create();
+
+        (new GenerateSeoArticleJob($digest))->handle();
+
+        $fake->assertRequest(function (array $requests): void {
+            $this->assertStringContainsString("<experience>\nAucune expérience fournie.\n</experience>", $requests[0]->prompt());
+        });
     }
 }

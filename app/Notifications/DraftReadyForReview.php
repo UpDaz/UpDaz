@@ -4,6 +4,7 @@ namespace App\Notifications;
 
 use App\Filament\Resources\Articles\ArticleResource;
 use App\Models\Article;
+use App\Models\WeeklyDigest;
 use Discord\Builders\Components\ActionRow;
 use Discord\Builders\Components\Button;
 use Illuminate\Bus\Queueable;
@@ -40,10 +41,17 @@ class DraftReadyForReview extends Notification implements ShouldQueue
         $previewUrl = $this->article->frontendUrl();
         $editUrl = ArticleResource::getUrl('edit', ['record' => $this->article]);
 
+        $isFieldExperience = WeeklyDigest::query()
+            ->where('post_id', $this->article->id)
+            ->first()
+            ?->hasFieldExperience() ?? false;
+
         $actions = ActionRow::new()
             ->addComponent(
-                Button::success('article:approve:' . $this->article->id)
-                    ->setLabel('✅ Valider')
+                $this->approveButton('approve-experience', '✅ Publier en retour d\'expérience', suggested: $isFieldExperience)
+            )
+            ->addComponent(
+                $this->approveButton('approve-watch', '✅ Publier en veille', suggested: ! $isFieldExperience)
             )
             ->addComponent(
                 Button::primary('article:revise:' . $this->article->id)
@@ -55,6 +63,18 @@ class DraftReadyForReview extends Notification implements ShouldQueue
         )
             ->embed($this->buildEmbed($previewUrl, $editUrl))
             ->components([$actions->jsonSerialize()]);
+    }
+
+    /**
+     * The label the interview suggests is highlighted; the editor still
+     * decides by picking either button.
+     */
+    private function approveButton(string $action, string $label, bool $suggested): Button
+    {
+        $customId = "article:{$action}:{$this->article->id}";
+
+        return ($suggested ? Button::success($customId) : Button::secondary($customId))
+            ->setLabel($label);
     }
 
     /**

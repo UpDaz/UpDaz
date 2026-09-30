@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="hidden w-full justify-center *:h-auto *:w-full md:w-1/2 lg:flex *:lg:h-[65vh] *:lg:w-auto">
-                <img src="{{ asset('img/illustrations/home.svg') }}" alt="" width="263" height="213" loading="lazy" />
+                <img src="{{ asset('img/illustrations/home.svg') }}" alt="" width="263" height="213" fetchpriority="high" />
             </div>
         </div>
     </div>

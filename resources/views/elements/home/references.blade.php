@@ -7,7 +7,7 @@
             <h2>Une confiance gagnante</h2>
         </div>
         <div class="flex flex-col gap-4">
-            <h3 class="text-lg">Des retours qui parlent d'eux-mêmes</h3>
+            <h3 class="text-lg">Vos retours qui font plaisir</h3>
             <div class="flex gap-8 overflow-y-visible -ml-6 p-6 -mt-6 overflow-x-auto no-scrollbar *:w-90 lg:*:w-80 *:shrink-0">
               <x-review name="Linda R" source="google" date="nov. 2025" :rating="5">
                     Nous avons fait appel à Matthieu pour le développement web de notre activité, et nous sommes
@@ -38,7 +38,7 @@
             </div>
         </div>
         <div class="flex flex-col gap-4">
-            <h3 class="text-lg">Projets travaillés par UpDaz</h3>
+            <h3 class="text-lg">Ils m'ont fait confiance</h3>
             <div class="grid grid-cols-2 items-center gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 @include('elements.home.references-updaz')
             </div>

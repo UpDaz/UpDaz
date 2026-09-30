@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="hidden lg:flex justify-center w-full *:w-full *:h-auto md:w-1/2 *:lg:w-auto *:lg:h-[65vh]">
-                <img src="{{ asset('img/illustrations/webflow.svg') }}" alt="" width="355" height="364" loading="lazy" />
+                <img src="{{ asset('img/illustrations/webflow.svg') }}" alt="" width="355" height="364" fetchpriority="high" />
             </div>
         </div>
     </div>

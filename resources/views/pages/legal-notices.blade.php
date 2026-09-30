@@ -14,7 +14,7 @@
                 <h2 class="text-xl ">Retrouvez toute l'actualité UpDaz</h2>
             </div>
         </div>
-        <div class="max-w-lg mx-auto">
+        <div>
             <h2 class="text-2xl">
                 UPDAZ
             </h2>
@@ -33,11 +33,16 @@
             <p class="mb-4">
                 Développé par UpDaz avec les technologies Laravel, TailwindCSS, AlpineJS
                 <br>
-                Base du design : Tailblocks
-                <br>
-                Icons : https://www.streamlinehq.com/icons/freehand-duotone-free
-                <br>
                 Hébergement : ZakaServices
+            </p>
+            <h2 id="cookies" class="mt-4 text-2xl">
+                Cookies et mesure d'audience
+            </h2>
+            <p class="mb-4">
+                Ce site utilise Google Analytics, un service de Google, pour mesurer son audience
+                (pages consultées, durée de visite, provenance). Google Analytics dépose des cookies
+                sur votre appareil ; les données collectées servent uniquement à établir des statistiques
+                de fréquentation. Vous pouvez bloquer ces cookies depuis les réglages de votre navigateur.
             </p>
             <h2 class="mt-4 text-2xl">
                 Illustrations et éléments graphiques

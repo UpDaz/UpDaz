@@ -43,4 +43,17 @@ return [
 
     'topics_per_run' => (int) env('BLOG_TOPICS_PER_RUN', 3),
 
+    /*
+    |--------------------------------------------------------------------------
+    | Third-Party Image Weight Cap
+    |--------------------------------------------------------------------------
+    |
+    | Source images are hotlinked into generated articles. Any image heavier
+    | than this (in kilobytes), unreachable, or whose weight can't be read
+    | from its headers is left out, see RemoteImageInspector.
+    |
+    */
+
+    'max_image_kilobytes' => (int) env('BLOG_MAX_IMAGE_KILOBYTES', 500),
+
 ];

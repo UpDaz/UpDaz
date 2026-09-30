@@ -11,6 +11,7 @@ use App\Models\WeeklyDigest;
 use App\Notifications\DraftReadyForReview;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Notification;
 use Prism\Prism\Enums\FinishReason;
 use Prism\Prism\Facades\Prism;
@@ -120,6 +121,7 @@ class GenerateSeoArticleJobTest extends TestCase
     {
         Notification::fake();
         Prism::fake([$this->fakeArticle()]);
+        Http::fake(['*' => Http::response('', 200, ['Content-Type' => 'image/jpeg', 'Content-Length' => 80 * 1024])]);
 
         $rawArticle = RawArticle::factory()->create(['image_url' => 'https://example.com/cover.jpg']);
 
@@ -140,6 +142,20 @@ class GenerateSeoArticleJobTest extends TestCase
             $rawContent
         );
         $this->assertStringNotContainsString('onerror="this.remove()">' . "\n\n" . '## Sources', $rawContent);
+    }
+
+    public function testLeavesOutSourceImagesThatAreTooHeavy(): void
+    {
+        Notification::fake();
+        Prism::fake([$this->fakeArticle()]);
+        Http::fake(['*' => Http::response('', 200, ['Content-Type' => 'image/png', 'Content-Length' => 2 * 1024 * 1024])]);
+
+        $rawArticle = RawArticle::factory()->create(['image_url' => 'https://example.com/heavy.png']);
+        $digest = WeeklyDigest::factory()->create(['raw_article_ids' => [$rawArticle->id]]);
+
+        (new GenerateSeoArticleJob($digest))->handle();
+
+        $this->assertStringNotContainsString('heavy.png', Article::find($digest->fresh()->post_id)->getRawOriginal('content'));
     }
 
     public function testLeavesCategoryNullWhenNoCategoryMatchesTheDigestTheme(): void

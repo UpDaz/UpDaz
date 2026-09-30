@@ -11,10 +11,6 @@
     <meta name="author" content="Matthieu DAZORD" />
     <meta name="application-name" content="UpDaz" />
     <link rel="icon" href="{{ asset('img/favicon.png') }}" type="image/png">
-    <link rel="preconnect" href="https://static.axept.io">
-    <link rel="preconnect" href="https://client.axept.io">
-    <link rel="preconnect" href="https://fonts.axept.io" crossorigin>
-    <link rel="preconnect" href="https://api.axept.io">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <x-canonical-url />
     @include('elements.fonts')
@@ -22,7 +18,6 @@
     @include('elements.structured-data')
     @stack('structured-data')
     @include('elements.google-analytics')
-    @include('elements.axeptio')
 </head>
 
 <body class="text-white overflow-x-hidden bg-linear-to-br from-blue to-blue-dark">
@@ -37,6 +32,7 @@
         </div>
     </div>
     @include('elements.footer')
+    @include('elements.cookie-banner')
 </body>
 
 @vite('resources/js/app.js')

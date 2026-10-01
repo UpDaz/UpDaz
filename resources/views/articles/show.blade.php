@@ -21,6 +21,12 @@
     <div class="container mx-auto flex max-w-screen-lg flex-col gap-8">
         <div class="relative mt-24 overflow-hidden text-white">
             <div class="flex flex-col items-start gap-8">
+                @if ($article->category)
+                    <x-breadcrumb :links="[
+                        'Articles' => route('articles'),
+                        e($article->category->name) => route('category', ['slug' => $article->category->slug]),
+                    ]" />
+                @endif
                 <div class="flex flex-col gap-8 md:flex-row md:items-center">
                     <div class="*:h-auto *:w-12">
                         @include('elements.icon.write-paper')

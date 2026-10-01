@@ -39,6 +39,27 @@ class ArticlesControllerTest extends TestCase
         $response->assertOk();
     }
 
+    public function testArticlePageDisplaysABreadcrumbBackToItsMainCategory(): void
+    {
+        $mainCategory = Category::factory()->create(['name' => 'Laravel']);
+
+        $article = Article::factory()->create([
+            'category_id' => $mainCategory->id,
+            'is_published' => true,
+            'published_at' => now()->subDay(),
+        ]);
+
+        $response = $this->get(route('article', ['categorySlug' => $mainCategory->slug, 'slug' => $article->slug]));
+
+        $articlesUrl = route('articles');
+        $categoryUrl = route('category', ['slug' => $mainCategory->slug]);
+
+        $response->assertSeeInOrder([
+            "<a href=\"{$articlesUrl}\" class=\"text-sm\">Articles</a>",
+            "<a href=\"{$categoryUrl}\" class=\"text-sm\">Laravel</a>",
+        ], false);
+    }
+
     public function testArticleUnderASecondaryCategoryRedirectsToItsCanonicalUrl(): void
     {
         $mainCategory = Category::factory()->create();

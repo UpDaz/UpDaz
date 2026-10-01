@@ -32,6 +32,21 @@ class CategoryControllerTest extends TestCase
         $response->assertOk();
     }
 
+    public function testCategoryPageDisplaysABreadcrumbBackToTheBlog(): void
+    {
+        $category = Category::factory()->create(['name' => 'Laravel']);
+
+        $response = $this->get(route('category', ['slug' => $category->slug]));
+
+        $articlesUrl = route('articles');
+        $categoryUrl = route('category', ['slug' => $category->slug]);
+
+        $response->assertSeeInOrder([
+            "<a href=\"{$articlesUrl}\" class=\"text-sm\">Articles</a>",
+            "<a href=\"{$categoryUrl}\" class=\"text-sm\">Laravel</a>",
+        ], false);
+    }
+
     public function testCategoryTitleDoesNotRepeatTheBrand(): void
     {
         $category = Category::factory()->create(['meta_title' => 'Laravel : actualités | UpDaz']);

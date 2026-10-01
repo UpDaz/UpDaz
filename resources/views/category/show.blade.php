@@ -18,6 +18,10 @@
     <div class="container flex flex-col gap-16 mx-auto">
         <div class="relative mt-24 overflow-hidden text-center text-white ">
             <div class="flex flex-col gap-4 mx-auto">
+                <x-breadcrumb :links="[
+                    'Articles' => route('articles'),
+                    e($category->name) => route('category', ['slug' => $category->slug]),
+                ]" />
                 <h1 class="text-4xl font-bold font-title lg:text-5xl">Les articles<br/><span
                         class="lowercase text-yellow">{{ $category->name }}</span></h1>
                 <p class="text-xl">{{ $category->catch_phrase }}</p>

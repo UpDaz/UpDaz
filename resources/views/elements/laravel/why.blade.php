@@ -1,7 +1,7 @@
 <section id="quelle-utilisation" class="-mt-24 pt-24">
     <div class="container mx-auto">
         <div class="flex flex-col-reverse gap-16 sm:flex-row sm:gap-0">
-            <div class="border-gray flex flex-col items-start justify-start gap-8 sm:w-3/4 sm:border-r sm:border-t-0 sm:py-8 sm:pr-8 sm:text-left md:py-16 md:pr-16">
+            <div class="border-gray flex flex-col items-start justify-start gap-8 sm:w-3/4 sm:border-r sm:border-t-0 py-8 sm:pr-8 sm:text-left md:py-16 md:pr-16">
                 <div class="flex items-center gap-8">
                     <div class="*:w-12 *:h-auto">
                         @include('elements.icon.check-list')
@@ -26,13 +26,15 @@
                         services tiers (paiement, logistique, emailing).</li>
                     <li><b>Plateformes SaaS et gestion d’abonnements</b> : comptes utilisateurs, rôles, paiement
                         récurrent.</li>
+                    <li><b>Intégration d’intelligence artificielle</b> : agents et assistants branchés sur vos
+                        données, voir <a href="#integration-ia" class="underline">l’IA dans votre application</a>.</li>
                     <li><b>E-commerce sur mesure</b> : une boutique en ligne sans abonnement ni commission, comme
                         celle de PadelReference, voir la
                         <a href="{{ route('ecommerce') }}" class="underline">création de site e-commerce sur mesure
                             à Bordeaux</a>.</li>
                 </ul>
             </div>
-            <div class="max-w-full sm:pl-8 sm:pt-8 md:w-1/4 md:pt-16 lg:px-12">
+            <div class="max-w-full sm:pl-8 pt-8 md:w-1/4 md:pt-16 lg:px-12">
                 <div class="sticky sm:top-24">
                     <div class="relative mx-8 md:mx-0">
                         <img src="{{ asset('img/logos/laravel.svg') }}" class="w-full bg-white p-5" alt="Logo Laravel" width="50" height="52">

@@ -1,7 +1,7 @@
 <section id="presentation" class="-mt-24 pt-24">
     <div class="container mx-auto flex flex-col">
         <div class="mt-10 flex flex-col items-center gap-8 sm:flex-row sm:items-start md:gap-16">
-            <div class="border-gray border-b sm:mt-0 sm:border-l sm:pb-8 sm:pl-8 sm:text-left md:pb-16 md:pl-16">
+            <div class="border-gray sm:border-b sm:mt-0 sm:border-l sm:pb-8 sm:pl-8 sm:text-left md:pb-16 md:pl-16">
                 <div class="flex items-center gap-8">
                     <div class="*:w-12 *:h-auto">
                         @include('elements.icon.question-mark')

@@ -97,7 +97,23 @@
                 </div>
             </x-skills.box>
             <div class="md:col-span-3">
-                <div class="mx-auto md:w-1/2">
+                <div class="mx-auto grid grid-cols-1 md:w-2/3 md:grid-cols-2 md:gap-x-8">
+                    <x-skills.box>
+                        <x-slot:icon>
+                            @include('elements.icon.light')
+                        </x-slot:icon>
+                        <x-slot:title>
+                            <h3>Intelligence artificielle</h3>
+                        </x-slot:title>
+                        <div class="flex flex-col items-start text-left -mb-1 space-y-2.5">
+                            <x-skills.item text="Intégration d'agents IA dans vos outils métier" />
+                            <x-skills.item text="Automatisation des tâches répétitives" />
+                            <x-skills.item text="Synthèse et tri de vos documents" />
+                            <x-skills.item text="Validation humaine des actions sensibles" />
+                            <x-skills.item text="Développement assisté par IA, relu et testé" />
+                        </div>
+                    </x-skills.box>
+
                     <x-skills.box>
                         <x-slot:icon>
                             @include('elements.icon.fingerprint')

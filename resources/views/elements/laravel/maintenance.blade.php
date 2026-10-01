@@ -1,7 +1,7 @@
 <section id="reprise-maintenance" class="-mt-24 pt-24">
     <div class="container mx-auto flex flex-col">
         <div class="flex flex-col items-center gap-8 sm:flex-row sm:items-start md:gap-16">
-            <div class="border-gray border-t mt-8 sm:border-l pt-8 sm:pl-8 sm:text-left md:pt-16 md:pl-16">
+            <div class="border-gray border-t sm:border-l py-8 sm:pl-8 sm:text-left md:py-16 md:pl-16">
                 <div class="flex items-center gap-8">
                     <div class="*:w-12 *:h-auto">
                         @include('elements.icon.window-cloud')

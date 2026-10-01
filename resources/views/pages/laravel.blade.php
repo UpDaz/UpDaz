@@ -24,6 +24,7 @@
             @include('elements.laravel.presentation')
             @include('elements.laravel.why')
             @include('elements.laravel.maintenance')
+            @include('elements.laravel.ai')
         </div>
         @include('elements.separators.center')
         @include('elements.laravel.support')

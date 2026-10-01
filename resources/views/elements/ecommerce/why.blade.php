@@ -1,50 +1,87 @@
-<section id="opquast" class="pt-24 -mt-24">
+<section id="pourquoi-sur-mesure" class="-mt-24 pt-24">
     <div class="container mx-auto">
-        <div class="flex flex-col-reverse gap-16 sm:gap-0 sm:flex-row ">
-            <div
-                class="flex flex-col items-start justify-start gap-8 border-gray sm:w-3/4 sm:pr-8 sm:py-8 md:pr-16 md:py-16 sm:border-r sm:border-t-0 sm:text-left">
+        <div class="flex flex-col-reverse gap-16 sm:flex-row sm:gap-0">
+            <div class="border-gray flex flex-col items-start justify-start gap-8 sm:w-3/4 sm:border-r sm:border-t-0 sm:py-8 sm:pr-8 sm:text-left md:py-16 md:pr-16">
                 <div class="flex items-center gap-8">
-                    <div class="*:w-12 *:h-auto">
+                    <div class="*:h-auto *:w-12">
                         @include('elements.icon.check-list')
                     </div>
                     <h2>
-                        Quels avantages à utiliser Lunar ?
+                        Pourquoi un site e-commerce <span class="text-yellow">sur mesure</span> ?
                     </h2>
                 </div>
-                <p class="leading-relaxed text-md">
-                    Lunar permet une maîtrise complète du fonctionnement d’un site e-commerce, là où Prestashop et
-                    Shopify imposent des structures et des limites fonctionnelles.
-                    Le code est totalement accessible, personnalisable et cohérent avec l’écosystème Laravel, ce qui
-                    élimine la dépendance aux modules tiers et aux surcharges techniques fréquentes sur Prestashop.
-                    Aucune contrainte d’abonnement, de commission ou de verrou propriétaire comme sur Shopify :
-                    l’infrastructure, le paiement et les intégrations restent entièrement contrôlés.
-                    <br /><br />
-                    L’architecture de Lunar facilite les développements spécifiques, les modèles de pricing complexes,
-                    les workflows métier, les synchronisations avec des outils internes et les catalogues non standard.
-                    Les performances et la scalabilité dépendent uniquement de l’environnement Laravel, ce qui garantit
-                    une montée en charge sans les limites imposées par les plateformes SaaS ou les CMS e-commerce
-                    préconstruits.
-                    <br /><br />
-                    Lunar offre donc un socle e-commerce flexible, extensible et durable, adapté aux projets nécessitant
-                    un haut niveau de personnalisation et une logique métier sur mesure.
+                <p class="text-md leading-relaxed">
+                    Shopify est un service américain par abonnement, dont le coût augmente avec vos ventes.
+                    Prestashop est un CMS généraliste, pensé pour convenir à toutes les boutiques : il embarque
+                    quantité de fonctions dont vous ne vous servez pas et se prête mal aux évolutions sur mesure.
+                    Avec une boutique développée pour vous, vous gardez la main sur ce que vous payez, sur
+                    l’endroit où vivent vos données et sur la façon dont votre site évolue.
                 </p>
+                <ul class="text-md flex list-disc flex-col gap-2 pl-6 leading-relaxed">
+                    <li>
+                        <b>Un coût fixe et prévisible</b> : l’hébergement et la maintenance uniquement
+                    </li>
+                    <li>
+                        <b>Une boutique qui vous appartient</b> : le code est le vôtre, sans verrou propriétaire.
+                        Vous pouvez le faire évoluer, changer de prestataire ou d’hébergeur.
+                    </li>
+                    <li>
+                        <b>Des données hébergées en France</b> : votre boutique est hébergée dans l’agglomération
+                        bordelaise par <a href="https://www.zaka-services.com/" target="_blank" class="underline">ZakaServices</a>,
+                        un prestataire de confiance avec qui je travaille au quotidien.
+                    </li>
+                    <li>
+                        <b>Le prestataire de paiement de votre choix</b> : n’importe quelle solution de paiement
+                        peut être installée, ce qui vous permet de retenir celle dont les frais sont les plus
+                        bas pour votre activité.
+                    </li>
+                    <li>
+                        <b>Des évolutions sans contournement</b> : sur Prestashop, chaque besoin spécifique passe
+                        par un module ou par une surcharge du cœur, que la mise à jour suivante peut casser. Ici,
+                        tarifs professionnels, stocks, vente en magasin ou options de produit particulières sont
+                        développés pour votre fonctionnement.
+                    </li>
+                    <li>
+                        <b>Aucune dépendance aux modules</b> : pas de modules tiers payants à empiler, à faire
+                        cohabiter et à mettre à jour, ni d’éditeur dont dépend une fonction clé de votre boutique.
+                    </li>
+                    <li>
+                        <b>Une boutique légère et rapide</b> : le site ne contient que ce dont vous avez besoin.
+                        Sans le poids d’un CMS et de ses modules, les pages se chargent plus vite, au bénéfice du
+                        référencement et des ventes.
+                    </li>
+                    <li>
+                        <b>Une boutique à votre image</b> : l’interface et le parcours d’achat
+                        sont conçus pour votre marque et votre clientèle, là où les thèmes prêts à l’emploi
+                        produisent des boutiques qui se ressemblent toutes.
+                    </li>
+                </ul>
             </div>
-            <div class="max-w-full sm:pl-8 lg:px-12 md:w-1/4 sm:pt-8 md:pt-16">
-                <div class="sticky sm:top-24">
+            <div class="max-w-full sm:pl-8 sm:pt-8 md:w-1/4 md:pt-16 lg:px-12">
+                <div class="sticky flex flex-col gap-16 sm:top-24">
                     <div class="relative mx-8 md:mx-0">
-                        <img src="{{ asset('img/logos/lunar.svg') }}" class="w-full p-5 bg-blue-dark" alt="Logo Lunar"
-                            width="204" height="58">
-                        <div data-element="line-horizontal"
-                            class="absolute h-[1px] left-1/2 w-[150%] -translate-x-1/2 top-0 bg-gradient-to-r  ">
+                        <img src="{{ asset('img/logos/laravel.svg') }}" class="w-full bg-white p-5" alt="Logo Laravel" width="50" height="52">
+                        <div data-element="line-horizontal" class="absolute left-1/2 top-0 h-[1px] w-[150%] -translate-x-1/2 bg-gradient-to-r">
                         </div>
-                        <div data-element="line-horizontal"
-                            class="absolute h-[1px] left-1/2 w-[150%] -translate-x-1/2 bottom-0 bg-gradient-to-r  ">
+                        <div data-element="line-horizontal" class="absolute bottom-0 left-1/2 h-[1px] w-[150%] -translate-x-1/2 bg-gradient-to-r">
                         </div>
-                        <div data-element="line-vertical"
-                            class="absolute w-[1px] top-1/2 h-[150%] -translate-y-1/2 left-0 bg-gradient-to-b  ">
+                        <div data-element="line-vertical" class="absolute left-0 top-1/2 h-[150%] w-[1px] -translate-y-1/2 bg-gradient-to-b">
                         </div>
-                        <div data-element="line-vertical"
-                            class="absolute w-[1px] top-1/2 h-[150%] -translate-y-1/2 right-0 bg-gradient-to-b  ">
+                        <div data-element="line-vertical" class="absolute right-0 top-1/2 h-[150%] w-[1px] -translate-y-1/2 bg-gradient-to-b">
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        @include('elements.icon.plus')
+                    </div>
+                    <div class="relative mx-8 md:mx-0">
+                        <img src="{{ asset('img/logos/lunar.svg') }}" class="bg-blue-dark w-full p-5" alt="Logo Lunar" width="204" height="58">
+                        <div data-element="line-horizontal" class="absolute left-1/2 top-0 h-[1px] w-[150%] -translate-x-1/2 bg-gradient-to-r">
+                        </div>
+                        <div data-element="line-horizontal" class="absolute bottom-0 left-1/2 h-[1px] w-[150%] -translate-x-1/2 bg-gradient-to-r">
+                        </div>
+                        <div data-element="line-vertical" class="absolute left-0 top-1/2 h-[150%] w-[1px] -translate-y-1/2 bg-gradient-to-b">
+                        </div>
+                        <div data-element="line-vertical" class="absolute right-0 top-1/2 h-[150%] w-[1px] -translate-y-1/2 bg-gradient-to-b">
                         </div>
                     </div>
                 </div>

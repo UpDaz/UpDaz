@@ -1,25 +1,25 @@
 @php
     $questions = [
+        'Combien coûte un site e-commerce sur mesure ?' =>
+            'Le budget dépend du catalogue, du parcours de commande et des intégrations attendues : chaque projet fait l’objet d’un devis. Une fois la boutique en ligne, les coûts se limitent à l’hébergement, à la maintenance et aux frais du prestataire de paiement choisi, sans abonnement à une plateforme ni commission sur les ventes.',
+        'Pourquoi choisir le sur mesure plutôt que Shopify ou Prestashop ?' =>
+            'Shopify est un service américain par abonnement dont le coût augmente avec les ventes : abonnement, commissions sur les transactions, applications payantes. Prestashop repose sur des modules tiers qu’il faut maintenir et faire cohabiter. Une boutique sur mesure vous appartient, son coût reste prévisible et elle s’adapte à votre fonctionnement.',
+        'Le sur mesure convient-il à une petite boutique ?' =>
+            'Oui. Lunar fournit le catalogue, les commandes, les stocks et l’administration : une petite boutique peut être mise en ligne sans développer tout de zéro, puis évoluer au rythme de l’activité.',
+        'Qui est propriétaire du site et des données ?' =>
+            'Vous. Le code de la boutique vous appartient, sans verrou propriétaire, et vos données clients et commandes restent sous votre contrôle. Vous pouvez changer de prestataire ou d’hébergeur à tout moment.',
+        'Où est hébergée ma boutique en ligne ?' =>
+            'Dans l’agglomération bordelaise, chez ZakaServices, qui assure l’hébergement et l’exploitation des serveurs. J’assure de mon côté la maintenance applicative de la boutique.',
+        'Quels moyens de paiement peut-on proposer ?' =>
+            'N’importe quel prestataire de paiement peut être installé. Vous choisissez celui dont les frais et les moyens de paiement conviennent le mieux à votre activité, et vous pouvez en changer.',
+        'Peut-on migrer une boutique Prestashop ou Shopify existante ?' =>
+            'Oui. La migration reprend le catalogue, les clients et l’historique de commandes, reconstruit le parcours d’achat et les intégrations, puis redirige les anciennes adresses pour préserver le référencement.',
         'Qu’est-ce que Lunar pour Laravel ?' =>
-            'Lunar est un moteur e-commerce conçu pour s’intégrer nativement à Laravel. Il fournit une base technique complète pour gérer produits, commandes, stocks, variations et pricing, tout en laissant une liberté totale dans la structure du code et la logique métier.',
-        'Pourquoi choisir Lunar plutôt que Prestashop ou Shopify ?' =>
-            'Lunar évite les limites des plateformes préconstruites : aucune dépendance à des modules lourds, pas de contraintes d’abonnement ou de commissions, et aucune structure figée. Il offre un environnement totalement personnalisable, idéal pour les projets e-commerce nécessitant des fonctionnalités spécifiques ou une logique avancée.',
-        'Lunar permet-il de créer des catalogues complexes ?' =>
-            'Lunar gère nativement les variantes, les attributs personnalisés, les logiques de prix conditionnelles et les catalogues multi-canaux. Il s’adapte aux bases produits atypiques et aux structures complexes que les CMS classiques ont du mal à supporter.',
-        'Lunar est-il adapté aux fortes charges ?' =>
-            'Grâce à l’écosystème Laravel, Lunar bénéficie d’un environnement optimisé pour la performance : cache, files de traitement, optimisation serveur et séparation des processus. Cette architecture permet d’absorber des volumes importants de trafic et de commandes.',
-        'Peut-on intégrer Lunar à un ERP, un CRM ou des services externes ?' =>
-            'Lunar repose sur les standards Laravel, ce qui facilite les connexions API, webhooks, synchronisations programmées et intégrations sur mesure. Il s’intègre efficacement à des outils internes ou à des solutions tierces.',
-        'Lunar propose-t-il un tableau d’administration ?' =>
-            'Lunar inclut une interface d’administration dédiée permettant de gérer le catalogue produits, les stocks, les commandes, les clients et les paramètres du site. Cette interface simplifie la gestion opérationnelle sans limiter les possibilités de développement.',
-        'Lunar gère-t-il les paiements et les taxes ?' =>
-            'Lunar propose des intégrations natives avec Stripe et d’autres passerelles de paiement, ainsi qu’un système flexible pour définir les règles fiscales et les logiques de pricing. Il s’adapte aux configurations commerciales simples ou avancées.',
-        'Comment se déroule un projet e-commerce avec Lunar ?' =>
-            'Un projet démarre par la définition du modèle de données et du catalogue, suivie du développement du front-end, de l’intégration des services externes et de la configuration des workflows métier. Le processus se termine par les tests et le déploiement.',
-        'Quels sont les coûts liés à l’utilisation de Lunar ?' =>
-            'Lunar ne nécessite aucun abonnement propriétaire. Les coûts concernent uniquement le développement sur mesure, l’hébergement et les services externes choisis pour le paiement ou la gestion des données.',
-        'Peut-on migrer un site e-commerce existant vers Lunar ?' =>
-            'La migration est possible en reprenant le catalogue, les clients et les commandes, puis en reconstruisant les flux métier et les intégrations. Lunar permet de repartir sur une base technique moderne tout en conservant les données essentielles.',
+            'Lunar est un moteur e-commerce libre conçu pour s’intégrer à Laravel. Il fournit une base complète pour gérer produits, variantes, stocks, prix et commandes, tout en laissant une liberté totale sur le code et la logique métier.',
+        'Peut-on connecter la boutique à un ERP, un CRM ou à la logistique ?' =>
+            'Oui. Lunar repose sur les standards Laravel, ce qui facilite les connexions par API, les webhooks et les synchronisations programmées avec vos outils internes, vos transporteurs ou votre solution d’emailing.',
+        'Comment se déroule un projet e-commerce sur mesure ?' =>
+            'Le projet démarre par le cadrage du catalogue et des règles de vente, se poursuit par le développement du parcours d’achat et des intégrations, puis par les tests et la mise en ligne. La maintenance et les évolutions prennent ensuite le relais.',
     ];
 @endphp
 
@@ -30,7 +30,7 @@
                 <div class="*:w-12 *:h-auto">
                     @include('elements.icon.question-mark')
                 </div>
-                <h2>Questions fréquentes sur la création de site e-commerce</h2>
+                <h2>Questions fréquentes sur le e-commerce sur mesure</h2>
             </div>
             <div>
                 @foreach ($questions as $question => $answer)

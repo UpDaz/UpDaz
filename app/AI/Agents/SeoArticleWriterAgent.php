@@ -95,7 +95,7 @@ class SeoArticleWriterAgent implements Agent
           application métier, CRM, API ou reprise et maintenance d'application
           (ex. d'ancres : « développement d'application Laravel à Bordeaux »,
           « application métier sur mesure », « reprise d'application Laravel »)
-        - https://www.updaz.fr/sur-mesure/e-commerce-bordeaux : sujets e-commerce
+        - https://www.updaz.fr/application-web-bordeaux/e-commerce-sur-mesure : sujets e-commerce
         - https://www.updaz.fr/webflow-bordeaux : sujets Webflow, sites vitrines, no-code
         Varie le texte d'ancre d'un article à l'autre.
         </maillage>

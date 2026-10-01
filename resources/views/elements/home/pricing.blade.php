@@ -28,7 +28,7 @@
                     <x-slot:title>
                         <h3 class="text-white text-md font-text font-light">Application web</h3>
                         <h4 class="pb-4 mb-4 text-4xl leading-none text-yellow">
-                            <span>sur-mesure</span>
+                            <span>sur mesure</span>
                         </h4>
                     </x-slot:title>
                     <div class="flex flex-col gap-2">

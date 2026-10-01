@@ -40,7 +40,8 @@ Route::get('/articles/prestashop', function () {
 /**
  * Routes
  */
-Route::redirect('/prestashop', '/sur-mesure/e-commerce-bordeaux', 301);
+Route::redirect('/prestashop', '/application-web-bordeaux/e-commerce-sur-mesure', 301);
+Route::redirect('/sur-mesure/e-commerce-bordeaux', '/application-web-bordeaux/e-commerce-sur-mesure', 301);
 Route::redirect('/laravel', '/application-web-bordeaux', 301);
 Route::redirect('/sur-mesure-bordeaux', '/application-web-bordeaux', 301);
 
@@ -73,9 +74,14 @@ Route::get(
 )->name('laravel');
 
 Route::get(
-    '/sur-mesure/e-commerce-bordeaux',
+    '/application-web-bordeaux/e-commerce-sur-mesure',
     function () {
-        return view('pages.ecommerce');
+        return view('pages.ecommerce', [
+            'caseStudyReview' => Review::query()
+                ->where('name', 'Maxime S.')
+                ->where('platform', ReviewPlatform::Google)
+                ->first(),
+        ]);
     }
 )->name('ecommerce');
 

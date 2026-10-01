@@ -4,28 +4,27 @@
             <div class="border-b border-gray sm:pl-8 sm:pb-8 md:pl-16 md:pb-16 sm:border-l sm:mt-0 sm:text-left">
                 <div class="flex items-center gap-8">
                     <div class="*:w-12 *:h-auto">
-                        @include('elements.icon.question-mark')
+                        @include('elements.icon.programming')
                     </div>
-                    <h2><span class="text-yellow">Lunar</span>
-                        qu'est-ce que c'est ?</h2>
+                    <h2>Une boutique construite avec Laravel et <span class="text-yellow">Lunar</span></h2>
                 </div>
                 <p class="my-4 leading-relaxed text-md">
-                    <a target="_blank" href="https://lunarphp.com/" class="underline">Lunar</a> est un moteur e-commerce conçu pour les développeurs, offrant une base technique robuste pour
-                    créer des boutiques en ligne sur-mesure.
-                    Construit pour s’intégrer nativement à <a class="underline" href="{{ route('laravel') }}">Laravel</a>, il fournit un ensemble de composants spécialisés
-                    pour gérer produits, variations, stocks, tarifs, commandes et parcours d’achat.
-                    <br /><br />
-                    Organisé autour d’une architecture flexible, Lunar sépare clairement la logique métier, l’interface
-                    et les données, ce qui permet de développer des plateformes fiables, performantes et adaptées aux
-                    besoins spécifiques d’un projet.
-                    La structure interne facilite l’ajout de fonctionnalités avancées, l’évolution progressive du
-                    catalogue et l’intégration avec des outils tiers.
-                    <br /><br />
-                    L’écosystème de Lunar inclut un panneau d’administration complet, un moteur de pricing extensible,
-                    un système de gestion des canaux de vente et des outils pour connecter des services externes
-                    (paiements, ERP, CRM).
-                    Le résultat est une base e-commerce maîtrisable de bout en bout, offrant une liberté totale dans la
-                    conception, l’expérience utilisateur et la logique commerciale.
+                    <a target="_blank" href="https://lunarphp.com/" class="underline">Lunar</a> est un moteur
+                    e-commerce libre qui s’intègre à <a class="underline" href="{{ route('laravel') }}">Laravel</a>.
+                    Il apporte les briques dont toute boutique a besoin, et laisse le reste entièrement
+                    personnalisable&nbsp;:
+                </p>
+                <ul class="text-md my-4 flex list-disc flex-col gap-2 pl-6 leading-relaxed">
+                    <li><b>Catalogue</b> : gestion des produits, variantes, attributs personnalisés et plusieurs langues.</li>
+                    <li><b>Prix</b> : tarifs par groupe de clients, promotions et règles de prix.</li>
+                    <li><b>Commandes et stocks</b> : un panneau d’administration pour gérer les commandes et les
+                        clients.</li>
+                </ul>
+                <p class="my-4 leading-relaxed text-md">
+                    Une boutique Lunar est avant tout une application Laravel : elle repose sur la même
+                    <a class="underline" href="{{ route('laravel') }}#stack">stack technique</a> et bénéficie du même
+                    suivi que mes autres projets, de la mise en ligne à la
+                    <a class="underline" href="{{ route('laravel') }}#reprise-maintenance">maintenance</a>.
                 </p>
             </div>
         </div>

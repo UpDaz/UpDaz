@@ -1,4 +1,4 @@
-<div class="flex items-start items-center justify-center gap-2">
+<div class="flex items-center justify-center gap-2">
     <a href="{{ route('home') }}">
         @include('elements.icon.home')
     </a>

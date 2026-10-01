@@ -26,9 +26,10 @@
                         services tiers (paiement, logistique, emailing).</li>
                     <li><b>Plateformes SaaS et gestion d’abonnements</b> : comptes utilisateurs, rôles, paiement
                         récurrent.</li>
-                    <li><b>E-commerce sur mesure</b> : lorsque les solutions standards atteignent leurs limites, voir
-                        la <a href="{{ route('ecommerce') }}" class="underline">création de site e-commerce à
-                            Bordeaux</a>.</li>
+                    <li><b>E-commerce sur mesure</b> : une boutique en ligne sans abonnement ni commission, comme
+                        celle de PadelReference, voir la
+                        <a href="{{ route('ecommerce') }}" class="underline">création de site e-commerce sur mesure
+                            à Bordeaux</a>.</li>
                 </ul>
             </div>
             <div class="max-w-full sm:pl-8 sm:pt-8 md:w-1/4 md:pt-16 lg:px-12">

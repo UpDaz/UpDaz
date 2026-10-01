@@ -8,21 +8,24 @@
         </div>
         <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
             <div class="flex flex-col gap-2">
-                <h3 class="text-yellow text-lg font-medium">Back-end</h3>
+                <h3 class="text-lg text-yellow">Back-end</h3>
+                <div data-element="line-horizontal" class="-translate-x-1/12 bg-linear-to-r via-gray h-px w-[75%] from-transparent to-transparent"></div>
                 <x-skills.item text="Laravel et PHP dans leurs dernières versions" />
                 <x-skills.item text="API REST sécurisées (Sanctum)" />
                 <x-skills.item text="Files d’attente et tâches planifiées" />
                 <x-skills.item text="MySQL, PostgreSQL, SQLite" />
             </div>
             <div class="flex flex-col gap-2">
-                <h3 class="text-yellow text-lg font-medium">Interfaces</h3>
+                <h3 class="text-lg text-yellow">Interfaces</h3>
+                <div data-element="line-horizontal" class="-translate-x-1/12 bg-linear-to-r via-gray h-px w-[75%] from-transparent to-transparent"></div>
                 <x-skills.item text="Filament pour les back-offices" />
                 <x-skills.item text="Livewire et Alpine.js" />
                 <x-skills.item text="Tailwind CSS" />
                 <x-skills.item text="Accessibilité et qualité web (certifié Opquast)" />
             </div>
             <div class="flex flex-col gap-2">
-                <h3 class="text-yellow text-lg font-medium">Qualité et mise en ligne</h3>
+                <h3 class="text-lg text-yellow">Qualité et mise en ligne</h3>
+                <div data-element="line-horizontal" class="-translate-x-1/12 bg-linear-to-r via-gray h-px w-[75%] from-transparent to-transparent"></div>
                 <x-skills.item text="Tests automatisés (PHPUnit, Pest)" />
                 <x-skills.item text="Standards de code (Pint, PHP_CodeSniffer)" />
                 <x-skills.item text="Déploiement automatisé" />

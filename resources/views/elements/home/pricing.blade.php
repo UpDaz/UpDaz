@@ -64,7 +64,7 @@
                 </x-slot:title>
                 <div class="flex flex-col gap-2">
                     <x-skills.item text="Tout ce qu'intègre une application web sur mesure" />
-                    <x-skills.item text="Application sur-mesure e-commerce grace à l'extension LunarPHP" />
+                    <x-skills.item text="Application sur mesure e-commerce grace à l'extension LunarPHP" />
                     <x-skills.item text="Gestion des produits et des commandes via un panneau d'administration" />
                     <x-skills.item text="Tunnel de commande optimisé pour convertir le visiteur en client" />
                     <x-skills.item text="Aucun frais de transaction sur les ventes" />

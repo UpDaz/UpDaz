@@ -23,7 +23,7 @@
                     @include('elements.icon.hand-tag')
                 </x-slot:icon>
                 <x-slot:title>
-                    <h3>Développement sur-mesure</h3>
+                    <h3>Développement sur mesure</h3>
                 </x-slot:title>
                 <div class="flex flex-col items-start text-left -mb-1 space-y-2.5">
                     <x-skills.item text="Digitalisation de vos processus métiers" />

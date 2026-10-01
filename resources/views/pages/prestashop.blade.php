@@ -51,7 +51,7 @@ Votre boutique e-commerce en ligne clé-en-main grâce au CMS Prestashop. Profit
             <x-tooltip color="#001A9E">
                 <x-slot:message>
                     <span class="block p-6">
-                        Boite à outils servant aux développeurs à créer des sites sur-mesure
+                        Boite à outils servant aux développeurs à créer des sites sur mesure
                     </span>
                 </x-slot>
                 <x-slot:content>

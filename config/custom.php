@@ -10,7 +10,7 @@ return [
     'reviews' => [
         'google' => [
             'rating' => 5,
-            'count' => 6,
+            'count' => 7,
             'url' => 'https://maps.app.goo.gl/haXpfw6D6HNPYJBA6',
         ],
         'malt' => [

@@ -12,6 +12,8 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Process;
 
+use function Illuminate\Support\php_binary;
+
 /**
  * Handles Discord interactions (button clicks, modal submissions) via
  * the Interactions Endpoint URL: Discord POSTs each interaction here
@@ -229,15 +231,28 @@ class DiscordInteractionController extends Controller
 
     private function startTopicStep(string $step, WeeklyDigest $digest): void
     {
-        // Same reason as for revisions below: the AI call must not block
-        // this HTTP request past Discord's 3-second response window.
-        Process::path(base_path())->start([
-            PHP_BINARY,
-            'artisan',
-            'blog:topic',
-            $step,
-            (string) $digest->id,
-        ]);
+        $this->runArtisanInBackground(['blog:topic', $step, (string) $digest->id]);
+    }
+
+    /**
+     * The AI call must not block this HTTP request past Discord's
+     * 3-second response window (and QUEUE_CONNECTION=sync rules out a
+     * plain dispatch), so the command is detached through the shell: a
+     * process that is merely started gets killed by Symfony's Process
+     * destructor as soon as the request ends. PHP_BINARY can't be used
+     * either, as it points to php-fpm rather than the CLI under FPM.
+     *
+     * @param  array<int, string>  $arguments
+     */
+    private function runArtisanInBackground(array $arguments): void
+    {
+        $command = collect([php_binary(), 'artisan', ...$arguments])
+            ->map(fn (string $argument): string => escapeshellarg($argument))
+            ->implode(' ');
+
+        $log = escapeshellarg(storage_path('logs/discord-background.log'));
+
+        Process::path(base_path())->run("nohup {$command} >> {$log} 2>&1 &");
     }
 
     private function showReviseModal(Article $article): JsonResponse
@@ -297,17 +312,7 @@ class DiscordInteractionController extends Controller
             'feedback' => $feedback,
         ]);
 
-        // Runs in its own process rather than dispatching the job
-        // directly: with QUEUE_CONNECTION=sync, the (slow) AI call
-        // would block this HTTP request well past Discord's 3-second
-        // response window.
-        Process::path(base_path())->start([
-            PHP_BINARY,
-            'artisan',
-            'articles:revise',
-            (string) $article->id,
-            $feedback,
-        ]);
+        $this->runArtisanInBackground(['articles:revise', (string) $article->id, $feedback]);
 
         return $this->ephemeralMessage('🔄 Révision en cours de génération...');
     }

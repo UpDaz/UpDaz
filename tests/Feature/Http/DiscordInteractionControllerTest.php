@@ -145,13 +145,7 @@ class DiscordInteractionControllerTest extends TestCase
         $this->assertSame(4, $response->json('type'));
         $this->assertSame(64, $response->json('data.flags'));
 
-        Process::assertRan(fn ($process) => $process->command === [
-            PHP_BINARY,
-            'artisan',
-            'articles:revise',
-            (string) $article->id,
-            'Rendre le titre plus percutant.',
-        ]);
+        $this->assertArtisanRanInBackground(['articles:revise', (string) $article->id, 'Rendre le titre plus percutant.']);
     }
 
     public function testRespondsWithAnErrorMessageWhenTheArticleIsMissing(): void
@@ -178,7 +172,7 @@ class DiscordInteractionControllerTest extends TestCase
         $this->assertSame(64, $response->json('data.flags'));
         $this->assertSame(TopicStatus::Interviewing, $digest->fresh()->status);
 
-        Process::assertRan(fn ($process) => $process->command === [PHP_BINARY, 'artisan', 'blog:topic', 'prepare-interview', (string) $digest->id]);
+        $this->assertArtisanRanInBackground(['blog:topic', 'prepare-interview', (string) $digest->id]);
     }
 
     public function testATopicCannotBeChosenTwice(): void
@@ -205,7 +199,7 @@ class DiscordInteractionControllerTest extends TestCase
         $this->interact(3, "topic:update:{$digest->id}");
 
         $this->assertSame(TopicStatus::Drafting, $digest->fresh()->status);
-        Process::assertRan(fn ($process) => $process->command === [PHP_BINARY, 'artisan', 'blog:topic', 'propose-update', (string) $digest->id]);
+        $this->assertArtisanRanInBackground(['blog:topic', 'propose-update', (string) $digest->id]);
     }
 
     public function testAnswerButtonOpensAModalWithOneFieldPerQuestion(): void
@@ -243,7 +237,7 @@ class DiscordInteractionControllerTest extends TestCase
         $this->assertSame(['Une reprise Laravel 8.', ''], $digest->interview_answers);
         $this->assertSame(TopicStatus::Drafting, $digest->status);
 
-        Process::assertRan(fn ($process) => $process->command === [PHP_BINARY, 'artisan', 'blog:topic', 'draft', (string) $digest->id]);
+        $this->assertArtisanRanInBackground(['blog:topic', 'draft', (string) $digest->id]);
     }
 
     public function testSkippingTheInterviewWritesAWatchArticle(): void
@@ -255,7 +249,7 @@ class DiscordInteractionControllerTest extends TestCase
         $response = $this->interact(3, "topic:skip:{$digest->id}");
 
         $this->assertSame(7, $response->json('type'));
-        Process::assertRan(fn ($process) => $process->command === [PHP_BINARY, 'artisan', 'blog:topic', 'draft', (string) $digest->id]);
+        $this->assertArtisanRanInBackground(['blog:topic', 'draft', (string) $digest->id]);
     }
 
     public function testApprovingAsFieldExperienceAttachesTheLabelAndRemovesTheOtherOne(): void
@@ -322,5 +316,19 @@ class DiscordInteractionControllerTest extends TestCase
         ]);
 
         return $this->postJson('/discord/interactions', $payload, $headers)->assertOk();
+    }
+
+    /**
+     * @param  array<int, string>  $arguments
+     */
+    private function assertArtisanRanInBackground(array $arguments): void
+    {
+        $expected = collect(['artisan', ...$arguments])
+            ->map(fn (string $argument): string => escapeshellarg($argument))
+            ->implode(' ');
+
+        Process::assertRan(fn ($process) => str_starts_with($process->command, 'nohup ')
+            && str_contains($process->command, " {$expected} >> ")
+            && str_ends_with($process->command, ' 2>&1 &'));
     }
 }

@@ -19,6 +19,6 @@ class ReviewObserver
 
     private function forgetPagesDisplayingReviews(): void
     {
-        ResponseCache::forget([route('home'), route('laravel')]);
+        ResponseCache::forget([route('home'), route('webflow'), route('laravel'), route('ecommerce')]);
     }
 }

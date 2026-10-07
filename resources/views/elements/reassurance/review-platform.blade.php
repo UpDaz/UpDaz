@@ -1,10 +1,12 @@
 @php
-    $hasScore = $platform['rating'] && $platform['count'];
+    $settings = config("custom.reviews.{$platform->value}");
+    $reviewsCount = \App\Models\Review::query()->where('platform', $platform)->count();
+    $hasScore = $settings['rating'] && $reviewsCount;
     $label = $hasScore
-        ? number_format($platform['rating'], 1, ',', ' ') . ' · ' . $platform['count'] . ' avis'
+        ? number_format($settings['rating'], 1, ',', ' ') . ' · ' . $reviewsCount . ' avis'
         : null;
 @endphp
-<a href="{{ $platform['url'] }}" target="_blank" rel="nofollow noopener"
+<a href="{{ $settings['url'] }}" target="_blank" rel="nofollow noopener"
     title="{{ $hasScore ? "Note {$label} sur {$name}" : "Avis clients sur {$name}" }}"
     class="flex justify-start gap-2 flex-row items-center">
     <img src="{{ asset($logo) }}" alt="{{ $name }}" class="h-8 w-auto max-w-none self-start" width="{{ $width }}" height="32" />

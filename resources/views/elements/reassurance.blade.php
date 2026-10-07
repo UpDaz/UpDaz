@@ -7,13 +7,13 @@
             </div>
             <div class="flex flex-col md:flex-row w-full justify-between gap-4 sm:items-center md:justify-start md:gap-8">
                 @include('elements.reassurance.review-platform', [
-                    'platform' => config('custom.reviews.google'),
+                    'platform' => \App\Enums\ReviewPlatform::Google,
                     'logo' => 'img/logos/google.svg',
                     'name' => 'Google',
                     'width' => 95,
                 ])
                 @include('elements.reassurance.review-platform', [
-                    'platform' => config('custom.reviews.malt'),
+                    'platform' => \App\Enums\ReviewPlatform::Malt,
                     'logo' => 'img/logos/malt.svg',
                     'name' => 'Malt',
                     'width' => 92,

@@ -13,7 +13,7 @@ class ReviewObserverTest extends TestCase
 
     public function testForgetsTheCachedPagesDisplayingReviewsWhenAReviewIsCreated(): void
     {
-        ResponseCache::shouldReceive('forget')->once()->with([route('home'), route('laravel')]);
+        ResponseCache::shouldReceive('forget')->once()->with([route('home'), route('webflow'), route('laravel'), route('ecommerce')]);
 
         Review::factory()->create();
     }
@@ -22,7 +22,7 @@ class ReviewObserverTest extends TestCase
     {
         $review = Review::factory()->create();
 
-        ResponseCache::shouldReceive('forget')->once()->with([route('home'), route('laravel')]);
+        ResponseCache::shouldReceive('forget')->once()->with([route('home'), route('webflow'), route('laravel'), route('ecommerce')]);
 
         $review->update(['name' => 'Nom modifié']);
     }
@@ -31,7 +31,7 @@ class ReviewObserverTest extends TestCase
     {
         $review = Review::factory()->create();
 
-        ResponseCache::shouldReceive('forget')->once()->with([route('home'), route('laravel')]);
+        ResponseCache::shouldReceive('forget')->once()->with([route('home'), route('webflow'), route('laravel'), route('ecommerce')]);
 
         $review->delete();
     }

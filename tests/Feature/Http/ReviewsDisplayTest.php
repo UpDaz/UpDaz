@@ -11,25 +11,38 @@ class ReviewsDisplayTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function testConfiguredRatingAndReviewCountAreDisplayed(): void
+    public function testConfiguredRatingAndStoredReviewCountAreDisplayed(): void
     {
         config([
             'custom.reviews.google' => [
                 'rating' => 4.9,
-                'count' => 12,
                 'url' => 'https://g.page/updaz',
             ],
         ]);
 
+        Review::query()->delete();
+        Review::factory()->count(3)->create(['platform' => ReviewPlatform::Google]);
+        Review::factory()->count(2)->create(['platform' => ReviewPlatform::Malt]);
+
         $response = $this->get(route('home'));
 
-        $response->assertSee('4,9 · 12 avis');
+        $response->assertSee('4,9 · 3 avis');
         $response->assertSee('href="https://g.page/updaz"', false);
     }
 
     public function testOnlyStarsAreDisplayedWhenNoRatingIsConfigured(): void
     {
-        config(['custom.reviews.malt.rating' => null, 'custom.reviews.malt.count' => null]);
+        config(['custom.reviews.malt.rating' => null]);
+
+        $response = $this->get(route('home'));
+
+        $response->assertOk();
+        $response->assertSee('title="Avis clients sur Malt"', false);
+    }
+
+    public function testOnlyStarsAreDisplayedWhenThePlatformHasNoStoredReview(): void
+    {
+        Review::query()->where('platform', ReviewPlatform::Malt)->delete();
 
         $response = $this->get(route('home'));
 

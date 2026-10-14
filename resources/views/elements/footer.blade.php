@@ -1,6 +1,6 @@
 <footer class="py-8 border-t border-gray">
     <div class="container flex flex-col items-center gap-4 mx-auto sm:flex-row">
-        <a href="{{ route('home') }}" class="w-1/2 md:w-1/12">
+        <a href="{{ route('home') }}" class="w-32 shrink-0">
             <img src="{{ asset('img/logo.svg') }}" class="w-auto h-auto" width="225" height="72" alt="UpDaz Logo"
                 title="UpDaz" loading="lazy">
         </a>
@@ -9,17 +9,17 @@
         </div>
         <p class="text-sm text-white">
             © {{ date('Y') }} UpDaz -
-            <a href="{{ route('legal-notices') }}" title="Mentions légales UpDaz" class="w-full md:w-1/12">
+            <a href="{{ route('legal-notices') }}" title="Mentions légales UpDaz" class="-my-3 inline-block py-3">
                 Mentions légales
             </a>
         </p>
         <span class="inline-flex justify-center mt-4 sm:ml-auto sm:mt-0 sm:justify-start">
             <a href="https://fr.linkedin.com/in/matthieu-dazord" target="_blank" title="Linkedin"
-                class="mr-6 text-white">
+                class="-m-2 mr-2 p-2 text-white">
                 <img src="{{ asset('img/logos/white/linkedin.svg') }}" width="30" height="30" alt="Logo Linkedin"
                     title="Linkedin" class="mx-auto" loading="lazy">
             </a>
-            <a href="https://github.com/UpDaz" target="_blank" title="Github" class="text-white">
+            <a href="https://github.com/UpDaz" target="_blank" title="Github" class="-m-2 p-2 text-white">
                 <img src="{{ asset('img/logos/white/github.svg') }}" width="30" height="30" alt="Logo Github"
                     title="Github" class="mx-auto">
             </a>

@@ -1,6 +1,6 @@
 <div class="lg:hidden" @keydown.escape.window="openMobileMenu && closeMobileMenu()">
     <button x-ref="mobileMenuOpenButton" @click.prevent="toggleMobileMenu()" aria-label="Ouvrir le menu" type="button"
-        class="inline-flex items-center text-sm text-white" aria-controls="mobile-menu" :aria-expanded="openMobileMenu.toString()">
+        class="-m-2.5 inline-flex items-center p-2.5 text-sm text-white" aria-controls="mobile-menu" :aria-expanded="openMobileMenu.toString()">
         <span class="*:w-full">
             @include('elements.icon.plus')
         </span>
@@ -16,7 +16,7 @@
                             alt="UpDaz Logo" title="UpDaz" />
                     </a>
                     <button x-ref="mobileMenuCloseButton" @click.prevent="closeMobileMenu()" type="button" aria-label="Fermer le menu"
-                        class="text-sm text-white" aria-controls="mobile-menu">
+                        class="-m-2.5 p-2.5 text-sm text-white" aria-controls="mobile-menu">
                         @include('elements.icon.close')
                     </button>
                 </div>

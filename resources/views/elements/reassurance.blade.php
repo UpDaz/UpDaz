@@ -2,7 +2,7 @@
     <div class="container flex flex-row flex-wrap items-start gap-8 md:justify-between md:gap-4 lg:items-center">
         <div class="flex flex-col gap-2">
             <div class="flex items-center gap-2">
-                <a href="#references" class="whitespace-nowrap text-sm">Notes et avis <span class="text-xs underline">(voir
+                <a href="#references" class="-my-3 inline-block whitespace-nowrap py-3 text-sm">Notes et avis <span class="text-xs underline">(voir
                         plus)</span></a>
             </div>
             <div class="flex flex-col md:flex-row w-full justify-between gap-4 sm:items-center md:justify-start md:gap-8">

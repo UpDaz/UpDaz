@@ -19,7 +19,7 @@
 @section('content')
     @include('elements.article.structured-data')
     <div class="container mx-auto flex max-w-screen-lg flex-col gap-8">
-        <div class="relative mt-24 overflow-hidden text-white">
+        <div class="relative mt-12 lg:mt-24 overflow-hidden text-white">
             <div class="flex flex-col items-start gap-8">
                 @if ($article->category)
                     <x-breadcrumb :links="[
@@ -34,9 +34,9 @@
                     <h1>{{ $article->title }}</h1>
                 </div>
                 <p class="text-lg">{{ $article->catch_phrase }}</p>
-                <div class="font-title text-yellow relative col-span-2 mb-1 min-w-0 truncate">
+                <div class="font-title text-yellow relative col-span-2 mb-1 min-w-0 truncate leading-8">
                     @foreach ($article->categoriesWithMainFirst() as $articleCategory)
-                        <a title="Lien page catégorie article {{ $articleCategory->name }}" href="{{ route('category', ['slug' => $articleCategory->slug]) }}">{{ $articleCategory->name }}</a>
+                        <a class="py-1" title="Lien page catégorie article {{ $articleCategory->name }}" href="{{ route('category', ['slug' => $articleCategory->slug]) }}">{{ $articleCategory->name }}</a>
                         @if (!$loop->last)
                             /
                         @endif

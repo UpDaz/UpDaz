@@ -8,14 +8,12 @@
 
 
 import Alpine from 'alpinejs'
-import intersect from '@alpinejs/intersect'
 import Axios from 'axios'
 
 window.axios = Axios;
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
-Alpine.plugin(intersect)
 
 window.Alpine = Alpine
 

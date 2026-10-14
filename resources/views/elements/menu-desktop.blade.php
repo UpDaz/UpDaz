@@ -4,14 +4,14 @@
         <li>
             <a href="{{ route('home') }}#presentation"
                 title="Présentation"
-                class="block py-4 pl-3 pr-4 text-white bg-blue-700 md:py-2 md:bg-transparent md:p-0 dark:text-white hover:underline">
+                class="block py-4 pl-3 pr-4 text-white md:py-2 md:bg-transparent md:p-0 hover:underline">
                 À propos
             </a>
         </li>
         <li>
             <a href="{{ route('home') }}#competences"
                 title="Mes competences"
-                class="block py-4 pl-3 pr-4 text-white bg-blue-700 md:py-2 md:bg-transparent md:p-0 dark:text-white hover:underline">
+                class="block py-4 pl-3 pr-4 text-white md:py-2 md:bg-transparent md:p-0 hover:underline">
                 Compétences
             </a>
         </li>
@@ -36,7 +36,7 @@
                 CMS
             </a>
         </li>
-        <li class="relative" x-data="{ openSubmenu: false }">
+        <li class="relative">
             <a href="{{ route('articles') }}" title="Actualités"
                 class="block py-4 pl-3 pr-4 text-white md:py-2 md:bg-transparent md:p-0 hover:underline"
                 @if(request()->routeIs('articles')) aria-current="page" @endif>

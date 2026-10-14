@@ -3,7 +3,7 @@
         class="btn btn-primary @if ($small) btn-small @endif {{ $classes }}">
         {{ $slot }}
     </{{$tag}}>
-    <span class="*:text-yellow inline-block">
+    <span class="*:text-yellow inline-block" aria-hidden="true">
         @include('elements.icon.lines')
     </span>
 </div>

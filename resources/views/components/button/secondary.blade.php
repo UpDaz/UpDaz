@@ -1,7 +1,7 @@
-<div class="relative ">
+<div class="relative">
     <{{ $tag }} {{ $attributes }} class="btn btn-secondary @if ($small) btn-small @endif {{ $classes }}">
         <span>{{ $slot }}</span>
-        <span class="lg:self-end inline-block">
+        <span class="lg:self-end inline-block" aria-hidden="true">
             @include('elements.icon.line')
         </span>
         </{{ $tag }}>

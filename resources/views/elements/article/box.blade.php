@@ -6,9 +6,9 @@
             </div>
             <div data-element="line-vertical" class="absolute w-[1px] h-[250%] -top-2 -right-4"></div>
         </div>
-        <div class="relative col-span-2 min-w-0 truncate mb-1 font-title text-sm text-yellow">
+        <div class="relative col-span-2 min-w-0 truncate mb-1 font-title text-sm leading-7 text-yellow">
             @foreach ($article->categoriesWithMainFirst() as $articleCategory)
-                <a title="Lien page catégorie article {{ $articleCategory->name }}"
+                <a class="py-1" title="Lien page catégorie article {{ $articleCategory->name }}"
                     href="{{ route('category', ['slug' => $articleCategory->slug]) }}">{{ $articleCategory->name }}</a>@if (! $loop->last) / @endif
             @endforeach
         </div>
@@ -24,7 +24,7 @@
         <div class=" *:!w-auto *:inline-block">
             <x-button.secondary :small="true" title="Lien page article {{ $article->title }}"
                 href="{{ route('article', ['categorySlug' => $article->category->slug, 'slug' => $article->slug]) }}">
-                Lire l'article
+                Lire l'article<span class="sr-only"> : {{ $article->title }}</span>
             </x-button.secondary>
         </div>
     </div>

@@ -51,17 +51,17 @@
                         </div>
                         <ul class="flex flex-wrap w-full md:w-auto items-center justify-center gap-16 md:gap-4 sm:justify-start" aria-label="Profils de Matthieu DAZORD">
                             <li>
-                                <a href="https://fr.linkedin.com/in/matthieu-dazord" target="_blank" rel="me noopener" title="Profil LinkedIn de Matthieu DAZORD">
+                                <a href="https://fr.linkedin.com/in/matthieu-dazord" target="_blank" rel="me noopener" class="-m-2.5 block p-2.5" title="Profil LinkedIn de Matthieu DAZORD">
                                     <img src="{{ asset('img/logos/white/linkedin.svg') }}" width="24" height="24" alt="" loading="lazy">
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/UpDaz" target="_blank" rel="me noopener" title="Profil GitHub de Matthieu DAZORD">
+                                <a href="https://github.com/UpDaz" target="_blank" rel="me noopener" class="-m-2.5 block p-2.5" title="Profil GitHub de Matthieu DAZORD">
                                     <img src="{{ asset('img/logos/white/github.svg') }}" width="24" height="24" alt="" loading="lazy">
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.malt.fr/profile/matthieudazord" target="_blank" rel="me noopener" title="Profil Malt de Matthieu DAZORD">
+                                <a href="https://www.malt.fr/profile/matthieudazord" target="_blank" rel="me noopener" class="-m-2.5 block p-2.5" title="Profil Malt de Matthieu DAZORD">
                                     <img src="{{ asset('img/logos/white/malt.svg') }}" width="24" height="24" alt="" loading="lazy">
                                 </a>
                             </li>
@@ -79,8 +79,7 @@
             scrollToTarget: function(target) {
                 window.scrollTo({
                     top: document.querySelector(target).offsetTop,
-                    left: 0,
-                    behavior: 'smooth'
+                    left: 0
                 });
             }
         }))

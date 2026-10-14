@@ -18,7 +18,7 @@
                 </div>
                 <div class="mt-8">
                     <x-button.secondary href="{{ route('webflow') }}" title="Lien page Webflow">
-                        En savoir plus
+                        En savoir plus<span class="sr-only"> sur les sites CMS Webflow</span>
                     </x-button.secondary>
                 </div>
             </x-price>
@@ -41,7 +41,7 @@
                     </div>
                     <div class="mt-8">
                         <x-button.primary href="{{ route('laravel') }}" title="Développement d’application Laravel à Bordeaux">
-                            Découvrir
+                            Découvrir<span class="sr-only"> le développement d’applications web sur mesure</span>
                         </x-button.primary>
                     </div>
                 </x-price>
@@ -64,15 +64,15 @@
                 </x-slot:title>
                 <div class="flex flex-col gap-2">
                     <x-skills.item text="Tout ce qu'intègre une application web sur mesure" />
-                    <x-skills.item text="Application sur mesure e-commerce grace à l'extension LunarPHP" />
+                    <x-skills.item text="Application sur mesure e-commerce grâce à l'extension LunarPHP" />
                     <x-skills.item text="Gestion des produits et des commandes via un panneau d'administration" />
                     <x-skills.item text="Tunnel de commande optimisé pour convertir le visiteur en client" />
                     <x-skills.item text="Aucun frais de transaction sur les ventes" />
                     <x-skills.item text="Interface d'administration personnalisable" />
                 </div>
                 <div class="mt-8">
-                    <x-button.secondary href="{{ route('ecommerce') }}" title="Lien page Laravel section Lunar">
-                        En savoir plus
+                    <x-button.secondary href="{{ route('ecommerce') }}" title="Création de site e-commerce sur mesure">
+                        En savoir plus<span class="sr-only"> sur les sites e-commerce sur mesure</span>
                     </x-button.secondary>
                 </div>
             </x-price>

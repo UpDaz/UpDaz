@@ -55,8 +55,8 @@ class ArticlesControllerTest extends TestCase
         $categoryUrl = route('category', ['slug' => $mainCategory->slug]);
 
         $response->assertSeeInOrder([
-            "<a href=\"{$articlesUrl}\" class=\"text-sm\">Articles</a>",
-            "<a href=\"{$categoryUrl}\" class=\"text-sm\">Laravel</a>",
+            "<a href=\"{$articlesUrl}\" class=\"-my-2.5 py-2.5 text-sm\">Articles</a>",
+            "<a href=\"{$categoryUrl}\" class=\"-my-2.5 py-2.5 text-sm\">Laravel</a>",
         ], false);
     }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="fr" class="scroll-smooth">
+<html lang="fr" class="scroll-smooth motion-reduce:scroll-auto">
 
 <head>
     <meta charset="utf-8">
@@ -11,7 +11,6 @@
     <meta name="author" content="Matthieu DAZORD" />
     <meta name="application-name" content="UpDaz" />
     <link rel="icon" href="{{ asset('img/favicon.png') }}" type="image/png">
-    <link rel="preconnect" href="https://www.googletagmanager.com">
     <x-canonical-url />
     @include('elements.fonts')
     @vite('resources/css/app.css')

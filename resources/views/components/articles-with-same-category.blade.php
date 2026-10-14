@@ -5,7 +5,7 @@
             <div class="pb-16 mt-8">
 
                 <div class="flex flex-col gap-8">
-                    <div class="flex items-center gap-8">
+                    <div class="flex flex-col md:flex-row md:items-center gap-8">
                         <div class="*:w-12 *:h-auto">
                             @include('elements.icon.book')
                         </div>

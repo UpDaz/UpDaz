@@ -7,24 +7,24 @@
             </p>
         </div>
 
-        <dl class="grid grid-cols-1 gap-8 text-center sm:grid-cols-3 lg:grid-cols-5">
+        <div class="grid grid-cols-1 gap-8 text-center sm:grid-cols-3 lg:grid-cols-5">
             <x-reference style="flex items-center">
-                <div class="flex flex-col items-center justify-center gap-2">
-                    <dd class="font-title text-yellow order-1 text-3xl font-bold">2 mois</dd>
+                <dl class="flex flex-col items-center justify-center gap-2">
                     <dt class="order-2">de la première réunion à la mise en ligne</dt>
-                </div>
+                    <dd class="font-title text-yellow order-1 text-3xl font-bold">2 mois</dd>
+                </dl>
             </x-reference>
             <x-reference style="flex items-center">
-                <div class="flex flex-col items-center justify-center gap-2">
-                    <dd class="font-title text-yellow order-1 text-3xl font-bold">≈ 30</dd>
+                <dl class="flex flex-col items-center justify-center gap-2">
                     <dt class="order-2">enchérisseurs et acheteurs inscrits en ligne pour la vente</dt>
-                </div>
+                    <dd class="font-title text-yellow order-1 text-3xl font-bold">≈ 30</dd>
+                </dl>
             </x-reference>
             <x-reference style="flex items-center">
-                <div class="flex flex-col items-center justify-center gap-2">
-                    <dd class="font-title text-yellow order-1 text-3xl font-bold">12</dd>
+                <dl class="flex flex-col items-center justify-center gap-2">
                     <dt class="order-2">lots mis en avant sur le site avant la vente</dt>
-                </div>
+                    <dd class="font-title text-yellow order-1 text-3xl font-bold">12</dd>
+                </dl>
             </x-reference>
             @if($caseStudyReview)
                 <div class="sm:col-span-3 lg:col-span-2">
@@ -33,7 +33,7 @@
                     </x-review>
                 </div>
             @endif
-        </dl>
+        </div>
 
         <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
             <div class="flex flex-col gap-4">

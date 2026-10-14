@@ -13,15 +13,16 @@
     /* Couleurs (Tailwind 4 applique automatiquement les couleurs aux bg/text/border/etc.) */
     --color-blue: #2E5676;
     --color-blue-dark: #24445C;
-    --color-yellow: #EBB100;
+    --color-yellow: #FFC000;
     --color-white: #F5F7FA;
     --color-dark: #2F3542;
     --color-gray: #98abb8;
+
+    /* Mouvement */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @layer utilities {
-    .safelisted {}
-
     /* Hide scrollbar for Chrome, Safari and Opera */
     .no-scrollbar::-webkit-scrollbar {
         display: none;
@@ -68,10 +69,6 @@
     }
 
 
-    .p-relative {
-        position: relative;
-    }
-
     b {
         font-weight: normal;
     }
@@ -85,6 +82,16 @@
 a,
 button {
     cursor: pointer;
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-yellow);
+    outline-offset: 4px;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+    outline-offset: 2px;
 }
 
 .btn {
@@ -108,26 +115,6 @@ hr {
     margin: 3rem auto;
     height: 1px;
     background: linear-gradient(to left, transparent, theme('colors.gray') 10%, theme('colors.gray') 90%, transparent 100%);
-}
-
-.x-center {
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.y-center {
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.x-center.y-center {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.grecaptcha-badge {
-    display: none !important;
 }
 
 .underline,
@@ -238,6 +225,7 @@ button, a {
 .article-content img {
     margin: 1rem auto;
     max-width: 100%;
+    height: auto;
 }
 
 .article-content table {
@@ -259,18 +247,18 @@ button, a {
 }
 
 .article-content pre:before {
-    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"> <path stroke-linecap="round" stroke="%23EBB100" stroke-linejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" /></svg>');
+    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"> <path stroke-linecap="round" stroke="%23FFC000" stroke-linejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" /></svg>');
     position: absolute;
     width: 1.5rem;
     height: 1.5rem;
     top: 50%;
-    left: -0.5rem;
+    left: 1rem;
     transform: translateY(-50%);
 }
 
 .article-content pre code {
     display: block;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.5rem 1rem 3.5rem;
 }
 
 .article-content code {

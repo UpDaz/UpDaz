@@ -1,6 +1,5 @@
-<div id="menu-top"></div>
-<nav id="menu" x-data="menu" x-init="manageMenuDisplay();" class="sticky z-50 w-full py-4 transition-all md:py-6"
-    :class="displayMenu ? (windowScrollY > 0 ? 'top-0 bg-blue-dark' : 'top-0') : 'md:-top-32 bg-blue'"
+<nav id="menu" x-data="menu" x-init="manageMenuDisplay();" class="sticky top-0 z-50 w-full py-4 transition-[translate,background-color] duration-300 ease-out-expo motion-reduce:transition-none md:py-6"
+    :class="displayMenu ? (windowScrollY > 0 ? 'bg-blue-dark' : '') : 'md:-translate-y-full bg-blue'"
     @scroll.window="manageMenuDisplay();">
     <div class="container mx-auto">
         <div class="flex flex-wrap items-center justify-between">
@@ -24,14 +23,41 @@
             oldScroll: 0,
             homeLink: '{{ route('home') }}',
             toggleMobileMenu: function() {
-                this.openMobileMenu = !this.openMobileMenu
+                if (this.openMobileMenu) {
+                    this.closeMobileMenu();
+
+                    return;
+                }
+
+                this.openMobileMenu = true;
+                this.$nextTick(() => this.$refs.mobileMenuCloseButton.focus());
+            },
+            closeMobileMenu: function() {
+                this.openMobileMenu = false;
+                this.$nextTick(() => this.$refs.mobileMenuOpenButton.focus());
+            },
+            trapMobileMenuFocus: function(event) {
+                const focusableElements = [...document.querySelectorAll('#mobile-menu a[href], #mobile-menu button')];
+                const firstElement = focusableElements[0];
+                const lastElement = focusableElements[focusableElements.length - 1];
+
+                if (event.shiftKey && document.activeElement === firstElement) {
+                    event.preventDefault();
+                    lastElement.focus();
+
+                    return;
+                }
+
+                if (! event.shiftKey && document.activeElement === lastElement) {
+                    event.preventDefault();
+                    firstElement.focus();
+                }
             },
             scrollToTarget: function(target) {
                 if (document.querySelector(target)) {
                     window.scrollTo({
                         top: document.querySelector(target).offsetTop,
-                        left: 0,
-                        behavior: 'smooth'
+                        left: 0
                     });
                     this.openMobileMenu = false;
                 } else {

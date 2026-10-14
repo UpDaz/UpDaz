@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-14T00:00:00Z",
+  "title": "Design System: UpDaz",
+  "extensions": {
+    "colorMeta": {
+      "blue-gironde": { "role": "primary", "displayName": "Bleu Gironde", "canonical": "#2E5676", "tonalRamp": ["#152837", "#24435C", "#325E80", "#4078A5", "#5A92BF", "#8AB1D1", "#BDD3E5", "#EDF3F8"] },
+      "blue-gironde-deep": { "role": "primary", "displayName": "Bleu Gironde profond", "canonical": "#24445C", "tonalRamp": ["#162937", "#24445C", "#325F80", "#417AA5", "#5A93BE", "#8AB2D1", "#BDD4E5", "#EDF3F8"] },
+      "yellow-bordelais": { "role": "secondary", "displayName": "Jaune bordelais", "canonical": "#EBB100", "tonalRamp": ["#4C3A00", "#806000", "#B28600", "#E6AD00", "#FFC61A", "#FFD75C", "#FFE8A3", "#FFF9E5"] },
+      "paper-white": { "role": "neutral", "displayName": "Blanc papier", "canonical": "#F5F7FA", "tonalRamp": ["#1A2433", "#2B3C55", "#3C5377", "#4D6B99", "#6685B2", "#92A8C9", "#C2CEE0", "#EEF1F7"] },
+      "ink-dark": { "role": "neutral", "displayName": "Encre", "canonical": "#2F3542", "tonalRamp": ["#20242D", "#353C4A", "#4A5468", "#5F6C86", "#7985A0", "#A0A8BB", "#C9CED9", "#F0F1F4"] },
+      "hairline-gray": { "role": "neutral", "displayName": "Gris filet", "canonical": "#98abb8", "tonalRamp": ["#1F282D", "#34424B", "#495C6A", "#5E7788", "#7790A1", "#9EB0BC", "#C9D3DA", "#F0F3F5"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "H1 de page, Space Mono 700." },
+      "headline": { "displayName": "Headline", "purpose": "Titres de section (H2)." },
+      "title": { "displayName": "Title", "purpose": "Titres de bloc, compétences, articles en liste." },
+      "body": { "displayName": "Body", "purpose": "Texte courant, Fira Sans 300." },
+      "label": { "displayName": "Label", "purpose": "Libellés, dates, catégories, boutons." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "accordion-expand", "value": "height 500ms ease", "purpose": "Ouverture/fermeture des réponses de FAQ." },
+      { "name": "arrow-rotate", "value": "rotate(-90deg)", "purpose": "Flèche d'accordéon fermée." }
+    ],
+    "breakpoints": [
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Action principale : mot en capitales Space Mono souligné d'un double trait manuscrit jaune.",
+      "html": "<div class=\"ds-btn-primary-wrap\"><a href=\"#\" class=\"ds-btn-primary\">J'ai un projet</a><svg class=\"ds-btn-primary-lines\" width=\"76\" height=\"11\" viewBox=\"0 0 76 11\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M71.3 4C65 3.8 58 2.9 52.9 2.9 43.8 3 34.6 2.5 25.4 3.4 19 4 12 4.4 8.3 4.7 6.1 5.2 4.4 5.7 2.3 5.6 1.2 5.3.1 4 .1 2.6.7 1.6 1.9 1.3 6.5.8 16.1.6 23 .4 29.1.3 38.7.2 44.8 0 50.2-.1 55.5.6 60.8 1.2 64 1.4 66.9 1.5 70 1.6 73 1.3 75.6 3.4 75.6 4.4 74.8 5 71.9 6 69.9 5.8 70 5 71.3 4Z\" fill=\"currentColor\"/><path d=\"M28.6 8.5C33.6 8.3 39.6 8.6 45.2 8.6 50.7 8.6 54.3 8.9 62.9 10.1 65 10.2 66.8 9.7 66.7 9 66.6 8.1 65.9 6.9 65 6.6 63 5.8 61.5 6.2 58.9 5.9 53 6.4 45 6.3 40 6.2 36.2 6.3 30.5 6.6 26.1 7.1 23.8 7.5 22.9 7.7 23.4 8.5 24.5 9 27.3 8.5 28.6 8.5Z\" fill=\"currentColor\"/></svg></div>",
+      "css": ".ds-btn-primary-wrap { display: flex; flex-direction: column; align-items: center; width: 100%; } .ds-btn-primary { display: block; width: 100%; font-family: 'Space Mono', monospace; font-weight: 400; text-transform: uppercase; text-align: center; font-size: 1.125rem; color: var(--color-white, #F5F7FA); background: none; border: 0; text-decoration: none; cursor: pointer; transition: color .2s; } .ds-btn-primary:hover, .ds-btn-primary:focus-visible { color: var(--color-yellow, #EBB100); } .ds-btn-primary:focus-visible { outline: 2px solid var(--color-yellow, #EBB100); outline-offset: 4px; } .ds-btn-primary-lines { color: var(--color-yellow, #EBB100); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Action secondaire (Lire l'article, En savoir plus) : texte Fira Sans suivi d'un trait manuscrit.",
+      "html": "<a href=\"#\" class=\"ds-btn-secondary\"><span>Lire l'article</span><svg width=\"73\" height=\"3\" viewBox=\"0 0 73 3\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M1 1C4 4 69 -1 72 2\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg></a>",
+      "css": ".ds-btn-secondary { display: inline-flex; flex-direction: column; gap: 2px; font-family: 'Space Mono', monospace; font-size: 1rem; color: var(--color-white, #F5F7FA); text-decoration: none; transition: color .2s; } .ds-btn-secondary svg { align-self: flex-end; } .ds-btn-secondary:hover, .ds-btn-secondary:focus-visible { color: var(--color-yellow, #EBB100); } .ds-btn-secondary:focus-visible { outline: 2px solid var(--color-yellow, #EBB100); outline-offset: 4px; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "Champ de formulaire de contact : fond clair, angles vifs, libellé Space Mono.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-field-label\" for=\"ds-email\">Email*</label><input class=\"ds-input\" id=\"ds-email\" type=\"email\"></div>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 4px; } .ds-field-label { font-family: 'Space Mono', monospace; font-size: .875rem; color: var(--color-white, #F5F7FA); } .ds-input { width: 100%; padding: 8px 12px; line-height: 1.25; border: 1px solid var(--color-gray, #98abb8); border-radius: 0; background: var(--color-white, #F5F7FA); color: var(--color-blue, #2E5676); font-family: 'Fira Sans', sans-serif; } .ds-input:focus-visible { outline: 2px solid var(--color-yellow, #EBB100); outline-offset: 2px; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Menu desktop : liens Fira Sans clairs, filet en fondu au survol, bouton principal compact en fin.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\">À propos</a><a href=\"#\" aria-current=\"page\">Application Laravel</a><a href=\"#\">E-commerce</a><a href=\"#\">Blog</a><a href=\"#\" class=\"ds-nav-cta\">J'ai un projet</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 32px; font-family: 'Fira Sans', sans-serif; font-size: .875rem; font-weight: 500; } .ds-nav a { position: relative; color: var(--color-white, #F5F7FA); text-decoration: none; } .ds-nav a:hover::after, .ds-nav a[aria-current]::after { content: ''; position: absolute; left: 0; top: 100%; width: 100%; height: 1px; background: linear-gradient(to left, transparent, #98abb8 10%, #98abb8 90%, transparent); } .ds-nav a:focus-visible { outline: 2px solid var(--color-yellow, #EBB100); outline-offset: 4px; } .ds-nav .ds-nav-cta { font-family: 'Space Mono', monospace; text-transform: uppercase; } .ds-nav .ds-nav-cta:hover { color: var(--color-yellow, #EBB100); }"
+    },
+    {
+      "name": "Construction Frame",
+      "kind": "card",
+      "description": "Cadre signature : quatre filets gris en fondu qui débordent du bloc, fond transparent, angles vifs.",
+      "html": "<div class=\"ds-frame\"><span class=\"ds-frame-t\"></span><span class=\"ds-frame-b\"></span><span class=\"ds-frame-l\"></span><span class=\"ds-frame-r\"></span><p>Mostiglass ®</p></div>",
+      "css": ".ds-frame { position: relative; padding: 12px 24px; color: var(--color-white, #F5F7FA); background: transparent; } .ds-frame-t, .ds-frame-b { position: absolute; left: 50%; width: 125%; height: 1px; transform: translateX(-50%); background: linear-gradient(to left, transparent, #98abb8 10%, #98abb8 90%, transparent); } .ds-frame-t { top: 0; } .ds-frame-b { bottom: 0; } .ds-frame-l, .ds-frame-r { position: absolute; top: 50%; height: 125%; width: 1px; transform: translateY(-50%); background: linear-gradient(to bottom, transparent, #98abb8 10%, #98abb8 90%, transparent); } .ds-frame-l { left: 0; } .ds-frame-r { right: 0; }"
+    },
+    {
+      "name": "Ruler Separator",
+      "kind": "custom",
+      "description": "Séparateur de section : bloc hachuré, filet, graduation et annotation d'échelle 1x1.",
+      "html": "<div class=\"ds-ruler\"><div class=\"ds-ruler-hatch\"></div><div class=\"ds-ruler-line\"><div class=\"ds-ruler-scale\"><span></span><span></span><span></span></div></div><span class=\"ds-ruler-note\">1x1</span></div>",
+      "css": ".ds-ruler { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); align-items: center; width: 100%; } .ds-ruler-hatch { grid-column: span 1; height: 10px; border: 1px solid #98abb8; background-color: var(--color-blue, #2E5676); background-image: repeating-linear-gradient(315deg, #98abb8 0, #98abb8 1px, #24445C 0, #24445C 50%); background-size: 10px 10px; } .ds-ruler-line { position: relative; grid-column: span 3; height: 1px; background: #98abb8; } .ds-ruler-scale { position: absolute; right: 25%; top: -20px; width: 33%; display: flex; align-items: center; } .ds-ruler-scale span:nth-child(1), .ds-ruler-scale span:nth-child(3) { width: 1px; height: 8px; background: #98abb8; } .ds-ruler-scale span:nth-child(2) { flex: 1; height: 1px; background: #98abb8; } .ds-ruler-note { position: absolute; right: 16px; top: 16px; transform: rotate(-90deg); font-family: 'Space Mono', monospace; font-size: .75rem; color: var(--color-white, #F5F7FA); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Le Plan d'atelier",
+    "overview": "Le site se lit comme un tirage de plan posé sur la table d'un développeur-artisan. Le fond est un papier bleu profond, dégradé en diagonale du Bleu Gironde vers sa version sombre. Ses deux bords sont tenus par des bandes hachurées qui cadrent la page comme une feuille de dessin technique. Tout ce qui structure (cadres, séparateurs, soulignements) est tracé au filet gris fin qui s'efface aux extrémités, comme un trait de crayon qui dépasse de la cote. Les sections sont séparées par des repères d'échelle (graduations, petits blocs hachurés, mention « 1x1 » pivotée) plutôt que par des fonds de couleur.\n\nSur cette rigueur de plan, une seule main humaine : le Jaune bordelais, tracé à main levée sous les boutons et posé sur les liens qui comptent. La typographie suit la même logique : Space Mono, chasse fixe, pour tout ce qui est titre, étiquette ou action (la voix de l'outil) ; Fira Sans en graisse légère pour le texte courant (la voix de l'homme qui explique).\n\nLe système est plat, à angles vifs, monochrome bleu avec un seul accent. La densité est aérée : de grands espaces entre sections, un contenu centré dans un conteneur à marge latérale généreuse.",
+    "keyCharacteristics": [
+      "Fond bleu dégradé (135°) bordé de bandes hachurées verticales sur les deux côtés.",
+      "Filets gris de 1 px qui s'effacent aux extrémités et débordent de leur cadre (110 à 125 %).",
+      "Séparateurs de section en forme de règle graduée, avec annotation d'échelle.",
+      "Titres et actions en Space Mono ; texte courant en Fira Sans 300.",
+      "Un seul accent : le jaune, en soulignement manuscrit et en survol.",
+      "Aucun arrondi, aucune ombre, aucun aplat de carte."
+    ],
+    "rules": [
+      { "name": "The Highlighter Rule", "body": "Le Jaune bordelais annote, il ne remplit pas. Il apparaît en trait, en texte ou en icône, jamais comme fond de bouton, de carte ou de section.", "section": "colors" },
+      { "name": "The Blue Paper Rule", "body": "Toute surface est le fond bleu dégradé. On ne crée pas de cartes en aplat clair ; une zone se délimite par des filets, pas par un changement de fond.", "section": "colors" },
+      { "name": "The Mono Voice Rule", "body": "Tout ce qui nomme ou déclenche (titre, libellé, bouton, date, annotation d'échelle) est en Space Mono. Tout ce qui explique est en Fira Sans.", "section": "typography" },
+      { "name": "The Construction Line Rule", "body": "Un cadre se dessine avec des filets gris de 1 px en dégradé transparent → gris → transparent, qui débordent de 10 à 25 % de leur bloc. Pas de `border` pleine, pas de `box-shadow`.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do délimiter chaque zone avec des filets gris de 1 px en dégradé transparent → #98abb8 → transparent, qui débordent de leur bloc.",
+      "Do séparer les sections de page par un séparateur de règle et 64 px d'espace.",
+      "Do réserver le Jaune bordelais (#EBB100) aux traits manuscrits, aux liens clés, aux catégories, aux étoiles et aux survols.",
+      "Do composer titres, libellés, dates et boutons en Space Mono, et le texte courant en Fira Sans 300.",
+      "Do garder un indicateur de focus visible sur chaque élément interactif (exigence Opquast / WCAG 2.2 AA du produit) ; le `focus:outline-none` des champs actuels est une dette à corriger."
+    ],
+    "donts": [
+      "Don't ajouter d'ombre portée (`box-shadow`, `shadow-*`) : le système est plat, la profondeur passe par les filets.",
+      "Don't arrondir les coins (`rounded-*`) des boutons, champs, cadres ou pastilles : tout est à angles vifs.",
+      "Don't utiliser de bordure CSS pleine pour encadrer un bloc : les cadres sont des filets de construction indépendants et en fondu. Les tableaux, citations et le code inline arrondi du contenu d'article sont des écarts existants, pas des modèles.",
+      "Don't poser le Jaune bordelais en aplat de fond.",
+      "Don't introduire un fond de carte clair ou un aplat de section différent du fond bleu dégradé."
+    ]
+  }
+}

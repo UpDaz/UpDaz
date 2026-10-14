@@ -34,15 +34,16 @@
             </div>
             <div class="flex flex-col gap-1">
                 <span class="font-semibold leading-none text-left">{{ $name }}</span>
-                <div class="flex items-center gap-2 text-xs text-gray">
-                    <span class="flex">
+                <div class="flex items-center gap-2 text-xs text-white/75">
+                    <span class="sr-only">Note : {{ $rating }} sur 5</span>
+                    <span class="flex" aria-hidden="true">
                         @for ($i = 1; $i <= 5; $i++)
-                            <span class="{{ $i <= $rating ? 'text-yellow' : 'text-gray/30' }} *:size-3">
+                            <span class="{{ $i <= $rating ? 'text-yellow' : 'text-white/30' }} *:size-3">
                                 @include('elements.icon.star')
                             </span>
                         @endfor
                     </span>
-                    <span>·</span>
+                    <span aria-hidden="true">·</span>
                     <span class="text-nowrap">{{ $date }}</span>
                 </div>
             </div>
@@ -51,7 +52,7 @@
             <img src="{{ asset($logoPath) }}" alt="{{ $source }}" class="h-4 w-auto shrink-0" loading="lazy"
                 width="{{ $logoWidth }}" height="16" />
         @else
-            <span class="text-xs uppercase tracking-widest text-gray">{{ $source }}</span>
+            <span class="text-xs uppercase tracking-widest text-white/75">{{ $source }}</span>
         @endif
     </div>
     <p class="text-white before:content-['«\00a0'] after:content-['\00a0»'] italic text-left">{{ $slot }}</p>

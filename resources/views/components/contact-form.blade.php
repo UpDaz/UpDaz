@@ -71,7 +71,7 @@
             </span>
         </p>
     </div>
-    <p x-show="!submitting && !success" class="text-xs text-gray">
+    <p x-show="!submitting && !success" class="text-xs text-white/75">
         * Champs requis
     </p>
 </form>

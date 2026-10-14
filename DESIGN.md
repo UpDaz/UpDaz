@@ -4,7 +4,7 @@ description: Développeur Laravel et Webflow à Bordeaux, un site dessiné comme
 colors:
   blue-gironde: "#2E5676"
   blue-gironde-deep: "#24445C"
-  yellow-bordelais: "#EBB100"
+  yellow-bordelais: "#FFC000"
   paper-white: "#F5F7FA"
   ink-dark: "#2F3542"
   hairline-gray: "#98abb8"
@@ -97,14 +97,17 @@ Un camaïeu de bleu nuit sur lequel un unique jaune joue le rôle du surligneur.
 - **Bleu Gironde profond** (#24445C) : arrivée du dégradé de fond et trame foncée des bandes hachurées.
 
 ### Secondary
-- **Jaune bordelais** (#EBB100) : l'annotation à la main. Soulignement manuscrit des boutons, liens clés dans le texte, catégories d'articles, étoiles des avis, état de survol des boutons. Jamais en aplat de fond.
+- **Jaune bordelais** (#FFC000) : l'annotation à la main. Soulignement manuscrit des boutons, liens clés dans le texte, catégories d'articles, étoiles des avis, état de survol des boutons. Jamais en aplat de fond.
 
 ### Neutral
 - **Blanc papier** (#F5F7FA) : couleur du texte courant et des titres sur le fond bleu ; fond des champs de formulaire.
-- **Gris filet** (#98abb8) : tous les traits (filets en fondu, bordures de tableau, graduations, hachures) et le texte secondaire (dates, méta des avis).
+- **Gris filet** (#98abb8) : tous les traits (filets en fondu, bordures de tableau, graduations, hachures). Jamais pour du texte : il n'atteint que 3,27:1 sur le Bleu Gironde.
+- **Blanc papier atténué** (Blanc papier à 75 %, `text-white/75`) : texte secondaire (dates, méta des avis, mentions de formulaire), 4,88:1 sur le Bleu Gironde.
 - **Encre** (#2F3542) : fond des blocs de code dans les articles.
 
 ### Named Rules
+**The 4.5 Floor Rule.** Tout texte posé sur le fond bleu atteint 4,5:1 contre le Bleu Gironde (#2E5676), la zone la plus claire du dégradé. Le texte secondaire dérive du Blanc papier, jamais du Gris filet.
+
 **The Highlighter Rule.** Le Jaune bordelais annote, il ne remplit pas. Il apparaît en trait, en texte ou en icône, jamais comme fond de bouton, de carte ou de section.
 
 **The Blue Paper Rule.** Toute surface est le fond bleu dégradé. On ne crée pas de cartes en aplat clair ; une zone se délimite par des filets, pas par un changement de fond.
@@ -184,7 +187,7 @@ Pastille carrée d'initiales en Bleu Gironde, nom en semi-gras, étoiles en Jaun
 ### Do:
 - **Do** délimiter chaque zone avec des filets gris de 1 px en dégradé transparent → #98abb8 → transparent, qui débordent de leur bloc.
 - **Do** séparer les sections de page par un séparateur de règle et 64 px d'espace.
-- **Do** réserver le Jaune bordelais (#EBB100) aux traits manuscrits, aux liens clés, aux catégories, aux étoiles et aux survols.
+- **Do** réserver le Jaune bordelais (#FFC000) aux traits manuscrits, aux liens clés, aux catégories, aux étoiles et aux survols.
 - **Do** composer titres, libellés, dates et boutons en Space Mono, et le texte courant en Fira Sans 300.
 - **Do** garder un indicateur de focus visible sur chaque élément interactif (exigence Opquast / WCAG 2.2 AA du produit) : contour Jaune bordelais de 2 px, jamais retiré par `outline-none`.
 

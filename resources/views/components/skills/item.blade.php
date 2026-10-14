@@ -1,6 +1,6 @@
-<div class="flex items-center gap-2">
-    <span>·</span>
+<div class="flex items-baseline gap-2">
+    <span aria-hidden="true">·</span>
     @isset($text)
-        {{ $text }}
+        <span>{{ $text }}</span>
     @endisset
 </div>

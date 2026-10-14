@@ -6,7 +6,7 @@
             <a href="{{ route('legal-notices') }}#cookies" class="hover:text-yellow underline">En savoir plus</a>
         </p>
         <div>
-            <x-button.primary title="Accepter les cookies" @click="dismiss()" :small="true" classes="text-nowrap">
+            <x-button.primary tag="button" type="button" title="Accepter les cookies" @click="dismiss()" :small="true" classes="text-nowrap">
                 j'ai compris
                 </x-button-primary>
         </div>

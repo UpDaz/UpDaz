@@ -24,7 +24,7 @@
         <div class=" *:!w-auto *:inline-block">
             <x-button.secondary :small="true" title="Lien page article {{ $article->title }}"
                 href="{{ route('article', ['categorySlug' => $article->category->slug, 'slug' => $article->slug]) }}">
-                Lire l'article
+                Lire l'article<span class="sr-only"> : {{ $article->title }}</span>
             </x-button.secondary>
         </div>
     </div>

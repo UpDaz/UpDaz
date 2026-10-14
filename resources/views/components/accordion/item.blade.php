@@ -1,4 +1,4 @@
-<div x-data='{ open: false }' x-id="['accordion-panel']" class="relative flex flex-col">
+<div x-data='{ open: false }' x-id="['accordion-panel']" class="relative flex flex-col p-px">
     <div data-element="line-horizontal" class="absolute left-1/2 top-0 h-[1px] w-[125%] -translate-x-1/2"></div>
     <div data-element="line-horizontal" class="absolute bottom-0 left-1/2 h-[1px] w-[125%] -translate-x-1/2"></div>
     <div data-element="line-vertical" class="absolute left-0 top-1/2 h-[125%] w-[1px] -translate-y-1/2"></div>

@@ -44,6 +44,16 @@ class ContactControllerTest extends TestCase
         Mail::assertSent(Contact::class, fn (Contact $mail): bool => $mail->phone === '0600000000');
     }
 
+    public function testOverlongMessageIsRejected(): void
+    {
+        Mail::fake();
+
+        $response = $this->postJson(route('contact'), ['message' => str_repeat('a', 5001)] + $this->validPayload());
+
+        $response->assertUnprocessable()->assertJsonValidationErrors('message');
+        Mail::assertNothingSent();
+    }
+
     public function testConfirmationIsShownAfterAnHtmlSubmission(): void
     {
         $response = $this->get(route('home', ['contact' => 'envoye']));

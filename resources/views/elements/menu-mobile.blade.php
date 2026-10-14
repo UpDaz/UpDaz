@@ -1,13 +1,13 @@
-<div class="lg:hidden">
-    <button @click.prevent="toggleMobileMenu()" aria-label="Ouvrir menu" type="button"
-        class="inline-flex items-center text-sm text-white" aria-controls="mobile-menu" aria-expanded="false">
+<div class="lg:hidden" @keydown.escape.window="openMobileMenu && closeMobileMenu()">
+    <button x-ref="mobileMenuOpenButton" @click.prevent="toggleMobileMenu()" aria-label="Ouvrir le menu" type="button"
+        class="inline-flex items-center text-sm text-white" aria-controls="mobile-menu" :aria-expanded="openMobileMenu.toString()">
         <span class="*:w-full">
             @include('elements.icon.plus')
         </span>
     </button>
     <div x-bind:class="openMobileMenu ? 'left-0!' : 'left-full'"
         class="fixed top-0 z-50 w-screen h-screen overflow-y-scroll transition-all bg-linear-to-br from-blue to-blue-dark lg:bg-none left-full"
-        id="mobile-menu">
+        id="mobile-menu" @keydown.tab="trapMobileMenuFocus($event)" :inert="!openMobileMenu" role="dialog" aria-modal="true" aria-label="Menu">
         <div class="relative flex flex-col gap-8 h-full">
             <div class="container mx-auto border-b border-gray py-4 ">
                 <div class="flex flex-wrap items-center justify-between">
@@ -15,8 +15,8 @@
                         <img src="{{ asset('img/logo.svg') }}" class="w-auto h-8" width="100" height="32"
                             alt="UpDaz Logo" title="UpDaz" />
                     </a>
-                    <button @click.prevent="toggleMobileMenu()" type="button" aria-label="Fermer menu"
-                        class="text-sm text-white" aria-controls="mobile-menu" aria-expanded="false">
+                    <button x-ref="mobileMenuCloseButton" @click.prevent="closeMobileMenu()" type="button" aria-label="Fermer le menu"
+                        class="text-sm text-white" aria-controls="mobile-menu">
                         @include('elements.icon.close')
                     </button>
                 </div>

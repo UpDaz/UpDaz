@@ -24,7 +24,35 @@
             oldScroll: 0,
             homeLink: '{{ route('home') }}',
             toggleMobileMenu: function() {
-                this.openMobileMenu = !this.openMobileMenu
+                if (this.openMobileMenu) {
+                    this.closeMobileMenu();
+
+                    return;
+                }
+
+                this.openMobileMenu = true;
+                this.$nextTick(() => this.$refs.mobileMenuCloseButton.focus());
+            },
+            closeMobileMenu: function() {
+                this.openMobileMenu = false;
+                this.$nextTick(() => this.$refs.mobileMenuOpenButton.focus());
+            },
+            trapMobileMenuFocus: function(event) {
+                const focusableElements = [...document.querySelectorAll('#mobile-menu a[href], #mobile-menu button')];
+                const firstElement = focusableElements[0];
+                const lastElement = focusableElements[focusableElements.length - 1];
+
+                if (event.shiftKey && document.activeElement === firstElement) {
+                    event.preventDefault();
+                    lastElement.focus();
+
+                    return;
+                }
+
+                if (! event.shiftKey && document.activeElement === lastElement) {
+                    event.preventDefault();
+                    firstElement.focus();
+                }
             },
             scrollToTarget: function(target) {
                 if (document.querySelector(target)) {

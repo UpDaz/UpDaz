@@ -163,7 +163,7 @@ Des actions qui ressemblent à un mot souligné sur le plan, pas à des pastille
 
 ### Inputs / Fields
 - **Style:** fond Blanc papier, texte Bleu Gironde, bordure 1 px, angles vifs, 8 × 12 px de marge intérieure ; libellé au-dessus en Space Mono 0.875rem.
-- **Focus:** à garantir visible (voir Do's and Don'ts) ; le code actuel retire le contour.
+- **Focus:** contour Jaune bordelais de 2 px, décalé de 2 px (règle `:focus-visible` globale).
 - **Error / Disabled:** les messages d'état sont du texte accompagné d'une icône au trait, sans couleur d'alerte dédiée.
 
 ### Navigation
@@ -186,7 +186,7 @@ Pastille carrée d'initiales en Bleu Gironde, nom en semi-gras, étoiles en Jaun
 - **Do** séparer les sections de page par un séparateur de règle et 64 px d'espace.
 - **Do** réserver le Jaune bordelais (#EBB100) aux traits manuscrits, aux liens clés, aux catégories, aux étoiles et aux survols.
 - **Do** composer titres, libellés, dates et boutons en Space Mono, et le texte courant en Fira Sans 300.
-- **Do** garder un indicateur de focus visible sur chaque élément interactif (exigence Opquast / WCAG 2.2 AA du produit) ; le `focus:outline-none` des champs actuels est une dette à corriger.
+- **Do** garder un indicateur de focus visible sur chaque élément interactif (exigence Opquast / WCAG 2.2 AA du produit) : contour Jaune bordelais de 2 px, jamais retiré par `outline-none`.
 
 ### Don't:
 - **Don't** ajouter d'ombre portée (`box-shadow`, `shadow-*`) : le système est plat, la profondeur passe par les filets.

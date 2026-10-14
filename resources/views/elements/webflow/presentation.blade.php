@@ -22,15 +22,7 @@
                     <br />
                     Proposant une interface similaire aux logiciels de la suite Adobe (Illustrator, Photoshop, etc), les
                     différents éléments du site se mettent en place via un système de
-                    <x-tooltip color="#001A9E">
-                        <x-slot:message>
-                            Utilisation du glisser-déposer en utilisant la souris de votre ordinateur.
-                        </x-slot>
-                        <x-slot:content>
-                            <i>drag-and-drop</i>
-                        </x-slot>
-                    </x-tooltip>
-                    .
+                    <i>drag-and-drop</i> (glisser-déposer à la souris).
                     <br />
                     Chaque élément peut être par la suite personnalisé en agissant sur ses caractéristiques.
                 </p>

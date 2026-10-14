@@ -1,4 +1,3 @@
-<div id="menu-top"></div>
 <nav id="menu" x-data="menu" x-init="manageMenuDisplay();" class="sticky z-50 w-full py-4 transition-all md:py-6"
     :class="displayMenu ? (windowScrollY > 0 ? 'top-0 bg-blue-dark' : 'top-0') : 'md:-top-32 bg-blue'"
     @scroll.window="manageMenuDisplay();">

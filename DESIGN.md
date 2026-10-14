@@ -154,7 +154,7 @@ Angles vifs partout (0 px) : boutons, champs, cadres, pastilles d'initiales, ill
 Des actions qui ressemblent à un mot souligné sur le plan, pas à des pastilles.
 - **Shape:** aucun fond, aucune bordure, angles vifs (0 px).
 - **Primary:** texte Space Mono en capitales (1.125rem, 0.875rem en version compacte sur desktop), Blanc papier, centré, pleine largeur de son conteneur ; sous le texte, un double trait manuscrit en Jaune bordelais (76 × 11 px).
-- **Hover / Focus:** le texte passe en Jaune bordelais.
+- **Hover / Focus:** le texte passe en Jaune bordelais. Le trait manuscrit reste fixe : il n'est jamais animé.
 - **Secondary:** texte Fira Sans 1rem, suivi d'un trait manuscrit simple (73 × 3 px) aligné à droite sur desktop. Sert aux « Lire l'article », « En savoir plus ».
 
 ### Cards / Containers
@@ -174,7 +174,7 @@ Des actions qui ressemblent à un mot souligné sur le plan, pas à des pastille
 - **Mobile:** sous `lg`, menu dédié en plein écran avec liens empilés en 1.125rem.
 
 ### Accordion (FAQ)
-Une ligne de question encadrée de quatre filets de construction, titre en Space Mono, flèche au trait qui pivote de −90° quand c'est fermé. Survol en Bleu Gironde. À l'ouverture, un trait manuscrit centré marque le haut de la réponse.
+Une ligne de question encadrée de quatre filets de construction, titre en Space Mono, flèche au trait qui pivote de −90° quand c'est fermé (200 ms). La réponse s'ouvre en hauteur (300 ms, `--ease-out-expo`). Survol en Bleu Gironde. À l'ouverture, un trait manuscrit centré marque le haut de la réponse.
 
 ### Ruler Separator (signature)
 Le séparateur entre sections : une grille de 4 colonnes où un bloc hachuré de 10 px de haut occupe une colonne, un filet gris occupe les autres, surmonté d'une graduation (filet avec deux taquets de 8 px) et d'une annotation « 1x1 » en Space Mono 0.75rem pivotée de −90°. Quatre variantes : gauche, droite, centre, extérieur.
@@ -189,6 +189,7 @@ Pastille carrée d'initiales en Bleu Gironde, nom en semi-gras, étoiles en Jaun
 - **Do** séparer les sections de page par un séparateur de règle et 64 px d'espace.
 - **Do** réserver le Jaune bordelais (#FFC000) aux traits manuscrits, aux liens clés, aux catégories, aux étoiles et aux survols.
 - **Do** composer titres, libellés, dates et boutons en Space Mono, et le texte courant en Fira Sans 300.
+- **Do** animer uniquement `transform`, `translate`, `height` d'un panneau ou une couleur, avec `--ease-out-expo` (`cubic-bezier(0.16, 1, 0.3, 1)`) entre 200 et 700 ms, et prévoir `motion-reduce:` / `motion-safe:` sur chaque mouvement.
 - **Do** garder un indicateur de focus visible sur chaque élément interactif (exigence Opquast / WCAG 2.2 AA du produit) : contour Jaune bordelais de 2 px, jamais retiré par `outline-none`.
 
 ### Don't:

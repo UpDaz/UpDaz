@@ -79,8 +79,7 @@
             scrollToTarget: function(target) {
                 window.scrollTo({
                     top: document.querySelector(target).offsetTop,
-                    left: 0,
-                    behavior: 'smooth'
+                    left: 0
                 });
             }
         }))

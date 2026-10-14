@@ -7,12 +7,12 @@
         <button type="button" class="hover:bg-blue flex w-full items-center justify-between gap-8 p-8 text-left md:px-16"
             @click="open = !open" :aria-expanded="open.toString()" :aria-controls="$id('accordion-panel')">
             <span>{!! $title !!}</span>
-            <span class="w-8 h-8 shrink-0 *:w-full *:max-w-full" :class="open ? '' : '-rotate-90'" aria-hidden="true">
+            <span class="w-8 h-8 shrink-0 *:w-full *:max-w-full transition-transform duration-200 ease-out-expo motion-reduce:transition-none" :class="open ? '' : '-rotate-90'" aria-hidden="true">
                 @include('elements.icon.arrow-down')
             </span>
         </button>
     </h3>
-    <div :id="$id('accordion-panel')" class="relative overflow-hidden transition-all duration-500"
+    <div :id="$id('accordion-panel')" class="relative overflow-hidden transition-[height] duration-300 ease-out-expo motion-reduce:transition-none"
         :style="open ? 'height: ' + $el.scrollHeight + 'px;' : 'height: 0;'" :inert="!open">
         <span class="absolute left-1/2 top-0 -translate-x-1/2">
             @include('elements.icon.line')

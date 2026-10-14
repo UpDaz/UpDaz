@@ -17,6 +17,9 @@
     --color-white: #F5F7FA;
     --color-dark: #2F3542;
     --color-gray: #98abb8;
+
+    /* Mouvement */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @layer utilities {

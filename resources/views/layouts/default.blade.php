@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="fr" class="scroll-smooth">
+<html lang="fr" class="scroll-smooth motion-reduce:scroll-auto">
 
 <head>
     <meta charset="utf-8">

@@ -120,14 +120,19 @@
     "shadows": [],
     "motion": [
       {
-        "name": "accordion-expand",
-        "value": "height 500ms ease",
-        "purpose": "Ouverture/fermeture des réponses de FAQ."
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Décélération de toutes les transitions du site."
       },
       {
-        "name": "arrow-rotate",
-        "value": "rotate(-90deg)",
-        "purpose": "Flèche d'accordéon fermée."
+        "name": "accordion-expand",
+        "value": "height 300ms ease-out-expo",
+        "purpose": "Ouverture des réponses de FAQ."
+      },
+      {
+        "name": "panel-slide",
+        "value": "translate 300ms ease-out-expo",
+        "purpose": "Menu mobile et masquage du menu sticky ; instantané en mouvement réduit."
       }
     ],
     "breakpoints": [
@@ -235,6 +240,7 @@
       "Do séparer les sections de page par un séparateur de règle et 64 px d'espace.",
       "Do réserver le Jaune bordelais (#FFC000) aux traits manuscrits, aux liens clés, aux catégories, aux étoiles et aux survols.",
       "Do composer titres, libellés, dates et boutons en Space Mono, et le texte courant en Fira Sans 300.",
+      "Do animer uniquement `transform`, `translate`, `height` d'un panneau ou une couleur, avec `--ease-out-expo` (`cubic-bezier(0.16, 1, 0.3, 1)`) entre 200 et 700 ms, et prévoir `motion-reduce:` / `motion-safe:` sur chaque mouvement.",
       "Do garder un indicateur de focus visible sur chaque élément interactif (exigence Opquast / WCAG 2.2 AA du produit) : contour Jaune bordelais de 2 px, jamais retiré par `outline-none`."
     ],
     "donts": [

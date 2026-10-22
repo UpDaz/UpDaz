@@ -12,8 +12,8 @@
             </span>
         </button>
     </h3>
-    <div :id="$id('accordion-panel')" class="relative overflow-hidden transition-[height] duration-300 ease-out-expo motion-reduce:transition-none"
-        :style="open ? 'height: ' + $el.scrollHeight + 'px;' : 'height: 0;'" :inert="!open">
+    <div :id="$id('accordion-panel')" class="relative overflow-hidden [interpolate-size:allow-keywords] transition-[height] duration-300 ease-out-expo motion-reduce:transition-none"
+        :style="open ? 'height: auto;' : 'height: 0;'" :inert="!open">
         <span class="absolute left-1/2 top-0 -translate-x-1/2">
             @include('elements.icon.line')
         </span>

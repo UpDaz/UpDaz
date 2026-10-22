@@ -66,8 +66,19 @@
             },
             manageMenuDisplay: function() {
                 this.windowScrollY = window.scrollY;
-                this.displayMenu = (this.windowScrollY <= 0 || this.oldScroll > this
-                    .windowScrollY);
+
+                if (this.windowScrollY <= 0) {
+                    this.displayMenu = true;
+                    this.oldScroll = this.windowScrollY;
+
+                    return;
+                }
+
+                if (Math.abs(this.windowScrollY - this.oldScroll) < 10) {
+                    return;
+                }
+
+                this.displayMenu = this.oldScroll > this.windowScrollY;
                 this.oldScroll = this.windowScrollY;
             }
         }))

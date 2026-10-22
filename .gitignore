@@ -1,7 +1,7 @@
-
-*/.DS_Store
 *-audit/
+*/.DS_Store
 .DS_Store
+.agents/
 .claude/
 .dependabot-current-branch
 .env
@@ -33,8 +33,8 @@ makefiles*
 npm-debug.log
 production.makefile
 public/build*
+scripts/lighthouse-audit.mjs
+skills-lock.json
 storage/debugbar/*
 storage/lighthouse/*
 yarn-error.log
-scripts/lighthouse-audit.mjs
-

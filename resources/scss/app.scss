@@ -95,7 +95,7 @@ textarea:focus-visible {
 }
 
 .btn {
-    @apply font-title inline-block hover:text-yellow border-0;
+    @apply font-title inline-block hover:text-yellow border-0 transition-[color,scale] duration-150 ease-out-expo active:scale-[0.97] motion-reduce:active:scale-100;
 
     &.btn-primary {
         @apply font-title uppercase text-center text-lg block w-full;

@@ -12,7 +12,7 @@
         @include('elements.separators.center')
         @include('elements.home.pricing')
         @include('elements.separators.extern')
-        <div id="contact">
+        <div id="contact" class="pt-24 -mt-24">
             @include('elements.contact')
         </div>
         @include('elements.separators.left')

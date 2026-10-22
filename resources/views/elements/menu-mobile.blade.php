@@ -5,8 +5,8 @@
             @include('elements.icon.plus')
         </span>
     </button>
-    <div x-bind:class="openMobileMenu ? 'translate-x-0!' : ''"
-        class="fixed top-0 left-0 z-50 w-screen h-screen overflow-y-scroll translate-x-full transition-transform duration-300 ease-out-expo motion-reduce:transition-none bg-linear-to-br from-blue to-blue-dark lg:bg-none"
+    <div x-bind:class="openMobileMenu ? 'translate-x-0! opacity-100!' : ''"
+        class="fixed top-0 left-0 z-50 w-screen h-screen overflow-y-scroll overscroll-contain translate-x-full transition-transform duration-300 ease-out-expo motion-reduce:translate-x-0 motion-reduce:opacity-0 motion-reduce:transition-opacity motion-reduce:duration-200 bg-linear-to-br from-blue to-blue-dark lg:bg-none"
         id="mobile-menu" @keydown.tab="trapMobileMenuFocus($event)" :inert="!openMobileMenu" role="dialog" aria-modal="true" aria-label="Menu">
         <div class="relative flex flex-col gap-8 h-full">
             <div class="container mx-auto border-b border-gray py-4 ">
